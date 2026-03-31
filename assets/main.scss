@@ -1,0 +1,21 @@
+---
+---
+
+@import "minima";
+
+/* 🎨 Tus colores */
+
+:root {
+  --main-color: #1a73e8;
+  --text-color: #111111;
+  --bg-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--main-color);
+}
