@@ -394,6 +394,7 @@ function applyFilters() {
             </div>
             <div class="article-title">${a.t}</div>
             ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
+            ${a.tags ? `<div class="tags">${a.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
             <span class="card-arrow">→</span>
           </a>
         `).join('')}
