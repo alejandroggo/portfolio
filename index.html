@@ -386,7 +386,7 @@ function applyFilters() {
     byYear[a.y].push(a);
   });
 
-  const years = Object.keys(byYear).sort((a,b) => b-a);
+  const years = Object.keys(groupByYear(list)).sort((a,b) => b-a);
   const main = document.getElementById('main-content');
 
   if (filtered.length === 0) {
@@ -408,7 +408,7 @@ function applyFilters() {
             </div>
             <div class="article-title">${a.t}</div>
             ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
-            ${a.tags ? `<div class="tags">${a.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
+            ${a.tags ? `<div class="tags">${a.tags.map(tag => `<span class="tag" onclick="filterByTag('${tag}')">${tag}</span>`).join('')}</div>` : ''}
             <span class="card-arrow">→</span>
           </a>
         `).join('')}
@@ -430,6 +430,10 @@ fetch('data.json')
   .catch(err => {
     document.getElementById('main-content').innerHTML = '<div class="loading">Error cargando datos. Asegúrate de que data.json está en la misma carpeta.</div>';
   });
+  function filterByTag(tag) {
+  const filtered = data.filter(a => a.tags && a.tags.includes(tag));
+  renderArticles(list = data);
+}
 </script>
 </body>
 </html>
