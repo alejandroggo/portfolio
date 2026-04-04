@@ -541,6 +541,12 @@ activeYear = 'all';
 activeSrc = 'all';
 activeTags = [];
 document.getElementById('search').value = '';
+document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+document.querySelector('[data-year="all"]').classList.add('active');
+
+document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
+document.querySelector('[data-src="all"]').classList.add('active');
+      
 applyFilters();
     })
     .catch(() => {
