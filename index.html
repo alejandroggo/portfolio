@@ -346,6 +346,26 @@
 let allArticles = [];
 let activeYear  = 'all';
 let activeSrc   = 'all';
+let activeTags = [];
+
+// ── Función para manejar clicks en tags ─────────────────────────
+function toggleTag(event, tag) {
+  event.stopPropagation(); // evita abrir el enlace del artículo
+
+  const index = activeTags.indexOf(tag);
+
+  if (index > -1) {
+    activeTags.splice(index, 1); // quitar tag si ya estaba
+  } else {
+    activeTags.push(tag); // añadir tag si no estaba
+  }
+
+  // actualizar UI: marcar el tag como activo/inactivo
+  event.target.classList.toggle('active');
+
+  saveFilters();   // guardar estado en localStorage
+  applyFilters();  // volver a filtrar artículos
+}
 
 // Guardar filtros
 function saveFilters() {
@@ -353,6 +373,7 @@ function saveFilters() {
     year: activeYear,
     src: activeSrc,
     search: document.getElementById('search').value
+    tags: activeTags   // 
   };
   localStorage.setItem('nbaFilters', JSON.stringify(state));
 }
@@ -366,6 +387,7 @@ function loadFilters() {
 
   activeYear = state.year || 'all';
   activeSrc  = state.src  || 'all';
+  activeTags = state.tags || [];
 
   // Restaurar búsqueda
   if (state.search) {
@@ -448,7 +470,10 @@ function loadFilters() {
       if (activeYear !== 'all' && a.y !== parseInt(activeYear)) return false;
       if (activeSrc  !== 'all' && a.s !== activeSrc)            return false;
       if (q && !a.t.toLowerCase().includes(q))                  return false;
-      if (tagFilter && !(a.tags && a.tags.includes(tagFilter))) return false;
+      const matchesTags = activeTags.length === 0 || activeTags.every(tag => a.tags.includes(tag));
+if (!matchesTags) return false;
+
+if (tagFilter && !(a.tags && a.tags.includes(tagFilter))) return false;
       return true;
     });
 
@@ -491,8 +516,8 @@ function loadFilters() {
               <div class="article-title">${a.t}</div>
               ${a.sub  ? `<div class="article-sub">${a.sub}</div>` : ''}
               ${a.tags ? `<div class="tags">${a.tags.map(tag =>
-                `<span class="tag" onclick="filterByTag(event, '${tag}')">${tag}</span>`
-              ).join('')}</div>` : ''}
+  `<span class="tag" onclick="toggleTag(event, '${tag}')">${tag}</span>`
+).join('')}</div>` : ''}
               <span class="card-arrow">→</span>
             </a>
           `).join('')}
