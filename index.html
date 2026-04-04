@@ -279,6 +279,7 @@
   }
 
   .tag:hover { background-color: var(--ink); color: var(--paper); }
+  .article-card-wrapper { display: flex; flex-direction: column; gap: 0.25rem; }
 </style>
 </head>
 <body>
@@ -464,18 +465,69 @@ function loadFilters() {
 
   // ── Renderizado principal ──────────────────────────────────────
   function applyFilters(tagFilter = null) {
-    const q = document.getElementById('search').value.toLowerCase().trim();
+  const q = document.getElementById('search').value.toLowerCase().trim();
 
-    const filtered = allArticles.filter(a => {
-      if (activeYear !== 'all' && a.y !== parseInt(activeYear)) return false;
-      if (activeSrc  !== 'all' && a.s !== activeSrc)            return false;
-      if (q && !a.t.toLowerCase().includes(q))                  return false;
-      const matchesTags = activeTags.length === 0 || activeTags.every(tag => a.tags.includes(tag));
-if (!matchesTags) return false;
+  const filtered = allArticles.filter(a => {
+    if (activeYear !== 'all' && a.y !== parseInt(activeYear)) return false;
+    if (activeSrc  !== 'all' && a.s !== activeSrc)            return false;
+    if (q && !a.t.toLowerCase().includes(q))                  return false;
+    const matchesTags = activeTags.length === 0 || activeTags.every(tag => a.tags.includes(tag));
+    if (!matchesTags) return false;
 
-if (tagFilter && !(a.tags && a.tags.includes(tagFilter))) return false;
-      return true;
-    });
+    if (tagFilter && !(a.tags && a.tags.includes(tagFilter))) return false;
+    return true;
+  });
+
+  document.getElementById('results-count').textContent =
+    `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
+
+  const byYear = {};
+  filtered.forEach(a => {
+    if (!byYear[a.y]) byYear[a.y] = [];
+    byYear[a.y].push(a);
+  });
+
+  const years = Object.keys(byYear).sort((a, b) => b - a);
+  const main  = document.getElementById('main-content');
+
+  if (filtered.length === 0) {
+    main.innerHTML = `
+      <div class="articles-grid">
+        <div class="empty-state">
+          No se han encontrado resultados.<br><br>
+          Prueba a eliminar algunos filtros o cambiar la búsqueda.
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  main.innerHTML = years.map(year => `
+    <div class="year-section">
+      <div class="year-label">${year}</div>
+      <div class="articles-grid">
+        ${byYear[year].map(a => `
+          <div class="article-card-wrapper">
+            <a class="article-card" href="${a.u}" target="_blank" rel="noopener">
+              <div class="card-meta">
+                <span class="card-date">${formatDate(a.d)}</span>
+                <span class="badge badge-${a.s === 'S' ? 'substack' : 'relevo'}">${a.s === 'S' ? 'Substack' : 'Relevo'}</span>
+                ${a.p   ? '<span class="badge badge-paid">Suscriptores</span>' : ''}
+                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>'   : ''}
+              </div>
+              <div class="article-title">${a.t}</div>
+              ${a.sub  ? `<div class="article-sub">${a.sub}</div>` : ''}
+              <span class="card-arrow">→</span>
+            </a>
+            ${a.tags ? `<div class="tags">${a.tags.map(tag =>
+              `<span class="tag" onclick="toggleTag(event, '${tag}')">${tag}</span>`
+            ).join('')}</div>` : ''}
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
 
     document.getElementById('results-count').textContent =
   `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
