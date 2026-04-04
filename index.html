@@ -233,6 +233,26 @@
 
   .article-card:hover .card-arrow { color: var(--accent); right: 0.5rem; }
 
+  .article-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+
+  .article-card-wrapper .article-card {
+    border-bottom: none;
+    border-right: none;
+    flex: 1;
+  }
+
+  .article-card-wrapper .tags {
+    padding: 0 1.25rem 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
   .empty-state {
     padding: 4rem 0;
     text-align: center;
@@ -264,22 +284,22 @@
   footer p { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
   footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
 
-  .tags { margin-top: 8px; }
-
   .tag {
     display: inline-block;
     background-color: #e5e7eb;
     color: #111827;
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 999px;
-    margin-right: 6px;
-    margin-top: 4px;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1px;
     cursor: pointer;
+    transition: all 0.12s;
+    border: 1px solid transparent;
   }
 
   .tag:hover { background-color: var(--ink); color: var(--paper); }
-  .article-card-wrapper { display: flex; flex-direction: column; gap: 0.25rem; }
+  .tag.active { background-color: var(--ink); color: var(--paper); border-color: var(--ink); }
 </style>
 </head>
 <body>
@@ -333,6 +353,11 @@
     <button class="filter-btn" data-src="S" onclick="setSrc(this)">Substack</button>
   </div>
   <span class="results-count" id="results-count"></span>
+  <div id="active-tags-bar" style="display:none; width:100%; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
+    <span style="font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Tags:</span>
+    <div id="active-tags-list" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
+    <button onclick="clearTags()" style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--muted); text-decoration:underline; padding:0;">Limpiar</button>
+  </div>
 </div>
 
 <main id="main-content"><div class="loading">Cargando artículos…</div></main>
@@ -351,69 +376,25 @@ let activeTags = [];
 
 // ── Función para manejar clicks en tags ─────────────────────────
 function toggleTag(event, tag) {
-  event.stopPropagation(); // evita abrir el enlace del artículo
+  event.preventDefault();
+  event.stopPropagation();
 
   const index = activeTags.indexOf(tag);
-
   if (index > -1) {
-    activeTags.splice(index, 1); // quitar tag si ya estaba
+    activeTags.splice(index, 1);
   } else {
-    activeTags.push(tag); // añadir tag si no estaba
+    activeTags.push(tag);
   }
 
-  // actualizar UI: marcar el tag como activo/inactivo
-  event.target.classList.toggle('active');
-
-  saveFilters();   // guardar estado en localStorage
-  applyFilters();  // volver a filtrar artículos
+  applyFilters();
 }
 
-// Guardar filtros
-function saveFilters() {
-  const state = {
-    year: activeYear,
-    src: activeSrc,
-    search: document.getElementById('search').value,
-    tags: activeTags   // 
-  };
-  localStorage.setItem('nbaFilters', JSON.stringify(state));
+function clearTags() {
+  activeTags = [];
+  applyFilters();
 }
 
-// Cargar filtros
-function loadFilters() {
-  const saved = localStorage.getItem('nbaFilters');
-  if (!saved) return;
 
-  const state = JSON.parse(saved);
-
-  activeYear = state.year || 'all';
-  activeSrc  = state.src  || 'all';
-  activeTags = state.tags || [];
-
-  // Restaurar búsqueda
-  if (state.search) {
-    document.getElementById('search').value = state.search;
-  }
-
-  // Restaurar botones de año
-  document.querySelectorAll('[data-year]').forEach(b => {
-    b.classList.toggle('active', b.dataset.year === activeYear);
-  });
-
-  // Restaurar botones de medio
-  document.querySelectorAll('[data-src]').forEach(b => {
-    b.classList.remove('active', 'relevo-active', 'substack-active');
-
-    if (b.dataset.src === activeSrc) {
-      b.classList.add('active');
-
-      if (activeSrc === 'R') b.classList.add('relevo-active');
-      if (activeSrc === 'S') b.classList.add('substack-active');
-    }
-  });
-}
-
-  // ── Fecha de hoy ───────────────────────────────────────────────
   document.getElementById('today-date').textContent =
     new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -443,37 +424,33 @@ function loadFilters() {
     applyFilters();
   }
 
-  // ── Filtro por tag (sin abrir el enlace de la card) ────────────
-  function filterByTag(event, tag) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    // Resetea controles visuales a "Todo" y "Todos"
-    document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
-    document.querySelector('[data-year="all"]').classList.add('active');
-    document.querySelectorAll('[data-src]').forEach(b => {
-      b.classList.remove('active', 'relevo-active', 'substack-active');
-    });
-    document.querySelector('[data-src="all"]').classList.add('active');
-    document.getElementById('search').value = '';
-
-    activeYear = 'all';
-    activeSrc  = 'all';
-
-    applyFilters(tag);
-  }
-
   // ── Renderizado principal ──────────────────────────────────────
-function applyFilters(tagFilter = null) {
+function applyFilters() {
   const searchInput = document.getElementById('search').value.toLowerCase();
+
   const filtered = allArticles.filter(a => {
-    const matchesTag = tagFilter ? a.tags?.includes(tagFilter) : true;
-    const matchesSearch = a.t.toLowerCase().includes(searchInput) || a.sub?.toLowerCase().includes(searchInput);
-    return matchesTag && matchesSearch;
+    const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
+    const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc;
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
+    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
+    return matchesYear && matchesSrc && matchesSearch && matchesTags;
   });
 
   document.getElementById('results-count').textContent =
     `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
+
+  // Actualizar barra de tags activos
+  const bar = document.getElementById('active-tags-bar');
+  const list = document.getElementById('active-tags-list');
+  if (activeTags.length > 0) {
+    bar.style.display = 'flex';
+    list.innerHTML = activeTags.map(tag =>
+      `<span class="tag active" onclick="toggleTag(event, '${tag}')">${tag} ✕</span>`
+    ).join('');
+  } else {
+    bar.style.display = 'none';
+    list.innerHTML = '';
+  }
 
   const byYear = {};
   filtered.forEach(a => {
@@ -514,7 +491,7 @@ function applyFilters(tagFilter = null) {
               <span class="card-arrow">→</span>
             </a>
             ${a.tags ? `<div class="tags">${a.tags.map(tag =>
-              `<span class="tag" onclick="toggleTag(event, '${tag}')">${tag}</span>`
+              `<span class="tag${activeTags.includes(tag) ? ' active' : ''}" onclick="toggleTag(event, '${tag}')">${tag}</span>`
             ).join('')}</div>` : ''}
           </div>
         `).join('')}
