@@ -342,10 +342,53 @@
 </footer>
 
 <script>
-  // ── Estado global ──────────────────────────────────────────────
-  let allArticles = [];
-  let activeYear  = 'all';
-  let activeSrc   = 'all';
+// ── Estado global ──────────────────────────────────────────────
+let allArticles = [];
+let activeYear  = 'all';
+let activeSrc   = 'all';
+
+// Guardar filtros
+function saveFilters() {
+  const state = {
+    year: activeYear,
+    src: activeSrc,
+    search: document.getElementById('search').value
+  };
+  localStorage.setItem('nbaFilters', JSON.stringify(state));
+}
+
+// Cargar filtros
+function loadFilters() {
+  const saved = localStorage.getItem('nbaFilters');
+  if (!saved) return;
+
+  const state = JSON.parse(saved);
+
+  activeYear = state.year || 'all';
+  activeSrc  = state.src  || 'all';
+
+  // Restaurar búsqueda
+  if (state.search) {
+    document.getElementById('search').value = state.search;
+  }
+
+  // Restaurar botones de año
+  document.querySelectorAll('[data-year]').forEach(b => {
+    b.classList.toggle('active', b.dataset.year === activeYear);
+  });
+
+  // Restaurar botones de medio
+  document.querySelectorAll('[data-src]').forEach(b => {
+    b.classList.remove('active', 'relevo-active', 'substack-active');
+
+    if (b.dataset.src === activeSrc) {
+      b.classList.add('active');
+
+      if (activeSrc === 'R') b.classList.add('relevo-active');
+      if (activeSrc === 'S') b.classList.add('substack-active');
+    }
+  });
+}
 
   // ── Fecha de hoy ───────────────────────────────────────────────
   document.getElementById('today-date').textContent =
@@ -410,7 +453,7 @@
     });
 
     document.getElementById('results-count').textContent =
-      `${filtered.length.toLocaleString('es-ES')} resultado${filtered.length !== 1 ? 's' : ''}`;
+  `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
 
     const byYear = {};
     filtered.forEach(a => {
@@ -422,9 +465,16 @@
     const main  = document.getElementById('main-content');
 
     if (filtered.length === 0) {
-      main.innerHTML = '<div class="articles-grid"><div class="empty-state">No se han encontrado resultados.</div></div>';
-      return;
-    }
+  main.innerHTML = `
+    <div class="articles-grid">
+      <div class="empty-state">
+        No se han encontrado resultados.<br><br>
+        Prueba a eliminar algunos filtros o cambiar la búsqueda.
+      </div>
+    </div>
+  `;
+  return;
+}
 
     main.innerHTML = years.map(year => `
       <div class="year-section">
@@ -461,6 +511,7 @@
       document.getElementById('stat-relevo').textContent  = data.filter(a => a.s === 'R').length.toLocaleString('es-ES');
       document.getElementById('stat-substack').textContent = data.filter(a => a.s === 'S').length.toLocaleString('es-ES');
 
+      loadFilters();
       applyFilters();
     })
     .catch(() => {
