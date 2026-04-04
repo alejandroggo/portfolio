@@ -17,6 +17,11 @@
     --paid-badge: #1a3a5c;
     --relevo: #FF34EF;
     --substack: #007A33;
+    --solobasket: #E8620A;
+    --gigantes: #CC0000;
+    --wordpress: #3D9CD2;
+    --outsiders: #111111;
+    --upunder: #1B3A6B;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -135,6 +140,7 @@
   .filter-btn.active { background: var(--ink); color: var(--paper); }
   .filter-btn.relevo-active { background: var(--relevo); color: white; border-color: var(--relevo); }
   .filter-btn.substack-active { background: var(--substack); color: white; border-color: var(--substack); }
+  .filter-btn.podcast-active { background: #6b4fbb; color: white; border-color: #6b4fbb; }
 
   .results-count {
     font-size: 0.68rem;
@@ -202,6 +208,11 @@
   .badge-substack { background: var(--substack); color: white; }
   .badge-paid { background: var(--paid-badge); color: white; }
   .badge-podcast { background: #6b4fbb; color: white; }
+  .badge-solobasket { background: var(--solobasket); color: white; }
+  .badge-gigantes { background: var(--gigantes); color: white; }
+  .badge-wordpress { background: var(--wordpress); color: white; }
+  .badge-outsiders { background: var(--outsiders); color: white; border: 1px solid #444; }
+  .badge-upunder { background: var(--upunder); color: white; }
 
   .article-title {
     font-family: 'Playfair Display', serif;
@@ -351,6 +362,14 @@
     <button class="filter-btn active" data-src="all" onclick="setSrc(this)">Todos</button>
     <button class="filter-btn" data-src="R" onclick="setSrc(this)">Relevo</button>
     <button class="filter-btn" data-src="S" onclick="setSrc(this)">Substack</button>
+    <button class="filter-btn" data-src="SB" onclick="setSrc(this)">Solobasket</button>
+    <button class="filter-btn" data-src="G" onclick="setSrc(this)">Gigantes</button>
+    <button class="filter-btn" data-src="WP" onclick="setSrc(this)">Wordpress</button>
+    <button class="filter-btn" data-src="O" onclick="setSrc(this)">Outsiders</button>
+    <button class="filter-btn" data-src="UU" onclick="setSrc(this)">Up & Under</button>
+  </div>
+  <div class="filter-group">
+    <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
   </div>
   <span class="results-count" id="results-count"></span>
   <div id="active-tags-bar" style="display:none; width:100%; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
@@ -372,7 +391,8 @@
 let allArticles = [];
 let activeYear  = 'all';
 let activeSrc   = 'all';
-let activeTags = [];
+let activePod   = false;
+let activeTags  = [];
 
 // ── Función para manejar clicks en tags ─────────────────────────
 function toggleTag(event, tag) {
@@ -415,13 +435,36 @@ function clearTags() {
 
   function setSrc(btn) {
     document.querySelectorAll('[data-src]').forEach(b => {
-      b.classList.remove('active', 'relevo-active', 'substack-active');
+      b.classList.remove('active', 'relevo-active', 'substack-active', 'src-active');
     });
     btn.classList.add('active');
-    if (btn.dataset.src === 'R') btn.classList.add('relevo-active');
-    if (btn.dataset.src === 'S') btn.classList.add('substack-active');
+    if (btn.dataset.src === 'R')  btn.classList.add('relevo-active');
+    if (btn.dataset.src === 'S')  btn.classList.add('substack-active');
     activeSrc = btn.dataset.src;
     applyFilters();
+  }
+
+  function setPod(btn) {
+    activePod = !activePod;
+    btn.classList.toggle('active', activePod);
+    btn.classList.toggle('podcast-active', activePod);
+    applyFilters();
+  }
+
+  // ── Badge por medio ────────────────────────────────────────────
+  const MEDIOS = {
+    R:  { label: 'Relevo',      cls: 'relevo'     },
+    S:  { label: 'Substack',    cls: 'substack'   },
+    SB: { label: 'Solobasket',  cls: 'solobasket' },
+    G:  { label: 'Gigantes',    cls: 'gigantes'   },
+    WP: { label: 'Wordpress',   cls: 'wordpress'  },
+    O:  { label: 'Outsiders',   cls: 'outsiders'  },
+    UU: { label: 'Up & Under',  cls: 'upunder'    },
+  };
+  function badgeFor(s) {
+    const m = MEDIOS[s];
+    if (!m) return '';
+    return `<span class="badge badge-${m.cls}">${m.label}</span>`;
   }
 
   // ── Renderizado principal ──────────────────────────────────────
@@ -431,9 +474,10 @@ function applyFilters() {
   const filtered = allArticles.filter(a => {
     const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
     const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc;
+    const matchesPod    = !activePod || a.pod === 1;
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
     const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
-    return matchesYear && matchesSrc && matchesSearch && matchesTags;
+    return matchesYear && matchesSrc && matchesPod && matchesSearch && matchesTags;
   });
 
   document.getElementById('results-count').textContent =
@@ -482,7 +526,7 @@ function applyFilters() {
             <a class="article-card" href="${a.u}" target="_blank" rel="noopener">
               <div class="card-meta">
                 <span class="card-date">${formatDate(a.d)}</span>
-                <span class="badge badge-${a.s === 'S' ? 'substack' : 'relevo'}">${a.s === 'S' ? 'Substack' : 'Relevo'}</span>
+                ${badgeFor(a.s)}
                 ${a.p   ? '<span class="badge badge-paid">Suscriptores</span>' : ''}
                 ${a.pod ? '<span class="badge badge-podcast">Podcast</span>' : ''}
               </div>
@@ -509,9 +553,9 @@ function applyFilters() {
       document.getElementById('stat-relevo').textContent  = data.filter(a => a.s === 'R').length.toLocaleString('es-ES');
       document.getElementById('stat-substack').textContent = data.filter(a => a.s === 'S').length.toLocaleString('es-ES');
 
-      // Ignorar filtros guardados y mostrar todo por defecto
-activeYear = 'all';
+      activeYear = 'all';
 activeSrc = 'all';
+activePod = false;
 activeTags = [];
 document.getElementById('search').value = '';
 document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
@@ -519,6 +563,7 @@ document.querySelector('[data-year="all"]').classList.add('active');
 
 document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
 document.querySelector('[data-src="all"]').classList.add('active');
+document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
       
 applyFilters();
     })
