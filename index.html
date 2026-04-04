@@ -464,18 +464,12 @@ function loadFilters() {
   }
 
   // ── Renderizado principal ──────────────────────────────────────
-  function applyFilters(tagFilter = null) {
-  const q = document.getElementById('search').value.toLowerCase().trim();
-
+function applyFilters(tagFilter = null) {
+  const searchInput = document.getElementById('search-input').value.toLowerCase();
   const filtered = allArticles.filter(a => {
-    if (activeYear !== 'all' && a.y !== parseInt(activeYear)) return false;
-    if (activeSrc  !== 'all' && a.s !== activeSrc)            return false;
-    if (q && !a.t.toLowerCase().includes(q))                  return false;
-    const matchesTags = activeTags.length === 0 || activeTags.every(tag => a.tags.includes(tag));
-    if (!matchesTags) return false;
-
-    if (tagFilter && !(a.tags && a.tags.includes(tagFilter))) return false;
-    return true;
+    const matchesTag = tagFilter ? a.tags?.includes(tagFilter) : true;
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) || a.sub?.toLowerCase().includes(searchInput);
+    return matchesTag && matchesSearch;
   });
 
   document.getElementById('results-count').textContent =
@@ -488,7 +482,7 @@ function loadFilters() {
   });
 
   const years = Object.keys(byYear).sort((a, b) => b - a);
-  const main  = document.getElementById('main-content');
+  const main = document.getElementById('main-content');
 
   if (filtered.length === 0) {
     main.innerHTML = `
@@ -513,10 +507,10 @@ function loadFilters() {
                 <span class="card-date">${formatDate(a.d)}</span>
                 <span class="badge badge-${a.s === 'S' ? 'substack' : 'relevo'}">${a.s === 'S' ? 'Substack' : 'Relevo'}</span>
                 ${a.p   ? '<span class="badge badge-paid">Suscriptores</span>' : ''}
-                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>'   : ''}
+                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>' : ''}
               </div>
               <div class="article-title">${a.t}</div>
-              ${a.sub  ? `<div class="article-sub">${a.sub}</div>` : ''}
+              ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
               <span class="card-arrow">→</span>
             </a>
             ${a.tags ? `<div class="tags">${a.tags.map(tag =>
