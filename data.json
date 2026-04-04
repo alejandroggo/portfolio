@@ -10702,7 +10702,10 @@
     "u": "https://www.youtube.com/watch?v=uruZyS0KWGQ",
     "d": "2019-12-11",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Rankings"
+    ]
   },
   {
     "t": "¡TORONTO RAPTORS 2020... CON NELSON PÉREZ!",
@@ -10740,10 +10743,7 @@
     "u": "https://www.solobasket.com/nba/toronto-raptors-la-resaca-mas-agradable-de-la-historia",
     "d": "2019-10-14",
     "y": 2019,
-    "s": "SB",
-    "tags": [
-      "Historia"
-    ]
+    "s": "SB"
   },
   {
     "t": "LA RENOVACIÓN DE KYLE LOWRY, ¿BUENA O MALA?",
