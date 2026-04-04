@@ -536,8 +536,12 @@ if (tagFilter && !(a.tags && a.tags.includes(tagFilter))) return false;
       document.getElementById('stat-relevo').textContent  = data.filter(a => a.s === 'R').length.toLocaleString('es-ES');
       document.getElementById('stat-substack').textContent = data.filter(a => a.s === 'S').length.toLocaleString('es-ES');
 
-      loadFilters();
-      applyFilters();
+      // Ignorar filtros guardados y mostrar todo por defecto
+activeYear = 'all';
+activeSrc = 'all';
+activeTags = [];
+document.getElementById('search').value = '';
+applyFilters();
     })
     .catch(() => {
       document.getElementById('main-content').innerHTML =
