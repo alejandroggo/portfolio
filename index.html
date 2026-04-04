@@ -522,56 +522,6 @@ function applyFilters(tagFilter = null) {
     </div>
   `).join('');
 }
-
-    document.getElementById('results-count').textContent =
-  `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
-
-    const byYear = {};
-    filtered.forEach(a => {
-      if (!byYear[a.y]) byYear[a.y] = [];
-      byYear[a.y].push(a);
-    });
-
-    const years = Object.keys(byYear).sort((a, b) => b - a);
-    const main  = document.getElementById('main-content');
-
-    if (filtered.length === 0) {
-  main.innerHTML = `
-    <div class="articles-grid">
-      <div class="empty-state">
-        No se han encontrado resultados.<br><br>
-        Prueba a eliminar algunos filtros o cambiar la búsqueda.
-      </div>
-    </div>
-  `;
-  return;
-}
-
-    main.innerHTML = years.map(year => `
-      <div class="year-section">
-        <div class="year-label">${year}</div>
-        <div class="articles-grid">
-          ${byYear[year].map(a => `
-            <a class="article-card" href="${a.u}" target="_blank" rel="noopener">
-              <div class="card-meta">
-                <span class="card-date">${formatDate(a.d)}</span>
-                <span class="badge badge-${a.s === 'S' ? 'substack' : 'relevo'}">${a.s === 'S' ? 'Substack' : 'Relevo'}</span>
-                ${a.p   ? '<span class="badge badge-paid">Suscriptores</span>' : ''}
-                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>'   : ''}
-              </div>
-              <div class="article-title">${a.t}</div>
-              ${a.sub  ? `<div class="article-sub">${a.sub}</div>` : ''}
-              ${a.tags ? `<div class="tags">${a.tags.map(tag =>
-  `<span class="tag" onclick="toggleTag(event, '${tag}')">${tag}</span>`
-).join('')}</div>` : ''}
-              <span class="card-arrow">→</span>
-            </a>
-          `).join('')}
-        </div>
-      </div>
-    `).join('');
-  }
-
   // ── Carga de datos ─────────────────────────────────────────────
   fetch('data.json')
     .then(r => r.json())
