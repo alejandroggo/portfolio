@@ -408,7 +408,7 @@ function applyFilters() {
             </div>
             <div class="article-title">${a.t}</div>
             ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
-            ${a.tags ? `<div class="tags">${a.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
+            ${a.tags ? `<div class="tags">${a.tags.map(tag => `<span class="tag" onclick="filterByTag('${tag}')">${tag}</span>`).join('')}</div>` : ''}
           </a>
         `).join('')}
       </div>
@@ -417,21 +417,30 @@ function applyFilters() {
 }
 
 // Load data
+let allArticles = [];
+
 fetch('data.json')
   .then(r => r.json())
   .then(data => {
-    ARTICLES = data;
+    allArticles = data;
+
     document.getElementById('stat-total').textContent = data.length.toLocaleString('es-ES');
     document.getElementById('stat-relevo').textContent = data.filter(a => a.s === 'R').length.toLocaleString('es-ES');
     document.getElementById('stat-substack').textContent = data.filter(a => a.s === 'S').length.toLocaleString('es-ES');
-    applyFilters();
+
+    renderArticles(data); // 👈 importante
   })
   .catch(err => {
     document.getElementById('main-content').innerHTML = '<div class="loading">Error cargando datos. Asegúrate de que data.json está en la misma carpeta.</div>';
   });
-  function filterByTag(tag) {
-  const filtered = data.filter(a => a.tags && a.tags.includes(tag));
-  renderArticles(list = data);
+
+// Filtro por tag
+function filterByTag(tag) {
+  const filtered = allArticles.filter(a => 
+    a.tags && a.tags.includes(tag)
+  );
+
+  renderArticles(filtered);
 }
 </script>
 </body>
