@@ -10953,13 +10953,6 @@
     "s": "SB"
   },
   {
-    "t": "Mario Hezonja: «Es fácil jugar para un entrenador que te quiere»",
-    "u": "https://outsidersnba.wordpress.com/2018/11/11/mario-hezonja-es-facil-jugar-para-un-entrenador-que-te-quiere/",
-    "d": "2018-11-11",
-    "y": 2018,
-    "s": "O"
-  },
-  {
     "t": "Jasikevicius, entrevistado para ser head-coach de Toronto Raptors",
     "u": "https://www.solobasket.com/nba/jasikevicius-entrevistado-para-ser-head-coach-de-toronto-raptors",
     "d": "2018-06-05",
@@ -10988,14 +10981,20 @@
     "u": "https://outsidersnba.wordpress.com/2017/08/28/ainge-ya-lo-sabia/",
     "d": "2017-08-28",
     "y": 2017,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "La vida según Danny Ainge",
     "u": "https://outsidersnba.wordpress.com/2017/08/23/la-vida-segun-danny-ainge/",
     "d": "2017-08-23",
     "y": 2017,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "Boston Celtics, notable alto a un año sobresaliente",
@@ -11012,28 +11011,41 @@
     "u": "https://outsidersnba.wordpress.com/2017/05/30/isaiah-thomas-the-warrior-path/",
     "d": "2017-05-30",
     "y": 2017,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "¿Qué esperar cuando estás esperando?",
     "u": "https://outsidersnba.wordpress.com/2017/05/17/que-esperar-cuando-estas-esperando/",
     "d": "2017-05-17",
     "y": 2017,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "LeBron sí se puede comparar con Jordan*",
     "u": "https://outsidersnba.wordpress.com/2017/05/08/lebron-james-comparar-michael-jordan/",
     "d": "2017-05-08",
     "y": 2017,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Opinión",
+      "Rankings"
+    ]
   },
   {
     "t": "Paul Pierce es MI verdad",
     "u": "https://outsidersnba.wordpress.com/2017/05/02/paul-pierce-mi-verdad/",
     "d": "2017-05-02",
     "y": 2017,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "Cuatro nombres, tres candidatos, dos finalistas y un MVP",
@@ -11077,21 +11089,30 @@
     "u": "https://outsidersnba.wordpress.com/2016/08/19/todos-somos-un-poco-dellavedova-en-la-vida/",
     "d": "2016-08-19",
     "y": 2016,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "El último paradigma evolutivo por romper",
     "u": "https://outsidersnba.wordpress.com/2016/04/06/el-ultimo-paradigma-evolutivo-por-romper/",
     "d": "2016-04-06",
     "y": 2016,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "Jae Crowder: el brazo ejecutor",
     "u": "https://outsidersnba.wordpress.com/2016/03/01/jae-crowder-el-brazo-ejecutor/",
     "d": "2016-03-01",
     "y": 2016,
-    "s": "O"
+    "s": "O",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "La Anti-Guía NBA 2016/17: Boston Celtics",
