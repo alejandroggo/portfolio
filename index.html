@@ -465,7 +465,7 @@ function loadFilters() {
 
   // ── Renderizado principal ──────────────────────────────────────
 function applyFilters(tagFilter = null) {
-  const searchInput = document.getElementById('search-input').value.toLowerCase();
+  const searchInput = document.getElementById('search').value.toLowerCase();
   const filtered = allArticles.filter(a => {
     const matchesTag = tagFilter ? a.tags?.includes(tagFilter) : true;
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || a.sub?.toLowerCase().includes(searchInput);
