@@ -10264,8 +10264,8 @@
     "y": 2021,
     "s": "YT",
     "tags": [
-      "Periodismo",
-      "Opinión"
+      "Opinión",
+      "Periodismo"
     ]
   },
   {
@@ -10280,14 +10280,21 @@
     "u": "https://www.youtube.com/watch?v=b-Fhpi4j6wg",
     "d": "2021-03-10",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Historia",
+      "Opinión"
+    ]
   },
   {
     "t": "¿CÓMO ARREGLAMOS EL ALL STAR WEEKEND?",
     "u": "https://www.youtube.com/watch?v=T4PXXO6xPIY",
     "d": "2021-03-08",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "¿NOS HEMOS OLVIDADO DE LOS EQUIPOS DE LOS ÁNGELES?",
