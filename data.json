@@ -10266,10 +10266,7 @@
     "u": "https://www.alejandrogaitan.com/ganadores-y-perdedores-de-las-primeras-72h-de-agencia-libre/",
     "d": "2022-07-03",
     "y": 2022,
-    "s": "WP",
-    "tags": [
-      "TV y derechos"
-    ]
+    "s": "WP"
   },
   {
     "t": "Previa de la off-season de los Boston Celtics",
@@ -10313,10 +10310,7 @@
     "u": "https://www.alejandrogaitan.com/el-nba-trade-deadline-al-minuto/",
     "d": "2022-01-31",
     "y": 2022,
-    "s": "WP",
-    "tags": [
-      "Análisis"
-    ]
+    "s": "WP"
   },
   {
     "t": "La última gran obra de Red Auerbach: el mejor equipo de la historia (II)",
@@ -10356,7 +10350,10 @@
     "u": "https://www.alejandrogaitan.com/y-si-la-nba-se-ha-quedado-corta-promocionando-el-nba75/",
     "d": "2021-11-01",
     "y": 2021,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "Descubriendo a Ime Udoka: vida y obra del nuevo entrenador de los Celtics",
@@ -10777,8 +10774,7 @@
     "y": 2020,
     "s": "WP",
     "tags": [
-      "Historia",
-      "TV y derechos"
+      "Historia"
     ]
   },
   {
