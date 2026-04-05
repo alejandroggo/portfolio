@@ -7781,10 +7781,7 @@
     "u": "https://www.youtube.com/watch?v=nuTCI0oNNhI",
     "d": "2023-07-05",
     "y": 2023,
-    "s": "YT",
-    "tags": [
-      "TV y derechos"
-    ]
+    "s": "YT"
   },
   {
     "t": "La NBA se pone dura contra los 'teatreros' y regala un nuevo 'challenge' a los entrenadores",
@@ -8553,7 +8550,10 @@
     "u": "https://www.youtube.com/watch?v=9Yfen2DlLgc",
     "d": "2023-04-12",
     "y": 2023,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "Trae Young apaga temporalmente los rumores de traspaso dando la sorpresa en Miami",
@@ -8569,7 +8569,7 @@
     "y": 2023,
     "s": "YT",
     "tags": [
-      "Estadística"
+      "Opinión"
     ]
   },
   {
@@ -9140,10 +9140,7 @@
     "u": "https://www.youtube.com/watch?v=GD8emEabfGM",
     "d": "2023-02-04",
     "y": 2023,
-    "s": "YT",
-    "tags": [
-      "Jordi Fernández"
-    ]
+    "s": "YT"
   },
   {
     "t": "Walker Kessler es el nuevo propietario de la pintura en Utah",
@@ -10267,7 +10264,8 @@
     "y": 2021,
     "s": "YT",
     "tags": [
-      "Periodismo"
+      "Periodismo",
+      "Opinión"
     ]
   },
   {
