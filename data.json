@@ -10255,7 +10255,11 @@
     "u": "https://www.alejandrogaitan.com/bill-russell-una-vida-de-honor/",
     "d": "2022-08-01",
     "y": 2022,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Celtics",
+      "Historia"
+    ]
   },
   {
     "t": "Ganadores y perdedores de las primeras 72h de agencia libre",
@@ -10282,14 +10286,20 @@
     "u": "https://www.alejandrogaitan.com/plan-danny-brad/",
     "d": "2022-05-27",
     "y": 2022,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "Y aun así, no creéis en este equipo",
     "u": "https://www.alejandrogaitan.com/y-aun-asi-no-creeis-en-este-equipo/",
     "d": "2022-04-11",
     "y": 2022,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "JUGADORES NBA COMO SUPERHÉROES DE MARVEL",
@@ -10315,6 +10325,7 @@
     "y": 2022,
     "s": "WP",
     "tags": [
+      "Celtics",
       "Historia"
     ]
   },
@@ -10325,6 +10336,7 @@
     "y": 2022,
     "s": "WP",
     "tags": [
+      "Celtics",
       "Historia"
     ]
   },
@@ -10361,7 +10373,10 @@
     "u": "https://www.alejandrogaitan.com/ainge-stevens-2003/",
     "d": "2021-06-08",
     "y": 2021,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "¿ES EL PLAY-IN DE LA NBA UNA BUENA IDEA?",
