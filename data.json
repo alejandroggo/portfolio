@@ -10321,8 +10321,7 @@
     "s": "YT",
     "tags": [
       "CBA",
-      "Celtics",
-      "Estadística"
+      "Celtics"
     ]
   },
   {
@@ -10332,6 +10331,7 @@
     "y": 2021,
     "s": "YT",
     "tags": [
+      "Rankings",
       "Historia"
     ]
   },
@@ -10342,6 +10342,7 @@
     "y": 2021,
     "s": "YT",
     "tags": [
+      "Rankings",
       "Historia"
     ]
   },
@@ -10352,6 +10353,7 @@
     "y": 2021,
     "s": "YT",
     "tags": [
+      "Rankings",
       "Historia"
     ]
   },
@@ -10362,7 +10364,7 @@
     "y": 2021,
     "s": "YT",
     "tags": [
-      "Celtics"
+      "Opinión"
     ]
   },
   {
@@ -10377,7 +10379,10 @@
     "u": "https://www.youtube.com/watch?v=CePamNPVFEk",
     "d": "2021-01-20",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "t": "JAMES HARDEN, KEVIN DURANT Y KYRIE IRVING, ¿EL MEJOR BIG-3 DE LA HISTORIA?",
