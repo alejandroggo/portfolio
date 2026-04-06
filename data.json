@@ -8033,7 +8033,8 @@
     "u": "https://www.youtube.com/watch?v=nuTCI0oNNhI",
     "d": "2023-07-05",
     "y": 2023,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "La NBA se pone dura contra los 'teatreros' y regala un nuevo 'challenge' a los entrenadores",
@@ -8888,6 +8889,7 @@
     "d": "2023-04-12",
     "y": 2023,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -8905,6 +8907,7 @@
     "d": "2023-04-11",
     "y": 2023,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -9553,7 +9556,8 @@
     "u": "https://www.youtube.com/watch?v=GD8emEabfGM",
     "d": "2023-02-04",
     "y": 2023,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "Walker Kessler es el nuevo propietario de la pintura en Utah",
@@ -10959,6 +10963,7 @@
     "d": "2022-03-23",
     "y": 2022,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Memes"
     ]
@@ -11139,6 +11144,7 @@
     "d": "2021-11-09",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión",
       "Periodismo"
@@ -11331,7 +11337,8 @@
     "u": "https://www.youtube.com/watch?v=NtmXia5B6Ao",
     "d": "2021-05-03",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "Cómo la NBA ha depreciado el valor del triple",
@@ -11418,6 +11425,7 @@
     "d": "2021-03-10",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Historia",
       "Opinión",
@@ -11430,6 +11438,7 @@
     "d": "2021-03-08",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -11447,7 +11456,8 @@
     "u": "https://www.youtube.com/watch?v=M5V39FaqDOc",
     "d": "2021-03-02",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¿QUÉ LE PASA A LOS CELTICS? ¿QUIÉN TIENE LA CULPA?",
@@ -11455,6 +11465,7 @@
     "d": "2021-02-25",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Celtics",
       "Pronósticos"
@@ -11477,6 +11488,7 @@
     "d": "2021-02-20",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "CBA",
       "Celtics"
@@ -11504,6 +11516,7 @@
     "d": "2021-02-04",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Rankings",
       "Historia"
@@ -11515,6 +11528,7 @@
     "d": "2021-02-01",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Rankings",
       "Historia"
@@ -11526,6 +11540,7 @@
     "d": "2021-01-29",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Rankings",
       "Historia"
@@ -11537,6 +11552,7 @@
     "d": "2021-01-26",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -11546,7 +11562,8 @@
     "u": "https://www.youtube.com/watch?v=-WPijQu3PG8",
     "d": "2021-01-23",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¿QUÉ ES MEJOR, UN BIG-3 O UN BIG-2?",
@@ -11554,6 +11571,7 @@
     "d": "2021-01-20",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Estadística"
     ]
@@ -11564,6 +11582,7 @@
     "d": "2021-01-15",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Historia"
     ]
@@ -11573,7 +11592,8 @@
     "u": "https://www.youtube.com/watch?v=50gJT1UgW2o",
     "d": "2021-01-13",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "NBA & COVID: Protocolos, normativas y opciones de futuro",
@@ -11581,6 +11601,7 @@
     "d": "2021-01-12",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "CBA"
     ]
@@ -11591,6 +11612,7 @@
     "d": "2021-01-09",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Pronósticos"
     ]
@@ -11601,6 +11623,7 @@
     "d": "2021-01-07",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Celtics"
     ]
@@ -11611,6 +11634,7 @@
     "d": "2021-01-04",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Historia"
     ]
@@ -11621,6 +11645,7 @@
     "d": "2021-01-01",
     "y": 2021,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión",
       "Pronósticos"
@@ -11632,6 +11657,7 @@
     "d": "2020-12-30",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -11641,14 +11667,16 @@
     "u": "https://www.youtube.com/watch?v=uRSr3jWEf6w",
     "d": "2020-12-28",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¡LA NBA VUELVE POR NAVIDAD!",
     "u": "https://www.youtube.com/watch?v=O45ZjcH9BZ8",
     "d": "2020-12-24",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¿QUIÉNES SON MIS CANDIDATOS PARA LOS PREMIOS NBA?",
@@ -11656,6 +11684,7 @@
     "d": "2020-12-21",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Pronósticos"
     ]
@@ -11665,35 +11694,40 @@
     "u": "https://www.youtube.com/watch?v=KbfuHgX8MTg",
     "d": "2020-12-18",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¡TIERMAKER NBA 2020/21!",
     "u": "https://www.youtube.com/watch?v=GVXlV4ZunUU",
     "d": "2020-12-16",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¡GANADORES DE LA AGENCIA LIBRE NBA!",
     "u": "https://www.youtube.com/watch?v=RsMNKx-dH3g",
     "d": "2020-12-14",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¿DÓNDE ACABARÁ JAMES HARDEN?",
     "u": "https://www.youtube.com/watch?v=fWYHIMmS5Ck",
     "d": "2020-12-11",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¿HAN MEJORADO LOS TORONTO RAPTORS ESTA OFF-SEASON?",
     "u": "https://www.youtube.com/watch?v=EQ8PLxyeZS0",
     "d": "2020-12-09",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¿HAN MEJORADO LOS BOSTON CELTICS TRAS EL MERCADO NBA?",
@@ -11701,6 +11735,7 @@
     "d": "2020-12-07",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Celtics"
     ]
@@ -11710,7 +11745,8 @@
     "u": "https://www.youtube.com/watch?v=2gYco3cjtOE",
     "d": "2020-12-03",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "Draft 2020: Anthony Edwards elegido #1. Todas las elecciones y traspasos de la noche",
@@ -11735,6 +11771,7 @@
     "d": "2020-10-15",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -11752,6 +11789,7 @@
     "d": "2020-10-06",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -11769,6 +11807,7 @@
     "d": "2020-10-02",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Celtics"
     ]
@@ -11779,6 +11818,7 @@
     "d": "2020-09-30",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Celtics"
     ]
@@ -11889,7 +11929,8 @@
     "u": "https://www.youtube.com/watch?v=4evt2CTjUWs",
     "d": "2020-06-16",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "Mi primera vez... en la NBA",
@@ -11946,6 +11987,7 @@
     "d": "2020-05-19",
     "y": 2020,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Periodismo"
     ]
@@ -12024,6 +12066,7 @@
     "d": "2019-12-11",
     "y": 2019,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Rankings"
     ]
@@ -12033,7 +12076,8 @@
     "u": "https://www.youtube.com/watch?v=nrOSgKcVkZM",
     "d": "2019-12-04",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "La efervescencia del triple-doble en la NBA actual",
@@ -12071,6 +12115,7 @@
     "d": "2019-10-24",
     "y": 2019,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -12081,6 +12126,7 @@
     "d": "2019-10-15",
     "y": 2019,
     "s": "YT",
+    "vid": 1,
     "tags": [
       "Pronósticos"
     ]
@@ -12107,28 +12153,32 @@
     "u": "https://www.youtube.com/watch?v=t1BFPKP4pd8",
     "d": "2019-10-12",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "EL VERANO DE LOS RAPTORS",
     "u": "https://www.youtube.com/watch?v=QW8WvCU2gB4",
     "d": "2019-10-11",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "ALTAS Y BAJAS DE LOS RAPTORS 2020",
     "u": "https://www.youtube.com/watch?v=evKXKGxqRls",
     "d": "2019-10-11",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¡PRESENTACIÓN DEL PROYECTO!",
     "u": "https://www.youtube.com/watch?v=B93V25btVnI",
     "d": "2019-10-11",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "vid": 1
   },
   {
     "t": "¡TORONTO RAPTORS CAMPEÓN DE LA NBA! Gasol, Kawhi e Ibaka consiguen el anillo",
