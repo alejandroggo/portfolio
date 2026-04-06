@@ -73,7 +73,10 @@
     "y": 2026,
     "s": "G",
     "s2": "NH",
-    "vid": 1
+    "vid": 1,
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "#195 ¿Qué ha pasado en la NBA? Tres semanas dan para mucho en la liga",
@@ -107,6 +110,7 @@
     "s2": "NH",
     "vid": 1,
     "tags": [
+      "Celtics",
       "Hugo González"
     ]
   },
@@ -154,7 +158,10 @@
     "y": 2026,
     "s": "G",
     "s2": "NH",
-    "vid": 1
+    "vid": 1,
+    "tags": [
+      "Predicciones"
+    ]
   },
   {
     "t": "HISTORIA NBA | La década de los 80: Larry, Magic y David",
@@ -215,8 +222,7 @@
     "s2": "NH",
     "vid": 1,
     "tags": [
-      "Celtics",
-      "Historia"
+      "Celtics"
     ]
   },
   {
@@ -238,7 +244,10 @@
     "y": 2026,
     "s": "G",
     "s2": "NH",
-    "vid": 1
+    "vid": 1,
+    "tags": [
+      "Predicciones"
+    ]
   },
   {
     "t": "¿Qué equipo de fútbol es cada franquicia NBA? (parte I)",
