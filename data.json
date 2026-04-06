@@ -12564,7 +12564,10 @@
     "u": "https://www.alejandrogaitan.com/karl-anthony-towns/",
     "d": "2017-07-20",
     "y": 2017,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Perfiles"
+    ]
   },
   {
     "t": "Boston Celtics, notable alto a un año sobresaliente",
@@ -12583,7 +12586,8 @@
     "y": 2017,
     "s": "O",
     "tags": [
-      "Celtics"
+      "Celtics",
+      "Perfiles"
     ]
   },
   {
