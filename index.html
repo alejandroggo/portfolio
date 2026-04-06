@@ -576,6 +576,7 @@ function applyFilters() {
       activeYear = 'all';
 activeSrc = 'all';
 activePod = false;
+activeVid = false;      
 activeTags = [];
 document.getElementById('search').value = '';
 document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
@@ -584,6 +585,7 @@ document.querySelector('[data-year="all"]').classList.add('active');
 document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
 document.querySelector('[data-src="all"]').classList.add('active');
 document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));      
       
 applyFilters();
     })
