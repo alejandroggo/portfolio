@@ -327,24 +327,24 @@
     <h1>Alejandro <span>Gaitán</span></h1>
     <p class="masthead-sub">Periodismo NBA en español · 2015–2026</p>
   </div>
-  <div class="header-stats">
-    <div class="stat">
-      <div class="stat-num" id="stat-total">—</div>
-      <div class="stat-label">Artículos</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" id="stat-relevo">—</div>
-      <div class="stat-label">En Relevo</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" id="stat-substack">—</div>
-      <div class="stat-label">En Substack</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">11</div>
-      <div class="stat-label">Temporadas</div>
-    </div>
+<div class="header-stats">
+  <div class="stat">
+    <div class="stat-num" id="stat-audio">—</div>
+    <div class="stat-label">Audio</div>
   </div>
+  <div class="stat">
+    <div class="stat-num" id="stat-video">—</div>
+    <div class="stat-label">Vídeo</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="stat-texto">—</div>
+    <div class="stat-label">Texto</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">11</div>
+    <div class="stat-label">Temporadas</div>
+  </div>
+</div>
 </header>
 
 <div class="controls">
@@ -569,9 +569,9 @@ function applyFilters() {
     .then(data => {
       allArticles = data;
 
-      document.getElementById('stat-total').textContent   = data.length.toLocaleString('es-ES');
-      document.getElementById('stat-relevo').textContent  = data.filter(a => a.s === 'R').length.toLocaleString('es-ES');
-      document.getElementById('stat-substack').textContent = data.filter(a => a.s === 'S').length.toLocaleString('es-ES');
+document.getElementById('stat-audio').textContent  = data.filter(a => a.pod === 1).length.toLocaleString('es-ES');
+document.getElementById('stat-video').textContent  = data.filter(a => a.vid === 1).length.toLocaleString('es-ES');
+document.getElementById('stat-texto').textContent  = data.filter(a => !a.pod && !a.vid).length.toLocaleString('es-ES');
 
       activeYear = 'all';
 activeSrc = 'all';
