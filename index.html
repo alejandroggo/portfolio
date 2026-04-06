@@ -380,6 +380,7 @@
   </div>
   <div class="filter-group">
     <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
+    <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
   </div>
   <span class="results-count" id="results-count"></span>
   <div id="active-tags-bar" style="display:none; width:100%; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
@@ -461,6 +462,13 @@ function clearTags() {
     applyFilters();
   }
 
+  function setVid(btn) {
+    activeVid = !activeVid;
+    btn.classList.toggle('active', activeVid);
+    btn.classList.toggle('video-active', activeVid);
+    applyFilters();
+  }
+
   // ── Badge por medio ────────────────────────────────────────────
   const MEDIOS = {
     R:  { label: 'Relevo',      cls: 'relevo'     },
@@ -486,9 +494,10 @@ function applyFilters() {
     const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
     const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc;
     const matchesPod    = !activePod || a.pod === 1;
+    const matchesVid = !activeVid || a.vid === 1;
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
     const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
-    return matchesYear && matchesSrc && matchesPod && matchesSearch && matchesTags;
+    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesSearch && matchesTags;
   });
 
   document.getElementById('results-count').textContent =
