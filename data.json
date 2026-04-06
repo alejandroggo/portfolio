@@ -53,7 +53,10 @@
     "d": "2026-03-05",
     "y": 2026,
     "s": "S",
-    "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Liverpool o se parece más a Algeciras. Hoy vuelvo para responder esa duda, otra vez, sí."
+    "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Liverpool o se parece más a Algeciras. Hoy vuelvo para responder esa duda, otra vez, sí.",
+    "tags": [
+      "Memes"
+    ]
   },
   {
     "t": "HISTORIA NBA | La década de los 2010: De Reyes y dinastías",
@@ -88,7 +91,8 @@
     "sub": "Es imposible hablar de los noventa sin un monográfico sobre MJ. Títulos, premios, idas y venidas. Teorías, personaje y la leyenda, todo le convierten en alguien inigualable.",
     "p": 1,
     "tags": [
-      "Historia"
+      "Historia",
+      "Pronósticos"
     ]
   },
   {
@@ -159,7 +163,10 @@
     "d": "2026-02-11",
     "y": 2026,
     "s": "S",
-    "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Real Madrid o se parece más a West Bromwich Albion. Hoy vengo a responder esa duda."
+    "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Real Madrid o se parece más a West Bromwich Albion. Hoy vengo a responder esa duda.",
+    "tags": [
+      "Memes"
+    ]
   },
   {
     "t": "#194 La hoja de ruta de los Celtics es dramática: no se puede competir hasta 2028",
@@ -249,7 +256,10 @@
     "y": 2026,
     "s": "S",
     "sub": "La mitad de temporada no sirve únicamente para que hablemos de traspasos, también para que demos premios. O, en este caso, los anti-premios.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#186 La reunión que definirá la NBA en Europa: Pau Gasol, Ibrahimovic, Arabia Saudí y Amazon Prime",
@@ -381,7 +391,10 @@
     "y": 2025,
     "s": "S",
     "sub": "Si la NBA me dejara votar para el All Star, estos serían mis elegidos hoy. ¿En un mes? Ahí la cosa ya cambia un poquito.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#174 Se abre el mercado NBA: ¿qué sabemos? 10 nombres clave + Tabla de mercado ",
@@ -460,7 +473,8 @@
     "sub": "Se cumple exactamente el 25% de la temporada regular, así que es el momento de dar los primeros premios del año. Como si fuera mi papeleta oficial.",
     "p": 1,
     "tags": [
-      "TV y derechos"
+      "TV y derechos",
+      "Pronósticos"
     ]
   },
   {
@@ -678,7 +692,8 @@
     "sub": "Tatum, los Thunder, Ja Morant o Giannis Antetokounmpo son protagonistas de las 10 predicciones de este año. Y los traspasos, como siempre.",
     "p": 1,
     "tags": [
-      "Celtics"
+      "Celtics",
+      "Pronósticos"
     ]
   },
   {
@@ -830,7 +845,8 @@
     "sub": "¿Qué pasa con Daimiel? ¿Guille Giménez? ¿Se mueven las voces de Movistar? ¿Qué nombres ha firmado Amazon? ¿Quién estará en el equipo de DAZN?",
     "tags": [
       "TV y derechos",
-      "Españoles NBA"
+      "Españoles NBA",
+      "Pronósticos"
     ]
   },
   {
@@ -1016,7 +1032,8 @@
     "sub": "Dos días, 2200 millones repartidos y muchos equipos que analizar. ¿Quién lo ha hecho bien y quién no? Te lo cuento.",
     "p": 1,
     "tags": [
-      "TV y derechos"
+      "TV y derechos",
+      "Pronósticos"
     ]
   },
   {
@@ -1145,7 +1162,10 @@
     "y": 2025,
     "s": "S",
     "sub": "Ocho equipos, cuatro series y una previa para cada una. Empieza lo mejor de la temporada NBA.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#110 Sobre Giannis, el final del camino y posibles destinos",
@@ -1180,7 +1200,10 @@
     "y": 2025,
     "s": "S",
     "sub": "Lo prometido es deuda. En vez de hablar de los playoffs, me pongo a disposición del lector para responder lo que surja.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#Starting5: La previa de los playoffs",
@@ -1205,7 +1228,10 @@
     "d": "2025-04-14",
     "y": 2025,
     "s": "S",
-    "sub": "En octubre lancé mis previsiones; es momento de analizar si estuve o no acertado (spoiler: no)."
+    "sub": "En octubre lancé mis previsiones; es momento de analizar si estuve o no acertado (spoiler: no).",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#104 Sobre la vuelta de Doncic, el deporte y la vida",
@@ -1234,7 +1260,10 @@
     "y": 2025,
     "s": "S",
     "sub": "Es momento de mojarse por los premios de la temporada NBA. Elijo los finalistas y ganadores de cada galardón y hasta lo argumento.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#101 Sobre periodismo NBA, Relevo, Zach Lowe y la utopía informativa",
@@ -1295,7 +1324,8 @@
     "sub": "El campeón de la NBA tiene nuevo dueño. ¿Quién es este señor? ¿Qué pasa ahora con los Celtics? ¿Se mudan a Las Vegas como Dallas?",
     "tags": [
       "Celtics",
-      "Expansión"
+      "Expansión",
+      "Pronósticos"
     ]
   },
   {
@@ -1452,7 +1482,10 @@
     "d": "2025-02-01",
     "y": 2025,
     "s": "S",
-    "sub": "Quedan cinco días y medio para el deadline. Es momento de hacer predicciones."
+    "sub": "Quedan cinco días y medio para el deadline. Es momento de hacer predicciones.",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#82 Sobre Fox, Rich Paul, las casualidades y San Antonio Spurs",
@@ -1523,7 +1556,8 @@
     "sub": "Pat Riley y Jimmy Butler han decidido retarse a un duelo de ver quién tiene el ego más grande y el orgullo más moldeable. Lo analizamos.",
     "p": 1,
     "tags": [
-      "Historia"
+      "Historia",
+      "Pronósticos"
     ]
   },
   {
@@ -1987,7 +2021,10 @@
     "d": "2024-11-26",
     "y": 2024,
     "s": "S",
-    "sub": "Más que una entrada, esto es una campaña de abonados para la Newsletter Fútbol Club."
+    "sub": "Más que una entrada, esto es una campaña de abonados para la Newsletter Fútbol Club.",
+    "tags": [
+      "Memes"
+    ]
   },
   {
     "t": "Jaylen Brown mantiene su traje de MVP y los Celtics asustan a toda la liga",
@@ -2578,7 +2615,10 @@
     "y": 2024,
     "s": "S",
     "sub": "Le he preguntado a Chat GPT por la temporada NBA y lo que me ha dicho, la verdad, no me acaba de convencer del todo.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#66 Sobre el top-100 de la NBA y lo que habéis votado",
@@ -2631,7 +2671,10 @@
     "y": 2024,
     "s": "S",
     "sub": "Klay Thompson, los Lakers, Westbrook, Indiana Pacers y otras cosas mucho menos interesantes como Washington Wizards.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Vince Carter: mitad hombre, mitad increíble y ahora miembro al completo del Salón de la Fama",
@@ -2859,7 +2902,10 @@
     "d": "2024-09-09",
     "y": 2024,
     "s": "S",
-    "sub": "Habéis votado y estos son los resultados: campeón, finalista, peor equipo y mejor verano entre otras cosas."
+    "sub": "Habéis votado y estos son los resultados: campeón, finalista, peor equipo y mejor verano entre otras cosas.",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "La millonaria renovación de Jamal Murray que apaga las dudas alrededor de los Nuggets",
@@ -4138,7 +4184,8 @@
     "p": 1,
     "tags": [
       "TV y derechos",
-      "Historia"
+      "Historia",
+      "Pronósticos"
     ]
   },
   {
@@ -4498,7 +4545,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/doncic-jokic-wembanyama-lideran-lista-20240420014003-nt.html",
     "d": "2024-04-22",
     "y": 2024,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Tras una temporada de dudas, Lillard ya justifica la apuesta millonaria de los Bucks",
@@ -4610,7 +4660,10 @@
     "d": "2024-04-16",
     "y": 2024,
     "s": "S",
-    "sub": "Es momento de mojarse por los premios de la temporada NBA. Elijo los finalistas y ganadores de cada galardón y hasta lo argumento."
+    "sub": "Es momento de mojarse por los premios de la temporada NBA. Elijo los finalistas y ganadores de cada galardón y hasta lo argumento.",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Se acabó la temporada regular NBA: todo lo que ha pasado en la última jornada y cruces",
@@ -4943,7 +4996,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/lakers-lebron-ganan-doble-prorroga-20240325050156-nt.html",
     "d": "2024-03-27",
     "y": 2024,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Jalen Green, la próxima gran amenaza de la NBA a la que nadie veía como estrella",
@@ -5877,7 +5933,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/steph-curry-reta-sabrina-ionescu-20240125065329-nt.html",
     "d": "2024-01-26",
     "y": 2024,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Nikola Jokic arruina el debut de Siakam en Indiana con una estadística 'absurda'",
@@ -6027,7 +6086,10 @@
     "d": "2024-01-12",
     "y": 2024,
     "s": "UU",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Victor Wembanyama aterroriza a la NBA con su primer triple-doble... ¡en sólo 21 minutos!",
@@ -6512,7 +6574,10 @@
     "d": "2023-12-07",
     "y": 2023,
     "s": "UU",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "LeBron James consigue el último billete a Las Vegas en un duelo a muerte contra Kevin Durant",
@@ -6593,7 +6658,10 @@
     "d": "2023-12-01",
     "y": 2023,
     "s": "UU",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Los Lakers recuperan la sonrisa a costa de los peores Detroit Pistons de la historia",
@@ -6887,7 +6955,8 @@
     "s": "UU",
     "pod": 1,
     "tags": [
-      "Celtics"
+      "Celtics",
+      "Pronósticos"
     ]
   },
   {
@@ -7099,7 +7168,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/nikola-jokic-nuggets-abren-temporada-20231023043739-nt.html",
     "d": "2023-10-25",
     "y": 2023,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "El All Star vuelve a su origen: la NBA recupera el Este contra Oeste a partir de 2024",
@@ -8755,7 +8827,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/anunciados-finalistas-premios-joel-embiid-20230413050302-nt.html",
     "d": "2023-04-15",
     "y": 2023,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Miami, Minnesota y el reto de ser octavo en unos playoff NBA",
@@ -8770,7 +8845,10 @@
     "d": "2023-04-14",
     "y": 2023,
     "s": "S",
-    "sub": "Casi 1000 personas participaron en la fiesta de la democracia que fueron estos premios NBA. Y los resultados son sorprendentes."
+    "sub": "Casi 1000 personas participaron en la fiesta de la democracia que fueron estos premios NBA. Y los resultados son sorprendentes.",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#24 La previa de playoffs: ¿los mejores de la historia?",
@@ -9619,7 +9697,10 @@
     "u": "https://alejandroggo.substack.com/p/2-mis-24-all-stars-quienes-y-por",
     "d": "2023-01-20",
     "y": 2023,
-    "s": "S"
+    "s": "S",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "LeBron James y la carrera contra el tiempo",
@@ -9691,7 +9772,10 @@
     "d": "2023-01-13",
     "y": 2023,
     "s": "S",
-    "sub": "Todos los equipos han llegado a 41 partidos a excepción de los Kings, así que es momento de dar los premios de la NBA a mitad de temporada."
+    "sub": "Todos los equipos han llegado a 41 partidos a excepción de los Kings, así que es momento de dar los premios de la NBA a mitad de temporada.",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Ha vuelto Steph Curry, ¿han vuelto los Warriors?",
@@ -9839,7 +9923,10 @@
     "d": "2022-12-28",
     "y": 2022,
     "s": "UU",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Ramón Díaz: «El tiempo me dirá si estoy preparado para entrenar en la NBA»",
@@ -9959,7 +10046,10 @@
     "d": "2022-12-14",
     "y": 2022,
     "s": "UU",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Cómo el 15 de diciembre puede cambiar la NBA",
@@ -10022,7 +10112,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/puede-detener-shai-gilgeousalexander-20221207063412-nt.html",
     "d": "2022-12-08",
     "y": 2022,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#7 La misión de Jayson Tatum",
@@ -10561,7 +10654,10 @@
     "u": "https://www.relevo.com/baloncesto/nba/vuelve-candidatos-titulo-favoritos-motivos-20221016035234-nt.html",
     "d": "2022-10-18",
     "y": 2022,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Previa de la Conferencia Oeste: candidatos, aspirantes y olvidados a partes iguales",
@@ -10836,7 +10932,10 @@
     "d": "2022-04-07",
     "y": 2022,
     "s": "UU",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "#22 Giannis Antetokounmpo, el eterno infravalorado",
@@ -10862,7 +10961,10 @@
     "u": "https://www.youtube.com/watch?v=36TG08hPMPI",
     "d": "2022-03-23",
     "y": 2022,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Memes"
+    ]
   },
   {
     "t": "#20 La reconversión de Dallas",
@@ -11204,7 +11306,8 @@
     "s": "UU",
     "pod": 1,
     "tags": [
-      "Análisis"
+      "Análisis",
+      "Pronósticos"
     ]
   },
   {
@@ -11320,7 +11423,8 @@
     "s": "YT",
     "tags": [
       "Historia",
-      "Opinión"
+      "Opinión",
+      "Pronósticos"
     ]
   },
   {
@@ -11355,7 +11459,8 @@
     "y": 2021,
     "s": "YT",
     "tags": [
-      "Celtics"
+      "Celtics",
+      "Pronósticos"
     ]
   },
   {
@@ -11488,7 +11593,10 @@
     "u": "https://www.youtube.com/watch?v=qK4zykLiGz8",
     "d": "2021-01-09",
     "y": 2021,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "¿ES PAYTON PRITCHARD EL ROBO DEL DRAFT?",
@@ -11517,7 +11625,8 @@
     "y": 2021,
     "s": "YT",
     "tags": [
-      "Opinión"
+      "Opinión",
+      "Pronósticos"
     ]
   },
   {
@@ -11549,7 +11658,10 @@
     "u": "https://www.youtube.com/watch?v=hHtLqIPUDrU",
     "d": "2020-12-21",
     "y": 2020,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "¡CINCO ROOKIES QUE VAN A SORPRENDERTE!",
@@ -11615,7 +11727,10 @@
     "u": "https://www.alejandrogaitan.com/nate-bjorkgren-pacers/",
     "d": "2020-10-21",
     "y": 2020,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "¡EL ÉXITO DE LA BURBUJA... aunque algunos no creyéramos!",
@@ -11968,7 +12083,10 @@
     "u": "https://www.youtube.com/watch?v=8zjmQpj8LEQ",
     "d": "2019-10-15",
     "y": 2019,
-    "s": "YT"
+    "s": "YT",
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Boston Celtics, de Kyrie a Kemba",
