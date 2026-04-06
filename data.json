@@ -567,7 +567,10 @@
     "y": 2025,
     "s": "G",
     "s2": "NH",
-    "vid": 1
+    "vid": 1,
+    "tags": [
+      "Predicciones"
+    ]
   },
   {
     "t": "#174 Se abre el mercado NBA: ¿qué sabemos? 10 nombres clave + Tabla de mercado ",
@@ -725,7 +728,10 @@
     "y": 2025,
     "s": "G",
     "s2": "NH",
-    "vid": 1
+    "vid": 1,
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "#163 Oklahoma City Thunder y la normalización de la excelencia histórica",
@@ -777,7 +783,7 @@
     "s2": "NH",
     "vid": 1,
     "tags": [
-      "Estadística"
+      "Predicciones"
     ]
   },
   {
