@@ -383,7 +383,9 @@
     <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
     <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros</button>
   </div>
+ <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
+    <button class="filter-btn" data-paid="1" onclick="setPaid(this)">💰 De pago</button>
     <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
     <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
   </div>
@@ -408,6 +410,8 @@ let allArticles = [];
 let activeYear  = 'all';
 let activeSrc   = 'all';
 let activePod   = false;
+let activeVid   = false;
+let activePaid  = false;
 let activeTags  = [];
 
 // ── Función para manejar clicks en tags ─────────────────────────
@@ -474,6 +478,13 @@ function clearTags() {
     applyFilters();
   }
 
+  function setPaid(btn) {
+  activePaid = !activePaid;
+  btn.classList.toggle('active', activePaid);
+  btn.classList.toggle('paid-active', activePaid);
+  applyFilters();
+}
+
   // ── Badge por medio ────────────────────────────────────────────
   const MEDIOS = {
     R:  { label: 'Relevo',      cls: 'relevo'     },
@@ -504,6 +515,7 @@ function applyFilters() {
     const matchesSrc = activeSrc === 'all' || a.s === activeSrc || a.s2 === activeSrc;
     const matchesPod    = !activePod || a.pod === 1;
     const matchesVid = !activeVid || a.vid === 1;
+    const matchesPaid = !activePaid || a.p === 1;
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
     const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
     return matchesYear && matchesSrc && matchesPod && matchesVid && matchesSearch && matchesTags;
@@ -584,19 +596,20 @@ document.getElementById('stat-video').textContent  = data.filter(a => a.vid === 
 document.getElementById('stat-texto').textContent  = data.filter(a => !a.pod && !a.vid).length.toLocaleString('es-ES');
 document.getElementById('stat-total').textContent = data.length.toLocaleString('es-ES');
 
-      activeYear = 'all';
+activeYear = 'all';
 activeSrc = 'all';
 activePod = false;
-activeVid = false;      
+activeVid = false;
+activePaid = false;
 activeTags = [];
 document.getElementById('search').value = '';
 document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
 document.querySelector('[data-year="all"]').classList.add('active');
-
 document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
 document.querySelector('[data-src="all"]').classList.add('active');
 document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));      
+document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));     
       
 applyFilters();
     })
