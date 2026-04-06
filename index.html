@@ -492,7 +492,7 @@ function applyFilters() {
 
   const filtered = allArticles.filter(a => {
     const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
-    const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc;
+    const matchesSrc = activeSrc === 'all' || a.s === activeSrc || a.s2 === activeSrc;
     const matchesPod    = !activePod || a.pod === 1;
     const matchesVid = !activeVid || a.vid === 1;
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
