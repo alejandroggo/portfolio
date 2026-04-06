@@ -215,6 +215,9 @@
   .badge-outsiders { background: var(--outsiders); color: white; border: 1px solid #444; }
   .badge-upunder { background: var(--upunder); color: white; }
   .badge-youtube { background: var(--youtube); color: #111111; }
+  .badge-nbahouse { background: #E03A3A; color: white; }
+  .badge-otros { background: #FFFFFF; color: #111111; border: 1px solid #444; }
+  .badge-video { background: #00B4D8; color: white; }
 
   .article-title {
     font-family: 'Playfair Display', serif;
@@ -377,6 +380,8 @@
     <button class="filter-btn" data-src="O" onclick="setSrc(this)">Outsiders</button>
     <button class="filter-btn" data-src="UU" onclick="setSrc(this)">Up & Under</button>
     <button class="filter-btn" data-src="YT" onclick="setSrc(this)">YouTube</button>
+    <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
+    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros</button>
   </div>
   <div class="filter-group">
     <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
@@ -479,12 +484,16 @@ function clearTags() {
     O:  { label: 'Outsiders',   cls: 'outsiders'  },
     UU: { label: 'Up & Under',  cls: 'upunder'    },
     YT: { label: 'YouTube', cls: 'youtube' },
+    NH: { label: 'NBA House', cls: 'nbahouse' },
+    OTR: { label: 'Otros',    cls: 'otros'    },
   };
-  function badgeFor(s) {
-    const m = MEDIOS[s];
-    if (!m) return '';
-    return `<span class="badge badge-${m.cls}">${m.label}</span>`;
-  }
+function badgeFor(s, s2) {
+  const m = MEDIOS[s];
+  const m2 = s2 ? MEDIOS[s2] : null;
+  let html = m ? `<span class="badge badge-${m.cls}">${m.label}</span>` : '';
+  if (m2) html += ` <span class="badge badge-${m2.cls}">${m2.label}</span>`;
+  return html;
+}
 
   // ── Renderizado principal ──────────────────────────────────────
 function applyFilters() {
@@ -546,9 +555,10 @@ function applyFilters() {
             <a class="article-card" href="${a.u}" target="_blank" rel="noopener">
               <div class="card-meta">
                 <span class="card-date">${formatDate(a.d)}</span>
-                ${badgeFor(a.s)}
+                ${badgeFor(a.s, a.s2)}
                 ${a.p   ? '<span class="badge badge-paid">Suscriptores</span>' : ''}
                 ${a.pod ? '<span class="badge badge-podcast">Podcast</span>' : ''}
+                ${a.vid ? '<span class="badge badge-video">Vídeo</span>' : ''}
               </div>
               <div class="article-title">${a.t}</div>
               ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
