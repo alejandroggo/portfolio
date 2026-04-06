@@ -340,10 +340,10 @@
     <div class="stat-num" id="stat-video">—</div>
     <div class="stat-label">Vídeo</div>
   </div>
-   <div class="stat">
-    <div class="stat-num">11</div>
-    <div class="stat-label">Temporadas</div>
-  </div>
+<div class="stat">
+  <div class="stat-num" id="stat-total">—</div>
+  <div class="stat-label">Total</div>
+</div>
 </div>
 </header>
 
@@ -572,6 +572,7 @@ function applyFilters() {
 document.getElementById('stat-audio').textContent  = data.filter(a => a.pod === 1).length.toLocaleString('es-ES');
 document.getElementById('stat-video').textContent  = data.filter(a => a.vid === 1).length.toLocaleString('es-ES');
 document.getElementById('stat-texto').textContent  = data.filter(a => !a.pod && !a.vid).length.toLocaleString('es-ES');
+document.getElementById('stat-total').textContent = data.length.toLocaleString('es-ES');
 
       activeYear = 'all';
 activeSrc = 'all';
