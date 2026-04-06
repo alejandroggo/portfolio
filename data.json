@@ -12487,7 +12487,8 @@
     "y": 2018,
     "s": "WP",
     "tags": [
-      "Historia"
+      "Historia",
+      "Perfiles"
     ]
   },
   {
@@ -12514,6 +12515,7 @@
     "y": 2018,
     "s": "WP",
     "tags": [
+      "Perfiles",
       "Celtics"
     ]
   },
@@ -12522,14 +12524,20 @@
     "u": "https://www.alejandrogaitan.com/mario-hezonja-demasiado-cocky/",
     "d": "2017-11-12",
     "y": 2017,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Perfiles"
+    ]
   },
   {
     "t": "El legado de CJ McCollum",
     "u": "https://www.alejandrogaitan.com/el-legado-de-cj-mccollum/",
     "d": "2017-09-26",
     "y": 2017,
-    "s": "WP"
+    "s": "WP",
+    "tags": [
+      "Perfiles"
+    ]
   },
   {
     "t": "Ainge ya lo sabía",
