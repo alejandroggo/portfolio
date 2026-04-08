@@ -1,9 +1,5 @@
 [
   {
-    "t": "UCU Web | El premio al Rookie del año tiene dueño: Scottie Barnes",
-    "u": "https://www.unocontraunoweb.com/2022/04/23/el-premio-al-rookie-del-ano-tiene-dueno-scottie-barnes/"
-  },
-  {
     "t": "LOS JUGADORES OLVIDADOS DE LA NBA",
     "u": "https://www.youtube.com/watch?v=sxSIVpAjG_0",
     "d": "2026-04-01",
@@ -11445,6 +11441,13 @@
     ]
   },
   {
+    "t": "UCU Web | El premio al Rookie del año tiene dueño: Scottie Barnes",
+    "u": "https://www.unocontraunoweb.com/2022/04/23/el-premio-al-rookie-del-ano-tiene-dueno-scottie-barnes/",
+    "d": "2022-04-23",
+    "y": 2022,
+    "s": "OTR"
+  },
+  {
     "t": "Y aun así, no creéis en este equipo",
     "u": "https://www.alejandrogaitan.com/y-aun-asi-no-creeis-en-este-equipo/",
     "d": "2022-04-11",
@@ -12711,7 +12714,8 @@
     "t": "Antena 3 | Así se originó el tiroteo que provocó la estampida en Toronto: \"El despliegue policial no era suficiente\"",
     "u": "https://www.antena3.com/noticias/deportes/baloncesto/video-estampida-toronto-raptors-tiroteo_201906185d08f48f0cf28dc4e14c4f95.html",
     "d": "2019-06-18",
-    "y": 2019
+    "y": 2019,
+    "s": "OTR"
   },
   {
     "t": "¡TORONTO RAPTORS CAMPEÓN DE LA NBA! Gasol, Kawhi e Ibaka consiguen el anillo",
