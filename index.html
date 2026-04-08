@@ -453,15 +453,17 @@ function clearTags() {
     applyFilters();
   }
 
-  function setSrc(btn) {
-    document.querySelectorAll('[data-src]').forEach(b => {
-      b.classList.remove('active', 'relevo-active', 'substack-active', 'src-active');
-    });
-    btn.classList.add('active');
-    if (btn.dataset.src === 'R')  btn.classList.add('relevo-active');
-    if (btn.dataset.src === 'S')  btn.classList.add('substack-active');
-    activeSrc = btn.dataset.src;
-    applyFilters();
+function setSrc(btn) {
+  document.querySelectorAll('[data-src]').forEach(b => {
+    b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active');
+  });
+  btn.classList.add('active');
+  if (btn.dataset.src === 'R')  btn.classList.add('relevo-active');
+  if (btn.dataset.src === 'S')  btn.classList.add('substack-active');
+  if (btn.dataset.src === 'G')  btn.classList.add('gigantes-active');
+  if (btn.dataset.src === 'NH') btn.classList.add('nbahouse-active');
+  activeSrc = btn.dataset.src;
+  applyFilters();
   }
 
   function setPod(btn) {
