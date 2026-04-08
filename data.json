@@ -1,5 +1,17 @@
 [
   {
+    "t": "Nacho Losilla | LAS NOTAS DE CADA EQUIPO TRAS EL DEADLINE CON ALEJANDRO GAITÁN",
+    "u": "https://www.youtube.com/watch?v=tfYBFC2N0Ck"
+  },
+  {
+    "t": "LOS JUGADORES OLVIDADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=sxSIVpAjG_0",
+    "d": "2026-04-01",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
+  },
+  {
     "t": "LOS JUGADORES OLVIDADOS DE LA NBA",
     "u": "https://www.youtube.com/watch?v=sxSIVpAjG_0",
     "d": "2026-04-01",
@@ -8,6 +20,14 @@
     "s2": "NH",
     "sub": "Una temporada NBA da para mucho y el foco suele estar en las grandes estrellas. ¿Pero qué pasa con todos esos jugadores que han rendido bien pero han pasado por debajo del radar?",
     "vid": 1
+  },
+  {
+    "t": "CÓMO EVITAR QUE OKC THUNDER VUELVA A SER CAMPEÓN NBA",
+    "u": "https://www.youtube.com/watch?v=ZAZHjGtg3uo",
+    "d": "2026-03-25",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "CÓMO EVITAR QUE OKC THUNDER VUELVA A SER CAMPEÓN NBA",
@@ -26,6 +46,17 @@
     "s": "S",
     "sub": "La NBA se acerca a las 32 franquicias, pero el debate real no está en Seattle ni en Las Vegas, sino en el momento elegido y por qué ha tardado tanto en llegar.",
     "p": 1,
+    "tags": [
+      "Expansión"
+    ]
+  },
+  {
+    "t": "LA EXPANSIÓN EN LA NBA EXPLICADA",
+    "u": "https://www.youtube.com/watch?v=LFALRHFr0d4",
+    "d": "2026-03-18",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
     "tags": [
       "Expansión"
     ]
@@ -72,6 +103,14 @@
     "d": "2026-03-11",
     "y": 2026,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "LEBRON, EDWARDS Y LOS MÁS SOBREVALORADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=Z0F9VUPd_xQ",
+    "d": "2026-03-11",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -99,6 +138,17 @@
     "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Liverpool o se parece más a Algeciras. Hoy vuelvo para responder esa duda, otra vez, sí.",
     "tags": [
       "Memes"
+    ]
+  },
+  {
+    "t": "HUGO GONZÁLEZ ES MEJOR DE LO QUE LA NBA CREÍA",
+    "u": "https://www.youtube.com/watch?v=4m_9AIyl1xc",
+    "d": "2026-03-04",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
+    "tags": [
+      "Hugo González"
     ]
   },
   {
@@ -150,6 +200,14 @@
       "Historia",
       "Pronósticos"
     ]
+  },
+  {
+    "t": "Por esto FRACASARÁN en los NBA PLAYOFFS ❌",
+    "u": "https://www.youtube.com/watch?v=ziMT64G2f1A",
+    "d": "2026-02-23",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "Por esto FRACASARÁN en los NBA PLAYOFFS ❌",
@@ -219,6 +277,18 @@
     "d": "2026-02-14",
     "y": 2026,
     "s": "G",
+    "pod": 1,
+    "tags": [
+      "Celtics",
+      "Historia"
+    ]
+  },
+  {
+    "t": "¿VUELVE TATUM? ¿PISTONS CAMPEONES? HISTORIAS POST ALL-STAR",
+    "u": "https://www.youtube.com/watch?v=5AaX5EaGAuQ",
+    "d": "2026-02-14",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -236,6 +306,14 @@
     "tags": [
       "Historia"
     ]
+  },
+  {
+    "t": "NO VAN A IR AL NBA ALL-STAR GAME",
+    "u": "https://www.youtube.com/watch?v=u6DIoEnApgw",
+    "d": "2026-02-11",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "NO VAN A IR AL NBA ALL-STAR GAME",
@@ -291,6 +369,17 @@
     "d": "2026-02-04",
     "y": 2026,
     "s": "G",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
+    "t": "LOS NOMBRES A SEGUIR EN EL TRADE DEADLINE",
+    "u": "https://www.youtube.com/watch?v=XByhq_9oT_Y",
+    "d": "2026-02-04",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -328,6 +417,17 @@
     "y": 2026,
     "s": "S",
     "sub": "Cada día hay más pistas para pensar que la retirada de LeBron James. Y la noche de Cleveland es quizá la más clara de todas."
+  },
+  {
+    "t": "ESTOS EQUIPOS NBA NECESITAN UN TRASPASO EN EL TRADE DEADLINE",
+    "u": "https://www.youtube.com/watch?v=jVlr_rvpm68",
+    "d": "2026-01-28",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
   },
   {
     "t": "ESTOS EQUIPOS NBA NECESITAN UN TRASPASO EN EL TRADE DEADLINE",
@@ -383,6 +483,17 @@
     "d": "2026-01-21",
     "y": 2026,
     "s": "G",
+    "pod": 1,
+    "tags": [
+      "Pronósticos"
+    ]
+  },
+  {
+    "t": "NUESTROS PREMIOS NBA HASTA AHORA",
+    "u": "https://www.youtube.com/watch?v=3-mB_BBFb90",
+    "d": "2026-01-21",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -414,6 +525,14 @@
     "tags": [
       "NBA Europa"
     ]
+  },
+  {
+    "t": "LAS NOTAS DE LOS FAVORITOS AL ANILLO NBA",
+    "u": "https://www.youtube.com/watch?v=C5tA28MU9wc",
+    "d": "2026-01-14",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "LAS NOTAS DE LOS FAVORITOS AL ANILLO NBA",
@@ -465,6 +584,14 @@
     "d": "2026-01-07",
     "y": 2026,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "JUGADORES Y EQUIPOS MÁS INFRAVALORADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=fkQJ0xUregI",
+    "d": "2026-01-07",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1
   },
@@ -487,6 +614,14 @@
     "y": 2026,
     "s": "S",
     "sub": "Querido Adam Silver: estas son mis condiciones para 2026. Si lo consigues, la NBA será un lugar mucho mejor."
+  },
+  {
+    "t": "LOS 12 NOMBRES NBA MÁS IMPORTANTES DE 2025",
+    "u": "https://www.youtube.com/watch?v=gp2t7lTUMYg",
+    "d": "2025-12-31",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "LOS 12 NOMBRES NBA MÁS IMPORTANTES DE 2025",
@@ -533,6 +668,14 @@
     "d": "2025-12-23",
     "y": 2025,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
+    "u": "https://www.youtube.com/watch?v=G5ivzeVgUMc",
+    "d": "2025-12-23",
+    "y": 2025,
+    "s": "G",
     "s2": "NH",
     "vid": 1
   },
@@ -566,6 +709,14 @@
     "d": "2025-12-17",
     "y": 2025,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "¿SALDRÁ GIANNIS? ¿DESTINO DE DAVIS? ARRANCA EL MERCADO DE TRASPASOS",
+    "u": "https://www.youtube.com/watch?v=ZuaHOmKCo5c",
+    "d": "2025-12-17",
+    "y": 2025,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -589,6 +740,17 @@
     "s": "S",
     "sub": "Aunque este año me haya emocionado menos, la Copa NBA sigue molando mucho. Pero sabéis qué molaría más: que volviera Jayson Tatum pronto.",
     "p": 1,
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
+    "t": "JOE MAZZULLA TIENE UN PLAN CON BOSTON CELTICS",
+    "u": "https://www.youtube.com/watch?v=zWzfjKXZLxA",
+    "d": "2025-12-10",
+    "y": 2025,
+    "s": "G",
+    "pod": 1,
     "tags": [
       "Celtics"
     ]
@@ -646,6 +808,14 @@
     "d": "2025-12-03",
     "y": 2025,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "¿ES REAL EL NIVEL DE LOS LAKERS DE DONCIC?",
+    "u": "https://www.youtube.com/watch?v=_ekqJuEJjus",
+    "d": "2025-12-03",
+    "y": 2025,
+    "s": "G",
     "s2": "NH",
     "vid": 1
   },
@@ -689,6 +859,14 @@
     "d": "2025-11-26",
     "y": 2025,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "POR QUÉ HAY UNA PLAGA DE LESIONES EN LA NBA",
+    "u": "https://www.youtube.com/watch?v=Oeaq6jHU0_8",
+    "d": "2025-11-26",
+    "y": 2025,
+    "s": "G",
     "s2": "NH",
     "vid": 1
   },
@@ -720,6 +898,14 @@
     "s": "S",
     "sub": "Cinco equipos que empezaron el año soñando con meterse en la lucha por el anillo y que en diciembre ya piensan en la lotería del draft. La magia de la NBA.",
     "p": 1
+  },
+  {
+    "t": "ATLANTA HAWKS NO NECESITAN A TRAE YOUNG",
+    "u": "https://www.youtube.com/watch?v=kkk7l8Ajcf0",
+    "d": "2025-11-19",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "ATLANTA HAWKS NO NECESITAN A TRAE YOUNG",
@@ -780,6 +966,17 @@
     "d": "2025-11-12",
     "y": 2025,
     "s": "G",
+    "pod": 1,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "t": "CUNNINGHAM HACE A LOS PISTONS, ¿CANDIDATOS?",
+    "u": "https://www.youtube.com/watch?v=gLdruWUdaEw",
+    "d": "2025-11-12",
+    "y": 2025,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -829,6 +1026,14 @@
     "d": "2025-11-05",
     "y": 2025,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "EL ASCENSO DE LAKERS Y DRAMA EN PELICANS Y GRIZZLIES",
+    "u": "https://www.youtube.com/watch?v=lNYD92ibU-w",
+    "d": "2025-11-05",
+    "y": 2025,
+    "s": "G",
     "s2": "NH",
     "vid": 1
   },
@@ -860,6 +1065,14 @@
     "s": "S",
     "sub": "Porque la NBA es la mejor liga del mundo y hemos de disfrutar a los 30 equipos, aunque no sea por igual. Sí, incluso los Jazz.",
     "p": 1
+  },
+  {
+    "t": "LO MEJOR Y LO PEOR DEL INICIO DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=IYdxU4vfFjo",
+    "d": "2025-10-29",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "LO MEJOR Y LO PEOR DEL INICIO DE LA NBA",
