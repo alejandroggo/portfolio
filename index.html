@@ -142,6 +142,9 @@
   .filter-btn.relevo-active { background: var(--relevo); color: white; border-color: var(--relevo); }
   .filter-btn.substack-active { background: var(--substack); color: white; border-color: var(--substack); }
   .filter-btn.podcast-active { background: #6b4fbb; color: white; border-color: #6b4fbb; }
+  .filter-btn.gigantes-active { background: var(--gigantes); color: white; border-color: var(--gigantes); }
+  .filter-btn.nbahouse-active { background: #E03A3A; color: white; border-color: #E03A3A; }
+  .filter-btn.video-active { background: #00B4D8; color: white; border-color: #00B4D8; }
 
   .results-count {
     font-size: 0.68rem;
@@ -518,8 +521,9 @@ function applyFilters() {
     const matchesPod    = !activePod || a.pod === 1;
     const matchesVid = !activeVid || a.vid === 1;
     const matchesPaid = !activePaid || a.p === 1;
-    const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
-    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) || 
+  (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
+  (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
     return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesSearch && matchesTags;
   });
 
