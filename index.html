@@ -216,7 +216,7 @@
   .badge-upunder { background: var(--upunder); color: white; }
   .badge-youtube { background: var(--youtube); color: #111111; }
   .badge-nbahouse { background: #E03A3A; color: white; }
-  .badge-otros { background: #FFFFFF; color: #111111; border: 1px solid #444; }
+  .badge-otros medios { background: #FFFFFF; color: #111111; border: 1px solid #444; }
   .badge-video { background: #00B4D8; color: white; }
 
   .article-title {
@@ -381,7 +381,7 @@
     <button class="filter-btn" data-src="UU" onclick="setSrc(this)">Up & Under</button>
     <button class="filter-btn" data-src="YT" onclick="setSrc(this)">YouTube</button>
     <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
-    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros</button>
+    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros Medios</button>
   </div>
  <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
@@ -496,7 +496,7 @@ function clearTags() {
     UU: { label: 'Up & Under',  cls: 'upunder'    },
     YT: { label: 'YouTube', cls: 'youtube' },
     NH: { label: 'NBA House', cls: 'nbahouse' },
-    OTR: { label: 'Otros',    cls: 'otros'    },
+    OTR: { label: 'Otros Medios',    cls: 'otros'    },
   };
 function badgeFor(s, s2) {
   const m = MEDIOS[s];
@@ -518,7 +518,7 @@ function applyFilters() {
     const matchesPaid = !activePaid || a.p === 1;
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || (a.sub?.toLowerCase().includes(searchInput) ?? false);
     const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
-    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesSearch && matchesTags;
+    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesSearch && matchesTags;
   });
 
   document.getElementById('results-count').textContent =
