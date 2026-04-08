@@ -1,10 +1,5 @@
 [
   {
-    "t": "ESTOS SON LOS 5 FAVORITOS AL MVP NBA\r",
-    "u": "https://www.youtube.com/watch?v=Abq8W07lp-s&t=200s",
-    "vid": 1
-  },
-  {
     "t": "LOS JUGADORES OLVIDADOS DE LA NBA",
     "u": "https://www.youtube.com/watch?v=sxSIVpAjG_0",
     "d": "2026-04-01",
@@ -2687,6 +2682,18 @@
     "d": "2024-11-21",
     "y": 2024,
     "s": "R"
+  },
+  {
+    "t": "ESTOS SON LOS 5 FAVORITOS AL MVP NBA\r",
+    "u": "https://www.youtube.com/watch?v=Abq8W07lp-s&t=200s",
+    "d": "2024-11-20",
+    "y": 2024,
+    "s": "G",
+    "sub": "¿Quién es el MVP de la NBA en lo que llevamos de temporada? Responder a esta pregunta este año es más complicado que nunca\r",
+    "vid": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Un partido inédito para Joel Embiid en seis años, una hora de retraso y una disculpa confirman a los Sixers como uno de los peores equipos de la NBA",
