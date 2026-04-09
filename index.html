@@ -146,6 +146,13 @@
   .filter-btn.nbahouse-active { background: #E03A3A; color: white; border-color: #E03A3A; }
   .filter-btn.video-active { background: #00B4D8; color: white; border-color: #00B4D8; }
   .filter-btn.texto-active { background: #4CAF50; color: white; border-color: #4CAF50; }
+  .filter-btn.solobasket-active { background: var(--solobasket); color: white; border-color: var(--solobasket); }
+.filter-btn.wordpress-active { background: var(--wordpress); color: white; border-color: var(--wordpress); }
+.filter-btn.outsiders-active { background: var(--outsiders); color: white; border-color: var(--outsiders); }
+.filter-btn.upunder-active { background: var(--upunder); color: white; border-color: var(--upunder); }
+.filter-btn.youtube-active { background: var(--youtube); color: #111111; border-color: var(--youtube); }
+.filter-btn.paid-active { background: var(--paid-badge); color: white; border-color: var(--paid-badge); }
+.filter-btn.otros-active { background: #FFFFFF; color: #111111; border-color: #444; }
 
   .results-count {
     font-size: 0.68rem;
@@ -458,19 +465,25 @@ function clearTags() {
     activeYear = btn.dataset.year;
     applyFilters();
   }
-
+  
 function setSrc(btn) {
   document.querySelectorAll('[data-src]').forEach(b => {
-    b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active');
+    b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active', 'solobasket-active', 'wordpress-active', 'outsiders-active', 'upunder-active', 'youtube-active', 'otros-active');
   });
   btn.classList.add('active');
-  if (btn.dataset.src === 'R')  btn.classList.add('relevo-active');
-  if (btn.dataset.src === 'S')  btn.classList.add('substack-active');
-  if (btn.dataset.src === 'G')  btn.classList.add('gigantes-active');
-  if (btn.dataset.src === 'NH') btn.classList.add('nbahouse-active');
+  if (btn.dataset.src === 'R')   btn.classList.add('relevo-active');
+  if (btn.dataset.src === 'S')   btn.classList.add('substack-active');
+  if (btn.dataset.src === 'G')   btn.classList.add('gigantes-active');
+  if (btn.dataset.src === 'NH')  btn.classList.add('nbahouse-active');
+  if (btn.dataset.src === 'SB')  btn.classList.add('solobasket-active');
+  if (btn.dataset.src === 'WP')  btn.classList.add('wordpress-active');
+  if (btn.dataset.src === 'O')   btn.classList.add('outsiders-active');
+  if (btn.dataset.src === 'UU')  btn.classList.add('upunder-active');
+  if (btn.dataset.src === 'YT')  btn.classList.add('youtube-active');
+  if (btn.dataset.src === 'OTR') btn.classList.add('otros-active');
   activeSrc = btn.dataset.src;
   applyFilters();
-  }
+}
 
  function setPod(btn) {
   activePod = !activePod;
