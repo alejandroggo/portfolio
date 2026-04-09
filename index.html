@@ -145,6 +145,7 @@
   .filter-btn.gigantes-active { background: var(--gigantes); color: white; border-color: var(--gigantes); }
   .filter-btn.nbahouse-active { background: #E03A3A; color: white; border-color: #E03A3A; }
   .filter-btn.video-active { background: #00B4D8; color: white; border-color: #00B4D8; }
+  .filter-btn.texto-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
   .results-count {
     font-size: 0.68rem;
@@ -389,6 +390,7 @@
  <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
     <button class="filter-btn" data-paid="1" onclick="setPaid(this)">💰 De pago</button>
+    <button class="filter-btn" data-txt="1" onclick="setTxt(this)">📝 Texto</button>
     <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
     <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
   </div>
@@ -415,6 +417,7 @@ let activeSrc   = 'all';
 let activePod   = false;
 let activeVid   = false;
 let activePaid  = false;
+let activeTxt   = false;
 let activeTags  = [];
 
 // ── Función para manejar clicks en tags ─────────────────────────
@@ -469,27 +472,49 @@ function setSrc(btn) {
   applyFilters();
   }
 
-  function setPod(btn) {
-    activePod = !activePod;
-    btn.classList.toggle('active', activePod);
-    btn.classList.toggle('podcast-active', activePod);
-    applyFilters();
-  }
-
-  function setVid(btn) {
-    activeVid = !activeVid;
-    btn.classList.toggle('active', activeVid);
-    btn.classList.toggle('video-active', activeVid);
-    applyFilters();
-  }
-
-  function setPaid(btn) {
-  activePaid = !activePaid;
-  btn.classList.toggle('active', activePaid);
-  btn.classList.toggle('paid-active', activePaid);
+ function setPod(btn) {
+  activePod = !activePod;
+  if (activePod) { activeVid = false; activePaid = false; activeTxt = false; }
+  btn.classList.toggle('active', activePod);
+  btn.classList.toggle('podcast-active', activePod);
+  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
   applyFilters();
 }
 
+function setVid(btn) {
+  activeVid = !activeVid;
+  if (activeVid) { activePod = false; activePaid = false; activeTxt = false; }
+  btn.classList.toggle('active', activeVid);
+  btn.classList.toggle('video-active', activeVid);
+  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  applyFilters();
+}
+
+function setPaid(btn) {
+  activePaid = !activePaid;
+  if (activePaid) { activePod = false; activeVid = false; activeTxt = false; }
+  btn.classList.toggle('active', activePaid);
+  btn.classList.toggle('paid-active', activePaid);
+  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  applyFilters();
+}
+
+function setTxt(btn) {
+  activeTxt = !activeTxt;
+  if (activeTxt) { activePod = false; activeVid = false; activePaid = false; }
+  btn.classList.toggle('active', activeTxt);
+  btn.classList.toggle('texto-active', activeTxt);
+  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  applyFilters();
+}
   // ── Badge por medio ────────────────────────────────────────────
   const MEDIOS = {
     R:  { label: 'Relevo',      cls: 'relevo'     },
@@ -521,6 +546,7 @@ function applyFilters() {
     const matchesPod    = !activePod || a.pod === 1;
     const matchesVid = !activeVid || a.vid === 1;
     const matchesPaid = !activePaid || a.p === 1;
+    const matchesTxt = !activeTxt || (!a.pod && !a.vid);
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || 
   (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
   (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
@@ -607,6 +633,8 @@ activeSrc = 'all';
 activePod = false;
 activeVid = false;
 activePaid = false;
+activeTxt = false;
+
 activeTags = [];
 document.getElementById('search').value = '';
 document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
@@ -615,7 +643,8 @@ document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active'
 document.querySelector('[data-src="all"]').classList.add('active');
 document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
 document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));     
+document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
       
 applyFilters();
     })
