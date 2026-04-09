@@ -145,7 +145,7 @@
   .filter-btn.gigantes-active { background: var(--gigantes); color: white; border-color: var(--gigantes); }
   .filter-btn.nbahouse-active { background: #E03A3A; color: white; border-color: #E03A3A; }
   .filter-btn.video-active { background: #00B4D8; color: white; border-color: #00B4D8; }
-  .filter-btn.texto-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filter-btn.texto-active { background: #4CAF50; color: white; border-color: #4CAF50; }
 
   .results-count {
     font-size: 0.68rem;
@@ -550,7 +550,7 @@ function applyFilters() {
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || 
   (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
   (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
-    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesSearch && matchesTags;
+     return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesSearch && matchesTags;
   });
 
   document.getElementById('results-count').textContent =
