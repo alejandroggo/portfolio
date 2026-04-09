@@ -5,6 +5,14 @@
     "d": "2026-04-08",
     "y": 2026,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "El DESASTRE de los LAKERS por las LESIONES",
+    "u": "https://www.youtube.com/watch?v=c6PSE-li6mg",
+    "d": "2026-04-08",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "sub": "En una sola noche Los Angeles Lakers vieron cómo su temporada se acababa. Primero la lesión de Luka Doncic y más tarde la de Austin Reaves. Dos bajas que dejan a LeBron James solo a las puertas de los Playoffs. ",
     "vid": 1,
@@ -18,9 +26,37 @@
     "d": "2026-04-01",
     "y": 2026,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "LOS JUGADORES OLVIDADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=sxSIVpAjG_0",
+    "d": "2026-04-01",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "sub": "Una temporada NBA da para mucho y el foco suele estar en las grandes estrellas. ¿Pero qué pasa con todos esos jugadores que han rendido bien pero han pasado por debajo del radar?",
     "vid": 1
+  },
+  {
+    "t": "#198 La expansión de la NBA: entre el dinero y el producto",
+    "u": "https://alejandroggo.substack.com/p/198-la-expansion-de-la-nba-entre",
+    "d": "2026-03-25",
+    "y": 2026,
+    "s": "S",
+    "sub": "La NBA se acerca a las 32 franquicias, pero el debate real no está en Seattle ni en Las Vegas, sino en el momento elegido y por qué ha tardado tanto en llegar.",
+    "p": 1,
+    "tags": [
+      "Expansión"
+    ]
+  },
+  {
+    "t": "CÓMO EVITAR QUE OKC THUNDER VUELVA A SER CAMPEÓN NBA",
+    "u": "https://www.youtube.com/watch?v=ZAZHjGtg3uo",
+    "d": "2026-03-25",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "CÓMO EVITAR QUE OKC THUNDER VUELVA A SER CAMPEÓN NBA",
@@ -32,13 +68,25 @@
     "vid": 1
   },
   {
-    "t": "#198 La expansión de la NBA: entre el dinero y el producto",
-    "u": "https://alejandroggo.substack.com/p/198-la-expansion-de-la-nba-entre",
-    "d": "2026-03-25",
+    "t": "#197 Jordi Fernández: el éxito español que la prensa no ha sabido contar",
+    "u": "https://alejandroggo.substack.com/p/197-jordi-fernandez-el-exito-espanol",
+    "d": "2026-03-18",
     "y": 2026,
     "s": "S",
-    "sub": "La NBA se acerca a las 32 franquicias, pero el debate real no está en Seattle ni en Las Vegas, sino en el momento elegido y por qué ha tardado tanto en llegar.",
+    "sub": "El primer entrenador español en la NBA rompe barreras históricas mientras en casa seguimos sin dimensionar lo que significa. Lo que evidencia las carencias del relato mediático en el periodismo.",
     "p": 1,
+    "tags": [
+      "Periodismo",
+      "Jordi Fernández"
+    ]
+  },
+  {
+    "t": "LA EXPANSIÓN EN LA NBA EXPLICADA",
+    "u": "https://www.youtube.com/watch?v=LFALRHFr0d4",
+    "d": "2026-03-18",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
     "tags": [
       "Expansión"
     ]
@@ -56,37 +104,12 @@
     ]
   },
   {
-    "t": "#197 Jordi Fernández: el éxito español que la prensa no ha sabido contar",
-    "u": "https://alejandroggo.substack.com/p/197-jordi-fernandez-el-exito-espanol",
-    "d": "2026-03-18",
-    "y": 2026,
-    "s": "S",
-    "sub": "El primer entrenador español en la NBA rompe barreras históricas mientras en casa seguimos sin dimensionar lo que significa. Lo que evidencia las carencias del relato mediático en el periodismo.",
-    "p": 1,
-    "tags": [
-      "Periodismo",
-      "Jordi Fernández"
-    ]
-  },
-  {
     "t": "#196 ¿Por qué no podemos hablar bien de la NBA? Porque somos unos haters",
     "u": "https://alejandroggo.substack.com/p/odiamos-la-nba",
     "d": "2026-03-15",
     "y": 2026,
     "s": "S",
     "sub": "Los 83 puntos de Bam Adebayo nos parecieron mal. El récord de Shai también lo hemos criticado y el tema más importante es criticar el tanking.",
-    "tags": [
-      "Opinión"
-    ]
-  },
-  {
-    "t": "LEBRON, EDWARDS Y LOS MÁS SOBREVALORADOS DE LA NBA",
-    "u": "https://www.youtube.com/watch?v=Z0F9VUPd_xQ",
-    "d": "2026-03-11",
-    "y": 2026,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1,
     "tags": [
       "Opinión"
     ]
@@ -104,6 +127,26 @@
     ]
   },
   {
+    "t": "LEBRON, EDWARDS Y LOS MÁS SOBREVALORADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=Z0F9VUPd_xQ",
+    "d": "2026-03-11",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "LEBRON, EDWARDS Y LOS MÁS SOBREVALORADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=Z0F9VUPd_xQ",
+    "d": "2026-03-11",
+    "y": 2026,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1,
+    "tags": [
+      "Opinión"
+    ]
+  },
+  {
     "t": "¿Qué equipo de fútbol es cada franquicia NBA? (parte II)",
     "u": "https://alejandroggo.substack.com/p/nba-equipo-futbol-2",
     "d": "2026-03-05",
@@ -112,6 +155,17 @@
     "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Liverpool o se parece más a Algeciras. Hoy vuelvo para responder esa duda, otra vez, sí.",
     "tags": [
       "Memes"
+    ]
+  },
+  {
+    "t": "HUGO GONZÁLEZ ES MEJOR DE LO QUE LA NBA CREÍA",
+    "u": "https://www.youtube.com/watch?v=4m_9AIyl1xc",
+    "d": "2026-03-04",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
+    "tags": [
+      "Hugo González"
     ]
   },
   {
@@ -165,18 +219,6 @@
     ]
   },
   {
-    "t": "Por esto FRACASARÁN en los NBA PLAYOFFS ❌",
-    "u": "https://www.youtube.com/watch?v=ziMT64G2f1A",
-    "d": "2026-02-23",
-    "y": 2026,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1,
-    "tags": [
-      "Predicciones"
-    ]
-  },
-  {
     "t": "HISTORIA NBA | La década de los 80: Larry, Magic y David",
     "u": "https://alejandroggo.substack.com/p/historia-nba-los-80",
     "d": "2026-02-23",
@@ -186,6 +228,26 @@
     "p": 1,
     "tags": [
       "Historia"
+    ]
+  },
+  {
+    "t": "Por esto FRACASARÁN en los NBA PLAYOFFS ❌",
+    "u": "https://www.youtube.com/watch?v=ziMT64G2f1A",
+    "d": "2026-02-23",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "Por esto FRACASARÁN en los NBA PLAYOFFS ❌",
+    "u": "https://www.youtube.com/watch?v=ziMT64G2f1A",
+    "d": "2026-02-23",
+    "y": 2026,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1,
+    "tags": [
+      "Predicciones"
     ]
   },
   {
@@ -232,6 +294,18 @@
     "d": "2026-02-14",
     "y": 2026,
     "s": "G",
+    "pod": 1,
+    "tags": [
+      "Celtics",
+      "Historia"
+    ]
+  },
+  {
+    "t": "¿VUELVE TATUM? ¿PISTONS CAMPEONES? HISTORIAS POST ALL-STAR",
+    "u": "https://www.youtube.com/watch?v=5AaX5EaGAuQ",
+    "d": "2026-02-14",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
@@ -251,6 +325,17 @@
     ]
   },
   {
+    "t": "¿Qué equipo de fútbol es cada franquicia NBA? (parte I)",
+    "u": "https://alejandroggo.substack.com/p/nba-equipo-futbol",
+    "d": "2026-02-11",
+    "y": 2026,
+    "s": "S",
+    "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Real Madrid o se parece más a West Bromwich Albion. Hoy vengo a responder esa duda.",
+    "tags": [
+      "Memes"
+    ]
+  },
+  {
     "t": "Nacho Losilla | LAS NOTAS DE CADA EQUIPO TRAS EL DEADLINE CON ALEJANDRO GAITÁN",
     "u": "https://www.youtube.com/watch?v=tfYBFC2N0Ck",
     "d": "2026-02-11",
@@ -265,21 +350,18 @@
     "d": "2026-02-11",
     "y": 2026,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "NO VAN A IR AL NBA ALL-STAR GAME",
+    "u": "https://www.youtube.com/watch?v=u6DIoEnApgw",
+    "d": "2026-02-11",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1,
     "tags": [
       "Predicciones"
-    ]
-  },
-  {
-    "t": "¿Qué equipo de fútbol es cada franquicia NBA? (parte I)",
-    "u": "https://alejandroggo.substack.com/p/nba-equipo-futbol",
-    "d": "2026-02-11",
-    "y": 2026,
-    "s": "S",
-    "sub": "Todos nos hemos preguntado alguna vez si nuestro equipo realmente es el Real Madrid o se parece más a West Bromwich Albion. Hoy vengo a responder esa duda.",
-    "tags": [
-      "Memes"
     ]
   },
   {
@@ -308,18 +390,6 @@
     ]
   },
   {
-    "t": "LOS NOMBRES A SEGUIR EN EL TRADE DEADLINE",
-    "u": "https://www.youtube.com/watch?v=XByhq_9oT_Y",
-    "d": "2026-02-04",
-    "y": 2026,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1,
-    "tags": [
-      "Análisis"
-    ]
-  },
-  {
     "t": "#192 ¿Qué ha pasado en la NBA? Harden, Jaren Jackson, Vucevic y quedan 36 horas todavía",
     "u": "https://alejandroggo.substack.com/p/192-que-ha-pasado-en-la-nba-harden",
     "d": "2026-02-04",
@@ -327,6 +397,29 @@
     "s": "S",
     "sub": "Cuando parecía que no iba a pasar nada, pasaron cosas. Algunas muy importantes, como el traspaso de James Harden o el inicio del tanking de los Grizzlies.",
     "p": 1,
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
+    "t": "LOS NOMBRES A SEGUIR EN EL TRADE DEADLINE",
+    "u": "https://www.youtube.com/watch?v=XByhq_9oT_Y",
+    "d": "2026-02-04",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
+    "t": "LOS NOMBRES A SEGUIR EN EL TRADE DEADLINE",
+    "u": "https://www.youtube.com/watch?v=XByhq_9oT_Y",
+    "d": "2026-02-04",
+    "y": 2026,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1,
     "tags": [
       "Análisis"
     ]
@@ -344,15 +437,6 @@
     ]
   },
   {
-    "t": "Charla NBA con Alejandro Gaitán | BASKET 365",
-    "u": "https://www.youtube.com/watch?v=NBr4LUJ5HnU",
-    "d": "2026-01-29",
-    "y": 2026,
-    "s": "OTR",
-    "sub": "Charla NBA con Alejandro Gaitán\r",
-    "vid": 1
-  },
-  {
     "t": "#190 LeBron James se quiere despedir sin decir adiós",
     "u": "https://alejandroggo.substack.com/p/lebron-james-despedir-adios",
     "d": "2026-01-29",
@@ -361,16 +445,13 @@
     "sub": "Cada día hay más pistas para pensar que la retirada de LeBron James. Y la noche de Cleveland es quizá la más clara de todas."
   },
   {
-    "t": "ESTOS EQUIPOS NBA NECESITAN UN TRASPASO EN EL TRADE DEADLINE",
-    "u": "https://www.youtube.com/watch?v=jVlr_rvpm68",
-    "d": "2026-01-28",
+    "t": "Charla NBA con Alejandro Gaitán | BASKET 365",
+    "u": "https://www.youtube.com/watch?v=NBr4LUJ5HnU",
+    "d": "2026-01-29",
     "y": 2026,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1,
-    "tags": [
-      "Análisis"
-    ]
+    "s": "OTR",
+    "sub": "Charla NBA con Alejandro Gaitán\r",
+    "vid": 1
   },
   {
     "t": "#189 El dilema moral de ser billonario en la NBA",
@@ -382,6 +463,29 @@
     "p": 1,
     "tags": [
       "Opinión"
+    ]
+  },
+  {
+    "t": "ESTOS EQUIPOS NBA NECESITAN UN TRASPASO EN EL TRADE DEADLINE",
+    "u": "https://www.youtube.com/watch?v=jVlr_rvpm68",
+    "d": "2026-01-28",
+    "y": 2026,
+    "s": "G",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
+    "t": "ESTOS EQUIPOS NBA NECESITAN UN TRASPASO EN EL TRADE DEADLINE",
+    "u": "https://www.youtube.com/watch?v=jVlr_rvpm68",
+    "d": "2026-01-28",
+    "y": 2026,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1,
+    "tags": [
+      "Análisis"
     ]
   },
   {
@@ -414,22 +518,21 @@
     "d": "2026-01-21",
     "y": 2026,
     "s": "G",
-    "s2": "NH",
-    "vid": 1,
+    "pod": 1,
     "tags": [
       "Pronósticos"
     ]
   },
   {
-    "t": "TODO LO QUE SE SABE DE LA NBA EN EUROPA\r",
-    "u": "https://www.youtube.com/watch?v=fTb2tP_zqGw&t=738s",
-    "d": "2026-01-20",
+    "t": "NUESTROS PREMIOS NBA HASTA AHORA",
+    "u": "https://www.youtube.com/watch?v=3-mB_BBFb90",
+    "d": "2026-01-21",
     "y": 2026,
     "s": "G",
-    "sub": "La NBA desembarcará en Europa, es una realidad. La entidad estadounidense ha dado pasos hacia adelante para definir cómo será la competición, qué equipos habrá, cómo se financiará y cuáles son sus objetivos.\r",
+    "s2": "NH",
     "vid": 1,
     "tags": [
-      "NBA Europa"
+      "Pronósticos"
     ]
   },
   {
@@ -447,6 +550,18 @@
     ]
   },
   {
+    "t": "TODO LO QUE SE SABE DE LA NBA EN EUROPA\r",
+    "u": "https://www.youtube.com/watch?v=fTb2tP_zqGw&t=738s",
+    "d": "2026-01-20",
+    "y": 2026,
+    "s": "G",
+    "sub": "La NBA desembarcará en Europa, es una realidad. La entidad estadounidense ha dado pasos hacia adelante para definir cómo será la competición, qué equipos habrá, cómo se financiará y cuáles son sus objetivos.\r",
+    "vid": 1,
+    "tags": [
+      "NBA Europa"
+    ]
+  },
+  {
     "t": "#185 La NBA no viene a Europa por baloncesto, viene a por dinero",
     "u": "https://alejandroggo.substack.com/p/la-nba-no-viene-a-europa-por-baloncesto",
     "d": "2026-01-17",
@@ -459,15 +574,6 @@
     ]
   },
   {
-    "t": "LAS NOTAS DE LOS FAVORITOS AL ANILLO NBA",
-    "u": "https://www.youtube.com/watch?v=C5tA28MU9wc",
-    "d": "2026-01-14",
-    "y": 2026,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1
-  },
-  {
     "t": "#184 Por qué toca mover a Jaylen Brown (aunque odie hacerlo)",
     "u": "https://alejandroggo.substack.com/p/184-por-que-toca-mover-a-jaylen-brown",
     "d": "2026-01-14",
@@ -477,6 +583,23 @@
     "tags": [
       "Celtics"
     ]
+  },
+  {
+    "t": "LAS NOTAS DE LOS FAVORITOS AL ANILLO NBA",
+    "u": "https://www.youtube.com/watch?v=C5tA28MU9wc",
+    "d": "2026-01-14",
+    "y": 2026,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "LAS NOTAS DE LOS FAVORITOS AL ANILLO NBA",
+    "u": "https://www.youtube.com/watch?v=C5tA28MU9wc",
+    "d": "2026-01-14",
+    "y": 2026,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1
   },
   {
     "t": "#183 La realidad de Jaylen Brown: entre MVP y moneda de cambio",
@@ -508,6 +631,14 @@
     "d": "2026-01-07",
     "y": 2026,
     "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "JUGADORES Y EQUIPOS MÁS INFRAVALORADOS DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=fkQJ0xUregI",
+    "d": "2026-01-07",
+    "y": 2026,
+    "s": "G",
     "s2": "NH",
     "vid": 1
   },
@@ -532,6 +663,22 @@
     "sub": "Querido Adam Silver: estas son mis condiciones para 2026. Si lo consigues, la NBA será un lugar mucho mejor."
   },
   {
+    "t": "#179 Los 10 jugadores protagonistas de la NBA en 2025: Shai, Doncic, Haliburton... ",
+    "u": "https://alejandroggo.substack.com/p/179-los-10-jugadores-protagonistas",
+    "d": "2025-12-31",
+    "y": 2025,
+    "s": "S",
+    "p": 1
+  },
+  {
+    "t": "LOS 12 NOMBRES NBA MÁS IMPORTANTES DE 2025",
+    "u": "https://www.youtube.com/watch?v=gp2t7lTUMYg",
+    "d": "2025-12-31",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
     "t": "LOS 12 NOMBRES NBA MÁS IMPORTANTES DE 2025",
     "u": "https://www.youtube.com/watch?v=gp2t7lTUMYg",
     "d": "2025-12-31",
@@ -539,14 +686,6 @@
     "s": "G",
     "s2": "NH",
     "vid": 1
-  },
-  {
-    "t": "#179 Los 10 jugadores protagonistas de la NBA en 2025: Shai, Doncic, Haliburton... ",
-    "u": "https://alejandroggo.substack.com/p/179-los-10-jugadores-protagonistas",
-    "d": "2025-12-31",
-    "y": 2025,
-    "s": "S",
-    "p": 1
   },
   {
     "t": "#178 Golden State Warriors y la falacia competitiva de Steph Curry",
@@ -571,15 +710,6 @@
     ]
   },
   {
-    "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
-    "u": "https://www.youtube.com/watch?v=G5ivzeVgUMc",
-    "d": "2025-12-23",
-    "y": 2025,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1
-  },
-  {
     "t": "#176 La realidad de un periodista internacional cubriendo la NBA",
     "u": "https://alejandroggo.substack.com/p/realidad-periodista-nba",
     "d": "2025-12-23",
@@ -590,6 +720,23 @@
       "Periodismo",
       "Historia"
     ]
+  },
+  {
+    "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
+    "u": "https://www.youtube.com/watch?v=G5ivzeVgUMc",
+    "d": "2025-12-23",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
+    "u": "https://www.youtube.com/watch?v=G5ivzeVgUMc",
+    "d": "2025-12-23",
+    "y": 2025,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1
   },
   {
     "t": "#175 Mis 24 All Stars a día de hoy: quiénes y por qué (y LeBron James)",
@@ -604,6 +751,23 @@
     ]
   },
   {
+    "t": "#174 Se abre el mercado NBA: ¿qué sabemos? 10 nombres clave + Tabla de mercado ",
+    "u": "https://alejandroggo.substack.com/p/174-se-abre-el-mercado-nba-que-sabemos",
+    "d": "2025-12-17",
+    "y": 2025,
+    "s": "S",
+    "sub": "Enhorabuena a los New York Knicks, que o bien han ganado la Copa NBA, o se han asegurado un billete para las finales de la NBA al perderla.",
+    "p": 1
+  },
+  {
+    "t": "¿SALDRÁ GIANNIS? ¿DESTINO DE DAVIS? ARRANCA EL MERCADO DE TRASPASOS",
+    "u": "https://www.youtube.com/watch?v=ZuaHOmKCo5c",
+    "d": "2025-12-17",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
     "t": "¿SALDRÁ GIANNIS? ¿DESTINO DE DAVIS? ARRANCA EL MERCADO DE TRASPASOS",
     "u": "https://www.youtube.com/watch?v=ZuaHOmKCo5c",
     "d": "2025-12-17",
@@ -616,15 +780,6 @@
     ]
   },
   {
-    "t": "#174 Se abre el mercado NBA: ¿qué sabemos? 10 nombres clave + Tabla de mercado ",
-    "u": "https://alejandroggo.substack.com/p/174-se-abre-el-mercado-nba-que-sabemos",
-    "d": "2025-12-17",
-    "y": 2025,
-    "s": "S",
-    "sub": "Enhorabuena a los New York Knicks, que o bien han ganado la Copa NBA, o se han asegurado un billete para las finales de la NBA al perderla.",
-    "p": 1
-  },
-  {
     "t": "#173 Popurrí NBA: Wembanyama, los Knicks y la vuelta de Tatum",
     "u": "https://alejandroggo.substack.com/p/173-popurri-nba-wembanyama-los-knicks",
     "d": "2025-12-15",
@@ -632,6 +787,26 @@
     "s": "S",
     "sub": "Aunque este año me haya emocionado menos, la Copa NBA sigue molando mucho. Pero sabéis qué molaría más: que volviera Jayson Tatum pronto.",
     "p": 1,
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
+    "t": "#172 Por qué tu equipo no debería traspasar por Giannis ",
+    "u": "https://alejandroggo.substack.com/p/172-por-que-tu-equipo-no-deberia",
+    "d": "2025-12-10",
+    "y": 2025,
+    "s": "S",
+    "sub": "Y qué cinco equipos sí deberían hacer una oferta para ser los máximos favoritos en la conferencia Este.",
+    "p": 1
+  },
+  {
+    "t": "JOE MAZZULLA TIENE UN PLAN CON BOSTON CELTICS",
+    "u": "https://www.youtube.com/watch?v=zWzfjKXZLxA",
+    "d": "2025-12-10",
+    "y": 2025,
+    "s": "G",
+    "pod": 1,
     "tags": [
       "Celtics"
     ]
@@ -647,15 +822,6 @@
     "tags": [
       "Celtics"
     ]
-  },
-  {
-    "t": "#172 Por qué tu equipo no debería traspasar por Giannis ",
-    "u": "https://alejandroggo.substack.com/p/172-por-que-tu-equipo-no-deberia",
-    "d": "2025-12-10",
-    "y": 2025,
-    "s": "S",
-    "sub": "Y qué cinco equipos sí deberían hacer una oferta para ser los máximos favoritos en la conferencia Este.",
-    "p": 1
   },
   {
     "t": "#171 ENTREVISTA | Hugo González: \"Defender a la estrella rival no es nuevo para mí\" ",
@@ -684,15 +850,6 @@
     ]
   },
   {
-    "t": "¿ES REAL EL NIVEL DE LOS LAKERS DE DONCIC?",
-    "u": "https://www.youtube.com/watch?v=_ekqJuEJjus",
-    "d": "2025-12-03",
-    "y": 2025,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1
-  },
-  {
     "t": "#169 Las notas de DAZN y Amazon Prime: respuestas a la encuesta de la NBA en televisión",
     "u": "https://alejandroggo.substack.com/p/dazn-prime-nba-notas",
     "d": "2025-12-03",
@@ -703,6 +860,23 @@
       "TV y derechos",
       "Opinión"
     ]
+  },
+  {
+    "t": "¿ES REAL EL NIVEL DE LOS LAKERS DE DONCIC?",
+    "u": "https://www.youtube.com/watch?v=_ekqJuEJjus",
+    "d": "2025-12-03",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "¿ES REAL EL NIVEL DE LOS LAKERS DE DONCIC?",
+    "u": "https://www.youtube.com/watch?v=_ekqJuEJjus",
+    "d": "2025-12-03",
+    "y": 2025,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1
   },
   {
     "t": "#168 Premios NBA tras un cuarto de temporada: ¿Jokic o Shai? ¿Flagg ROY? ",
@@ -727,15 +901,6 @@
     "p": 1
   },
   {
-    "t": "POR QUÉ HAY UNA PLAGA DE LESIONES EN LA NBA",
-    "u": "https://www.youtube.com/watch?v=Oeaq6jHU0_8",
-    "d": "2025-11-26",
-    "y": 2025,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1
-  },
-  {
     "t": "#166 La crisis de las lesiones en la NBA (II): ¿es posible reducir el calendario?",
     "u": "https://alejandroggo.substack.com/p/crisis-lesiones-parte-2",
     "d": "2025-11-26",
@@ -743,6 +908,23 @@
     "s": "S",
     "sub": "¿Es momento de que dejemos de lado los 82 partidos? La NBA entre tradición, dinero y la salud de los jugadores.",
     "p": 1
+  },
+  {
+    "t": "POR QUÉ HAY UNA PLAGA DE LESIONES EN LA NBA",
+    "u": "https://www.youtube.com/watch?v=Oeaq6jHU0_8",
+    "d": "2025-11-26",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "POR QUÉ HAY UNA PLAGA DE LESIONES EN LA NBA",
+    "u": "https://www.youtube.com/watch?v=Oeaq6jHU0_8",
+    "d": "2025-11-26",
+    "y": 2025,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1
   },
   {
     "t": "#165 La crisis de las lesiones en la NBA (I): ¿cómo solucionamos el problema? ",
@@ -765,6 +947,23 @@
     "p": 1
   },
   {
+    "t": "#163 Oklahoma City Thunder y la normalización de la excelencia histórica",
+    "u": "https://alejandroggo.substack.com/p/oklahoma-city-thunder-excelencia",
+    "d": "2025-11-19",
+    "y": 2025,
+    "s": "S",
+    "sub": "¿Por qué no estamos hablando más del campeón que ha empezado la temporada incluso mejor que el año pasado? Porque no interesa, no vende.",
+    "p": 1
+  },
+  {
+    "t": "ATLANTA HAWKS NO NECESITAN A TRAE YOUNG",
+    "u": "https://www.youtube.com/watch?v=kkk7l8Ajcf0",
+    "d": "2025-11-19",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
     "t": "ATLANTA HAWKS NO NECESITAN A TRAE YOUNG",
     "u": "https://www.youtube.com/watch?v=kkk7l8Ajcf0",
     "d": "2025-11-19",
@@ -775,15 +974,6 @@
     "tags": [
       "Opinión"
     ]
-  },
-  {
-    "t": "#163 Oklahoma City Thunder y la normalización de la excelencia histórica",
-    "u": "https://alejandroggo.substack.com/p/oklahoma-city-thunder-excelencia",
-    "d": "2025-11-19",
-    "y": 2025,
-    "s": "S",
-    "sub": "¿Por qué no estamos hablando más del campeón que ha empezado la temporada incluso mejor que el año pasado? Porque no interesa, no vende.",
-    "p": 1
   },
   {
     "t": "#162 La paradoja de los Lakers: ganando por encima de sus posibilidades",
@@ -815,6 +1005,17 @@
     "sub": "Dallas puede mover al interior, y le dejo al nuevo general manager algunas ideas. Las hay malas, muy malas o directamente horribles, y una buena.",
     "tags": [
       "Opinión"
+    ]
+  },
+  {
+    "t": "CUNNINGHAM HACE A LOS PISTONS, ¿CANDIDATOS?",
+    "u": "https://www.youtube.com/watch?v=gLdruWUdaEw",
+    "d": "2025-11-12",
+    "y": 2025,
+    "s": "G",
+    "pod": 1,
+    "tags": [
+      "Estadística"
     ]
   },
   {
@@ -867,15 +1068,6 @@
     ]
   },
   {
-    "t": "EL ASCENSO DE LAKERS Y DRAMA EN PELICANS Y GRIZZLIES",
-    "u": "https://www.youtube.com/watch?v=lNYD92ibU-w",
-    "d": "2025-11-05",
-    "y": 2025,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1
-  },
-  {
     "t": "#156 Memphis ya no baila al ritmo de Ja Morant",
     "u": "https://alejandroggo.substack.com/p/ja-morant-memphis-ruptura",
     "d": "2025-11-05",
@@ -883,6 +1075,23 @@
     "s": "S",
     "sub": "Memphis ha tomado partido en una guerra silenciosa que llevaba meses gestándose. Ja Morant ya no es intocable, y su talento empieza a perder la batalla contra su propio personaje.",
     "p": 1
+  },
+  {
+    "t": "EL ASCENSO DE LAKERS Y DRAMA EN PELICANS Y GRIZZLIES",
+    "u": "https://www.youtube.com/watch?v=lNYD92ibU-w",
+    "d": "2025-11-05",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
+  },
+  {
+    "t": "EL ASCENSO DE LAKERS Y DRAMA EN PELICANS Y GRIZZLIES",
+    "u": "https://www.youtube.com/watch?v=lNYD92ibU-w",
+    "d": "2025-11-05",
+    "y": 2025,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1
   },
   {
     "t": "#155 Sobre madurez, periodismo, entretenimiento y un grupo de what's app",
@@ -903,6 +1112,14 @@
     "s": "S",
     "sub": "Porque la NBA es la mejor liga del mundo y hemos de disfrutar a los 30 equipos, aunque no sea por igual. Sí, incluso los Jazz.",
     "p": 1
+  },
+  {
+    "t": "LO MEJOR Y LO PEOR DEL INICIO DE LA NBA",
+    "u": "https://www.youtube.com/watch?v=IYdxU4vfFjo",
+    "d": "2025-10-29",
+    "y": 2025,
+    "s": "G",
+    "pod": 1
   },
   {
     "t": "LO MEJOR Y LO PEOR DEL INICIO DE LA NBA",
@@ -1053,6 +1270,15 @@
     ]
   },
   {
+    "t": "#143 ¿Por qué los Mavs deberían reventar el proyecto? ",
+    "u": "https://alejandroggo.substack.com/p/mavs-tanking-cooper-flagg",
+    "d": "2025-10-01",
+    "y": 2025,
+    "s": "S",
+    "sub": "Una vez movieron a Luka Doncic, Dallas dejó de poder luchar por el anillo. Si quieren volver a hacerlo, alrededor de Flagg, tienen que empezar a reconstruir antes de que sea muy tarde.",
+    "p": 1
+  },
+  {
     "t": "LOS BOSTON CELTICS TIENEN ALGO QUE DEMOSTRAR A LA NBA\r",
     "u": "https://www.youtube.com/watch?v=IsltqcdwRDw&t=709s",
     "d": "2025-10-01",
@@ -1063,15 +1289,6 @@
     "tags": [
       "Celtics"
     ]
-  },
-  {
-    "t": "#143 ¿Por qué los Mavs deberían reventar el proyecto? ",
-    "u": "https://alejandroggo.substack.com/p/mavs-tanking-cooper-flagg",
-    "d": "2025-10-01",
-    "y": 2025,
-    "s": "S",
-    "sub": "Una vez movieron a Luka Doncic, Dallas dejó de poder luchar por el anillo. Si quieren volver a hacerlo, alrededor de Flagg, tienen que empezar a reconstruir antes de que sea muy tarde.",
-    "p": 1
   },
   {
     "t": "#142 Horford, Embiid y las lesiones como mayor enemigo de la NBA",
@@ -1947,6 +2164,17 @@
     "p": 1
   },
   {
+    "t": "#74 Sobre audiencias: un diagnóstico del entorno de la NBA, causas y contexto de una crisis que no existe",
+    "u": "https://alejandroggo.substack.com/p/74-sobre-audiencias-un-diagnostico",
+    "d": "2024-12-18",
+    "y": 2024,
+    "s": "S",
+    "sub": "A la hora de hablar de la bajada de audiencia se habla de los triples. Pero nunca del factor sociocultural, la crisis económica o el acceso a la televisión por cable.",
+    "tags": [
+      "TV y derechos"
+    ]
+  },
+  {
     "t": "Milwaukee Bucks se proclaman campeones de la Copa NBA con una exhibición de Giannis Antetokounmpo",
     "u": "https://www.relevo.com/baloncesto/nba/milwaukee-bucks-proclama-campeon-copa-20241216053108-nt.html",
     "d": "2024-12-18",
@@ -1961,17 +2189,6 @@
     "s": "R",
     "tags": [
       "Estadística"
-    ]
-  },
-  {
-    "t": "#74 Sobre audiencias: un diagnóstico del entorno de la NBA, causas y contexto de una crisis que no existe",
-    "u": "https://alejandroggo.substack.com/p/74-sobre-audiencias-un-diagnostico",
-    "d": "2024-12-18",
-    "y": 2024,
-    "s": "S",
-    "sub": "A la hora de hablar de la bajada de audiencia se habla de los triples. Pero nunca del factor sociocultural, la crisis económica o el acceso a la televisión por cable.",
-    "tags": [
-      "TV y derechos"
     ]
   },
   {
@@ -2047,15 +2264,14 @@
     "s": "R"
   },
   {
-    "t": "LOS KNICKS SON UN PELIGRO PARA LA NBA\r",
-    "u": "https://www.youtube.com/watch?v=iH0s2NJCQzE&t=127s",
+    "t": "#73 Sobre dilemas, legados, leyendas y decisiones ",
+    "u": "https://alejandroggo.substack.com/p/sobre-lebron-curry-durant-dilemas",
     "d": "2024-12-11",
     "y": 2024,
-    "s": "G",
-    "sub": "Los Knicks realizaron uno de los movimientos más complejos de todos los tiempos en la historia de la NBA. Una operacion para hacerse con Karl Anthony Towns y rematar una alineacion que antes ya se habia hecho con Mikal Bridges\r",
-    "vid": 1,
+    "s": "S",
+    "sub": "LeBron cumple 40 en dos semanas. Kevin Durant juega un partido cada tres. Y Steph Curry es humano, aunque no lo parezca.",
     "tags": [
-      "Historia"
+      "Opinión"
     ]
   },
   {
@@ -2076,14 +2292,15 @@
     "s": "R"
   },
   {
-    "t": "#73 Sobre dilemas, legados, leyendas y decisiones ",
-    "u": "https://alejandroggo.substack.com/p/sobre-lebron-curry-durant-dilemas",
+    "t": "LOS KNICKS SON UN PELIGRO PARA LA NBA\r",
+    "u": "https://www.youtube.com/watch?v=iH0s2NJCQzE&t=127s",
     "d": "2024-12-11",
     "y": 2024,
-    "s": "S",
-    "sub": "LeBron cumple 40 en dos semanas. Kevin Durant juega un partido cada tres. Y Steph Curry es humano, aunque no lo parezca.",
+    "s": "G",
+    "sub": "Los Knicks realizaron uno de los movimientos más complejos de todos los tiempos en la historia de la NBA. Una operacion para hacerse con Karl Anthony Towns y rematar una alineacion que antes ya se habia hecho con Mikal Bridges\r",
+    "vid": 1,
     "tags": [
-      "Opinión"
+      "Historia"
     ]
   },
   {
@@ -2108,6 +2325,15 @@
     "s": "R"
   },
   {
+    "t": "Tres Cosas Que Me Han Gustado #4: interiores que no lo son y JJ Redick, ¿estás bien? ",
+    "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-4",
+    "d": "2024-12-09",
+    "y": 2024,
+    "s": "S",
+    "sub": "Wemby es un interior que juega por fuera. Towns es el mejor tirador entre hombres altos, pero ahora juega por dentro. ¿El mundo al revés?",
+    "p": 1
+  },
+  {
     "t": "A los Nets de Jordi Fernández se les olvida defender: «Si no juegan duro, no tendrán lugar en la plantilla»",
     "u": "https://www.relevo.com/baloncesto/nba/nets-jordi-fernandez-olvida-defender-20241209002910-nt.html",
     "d": "2024-12-09",
@@ -2123,15 +2349,6 @@
     "d": "2024-12-09",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "Tres Cosas Que Me Han Gustado #4: interiores que no lo son y JJ Redick, ¿estás bien? ",
-    "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-4",
-    "d": "2024-12-09",
-    "y": 2024,
-    "s": "S",
-    "sub": "Wemby es un interior que juega por fuera. Towns es el mejor tirador entre hombres altos, pero ahora juega por dentro. ¿El mundo al revés?",
-    "p": 1
   },
   {
     "t": "El peor equipo de la historia tumba a Denver y los 56 puntos de Nikola Jokic",
@@ -2189,6 +2406,17 @@
     "s": "R"
   },
   {
+    "t": "#72 La Copa mola mucho... y podría ser todavía mejor",
+    "u": "https://alejandroggo.substack.com/p/copa-mola-mucho-podria-ser-mejor",
+    "d": "2024-12-04",
+    "y": 2024,
+    "s": "S",
+    "sub": "Un martes de diciembre, todo Boston estaba pendiente de los resultados en New York y Detroit. Normal no es.",
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
     "t": "Santi Aldama, testigo de excepción de la última heroicidad de Luka Doncic: remonta 15 puntos en el último cuarto",
     "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-quiere-copa-remontaron-20241203070653-nt.html",
     "d": "2024-12-04",
@@ -2206,17 +2434,6 @@
     "s": "R"
   },
   {
-    "t": "#72 La Copa mola mucho... y podría ser todavía mejor",
-    "u": "https://alejandroggo.substack.com/p/copa-mola-mucho-podria-ser-mejor",
-    "d": "2024-12-04",
-    "y": 2024,
-    "s": "S",
-    "sub": "Un martes de diciembre, todo Boston estaba pendiente de los resultados en New York y Detroit. Normal no es.",
-    "tags": [
-      "Celtics"
-    ]
-  },
-  {
     "t": "Se acaba la luna de miel de los Lakers, LeBron James y JJ Redick: «No sé si son los mejores intereses para él y para nosotros si lo hace»",
     "u": "https://www.relevo.com/baloncesto/nba/acaba-luna-miel-redick-paliza-20241201045650-nt.html",
     "d": "2024-12-03",
@@ -2231,6 +2448,18 @@
     "s": "R",
     "tags": [
       "TV y derechos"
+    ]
+  },
+  {
+    "t": "Power Ranking #3: ¿Es Kevin Durant tan diferencial en 2025? ",
+    "u": "https://alejandroggo.substack.com/p/power-ranking-3-es-kevin-durant-tan",
+    "d": "2024-12-02",
+    "y": 2024,
+    "s": "S",
+    "sub": "Bienvenidos a los Power Rankings de la newsletter. Bienvenidos a la confirmación de que Kevin Durant es todavía top-tier estrellas NBA.",
+    "p": 1,
+    "tags": [
+      "Rankings"
     ]
   },
   {
@@ -2259,18 +2488,6 @@
     "d": "2024-12-02",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "Power Ranking #3: ¿Es Kevin Durant tan diferencial en 2025? ",
-    "u": "https://alejandroggo.substack.com/p/power-ranking-3-es-kevin-durant-tan",
-    "d": "2024-12-02",
-    "y": 2024,
-    "s": "S",
-    "sub": "Bienvenidos a los Power Rankings de la newsletter. Bienvenidos a la confirmación de que Kevin Durant es todavía top-tier estrellas NBA.",
-    "p": 1,
-    "tags": [
-      "Rankings"
-    ]
   },
   {
     "t": "Durant y Booker alargan la mala racha de los Warriors y aprietan todavía más el Oeste",
@@ -2304,20 +2521,20 @@
     ]
   },
   {
-    "t": "#71 Sobre acciones, gracias, y un pavo que no es",
-    "u": "https://alejandroggo.substack.com/p/71-sobre-acciones-gracias-y-un-pavo",
-    "d": "2024-11-29",
-    "y": 2024,
-    "s": "S",
-    "sub": "Por una noche, no tenemos que pensar en la NBA. Y cuando uno da rienda suelta a su cabeza, pasan cosas."
-  },
-  {
     "t": "5x06 | La crisis de Philadelpiha 76ers",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2024-11-29",
     "y": 2024,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "#71 Sobre acciones, gracias, y un pavo que no es",
+    "u": "https://alejandroggo.substack.com/p/71-sobre-acciones-gracias-y-un-pavo",
+    "d": "2024-11-29",
+    "y": 2024,
+    "s": "S",
+    "sub": "Por una noche, no tenemos que pensar en la NBA. Y cuando uno da rienda suelta a su cabeza, pasan cosas."
   },
   {
     "t": "Kevin Durant y los Suns sacan la peor cara de LeBron y los Lakers en la noche de la confirmación de los Rockets como alternativa real",
@@ -2347,6 +2564,14 @@
     ]
   },
   {
+    "t": "El calendario del mes de diciembre",
+    "u": "https://alejandroggo.substack.com/p/el-calendario-del-mes-de-diciembre",
+    "d": "2024-11-26",
+    "y": 2024,
+    "s": "S",
+    "sub": "Más que una entrada, esto es una campaña de abonados para la Newsletter Fútbol Club."
+  },
+  {
     "t": "Los Knicks mandan un mensaje a la NBA aplastando a Denver a domicilio",
     "u": "https://www.relevo.com/baloncesto/nba/knicks-mandan-mensaje-aplastando-denver-20241125065825-nt.html",
     "d": "2024-11-26",
@@ -2364,12 +2589,16 @@
     ]
   },
   {
-    "t": "El calendario del mes de diciembre",
-    "u": "https://alejandroggo.substack.com/p/el-calendario-del-mes-de-diciembre",
-    "d": "2024-11-26",
+    "t": "Tres Cosas Que Me Han Gustado #3: el premio de hacer cosas que no venden",
+    "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-3-el",
+    "d": "2024-11-25",
     "y": 2024,
     "s": "S",
-    "sub": "Más que una entrada, esto es una campaña de abonados para la Newsletter Fútbol Club."
+    "sub": "Si Houston es la mejor defensa de la NBA, es por ellos. Si los Raptors molan, es por él. Si los Hornets no son una banda, no es por LaMelo.",
+    "p": 1,
+    "tags": [
+      "Jordi Fernández"
+    ]
   },
   {
     "t": "Jaylen Brown mantiene su traje de MVP y los Celtics asustan a toda la liga",
@@ -2400,18 +2629,6 @@
     "s": "R"
   },
   {
-    "t": "Tres Cosas Que Me Han Gustado #3: el premio de hacer cosas que no venden",
-    "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-3-el",
-    "d": "2024-11-25",
-    "y": 2024,
-    "s": "S",
-    "sub": "Si Houston es la mejor defensa de la NBA, es por ellos. Si los Raptors molan, es por él. Si los Hornets no son una banda, no es por LaMelo.",
-    "p": 1,
-    "tags": [
-      "Jordi Fernández"
-    ]
-  },
-  {
     "t": "Los Bucks dejan la crisis en el pasado con un Antetokounmpo MVP y frenando los 50 de LaMelo Ball",
     "u": "https://www.relevo.com/baloncesto/nba/bucks-dejan-crisis-pasado-giannis-20241123071701-nt.html",
     "d": "2024-11-24",
@@ -2424,6 +2641,18 @@
     "d": "2024-11-23",
     "y": 2024,
     "s": "R"
+  },
+  {
+    "t": "La NBA en datos #2: la masacre del Oeste ",
+    "u": "https://alejandroggo.substack.com/p/la-nba-en-datos-2-la-masacre-del",
+    "d": "2024-11-22",
+    "y": 2024,
+    "s": "S",
+    "sub": "Ahora mismo en la NBA hay 15 equipos con récord en positivo y 11 están en el Oeste. Es para que Adam Silver lo analice.",
+    "p": 1,
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "t": "Un 'francotirador' alemán asalta Los Angeles y rompe la racha de los Lakers y LeBron James",
@@ -2444,16 +2673,12 @@
     ]
   },
   {
-    "t": "La NBA en datos #2: la masacre del Oeste ",
-    "u": "https://alejandroggo.substack.com/p/la-nba-en-datos-2-la-masacre-del",
-    "d": "2024-11-22",
+    "t": "5x05 | La dinastía del Oeste",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2024-11-21",
     "y": 2024,
-    "s": "S",
-    "sub": "Ahora mismo en la NBA hay 15 equipos con récord en positivo y 11 están en el Oeste. Es para que Adam Silver lo analice.",
-    "p": 1,
-    "tags": [
-      "Estadística"
-    ]
+    "s": "UU",
+    "pod": 1
   },
   {
     "t": "Stephen Curry desciende de su nave nodriza para volver a reinar en el Oeste... recuperando una faceta poco reconocida",
@@ -2480,14 +2705,6 @@
     "s": "R"
   },
   {
-    "t": "5x05 | La dinastía del Oeste",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2024-11-21",
-    "y": 2024,
-    "s": "UU",
-    "pod": 1
-  },
-  {
     "t": "ESTOS SON LOS 5 FAVORITOS AL MVP NBA\r",
     "u": "https://www.youtube.com/watch?v=Abq8W07lp-s&t=200s",
     "d": "2024-11-20",
@@ -2497,6 +2714,18 @@
     "vid": 1,
     "tags": [
       "Pronósticos"
+    ]
+  },
+  {
+    "t": "Periodismo y NBA: Episodio 3 con Outconsumer",
+    "u": "https://alejandroggo.substack.com/p/periodismo-y-nba-episodio-3-con-outconsumer",
+    "d": "2024-11-19",
+    "y": 2024,
+    "s": "S",
+    "sub": "En las últimas semanas hemos visto una migración masiva de Twitter a BlueSky. Y toca analizar el fenómeno.",
+    "pod": 1,
+    "tags": [
+      "Periodismo"
     ]
   },
   {
@@ -2514,25 +2743,6 @@
     "s": "R"
   },
   {
-    "t": "Periodismo y NBA: Episodio 3 con Outconsumer",
-    "u": "https://alejandroggo.substack.com/p/periodismo-y-nba-episodio-3-con-outconsumer",
-    "d": "2024-11-19",
-    "y": 2024,
-    "s": "S",
-    "sub": "En las últimas semanas hemos visto una migración masiva de Twitter a BlueSky. Y toca analizar el fenómeno.",
-    "pod": 1,
-    "tags": [
-      "Periodismo"
-    ]
-  },
-  {
-    "t": "Dallas Wings se lleva el #1 del draft con Paige Bueckers en el horizonte",
-    "u": "https://www.relevo.com/baloncesto/nba/dallas-wings-lleva-draft-paige-20241116033315-nt.html",
-    "d": "2024-11-18",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "Power Ranking #2: ¿Perderá alguna vez Cleveland? ",
     "u": "https://alejandroggo.substack.com/p/power-ranking-2-perdera-alguna-vez",
     "d": "2024-11-18",
@@ -2543,6 +2753,13 @@
     "tags": [
       "Rankings"
     ]
+  },
+  {
+    "t": "Dallas Wings se lleva el #1 del draft con Paige Bueckers en el horizonte",
+    "u": "https://www.relevo.com/baloncesto/nba/dallas-wings-lleva-draft-paige-20241116033315-nt.html",
+    "d": "2024-11-18",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "Un triple de Tatum sobre la bocina de la prórroga evita la debacle del campeón ante el peor equipo de la NBA",
@@ -2586,6 +2803,14 @@
     ]
   },
   {
+    "t": "5x04 | ¿Han revivido los Golden State Warriors?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2024-11-15",
+    "y": 2024,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Un error de Luka Doncic hunde a unos Mavericks condenados por el clutch",
     "u": "https://www.relevo.com/baloncesto/nba/error-luka-doncic-condena-mavericks-20241113054516-nt.html",
     "d": "2024-11-15",
@@ -2598,14 +2823,6 @@
     "d": "2024-11-15",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "5x04 | ¿Han revivido los Golden State Warriors?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2024-11-15",
-    "y": 2024,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "#70 Popurrí NBA: Sobre la Copa NBA, el espejo de Cleveland y Dyson Daniels",
@@ -2647,6 +2864,15 @@
     "s": "R"
   },
   {
+    "t": "Tres Cosas Que Me Han Gustado #2: han llegado para quedarse",
+    "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-2-han",
+    "d": "2024-11-11",
+    "y": 2024,
+    "s": "S",
+    "sub": "A uno le pusieron titular y ha respondido. Al otro, deberían hacerlo desde ya.",
+    "p": 1
+  },
+  {
     "t": "Los Nets de Jordi Fernández pueden colgar el cartel de 'en venta' antes de lo esperado «por ser demasiado competitivos»",
     "u": "https://www.relevo.com/baloncesto/nba/nets-jordi-fernandez-pueden-colgar-20241110174630-nt.html",
     "d": "2024-11-11",
@@ -2655,15 +2881,6 @@
     "tags": [
       "Jordi Fernández"
     ]
-  },
-  {
-    "t": "Tres Cosas Que Me Han Gustado #2: han llegado para quedarse",
-    "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-2-han",
-    "d": "2024-11-11",
-    "y": 2024,
-    "s": "S",
-    "sub": "A uno le pusieron titular y ha respondido. Al otro, deberían hacerlo desde ya.",
-    "p": 1
   },
   {
     "t": "La NBA en datos #1: ¿Ha vuelto la defensa?",
@@ -2703,6 +2920,18 @@
     ]
   },
   {
+    "t": "Power Ranking #1: ¿Los Warriors son un equipo triplista o defensivo?",
+    "u": "https://alejandroggo.substack.com/p/power-ranking-1-los-warriors-son",
+    "d": "2024-11-04",
+    "y": 2024,
+    "s": "S",
+    "sub": "Bienvenidos a los Power Rankings de la newsletter. 30 equipos, seis niveles y una lupa. Hoy hablamos de los Warriors.",
+    "p": 1,
+    "tags": [
+      "Rankings"
+    ]
+  },
+  {
     "t": "Un recital de Luka Doncic lanza a los Mavericks antes de la 'jornada electoral' en la NBA",
     "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-aprovecha-magic-huerfanos-20241102054819-nt.html",
     "d": "2024-11-04",
@@ -2717,16 +2946,12 @@
     "s": "R"
   },
   {
-    "t": "Power Ranking #1: ¿Los Warriors son un equipo triplista o defensivo?",
-    "u": "https://alejandroggo.substack.com/p/power-ranking-1-los-warriors-son",
-    "d": "2024-11-04",
+    "t": "#69 Sobre despedidas, retiradas de camiseta y simbolismo",
+    "u": "https://alejandroggo.substack.com/p/69-sobre-despedidas-retiradas-de",
+    "d": "2024-11-03",
     "y": 2024,
     "s": "S",
-    "sub": "Bienvenidos a los Power Rankings de la newsletter. 30 equipos, seis niveles y una lupa. Hoy hablamos de los Warriors.",
-    "p": 1,
-    "tags": [
-      "Rankings"
-    ]
+    "sub": "Me dejaron ir a cubrir la retirada de camiseta de Vince Carter. Y me puse a divagar sobre la imagen en nuestra memoria."
   },
   {
     "t": "Joel Embiid, acusado de empujar y enfrentarse a un periodista en el vestuario de los Sixers",
@@ -2753,14 +2978,6 @@
     "s": "R"
   },
   {
-    "t": "#69 Sobre despedidas, retiradas de camiseta y simbolismo",
-    "u": "https://alejandroggo.substack.com/p/69-sobre-despedidas-retiradas-de",
-    "d": "2024-11-03",
-    "y": 2024,
-    "s": "S",
-    "sub": "Me dejaron ir a cubrir la retirada de camiseta de Vince Carter. Y me puse a divagar sobre la imagen en nuestra memoria."
-  },
-  {
     "t": "Anthony Edwards le recuerda a Denver la pesadilla de mayo con una remontada agónica",
     "u": "https://www.relevo.com/baloncesto/nba/anthony-edwards-recuerda-denver-pesadilla-20241101061430-nt.html",
     "d": "2024-11-02",
@@ -2776,6 +2993,23 @@
     "tags": [
       "Historia"
     ]
+  },
+  {
+    "t": "5x03 | Phoenix Suns: ¿qué falta para ser candidato de verdad?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2024-10-30",
+    "y": 2024,
+    "s": "UU",
+    "pod": 1
+  },
+  {
+    "t": "#68 Sobre imagen, marketing y la cara de la NBA",
+    "u": "https://alejandroggo.substack.com/p/68-sobre-imagen-marketing-y-la-cara",
+    "d": "2024-10-30",
+    "y": 2024,
+    "s": "S",
+    "sub": "El documental Starting 5 ha conseguido su objetivo: enfadarme mucho por el resultado final.",
+    "p": 1
   },
   {
     "t": "Doncic (con susto) e Irving confirman que los Mavs van en serio ante su rival favorito",
@@ -2802,23 +3036,6 @@
     ]
   },
   {
-    "t": "#68 Sobre imagen, marketing y la cara de la NBA",
-    "u": "https://alejandroggo.substack.com/p/68-sobre-imagen-marketing-y-la-cara",
-    "d": "2024-10-30",
-    "y": 2024,
-    "s": "S",
-    "sub": "El documental Starting 5 ha conseguido su objetivo: enfadarme mucho por el resultado final.",
-    "p": 1
-  },
-  {
-    "t": "5x03 | Phoenix Suns: ¿qué falta para ser candidato de verdad?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2024-10-30",
-    "y": 2024,
-    "s": "UU",
-    "pod": 1
-  },
-  {
     "t": "Nikola Jokic necesita ponerse el traje de Superman (81 puntos en 2 partidos) para salvar a los Nuggets de su peor arranque en 10 años",
     "u": "https://www.relevo.com/baloncesto/nba/nuggets-necesitan-prorroga-puntos-jokic-20241028061226-nt.html",
     "d": "2024-10-29",
@@ -2833,13 +3050,6 @@
     "s": "R"
   },
   {
-    "t": "Los Suns se vengan de Doncic pese a los 40 puntos del esloveno",
-    "u": "https://www.relevo.com/baloncesto/nba/suns-vengan-doncic-pese-puntos-20241026064504-nt.html",
-    "d": "2024-10-27",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "Tres Cosas Que Me Han Gustado #1: ¿Ha encontrado Redick la receta secreta?",
     "u": "https://alejandroggo.substack.com/p/tres-cosas-que-me-han-gustado-1-ha",
     "d": "2024-10-27",
@@ -2850,6 +3060,13 @@
     "tags": [
       "TV y derechos"
     ]
+  },
+  {
+    "t": "Los Suns se vengan de Doncic pese a los 40 puntos del esloveno",
+    "u": "https://www.relevo.com/baloncesto/nba/suns-vengan-doncic-pese-puntos-20241026064504-nt.html",
+    "d": "2024-10-27",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "LeBron James vence y convence para recuperar un récord de los Lakers de Kobe Bryant y Pau Gasol",
@@ -2875,6 +3092,25 @@
     "d": "2024-10-25",
     "y": 2024,
     "s": "R"
+  },
+  {
+    "t": "5x02 | Boston Celtics: ¿equipo histórico o solo \"un campeón más\" de la NBA?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2024-10-23",
+    "y": 2024,
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
+    "t": "¿Quieres contenido de NBA de calidad? ",
+    "u": "https://alejandroggo.substack.com/p/quieres-contenido-de-nba-de-calidad",
+    "d": "2024-10-23",
+    "y": 2024,
+    "s": "S",
+    "sub": "Hablemos entonces. Porque puede que esto te interese — y se acaba mañana."
   },
   {
     "t": "LeBron traspasa la última frontera junto a su hijo Bronny, mientras los campeones Celtics rozan la perfección",
@@ -2925,25 +3161,6 @@
     "s": "R"
   },
   {
-    "t": "¿Quieres contenido de NBA de calidad? ",
-    "u": "https://alejandroggo.substack.com/p/quieres-contenido-de-nba-de-calidad",
-    "d": "2024-10-23",
-    "y": 2024,
-    "s": "S",
-    "sub": "Hablemos entonces. Porque puede que esto te interese — y se acaba mañana."
-  },
-  {
-    "t": "5x02 | Boston Celtics: ¿equipo histórico o solo \"un campeón más\" de la NBA?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2024-10-23",
-    "y": 2024,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "Celtics"
-    ]
-  },
-  {
     "t": "Los Celtics buscan igualar a los Warriors de Stephen Curry y Kevin Durant... y algo que Boston no logra desde 1969",
     "u": "https://www.relevo.com/baloncesto/nba/celtics-buscan-igualar-warriors-curry-20241022081811-nt.html",
     "d": "2024-10-22",
@@ -2959,6 +3176,18 @@
     "d": "2024-10-22",
     "y": 2024,
     "s": "R"
+  },
+  {
+    "t": "#67 Sobre inteligencia artificial y predicciones NBA",
+    "u": "https://alejandroggo.substack.com/p/67-sobre-inteligencia-artificial",
+    "d": "2024-10-21",
+    "y": 2024,
+    "s": "S",
+    "sub": "Le he preguntado a Chat GPT por la temporada NBA y lo que me ha dicho, la verdad, no me acaba de convencer del todo.",
+    "p": 1,
+    "tags": [
+      "Pronósticos"
+    ]
   },
   {
     "t": "Las New York Liberty tiran de épica para terminar con 28 años de maldición en la WNBA",
@@ -2978,18 +3207,6 @@
     "s": "R",
     "tags": [
       "Estadística"
-    ]
-  },
-  {
-    "t": "#67 Sobre inteligencia artificial y predicciones NBA",
-    "u": "https://alejandroggo.substack.com/p/67-sobre-inteligencia-artificial",
-    "d": "2024-10-21",
-    "y": 2024,
-    "s": "S",
-    "sub": "Le he preguntado a Chat GPT por la temporada NBA y lo que me ha dicho, la verdad, no me acaba de convencer del todo.",
-    "p": 1,
-    "tags": [
-      "Pronósticos"
     ]
   },
   {
@@ -3022,19 +3239,19 @@
     ]
   },
   {
-    "t": "Lonzo Ball se permite sonreír 1.006 días después en una cancha de baloncesto gracias a la «familia»",
-    "u": "https://www.relevo.com/baloncesto/nba/1006-dias-tarde-lonzo-ball-20241015054201-nt.html",
-    "d": "2024-10-17",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "5x01 | Previa NBA: seis preguntas que marcarán la temporada",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2024-10-17",
     "y": 2024,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Lonzo Ball se permite sonreír 1.006 días después en una cancha de baloncesto gracias a la «familia»",
+    "u": "https://www.relevo.com/baloncesto/nba/1006-dias-tarde-lonzo-ball-20241015054201-nt.html",
+    "d": "2024-10-17",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "#65 Previa NBA 2025: 10 predicciones para la temporada",
@@ -3180,6 +3397,17 @@
     ]
   },
   {
+    "t": "#64 Sobre los Celtics, motivación y el inicio de la temporada",
+    "u": "https://alejandroggo.substack.com/p/64-sobre-los-celtics-motivacion-y",
+    "d": "2024-09-24",
+    "y": 2024,
+    "s": "S",
+    "sub": "El Media Day de los campeones da la temporada por inaugurada. Y era uno que todos esperábamos.",
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
     "t": "NowClubEsp | Charlando de NBA con Alejandro Gaitán",
     "u": "https://www.youtube.com/watch?v=pq9q1lcZ_EE",
     "d": "2024-09-24",
@@ -3189,17 +3417,6 @@
     "vid": 1,
     "tags": [
       "Periodismo"
-    ]
-  },
-  {
-    "t": "#64 Sobre los Celtics, motivación y el inicio de la temporada",
-    "u": "https://alejandroggo.substack.com/p/64-sobre-los-celtics-motivacion-y",
-    "d": "2024-09-24",
-    "y": 2024,
-    "s": "S",
-    "sub": "El Media Day de los campeones da la temporada por inaugurada. Y era uno que todos esperábamos.",
-    "tags": [
-      "Celtics"
     ]
   },
   {
@@ -3348,16 +3565,6 @@
     ]
   },
   {
-    "t": "Jaylen Brown asegura que los Celtics parten «con una diana en la espalda por defender anillo»",
-    "u": "https://www.relevo.com/baloncesto/nba/jaylen-brown-celtics-diana-anillo-20240822075118-nt.html",
-    "d": "2024-08-22",
-    "y": 2024,
-    "s": "R",
-    "tags": [
-      "Celtics"
-    ]
-  },
-  {
     "t": "#61 Sobre Victor Wembanyama: ¿cómo puede ser su segunda temporada?",
     "u": "https://alejandroggo.substack.com/p/61-sobre-victor-wembanyama-como-puede",
     "d": "2024-08-22",
@@ -3366,11 +3573,14 @@
     "sub": "Usando matemáticas y algoritmos, intento imaginar qué números tendrá el francés en su segundo año."
   },
   {
-    "t": "Las rocambolescas cifras detrás del fichaje de Yabusele por la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/rocambolescas-cifras-detras-fichaje-yabusele-20240817234100-nt.html",
-    "d": "2024-08-19",
+    "t": "Jaylen Brown asegura que los Celtics parten «con una diana en la espalda por defender anillo»",
+    "u": "https://www.relevo.com/baloncesto/nba/jaylen-brown-celtics-diana-anillo-20240822075118-nt.html",
+    "d": "2024-08-22",
     "y": 2024,
-    "s": "R"
+    "s": "R",
+    "tags": [
+      "Celtics"
+    ]
   },
   {
     "t": "#60 Sobre libros, sueños periodísticos y viajes al centro de la NBA",
@@ -3382,6 +3592,13 @@
     "tags": [
       "Periodismo"
     ]
+  },
+  {
+    "t": "Las rocambolescas cifras detrás del fichaje de Yabusele por la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/rocambolescas-cifras-detras-fichaje-yabusele-20240817234100-nt.html",
+    "d": "2024-08-19",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "La NBA busca pescar entre las estrellas de los Juegos Olímpicos",
@@ -3411,13 +3628,6 @@
     ]
   },
   {
-    "t": "La NBA anuncia el calendario para la temporada: ¿qué no te puedes perder?",
-    "u": "https://www.relevo.com/baloncesto/nba/anuncia-calendario-temporada-puedes-perder-20240814220253-nt.html",
-    "d": "2024-08-15",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#59 Sobre balances anuales, aprendizajes y qué depara el futuro",
     "u": "https://alejandroggo.substack.com/p/59-sobre-balances-anuales-aprendizajes",
     "d": "2024-08-15",
@@ -3427,6 +3637,21 @@
     "tags": [
       "Periodismo"
     ]
+  },
+  {
+    "t": "La NBA anuncia el calendario para la temporada: ¿qué no te puedes perder?",
+    "u": "https://www.relevo.com/baloncesto/nba/anuncia-calendario-temporada-puedes-perder-20240814220253-nt.html",
+    "d": "2024-08-15",
+    "y": 2024,
+    "s": "R"
+  },
+  {
+    "t": "#58 Sobre Jokic borracho, el final de la hegemonía americana y los veranos",
+    "u": "https://alejandroggo.substack.com/p/58-sobre-jokic-borracho-el-final",
+    "d": "2024-08-12",
+    "y": 2024,
+    "s": "S",
+    "sub": "Para Jokic, el bronce olímpico es el sueño de una vida (como la plata de Río 2016). Para Estados Unidos el oro es una obligación."
   },
   {
     "t": "LeBron James podría acabar como nuevo dueño de los Boston Celtics",
@@ -3447,14 +3672,6 @@
     "tags": [
       "TV y derechos"
     ]
-  },
-  {
-    "t": "#58 Sobre Jokic borracho, el final de la hegemonía americana y los veranos",
-    "u": "https://alejandroggo.substack.com/p/58-sobre-jokic-borracho-el-final",
-    "d": "2024-08-12",
-    "y": 2024,
-    "s": "S",
-    "sub": "Para Jokic, el bronce olímpico es el sueño de una vida (como la plata de Río 2016). Para Estados Unidos el oro es una obligación."
   },
   {
     "t": "Un oro para cerrar el legado de tres talentos generacionales: el último baile de Curry, LeBron y Durant",
@@ -3580,13 +3797,6 @@
     "s": "R"
   },
   {
-    "t": "Kevin Durant vuelve al máximo nivel y le cierra la puerta a un campeón de la NBA",
-    "u": "https://www.relevo.com/juegos-olimpicos/baloncesto/kevin-durant-vuelve-maximo-nivel-20240727200134-nt.html",
-    "d": "2024-07-28",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#57 Sobre el debut de Estados Unidos, LeBron y Durant, y las decisiones de Steve Kerr",
     "u": "https://alejandroggo.substack.com/p/57-sobre-el-debut-de-estados-unidos",
     "d": "2024-07-28",
@@ -3594,6 +3804,13 @@
     "s": "S",
     "sub": "Ganó Estados Unidos ante Serbia y el partido dejó algunos detalles interesantes a analizar.",
     "p": 1
+  },
+  {
+    "t": "Kevin Durant vuelve al máximo nivel y le cierra la puerta a un campeón de la NBA",
+    "u": "https://www.relevo.com/juegos-olimpicos/baloncesto/kevin-durant-vuelve-maximo-nivel-20240727200134-nt.html",
+    "d": "2024-07-28",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "Rui Hachimura vuelve a unos Juegos Olímpicos tras los ataques racistas de Tokio 2020",
@@ -3742,13 +3959,6 @@
     "s": "R"
   },
   {
-    "t": "Jalen Brunson extiende su contrato con los Knicks perdonando 113 millones",
-    "u": "https://www.relevo.com/baloncesto/nba/jalen-brunson-extiende-contrato-knicks-20240711001219-nt.html",
-    "d": "2024-07-13",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#54 Popurrí NBA: Sobre Brunson, Jaylen Brown, Nike y la Copa NBA",
     "u": "https://alejandroggo.substack.com/p/54-popurri-nba-sobre-brunson-jaylen",
     "d": "2024-07-13",
@@ -3759,6 +3969,13 @@
     "tags": [
       "Celtics"
     ]
+  },
+  {
+    "t": "Jalen Brunson extiende su contrato con los Knicks perdonando 113 millones",
+    "u": "https://www.relevo.com/baloncesto/nba/jalen-brunson-extiende-contrato-knicks-20240711001219-nt.html",
+    "d": "2024-07-13",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "La previa de Canadá en los JJOO: Shai, Jordi Fernández y las medallas\r",
@@ -3785,6 +4002,18 @@
     ]
   },
   {
+    "t": "#53 Sobre rankings, mejores franquicias de la historia y numeritos",
+    "u": "https://alejandroggo.substack.com/p/53-sobre-rankings-mejores-franquicias",
+    "d": "2024-07-11",
+    "y": 2024,
+    "s": "S",
+    "sub": "He sumado cada triunfo, cada temporada, cada detalle y lo he puesto en una tabla. Y me ha salido esto.",
+    "tags": [
+      "Rankings",
+      "Historia"
+    ]
+  },
+  {
     "t": "El nuevo acuerdo de televisión en la NBA que traerá salarios de un millón por partido... o 100 al año",
     "u": "https://www.relevo.com/baloncesto/nba/nuevo-acuerdo-television-traera-salarios-20240710064933-nt.html",
     "d": "2024-07-11",
@@ -3800,18 +4029,6 @@
     "d": "2024-07-11",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#53 Sobre rankings, mejores franquicias de la historia y numeritos",
-    "u": "https://alejandroggo.substack.com/p/53-sobre-rankings-mejores-franquicias",
-    "d": "2024-07-11",
-    "y": 2024,
-    "s": "S",
-    "sub": "He sumado cada triunfo, cada temporada, cada detalle y lo he puesto en una tabla. Y me ha salido esto.",
-    "tags": [
-      "Rankings",
-      "Historia"
-    ]
   },
   {
     "t": "Kawhi Leonard se borra de los Juegos Olímpicos: Derrick White, otro campeón, le sustituye",
@@ -3915,6 +4132,14 @@
     ]
   },
   {
+    "t": "#52 Reaccionando EN DIRECTO a la agencia libre y el mercado NBA",
+    "u": "https://alejandroggo.substack.com/p/52-reaccionando-en-directo-a-la-agencia",
+    "d": "2024-06-30",
+    "y": 2024,
+    "s": "S",
+    "sub": "Paul George, LeBron James, Chris Paul, Klay Thompson. Es la agencia libre, no lo entenderíais."
+  },
+  {
     "t": "LeBron James entra en la agencia libre... pensando en hacerle un hueco a Klay Thompson en los Lakers",
     "u": "https://www.relevo.com/baloncesto/nba/lebron-james-entra-agencia-libre-20240629074815-nt.html",
     "d": "2024-06-30",
@@ -3927,14 +4152,6 @@
     "d": "2024-06-30",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#52 Reaccionando EN DIRECTO a la agencia libre y el mercado NBA",
-    "u": "https://alejandroggo.substack.com/p/52-reaccionando-en-directo-a-la-agencia",
-    "d": "2024-06-30",
-    "y": 2024,
-    "s": "S",
-    "sub": "Paul George, LeBron James, Chris Paul, Klay Thompson. Es la agencia libre, no lo entenderíais."
   },
   {
     "t": "Dejounte Murray traspasado a New Orleans: empieza la reconstrucción de Atlanta",
@@ -3972,6 +4189,15 @@
     ]
   },
   {
+    "t": "La off-season NBA al detalle: accede al Google Drive con toda la información",
+    "u": "https://alejandroggo.substack.com/p/la-off-season-nba-al-detalle-accede",
+    "d": "2024-06-26",
+    "y": 2024,
+    "s": "S",
+    "sub": "Agencia libre, draft, traspasos, cambios en banquillos y oficinas y cómo queda cada plantilla. Todo está aquí.",
+    "p": 1
+  },
+  {
     "t": "Mikal Bridges cambia de barrio en Nueva York... y los 'Villanova boys' están juntos de nuevo",
     "u": "https://www.relevo.com/baloncesto/nba/mikal-bridges-traspasado-york-villanova-20240625071821-nt.html",
     "d": "2024-06-26",
@@ -3990,25 +4216,6 @@
     ]
   },
   {
-    "t": "La off-season NBA al detalle: accede al Google Drive con toda la información",
-    "u": "https://alejandroggo.substack.com/p/la-off-season-nba-al-detalle-accede",
-    "d": "2024-06-26",
-    "y": 2024,
-    "s": "S",
-    "sub": "Agencia libre, draft, traspasos, cambios en banquillos y oficinas y cómo queda cada plantilla. Todo está aquí.",
-    "p": 1
-  },
-  {
-    "t": "Kenny Atkinson, el elegido para el banquillo de Cleveland: dos entrenadores españoles en la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/kenny-atkinson-elegido-banquillo-cleveland-20240623170022-nt.html",
-    "d": "2024-06-24",
-    "y": 2024,
-    "s": "R",
-    "tags": [
-      "Españoles NBA"
-    ]
-  },
-  {
     "t": "#51 Sobre Mazzulla, contexto y narrativas desmitificadas",
     "u": "https://alejandroggo.substack.com/p/51-sobre-mazzulla-contexto-y-narrativas",
     "d": "2024-06-24",
@@ -4021,6 +4228,16 @@
     ]
   },
   {
+    "t": "Kenny Atkinson, el elegido para el banquillo de Cleveland: dos entrenadores españoles en la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/kenny-atkinson-elegido-banquillo-cleveland-20240623170022-nt.html",
+    "d": "2024-06-24",
+    "y": 2024,
+    "s": "R",
+    "tags": [
+      "Españoles NBA"
+    ]
+  },
+  {
     "t": "Brad Stevens, el genio que dejó el banquillo de los Celtics para construir un equipo campeón",
     "u": "https://www.relevo.com/baloncesto/nba/brad-stevens-genio-dejo-banquillo-20240617062544-nt.html",
     "d": "2024-06-19",
@@ -4028,6 +4245,17 @@
     "s": "R",
     "tags": [
       "Celtics"
+    ]
+  },
+  {
+    "t": "#50 Sobre sueños cumplidos, el banner 18 y la larga espera",
+    "u": "https://alejandroggo.substack.com/p/50-sobre-suenos-cumplidos-el-banner",
+    "d": "2024-06-18",
+    "y": 2024,
+    "s": "S",
+    "sub": "De 2008 a 2024 la vida ha cambiado mucho. Y nosotros con ella.",
+    "tags": [
+      "Periodismo"
     ]
   },
   {
@@ -4059,17 +4287,6 @@
     "tags": [
       "Celtics",
       "Historia"
-    ]
-  },
-  {
-    "t": "#50 Sobre sueños cumplidos, el banner 18 y la larga espera",
-    "u": "https://alejandroggo.substack.com/p/50-sobre-suenos-cumplidos-el-banner",
-    "d": "2024-06-18",
-    "y": 2024,
-    "s": "S",
-    "sub": "De 2008 a 2024 la vida ha cambiado mucho. Y nosotros con ella.",
-    "tags": [
-      "Periodismo"
     ]
   },
   {
@@ -4187,6 +4404,18 @@
     ]
   },
   {
+    "t": "#47 Cuatro narrativas de estas finales y la respuesta tras un partido",
+    "u": "https://alejandroggo.substack.com/p/47-cuatro-narrativas-de-estas-finales",
+    "d": "2024-06-07",
+    "y": 2024,
+    "s": "S",
+    "sub": "¿Pueden los Mavericks remontar? ¿Qué pasa a Tatum? ¿Es Joe Mazzulla lo más parecido a Billy Beane?",
+    "p": 1,
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
     "t": "Luka Doncic desafía a los Celtics de Tatum con la grandeza de Michael Jordan en mente",
     "u": "https://www.relevo.com/baloncesto/nba/previa-finales-boston-dallas-llegan-20240605203530-nt.html",
     "d": "2024-06-07",
@@ -4218,16 +4447,12 @@
     ]
   },
   {
-    "t": "#47 Cuatro narrativas de estas finales y la respuesta tras un partido",
-    "u": "https://alejandroggo.substack.com/p/47-cuatro-narrativas-de-estas-finales",
-    "d": "2024-06-07",
+    "t": "Previa de las NBA Finals: todo lo que he publicado hasta la fecha",
+    "u": "https://alejandroggo.substack.com/p/previa-de-las-nba-finals-todo-lo",
+    "d": "2024-06-06",
     "y": 2024,
     "s": "S",
-    "sub": "¿Pueden los Mavericks remontar? ¿Qué pasa a Tatum? ¿Es Joe Mazzulla lo más parecido a Billy Beane?",
-    "p": 1,
-    "tags": [
-      "Celtics"
-    ]
+    "sub": "Hemos esperado demasiado tiempo, pero ha llegado por fin el día. Feliz NBA Finals Day a todos."
   },
   {
     "t": "La NBA se embolsará 76 mil millones por los derechos de televisión de los próximos 11 años",
@@ -4256,14 +4481,6 @@
       "Celtics",
       "Historia"
     ]
-  },
-  {
-    "t": "Previa de las NBA Finals: todo lo que he publicado hasta la fecha",
-    "u": "https://alejandroggo.substack.com/p/previa-de-las-nba-finals-todo-lo",
-    "d": "2024-06-06",
-    "y": 2024,
-    "s": "S",
-    "sub": "Hemos esperado demasiado tiempo, pero ha llegado por fin el día. Feliz NBA Finals Day a todos."
   },
   {
     "t": "Nuevo giro en el caso Porter: acusado de amañar sus partidos para pagar sus grandes deudas de juego",
@@ -4300,16 +4517,6 @@
     "s": "R"
   },
   {
-    "t": "Kyrie Irving, ante su «exnovia despechada» y la lección de villanos de Joe Mazzulla",
-    "u": "https://www.relevo.com/baloncesto/nba/kyrie-irving-ante-exnovia-despechada-20240603235310-nt.html",
-    "d": "2024-06-03",
-    "y": 2024,
-    "s": "R",
-    "tags": [
-      "Celtics"
-    ]
-  },
-  {
     "t": "#46 Sobre Kyrie, Boston y la historia de amor peor contada ",
     "u": "https://alejandroggo.substack.com/p/46-sobre-kyrie-boston-y-la-historia",
     "d": "2024-06-03",
@@ -4319,6 +4526,16 @@
     "tags": [
       "Celtics",
       "Historia"
+    ]
+  },
+  {
+    "t": "Kyrie Irving, ante su «exnovia despechada» y la lección de villanos de Joe Mazzulla",
+    "u": "https://www.relevo.com/baloncesto/nba/kyrie-irving-ante-exnovia-despechada-20240603235310-nt.html",
+    "d": "2024-06-03",
+    "y": 2024,
+    "s": "R",
+    "tags": [
+      "Celtics"
     ]
   },
   {
@@ -4339,6 +4556,19 @@
     "s": "R"
   },
   {
+    "t": "#45 Sobre Tatum y Jaylen, una llamada y años de odio narrativo",
+    "u": "https://alejandroggo.substack.com/p/45-sobre-tatum-y-jaylen-una-llamada",
+    "d": "2024-05-31",
+    "y": 2024,
+    "s": "S",
+    "sub": "Siete años juntos, Jaylen Brown y Jayson Tatum son la cara de los Celtics y la cruz de ESPN.",
+    "p": 1,
+    "tags": [
+      "Celtics",
+      "TV y derechos"
+    ]
+  },
+  {
     "t": "Un increíble Luka Doncic reescribe la historia y mete a los Mavericks en las Finales tras arrasar a Minnesota",
     "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-kyrie-irving-llevan-20240529061424-nt.html",
     "d": "2024-05-31",
@@ -4356,26 +4586,6 @@
     "s": "R"
   },
   {
-    "t": "#45 Sobre Tatum y Jaylen, una llamada y años de odio narrativo",
-    "u": "https://alejandroggo.substack.com/p/45-sobre-tatum-y-jaylen-una-llamada",
-    "d": "2024-05-31",
-    "y": 2024,
-    "s": "S",
-    "sub": "Siete años juntos, Jaylen Brown y Jayson Tatum son la cara de los Celtics y la cruz de ESPN.",
-    "p": 1,
-    "tags": [
-      "Celtics",
-      "TV y derechos"
-    ]
-  },
-  {
-    "t": "Anthony Edwards roza el triple-doble y emplaza a Doncic a un quinto partido tras evitar el rosco",
-    "u": "https://www.relevo.com/baloncesto/nba/anthony-edwards-roza-tripledoble-timberwolves-20240527055244-nt.html",
-    "d": "2024-05-29",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#44 Sobre oportunidades perdidas, una reunión y el bien colectivo",
     "u": "https://alejandroggo.substack.com/p/44-sobre-oportunidades-perdidas-una",
     "d": "2024-05-29",
@@ -4386,6 +4596,13 @@
       "Celtics",
       "Historia"
     ]
+  },
+  {
+    "t": "Anthony Edwards roza el triple-doble y emplaza a Doncic a un quinto partido tras evitar el rosco",
+    "u": "https://www.relevo.com/baloncesto/nba/anthony-edwards-roza-tripledoble-timberwolves-20240527055244-nt.html",
+    "d": "2024-05-29",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "Los Celtics vuelven a las Finales tras barrer a Indiana y ya esperan a Doncic... e Irving",
@@ -4405,6 +4622,18 @@
     "s": "R",
     "tags": [
       "Celtics"
+    ]
+  },
+  {
+    "t": "#43 Sobre estrellas jóvenes, primeras veces y dinastías modernas",
+    "u": "https://alejandroggo.substack.com/p/43-sobre-estrellas-jovenes-primeras",
+    "d": "2024-05-27",
+    "y": 2024,
+    "s": "S",
+    "sub": "Luka, Tatum, Edwards y Haliburton (!). Uno ganará el MVP de las finales y será MUY joven para hacerlo.",
+    "tags": [
+      "Celtics",
+      "TV y derechos"
     ]
   },
   {
@@ -4430,18 +4659,6 @@
     "d": "2024-05-27",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#43 Sobre estrellas jóvenes, primeras veces y dinastías modernas",
-    "u": "https://alejandroggo.substack.com/p/43-sobre-estrellas-jovenes-primeras",
-    "d": "2024-05-27",
-    "y": 2024,
-    "s": "S",
-    "sub": "Luka, Tatum, Edwards y Haliburton (!). Uno ganará el MVP de las finales y será MUY joven para hacerlo.",
-    "tags": [
-      "Celtics",
-      "TV y derechos"
-    ]
   },
   {
     "t": "Boston remonta 18 puntos y se planta a un partido de las finales de la mano de Tatum, Holiday y Horford",
@@ -4499,6 +4716,18 @@
     ]
   },
   {
+    "t": "#42 Sobre los Knicks, mercados y televisiones",
+    "u": "https://alejandroggo.substack.com/p/42-sobre-los-knicks-mercados-y-televisiones",
+    "d": "2024-05-22",
+    "y": 2024,
+    "s": "S",
+    "sub": "La NBA es mejor con los Knicks compitiendo por el título. Lo sabe Silver, lo saben las televisiones y lo sabes tú.",
+    "p": 1,
+    "tags": [
+      "TV y derechos"
+    ]
+  },
+  {
     "t": "Boston Celtics obra el milagro ante Indiana Pacers y consigue el 1-0 en las finales del Este",
     "u": "https://www.relevo.com/baloncesto/nba/boston-sobrevive-prorroga-ante-indiana-20240521063227-nt.html",
     "d": "2024-05-22",
@@ -4514,18 +4743,6 @@
     "d": "2024-05-22",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#42 Sobre los Knicks, mercados y televisiones",
-    "u": "https://alejandroggo.substack.com/p/42-sobre-los-knicks-mercados-y-televisiones",
-    "d": "2024-05-22",
-    "y": 2024,
-    "s": "S",
-    "sub": "La NBA es mejor con los Knicks compitiendo por el título. Lo sabe Silver, lo saben las televisiones y lo sabes tú.",
-    "p": 1,
-    "tags": [
-      "TV y derechos"
-    ]
   },
   {
     "t": "Kyrie Irving deja atrás un lustro de polémicas y encuentra “la madurez” al lado de Luka Doncic",
@@ -4569,20 +4786,6 @@
     "s": "R"
   },
   {
-    "t": "Josh Hart, otro nombre en la larga lista de lesionados de los New York Knicks",
-    "u": "https://www.relevo.com/baloncesto/nba/josh-hart-nombre-larga-lista-20240516055433-nt.html",
-    "d": "2024-05-18",
-    "y": 2024,
-    "s": "R"
-  },
-  {
-    "t": "Pascal Siakam rescata a unos Pacers “a la desesperada” para forzar el séptimo partido ante los Knicks",
-    "u": "https://www.relevo.com/baloncesto/nba/pascal-siakam-pacers-fuerzan-septimo-20240516055115-nt.html",
-    "d": "2024-05-18",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#41 Sobre séptimos partidos, World Series, una huelga y la historia",
     "u": "https://alejandroggo.substack.com/p/41-sobre-game-seven",
     "d": "2024-05-18",
@@ -4597,6 +4800,28 @@
     ]
   },
   {
+    "t": "Josh Hart, otro nombre en la larga lista de lesionados de los New York Knicks",
+    "u": "https://www.relevo.com/baloncesto/nba/josh-hart-nombre-larga-lista-20240516055433-nt.html",
+    "d": "2024-05-18",
+    "y": 2024,
+    "s": "R"
+  },
+  {
+    "t": "Pascal Siakam rescata a unos Pacers “a la desesperada” para forzar el séptimo partido ante los Knicks",
+    "u": "https://www.relevo.com/baloncesto/nba/pascal-siakam-pacers-fuerzan-septimo-20240516055115-nt.html",
+    "d": "2024-05-18",
+    "y": 2024,
+    "s": "R"
+  },
+  {
+    "t": "#40 Sobre excelencia, normalización, resultados y expectativas",
+    "u": "https://alejandroggo.substack.com/p/40-sobre-excelencia-normalizacion",
+    "d": "2024-05-16",
+    "y": 2024,
+    "s": "S",
+    "sub": "Ocho años, seis finales de conferencia, cero anillos. Y un proyecto."
+  },
+  {
     "t": "Vuelve el mejor Luka Doncic para poner a Dallas a un partido de las finales del Oeste",
     "u": "https://www.relevo.com/baloncesto/nba/vuelve-mejor-luka-doncic-dallas-20240515061802-nt.html",
     "d": "2024-05-16",
@@ -4609,14 +4834,6 @@
     "d": "2024-05-16",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#40 Sobre excelencia, normalización, resultados y expectativas",
-    "u": "https://alejandroggo.substack.com/p/40-sobre-excelencia-normalizacion",
-    "d": "2024-05-16",
-    "y": 2024,
-    "s": "S",
-    "sub": "Ocho años, seis finales de conferencia, cero anillos. Y un proyecto."
   },
   {
     "t": "Los Celtics de Tatum y Brown recuperan el 'orgullo verde' de Boston para ponerse a un partido de las Finales de Conferencia",
@@ -4660,6 +4877,18 @@
     "s": "R"
   },
   {
+    "t": "#39 Sobre Larry y Magic, WNBA, la igualdad salarial y el reparto del pastel",
+    "u": "https://alejandroggo.substack.com/p/39-sobre-larry-y-magic-wnba-la-igualdad",
+    "d": "2024-05-10",
+    "y": 2024,
+    "s": "S",
+    "sub": "Su llegada cambió el deporte profesional como el negocio que era. Y estamos viendo la misma historia repetida.",
+    "tags": [
+      "WNBA",
+      "Historia"
+    ]
+  },
+  {
     "t": "El campeón NBA Glen «Big Baby» Davis, sentenciado a 40 meses de cárcel por fraude",
     "u": "https://www.relevo.com/baloncesto/nba/campeon-glen-baby-davis-sentenciado-20240510002932-nt.html",
     "d": "2024-05-10",
@@ -4679,18 +4908,6 @@
     "d": "2024-05-10",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#39 Sobre Larry y Magic, WNBA, la igualdad salarial y el reparto del pastel",
-    "u": "https://alejandroggo.substack.com/p/39-sobre-larry-y-magic-wnba-la-igualdad",
-    "d": "2024-05-10",
-    "y": 2024,
-    "s": "S",
-    "sub": "Su llegada cambió el deporte profesional como el negocio que era. Y estamos viendo la misma historia repetida.",
-    "tags": [
-      "WNBA",
-      "Historia"
-    ]
   },
   {
     "t": "Jalen Brunson es el nuevo rey del Madison Square Garden y los Knicks ponen el 2-0 ante los Pacers",
@@ -4721,6 +4938,15 @@
     "s": "R"
   },
   {
+    "t": "#38 Sobre Wembanyama, la llegada del hombre a la luna y expectativas",
+    "u": "https://alejandroggo.substack.com/p/38-sobre-wembanyama-la-llegada-del",
+    "d": "2024-05-07",
+    "y": 2024,
+    "s": "S",
+    "sub": "El francés fue nombrado ROY de manera unánime. Cero sorpresa en esto, pero sí en sus palabras.",
+    "p": 1
+  },
+  {
     "t": "Victor Wembanyama no se conforma con un premio para la historia: «No superé las expectativas»",
     "u": "https://www.relevo.com/baloncesto/nba/victor-wembanyama-elegido-mejor-novato-20240505011655-nt.html",
     "d": "2024-05-07",
@@ -4729,15 +4955,6 @@
     "tags": [
       "Historia"
     ]
-  },
-  {
-    "t": "#38 Sobre Wembanyama, la llegada del hombre a la luna y expectativas",
-    "u": "https://alejandroggo.substack.com/p/38-sobre-wembanyama-la-llegada-del",
-    "d": "2024-05-07",
-    "y": 2024,
-    "s": "S",
-    "sub": "El francés fue nombrado ROY de manera unánime. Cero sorpresa en esto, pero sí en sus palabras.",
-    "p": 1
   },
   {
     "t": "Jason Kidd renueva en Dallas tras los cantos de sirena para el banquillo de los Lakers",
@@ -4815,6 +5032,14 @@
     ]
   },
   {
+    "t": "#37 Sobre lesiones, normativas y consecuencias ",
+    "u": "https://alejandroggo.substack.com/p/37-sobre-lesiones-normativas-y-consecuencias",
+    "d": "2024-05-01",
+    "y": 2024,
+    "s": "S",
+    "sub": "La NBA quiso darle más importancia a la temporada regular y aquí estamos, en playoffs, huérfanos de estrellas."
+  },
+  {
     "t": "Un cambio generacional en la NBA: primer playoff sin LeBron, Curry ni Durant en semifinales desde 2005",
     "u": "https://www.relevo.com/baloncesto/nba/cambio-generacional-primer-playoff-lebron-20240430161151-nt.html",
     "d": "2024-05-01",
@@ -4823,14 +5048,6 @@
     "tags": [
       "TV y derechos"
     ]
-  },
-  {
-    "t": "#37 Sobre lesiones, normativas y consecuencias ",
-    "u": "https://alejandroggo.substack.com/p/37-sobre-lesiones-normativas-y-consecuencias",
-    "d": "2024-05-01",
-    "y": 2024,
-    "s": "S",
-    "sub": "La NBA quiso darle más importancia a la temporada regular y aquí estamos, en playoffs, huérfanos de estrellas."
   },
   {
     "t": "El mejor Nikola Jokic y la sangre fría de Jamal Murray fulminan con el sueño de LeBron James en su temporada 21",
@@ -4857,13 +5074,6 @@
     ]
   },
   {
-    "t": "Anthony Edwards completa el rosco a los Suns y sigue postulándose a ser \"el nuevo Jordan\"",
-    "u": "https://www.relevo.com/baloncesto/nba/james-harden-evita-mayor-remontada-20240427004104-nt.html",
-    "d": "2024-04-29",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#36 Sobre proyectos, estrellas y role players, y los grandes cambios que se vienen ",
     "u": "https://alejandroggo.substack.com/p/proyectos-estrellas-role-players",
     "d": "2024-04-29",
@@ -4871,6 +5081,13 @@
     "s": "S",
     "sub": "“Por cada Alex Caruso hay un DeMar DeRozan y un Zach LaVine”. Y así no se puede luchar por la NBA.",
     "p": 1
+  },
+  {
+    "t": "Anthony Edwards completa el rosco a los Suns y sigue postulándose a ser \"el nuevo Jordan\"",
+    "u": "https://www.relevo.com/baloncesto/nba/james-harden-evita-mayor-remontada-20240427004104-nt.html",
+    "d": "2024-04-29",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "LeBron James y los Lakers evitan ser barridos por Denver y alargan la serie un partido más",
@@ -4966,6 +5183,14 @@
     "s": "R"
   },
   {
+    "t": "#35 Sobre héroes inesperados, invitados especiales y playoffs",
+    "u": "https://alejandroggo.substack.com/p/35-sobre-heroes-inesperados-invitados",
+    "d": "2024-04-21",
+    "y": 2024,
+    "s": "S",
+    "sub": "Ocho series, 16 protagonistas. Uno por franquicia. 100 palabras por jugador. Buscando las clave de cada eliminatoria."
+  },
+  {
     "t": "Anthony Edwards se luce ante su «mejor jugador de la historia» y pone a los Wolves 1-0",
     "u": "https://www.relevo.com/baloncesto/nba/anthony-edwards-luce-ante-mejor-20240419002836-nt.html",
     "d": "2024-04-21",
@@ -4994,14 +5219,6 @@
     ]
   },
   {
-    "t": "#35 Sobre héroes inesperados, invitados especiales y playoffs",
-    "u": "https://alejandroggo.substack.com/p/35-sobre-heroes-inesperados-invitados",
-    "d": "2024-04-21",
-    "y": 2024,
-    "s": "S",
-    "sub": "Ocho series, 16 protagonistas. Uno por franquicia. 100 palabras por jugador. Buscando las clave de cada eliminatoria."
-  },
-  {
     "t": "Los Heat cumplen y la primera ronda tendrá la rivalidad de nunca acabar: Boston y Miami se vuelven a ver",
     "u": "https://www.relevo.com/baloncesto/nba/heat-cumplen-primera-ronda-rivalidad-20240419061739-nt.html",
     "d": "2024-04-20",
@@ -5013,6 +5230,15 @@
     ]
   },
   {
+    "t": "#34 Sobre las prioridades de la NBA, expulsiones de por vida y sanciones a dedo",
+    "u": "https://alejandroggo.substack.com/p/prioridades-nba-jontay-porter",
+    "d": "2024-04-19",
+    "y": 2024,
+    "s": "S",
+    "sub": "El caso Jontay Porter ha servido para dar claridad a las prioridades de la liga a la hora de poner sanciones. Y sorpresa, sorpresa, sigue siendo la misma.",
+    "p": 1
+  },
+  {
     "t": "La lesión de Jimmy Butler abre un camino 'fácil' para los Celtics hasta las finales del Este",
     "u": "https://www.relevo.com/baloncesto/nba/lesion-jimmy-butler-abre-camino-20240417004613-nt.html",
     "d": "2024-04-19",
@@ -5021,15 +5247,6 @@
     "tags": [
       "Celtics"
     ]
-  },
-  {
-    "t": "#34 Sobre las prioridades de la NBA, expulsiones de por vida y sanciones a dedo",
-    "u": "https://alejandroggo.substack.com/p/prioridades-nba-jontay-porter",
-    "d": "2024-04-19",
-    "y": 2024,
-    "s": "S",
-    "sub": "El caso Jontay Porter ha servido para dar claridad a las prioridades de la liga a la hora de poner sanciones. Y sorpresa, sorpresa, sigue siendo la misma.",
-    "p": 1
   },
   {
     "t": "LeBron James agranda un legado que ya era infinito, mientras que los Warriors ponen fin a una era",
@@ -5056,13 +5273,6 @@
     "s": "R"
   },
   {
-    "t": "Kawhi Leonard completa un Dream Team que atemoriza a todos sus rivales",
-    "u": "https://www.relevo.com/baloncesto/nba/lebron-curry-durant-tatum-joel-20240414014520-nt.html",
-    "d": "2024-04-16",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#33 Mis premios de temporada NBA 2023/24: ¿cómo sería mi papeleta electoral?",
     "u": "https://alejandroggo.substack.com/p/premios-temporada-nba-2024",
     "d": "2024-04-16",
@@ -5071,6 +5281,25 @@
     "sub": "Es momento de mojarse por los premios de la temporada NBA. Elijo los finalistas y ganadores de cada galardón y hasta lo argumento.",
     "tags": [
       "Pronósticos"
+    ]
+  },
+  {
+    "t": "Kawhi Leonard completa un Dream Team que atemoriza a todos sus rivales",
+    "u": "https://www.relevo.com/baloncesto/nba/lebron-curry-durant-tatum-joel-20240414014520-nt.html",
+    "d": "2024-04-16",
+    "y": 2024,
+    "s": "R"
+  },
+  {
+    "t": "#32 Sobre el play-in, el orgullo y las expectativas",
+    "u": "https://alejandroggo.substack.com/p/32-sobre-el-play-in-el-orgullo-y",
+    "d": "2024-04-15",
+    "y": 2024,
+    "s": "S",
+    "sub": "El play-in es el mejor invento de la NBA en la era moderna, y no es un debate realmente.",
+    "p": 1,
+    "tags": [
+      "Opinión"
     ]
   },
   {
@@ -5089,18 +5318,6 @@
     "d": "2024-04-15",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#32 Sobre el play-in, el orgullo y las expectativas",
-    "u": "https://alejandroggo.substack.com/p/32-sobre-el-play-in-el-orgullo-y",
-    "d": "2024-04-15",
-    "y": 2024,
-    "s": "S",
-    "sub": "El play-in es el mejor invento de la NBA en la era moderna, y no es un debate realmente.",
-    "p": 1,
-    "tags": [
-      "Opinión"
-    ]
   },
   {
     "t": "Denver tira el liderato ante Wembanyama; Lakers y Warriors ya son equipos de playin",
@@ -5141,13 +5358,6 @@
     "s": "R"
   },
   {
-    "t": "Dallas Mavericks reclama el título de mejor equipo en Texas y deja a Miami Heat pendiente del playin",
-    "u": "https://www.relevo.com/baloncesto/nba/dallas-reclama-titulo-mejor-equipo-20240410065003-nt.html",
-    "d": "2024-04-11",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#31 Sobre Jrue Holiday, una extensión fuerte y la apuesta de los Celtics",
     "u": "https://alejandroggo.substack.com/p/jrue-holiday-extension-celtics",
     "d": "2024-04-11",
@@ -5158,6 +5368,13 @@
     "tags": [
       "Celtics"
     ]
+  },
+  {
+    "t": "Dallas Mavericks reclama el título de mejor equipo en Texas y deja a Miami Heat pendiente del playin",
+    "u": "https://www.relevo.com/baloncesto/nba/dallas-reclama-titulo-mejor-equipo-20240410065003-nt.html",
+    "d": "2024-04-11",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "UConn se lleva la batalla de gigantes y se lleva el segundo título nacional consecutivo",
@@ -5431,6 +5648,19 @@
     "s": "R"
   },
   {
+    "t": "#29 Sobre récords, los Celtics de 2024 y valorar el proceso ",
+    "u": "https://alejandroggo.substack.com/p/29-sobre-records-los-celtics-de-2024",
+    "d": "2024-03-25",
+    "y": 2024,
+    "s": "S",
+    "sub": "La lista de récords que estos Celtics han batido empieza a ser demasiado larga. El anillo es el objetivo, pero no por ello hemos de dejar de admirar lo que están logrando en temporada regular.",
+    "p": 1,
+    "tags": [
+      "Celtics",
+      "Estadística"
+    ]
+  },
+  {
     "t": "LeBron y los Lakers se regalan un festín ofensivo inédito en 37 años: ¡150 puntos... sin prórroga!",
     "u": "https://www.relevo.com/baloncesto/nba/antetokounmpo-tripledoble-middleton-defensa-bucks-20240324053334-nt.html",
     "d": "2024-03-25",
@@ -5445,19 +5675,6 @@
     "s": "R",
     "tags": [
       "Españoles NBA"
-    ]
-  },
-  {
-    "t": "#29 Sobre récords, los Celtics de 2024 y valorar el proceso ",
-    "u": "https://alejandroggo.substack.com/p/29-sobre-records-los-celtics-de-2024",
-    "d": "2024-03-25",
-    "y": 2024,
-    "s": "S",
-    "sub": "La lista de récords que estos Celtics han batido empieza a ser demasiado larga. El anillo es el objetivo, pero no por ello hemos de dejar de admirar lo que están logrando en temporada regular.",
-    "p": 1,
-    "tags": [
-      "Celtics",
-      "Estadística"
     ]
   },
   {
@@ -5499,6 +5716,15 @@
     "s": "R"
   },
   {
+    "t": "#28 Sobre apuestas, adicciones (al dinero) y la hipocresía de la NBA",
+    "u": "https://alejandroggo.substack.com/p/28-sobre-apuestas-adicciones-al-dinero",
+    "d": "2024-03-21",
+    "y": 2024,
+    "s": "S",
+    "sub": "Es importante entender qué representan las apuestas, qué efecto tienen en la vida de las personas y por qué hay que combatirlas. Excepto si eres la NBA.",
+    "p": 1
+  },
+  {
     "t": "Shai es el MVP, pero Chet Holmgren es el factor diferencial de unos Thunder que ya están en postemporada",
     "u": "https://www.relevo.com/baloncesto/nba/chet-holmgren-exhibe-thunder-aseguran-20240320055627-nt.html",
     "d": "2024-03-21",
@@ -5523,13 +5749,15 @@
     "s": "R"
   },
   {
-    "t": "#28 Sobre apuestas, adicciones (al dinero) y la hipocresía de la NBA",
-    "u": "https://alejandroggo.substack.com/p/28-sobre-apuestas-adicciones-al-dinero",
-    "d": "2024-03-21",
+    "t": "#27 Sobre LeBron James, pódcast NBA y la democratización de la información",
+    "u": "https://alejandroggo.substack.com/p/27-sobre-lebron-james-podcast-nba",
+    "d": "2024-03-19",
     "y": 2024,
     "s": "S",
-    "sub": "Es importante entender qué representan las apuestas, qué efecto tienen en la vida de las personas y por qué hay que combatirlas. Excepto si eres la NBA.",
-    "p": 1
+    "sub": "La buena noticia es que LeBron James ha hecho un pódcast. La mala, que estamos más cerca de que todos los jugadores NBA tengan el suyo propio.",
+    "tags": [
+      "Podcasts"
+    ]
   },
   {
     "t": "Miami Heat sigue sin arrancar el vuelo: otra derrota y vuelven a caer a play-in",
@@ -5556,17 +5784,6 @@
     "s": "R"
   },
   {
-    "t": "#27 Sobre LeBron James, pódcast NBA y la democratización de la información",
-    "u": "https://alejandroggo.substack.com/p/27-sobre-lebron-james-podcast-nba",
-    "d": "2024-03-19",
-    "y": 2024,
-    "s": "S",
-    "sub": "La buena noticia es que LeBron James ha hecho un pódcast. La mala, que estamos más cerca de que todos los jugadores NBA tengan el suyo propio.",
-    "tags": [
-      "Podcasts"
-    ]
-  },
-  {
     "t": "Dos españoles lucharán por el título universitario: empieza la locura de marzo en la NCAA",
     "u": "https://www.relevo.com/baloncesto/nba/espanoles-lucharan-titulo-universitario-empieza-20240316025616-nt.html",
     "d": "2024-03-18",
@@ -5577,19 +5794,19 @@
     ]
   },
   {
-    "t": "Los Warriors asaltan Los Angeles en el final más de partido más largo de la temporada",
-    "u": "https://www.relevo.com/baloncesto/nba/warriors-asaltan-angeles-final-partido-20240316052818-nt.html",
-    "d": "2024-03-17",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#26 Sobre Steph Curry y la evolución del negacionismo histórico alrededor de su figura",
     "u": "https://alejandroggo.substack.com/p/26-sobre-steph-curry-y-la-evolucion",
     "d": "2024-03-17",
     "y": 2024,
     "s": "S",
     "sub": "Cumple 36. Y es momento de asumir que no volveremos a ver nada como él en la NBA, y que es mejor rendirse a la evidencia que seguir luchando en vano."
+  },
+  {
+    "t": "Los Warriors asaltan Los Angeles en el final más de partido más largo de la temporada",
+    "u": "https://www.relevo.com/baloncesto/nba/warriors-asaltan-angeles-final-partido-20240316052818-nt.html",
+    "d": "2024-03-17",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "La Bestia' Zion Williamson deja atrás las polémicas por su peso y convierte a los Pelicans en candidatos",
@@ -5626,6 +5843,18 @@
     "s": "R"
   },
   {
+    "t": "#25 Sobre narrativas, discurso y ruido en los medios de comunicación ",
+    "u": "https://alejandroggo.substack.com/p/25-sobre-narrativas-discurso-y-ruido",
+    "d": "2024-03-13",
+    "y": 2024,
+    "s": "S",
+    "sub": "Si te dicen que Jayson Tatum no es clutch te lo crees. Y si te dicen que la tierra es plana, pues igual también.",
+    "tags": [
+      "Celtics",
+      "Periodismo"
+    ]
+  },
+  {
     "t": "Los Knicks igualan un récord de principio de siglo en la vuelta de OG Anunoby",
     "u": "https://www.relevo.com/baloncesto/nba/knicks-igualan-record-principio-siglo-20240312053458-nt.html",
     "d": "2024-03-13",
@@ -5658,23 +5887,19 @@
     "s": "R"
   },
   {
-    "t": "#25 Sobre narrativas, discurso y ruido en los medios de comunicación ",
-    "u": "https://alejandroggo.substack.com/p/25-sobre-narrativas-discurso-y-ruido",
-    "d": "2024-03-13",
-    "y": 2024,
-    "s": "S",
-    "sub": "Si te dicen que Jayson Tatum no es clutch te lo crees. Y si te dicen que la tierra es plana, pues igual también.",
-    "tags": [
-      "Celtics",
-      "Periodismo"
-    ]
-  },
-  {
     "t": "El mejor Kevin Durant del curso despierta al 'Big Three' de los Suns a tiempo",
     "u": "https://www.relevo.com/baloncesto/nba/kevin-durant-big3-suns-despiertan-20240311055020-nt.html",
     "d": "2024-03-12",
     "y": 2024,
     "s": "R"
+  },
+  {
+    "t": "#24 Sobre árbitros, corrupción, cambios de normativa y Rudy Gobert",
+    "u": "https://alejandroggo.substack.com/p/24-sobre-arbitros-corrupcion-cambios",
+    "d": "2024-03-11",
+    "y": 2024,
+    "s": "S",
+    "sub": "“No atribuyas a la maldad lo que simplemente puede ser resultado de la ineptitud”."
   },
   {
     "t": "El campeón aprieta y busca el primer puesto en el Oeste",
@@ -5685,14 +5910,6 @@
     "tags": [
       "TV y derechos"
     ]
-  },
-  {
-    "t": "#24 Sobre árbitros, corrupción, cambios de normativa y Rudy Gobert",
-    "u": "https://alejandroggo.substack.com/p/24-sobre-arbitros-corrupcion-cambios",
-    "d": "2024-03-11",
-    "y": 2024,
-    "s": "S",
-    "sub": "“No atribuyas a la maldad lo que simplemente puede ser resultado de la ineptitud”."
   },
   {
     "t": "Sigue la fiesta de Luka Doncic con su sexto triple-doble seguido de 30 puntos y victoria",
@@ -5740,6 +5957,14 @@
     "s": "R"
   },
   {
+    "t": "#23 Sobre LeBron James y la búsqueda del próximo gran contrato NBA",
+    "u": "https://alejandroggo.substack.com/p/23-sobre-lebron-james-y-la-busqueda",
+    "d": "2024-03-07",
+    "y": 2024,
+    "s": "S",
+    "sub": "LeBron James podría entrar en la agencia libre este verano. ¿Qué opciones tiene? ¿Jugará con Bronny? ¿Seguirá en los Lakers?"
+  },
+  {
     "t": "DeMar DeRozan reabre la conversación sobre la salud mental: \"La belleza de mostrarse vulnerable\"",
     "u": "https://www.relevo.com/baloncesto/nba/demar-derozan-reabre-conversacion-sobre-20240305031426-nt.html",
     "d": "2024-03-07",
@@ -5752,14 +5977,6 @@
     "d": "2024-03-07",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#23 Sobre LeBron James y la búsqueda del próximo gran contrato NBA",
-    "u": "https://alejandroggo.substack.com/p/23-sobre-lebron-james-y-la-busqueda",
-    "d": "2024-03-07",
-    "y": 2024,
-    "s": "S",
-    "sub": "LeBron James podría entrar en la agencia libre este verano. ¿Qué opciones tiene? ¿Jugará con Bronny? ¿Seguirá en los Lakers?"
   },
   {
     "t": "Los Cavaliers lo vuelven a hacer: remontada a base de triples y rompen la racha de Boston",
@@ -5779,6 +5996,14 @@
     "s": "R"
   },
   {
+    "t": "¿Hablamos?",
+    "u": "https://alejandroggo.substack.com/p/hablamos",
+    "d": "2024-03-04",
+    "y": 2024,
+    "s": "S",
+    "sub": "Un espacio privado para conectar y conversar."
+  },
+  {
     "t": "Los datos de una paliza histórica de los Celtics a los Warriors: parcial de 61-17, 52 de diferencia, 0 de 9 de Stephen Curry...",
     "u": "https://www.relevo.com/baloncesto/nba/paliza-historica-warriors-curry-puntos-20240302001447-nt.html",
     "d": "2024-03-04",
@@ -5795,14 +6020,6 @@
     "d": "2024-03-04",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "¿Hablamos?",
-    "u": "https://alejandroggo.substack.com/p/hablamos",
-    "d": "2024-03-04",
-    "y": 2024,
-    "s": "S",
-    "sub": "Un espacio privado para conectar y conversar."
   },
   {
     "t": "LeBron James supera la barrera de los 40.000 puntos y sigue escribiendo la historia de la NBA",
@@ -5869,13 +6086,6 @@
     "s": "R"
   },
   {
-    "t": "Luka Doncic se regala un triple-doble y victoria en Toronto para su 25 cumpleaños",
-    "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-regala-tripledoble-victoria-20240228064403-nt.html",
-    "d": "2024-02-29",
-    "y": 2024,
-    "s": "R"
-  },
-  {
     "t": "#22 Sobre los Celtics y la dependencia en el triple como mentira narrativa",
     "u": "https://alejandroggo.substack.com/p/celtics-dependencia-triples",
     "d": "2024-02-29",
@@ -5885,6 +6095,13 @@
     "tags": [
       "Celtics"
     ]
+  },
+  {
+    "t": "Luka Doncic se regala un triple-doble y victoria en Toronto para su 25 cumpleaños",
+    "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-regala-tripledoble-victoria-20240228064403-nt.html",
+    "d": "2024-02-29",
+    "y": 2024,
+    "s": "R"
   },
   {
     "t": "Primeros fijos para la lista de Estados Unidos en París: estrellas de la NBA, Joel Embiid... y Jrue Holiday",
@@ -6159,6 +6376,17 @@
     "s": "R"
   },
   {
+    "t": "#20 Sobre Marcus Smart y relaciones irracionales en el deporte",
+    "u": "https://alejandroggo.substack.com/p/marcus-smart-relaciones-deporte",
+    "d": "2024-02-05",
+    "y": 2024,
+    "s": "S",
+    "sub": "De todas las formas de entender el deporte, la pasión e irracionalidad es sin duda la más tóxica y al mismo tiempo necesaria para sobrevivir.",
+    "tags": [
+      "Celtics"
+    ]
+  },
+  {
     "t": "Condenado a 12 años de cárcel por hacerse pasar por Marcus Smart para estafar $500 millones",
     "u": "https://www.relevo.com/baloncesto/nba/condenado-anos-carcel-hacerse-pasar-20240205071159-nt.html",
     "d": "2024-02-05",
@@ -6181,17 +6409,6 @@
     "d": "2024-02-05",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#20 Sobre Marcus Smart y relaciones irracionales en el deporte",
-    "u": "https://alejandroggo.substack.com/p/marcus-smart-relaciones-deporte",
-    "d": "2024-02-05",
-    "y": 2024,
-    "s": "S",
-    "sub": "De todas las formas de entender el deporte, la pasión e irracionalidad es sin duda la más tóxica y al mismo tiempo necesaria para sobrevivir.",
-    "tags": [
-      "Celtics"
-    ]
   },
   {
     "t": "Stephen Curry sufre la maldición del curso en la NBA: meter 60 puntos y acabar con derrota",
@@ -6218,6 +6435,18 @@
     ]
   },
   {
+    "t": "#19 Sobre Marc Gasol, jugadores, personas y periodistas",
+    "u": "https://alejandroggo.substack.com/p/marc-gasol-jugadores-personas",
+    "d": "2024-02-02",
+    "y": 2024,
+    "s": "S",
+    "sub": "A nivel jugador, Marc trajo un anillo a Toronto. A nivel periodístico, fue la presencia de Marc lo que me abrió una puerta. A nivel humano, hay muy pocos como él.",
+    "tags": [
+      "Periodismo",
+      "Españoles NBA"
+    ]
+  },
+  {
     "t": "Los Lakers sin LeBron ni Davis sorprenden a los Celtics ganando en Boston",
     "u": "https://www.relevo.com/baloncesto/nba/lakers-lebron-davis-sorprenden-celtics-20240201064016-nt.html",
     "d": "2024-02-02",
@@ -6240,18 +6469,6 @@
     "d": "2024-02-02",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "#19 Sobre Marc Gasol, jugadores, personas y periodistas",
-    "u": "https://alejandroggo.substack.com/p/marc-gasol-jugadores-personas",
-    "d": "2024-02-02",
-    "y": 2024,
-    "s": "S",
-    "sub": "A nivel jugador, Marc trajo un anillo a Toronto. A nivel periodístico, fue la presencia de Marc lo que me abrió una puerta. A nivel humano, hay muy pocos como él.",
-    "tags": [
-      "Periodismo",
-      "Españoles NBA"
-    ]
   },
   {
     "t": "LeBron explota ante la crisis de los Lakers: «Cualquier noche nos pueden patear el culo»",
@@ -6309,6 +6526,14 @@
     ]
   },
   {
+    "t": "4x13 | ¿Es JOEL EMBIID el MVP? ¿Se EQUIVOCARON los BUCKS con DOC RIVERS? ¿Qué TRADES se VIENEN en la NBA?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2024-01-26",
+    "y": 2024,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Stephen Curry, fuera de los quintetos del All Star de la NBA por primera vez en diez años",
     "u": "https://www.relevo.com/baloncesto/nba/lebron-james-lidera-titulares-star-20240125064919-nt.html",
     "d": "2024-01-26",
@@ -6337,14 +6562,6 @@
     "tags": [
       "Pronósticos"
     ]
-  },
-  {
-    "t": "4x13 | ¿Es JOEL EMBIID el MVP? ¿Se EQUIVOCARON los BUCKS con DOC RIVERS? ¿Qué TRADES se VIENEN en la NBA?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2024-01-26",
-    "y": 2024,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Nikola Jokic arruina el debut de Siakam en Indiana con una estadística 'absurda'",
@@ -6405,6 +6622,14 @@
     ]
   },
   {
+    "t": "4x12 | EL RENACER de LOS ANGELES CLIPPERS: ¿es ESTE su MOMENTO para GANAR LA NBA?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2024-01-20",
+    "y": 2024,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Denver asalta Boston en una final anticipada de la NBA",
     "u": "https://www.relevo.com/baloncesto/nba/explota-devin-booker-puntos-casa-20240119070732-nt.html",
     "d": "2024-01-20",
@@ -6420,14 +6645,6 @@
     "d": "2024-01-20",
     "y": 2024,
     "s": "R"
-  },
-  {
-    "t": "4x12 | EL RENACER de LOS ANGELES CLIPPERS: ¿es ESTE su MOMENTO para GANAR LA NBA?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2024-01-20",
-    "y": 2024,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Los Thunder asaltan Utah y reafirman su candidatura al anillo",
@@ -7173,6 +7390,18 @@
     "s": "R"
   },
   {
+    "t": "#18 La 'Copa NBA' ha sido un éxito aunque seáis unos haters",
+    "u": "https://alejandroggo.substack.com/p/copa-nba-exito-haters",
+    "d": "2023-11-23",
+    "y": 2023,
+    "s": "S",
+    "sub": "Tardaron años en hacerlo oficial y llegó con muchas dudas, pero el primer IST está siendo una maravilla, aunque no lo digáis en público.",
+    "tags": [
+      "TV y derechos",
+      "Opinión"
+    ]
+  },
+  {
     "t": "Los Boston Celtics martirizan a Antetokounmpo y tiñen de verde la NBA antes de irse de vacaciones",
     "u": "https://www.relevo.com/baloncesto/nba/jrue-holiday-firma-venganza-ante-20231122062925-nt.html",
     "d": "2023-11-23",
@@ -7194,18 +7423,6 @@
     ]
   },
   {
-    "t": "#18 La 'Copa NBA' ha sido un éxito aunque seáis unos haters",
-    "u": "https://alejandroggo.substack.com/p/copa-nba-exito-haters",
-    "d": "2023-11-23",
-    "y": 2023,
-    "s": "S",
-    "sub": "Tardaron años en hacerlo oficial y llegó con muchas dudas, pero el primer IST está siendo una maravilla, aunque no lo digáis en público.",
-    "tags": [
-      "TV y derechos",
-      "Opinión"
-    ]
-  },
-  {
     "t": "Los Thunder han llegado y tienen previsto quedarse en la élite de la NBA",
     "u": "https://www.relevo.com/baloncesto/nba/thunder-llegado-previsto-quedarse-elite-20231121061642-nt.html",
     "d": "2023-11-22",
@@ -7220,19 +7437,19 @@
     "s": "R"
   },
   {
-    "t": "Los Nuggets de Jokic vuelven a caer: tres derrotas en cuatro partidos para el campeón",
-    "u": "https://www.relevo.com/baloncesto/nba/nuggets-jokic-vuelven-caer-tres-20231119062755-nt.html",
-    "d": "2023-11-20",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "4x07 | Las SORPRESAS de este INICIO DE TEMPORADA de la NBA | HALIBURTON, MAXEY, WIGGINS y MÁS",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-11-20",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Los Nuggets de Jokic vuelven a caer: tres derrotas en cuatro partidos para el campeón",
+    "u": "https://www.relevo.com/baloncesto/nba/nuggets-jokic-vuelven-caer-tres-20231119062755-nt.html",
+    "d": "2023-11-20",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "El sacrificio de Russell Westbrook y la importancia de ser titular en la NBA",
@@ -7356,13 +7573,6 @@
     "s": "R"
   },
   {
-    "t": "El Jokic más agresivo se carga a los Warriors pese a la ausencia de su mejor escudero",
-    "u": "https://www.relevo.com/baloncesto/nba/jokic-agresivo-carga-warriors-jornada-20231108064523-nt.html",
-    "d": "2023-11-09",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "4x06 — ¿QUIÉN es el MÁXIMO CANDIDATO al MVP de la NBA? | Los CASOS de CURRY, DONCIC, TATUM y MÁS...",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-11-09",
@@ -7373,6 +7583,13 @@
       "Celtics",
       "Pronósticos"
     ]
+  },
+  {
+    "t": "El Jokic más agresivo se carga a los Warriors pese a la ausencia de su mejor escudero",
+    "u": "https://www.relevo.com/baloncesto/nba/jokic-agresivo-carga-warriors-jornada-20231108064523-nt.html",
+    "d": "2023-11-09",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Scottie Barnes es la mejor noticia de los Raptors: de promesa a realidad en un verano",
@@ -7451,6 +7668,14 @@
     "s": "R"
   },
   {
+    "t": "4x05 — Las CLAVES del TRASPASO de JAMES HARDEN + el GRAN NIVEL de WARRIORS y MAVERICKS en la NBA",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-11-03",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Wembanyama deja su primera gran exhibición: 38 puntos ante Kevin Durant y Devin Booker, y los Spurs en positivo",
     "u": "https://www.relevo.com/baloncesto/nba/wembanyama-deja-primera-gran-exhibicion-20231102055343-nt.html",
     "d": "2023-11-03",
@@ -7466,14 +7691,6 @@
     "d": "2023-11-03",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "4x05 — Las CLAVES del TRASPASO de JAMES HARDEN + el GRAN NIVEL de WARRIORS y MAVERICKS en la NBA",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-11-03",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Fallece Bobby Knight, leyenda de los banquillos NCAA y verdugo de España en Los Angeles 1984",
@@ -7717,6 +7934,14 @@
     "s": "R"
   },
   {
+    "t": "4x02 — Campeón, MVP, hot takes Y ANUNCIO",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-10-13",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Para Oklahoma City Thunder, el futuro es ahora mismo",
     "u": "https://www.relevo.com/baloncesto/nba/oklahoma-city-thunder-futuro-20231011041001-nt.html",
     "d": "2023-10-13",
@@ -7729,14 +7954,6 @@
     "d": "2023-10-13",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "4x02 — Campeón, MVP, hot takes Y ANUNCIO",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-10-13",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "La 'batalla' que enfrenta a LeBron James y Shaquille O'Neal por reinar en la Ciudad del Pecado",
@@ -8310,19 +8527,19 @@
     ]
   },
   {
-    "t": "James Harden, estancado en unos Sixers por un precio \"exorbitante\"",
-    "u": "https://www.relevo.com/baloncesto/nba/james-harden-sigue-queriendo-salir-20230715035243-nt.html",
-    "d": "2023-07-17",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#16 Nuevas redes sociales",
     "u": "https://alejandroggo.substack.com/p/nuevas-redes-sociales",
     "d": "2023-07-17",
     "y": 2023,
     "s": "S",
     "sub": "Hay que buscar una alternativa, por si acaba muriendo Twitter. Aquí las dejo todas."
+  },
+  {
+    "t": "James Harden, estancado en unos Sixers por un precio \"exorbitante\"",
+    "u": "https://www.relevo.com/baloncesto/nba/james-harden-sigue-queriendo-salir-20230715035243-nt.html",
+    "d": "2023-07-17",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "LeBron James vuelve al 23: deja de vestir el 6 en honor a Bill Russell",
@@ -8374,6 +8591,14 @@
     ]
   },
   {
+    "t": "#33 La NBA cambia... ¿para siempre?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-07-12",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "El último 'traspaso' del polémico Kyrie Irving tras su salida de Nike",
     "u": "https://www.relevo.com/baloncesto/nba/kyrie-irving-cambia-nike-anta-20230710040751-nt.html",
     "d": "2023-07-12",
@@ -8389,14 +8614,6 @@
     "tags": [
       "Expansión"
     ]
-  },
-  {
-    "t": "#33 La NBA cambia... ¿para siempre?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-07-12",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "La 'pensión' dorada de Gregg Popovich: 80 millones por seguir entrenando hasta los 79 años",
@@ -8427,6 +8644,13 @@
     "s": "R"
   },
   {
+    "t": "Damian Lillard secuestra el mercado de traspasos en la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/damian-lillard-secuestra-mercado-traspasos-20230707184833-nt.html",
+    "d": "2023-07-07",
+    "y": 2023,
+    "s": "R"
+  },
+  {
     "t": "Cancha NBA | AGENCIA LIBRE NBA: GANADORES Y PERDEDORES (CON ALEJANDRO GAITÁN)",
     "u": "https://www.youtube.com/watch?v=sM8gPATLsrg",
     "d": "2023-07-07",
@@ -8437,13 +8661,6 @@
     "tags": [
       "CBA"
     ]
-  },
-  {
-    "t": "Damian Lillard secuestra el mercado de traspasos en la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/damian-lillard-secuestra-mercado-traspasos-20230707184833-nt.html",
-    "d": "2023-07-07",
-    "y": 2023,
-    "s": "R"
   },
   {
     "t": "Los Mavs encuentran en el mercado defensa para complementar a Luka Doncic y Kyrie Irving",
@@ -8461,13 +8678,6 @@
     "vid": 1
   },
   {
-    "t": "La NBA se pone dura contra los 'teatreros' y regala un nuevo 'challenge' a los entrenadores",
-    "u": "https://www.relevo.com/baloncesto/nba/pone-dura-flopping-regala-nuevo-20230703042227-nt.html",
-    "d": "2023-07-05",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#32 Damian Lillard y el dilema de los Blazers",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-07-05",
@@ -8477,6 +8687,13 @@
     "tags": [
       "Opinión"
     ]
+  },
+  {
+    "t": "La NBA se pone dura contra los 'teatreros' y regala un nuevo 'challenge' a los entrenadores",
+    "u": "https://www.relevo.com/baloncesto/nba/pone-dura-flopping-regala-nuevo-20230703042227-nt.html",
+    "d": "2023-07-05",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Lluvia extra de millones para cumplir las nuevas normativas en la NBA",
@@ -8523,19 +8740,19 @@
     ]
   },
   {
-    "t": "La NBA se pone dura con los grandes gastadores: las nuevas normas del convenio colectivo",
-    "u": "https://www.relevo.com/baloncesto/nba/pone-dura-grandes-gastadores-nuevas-20230626032612-nt.html",
-    "d": "2023-06-28",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#31 Empieza la agencia libre de la NBA",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-06-28",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "La NBA se pone dura con los grandes gastadores: las nuevas normas del convenio colectivo",
+    "u": "https://www.relevo.com/baloncesto/nba/pone-dura-grandes-gastadores-nuevas-20230626032612-nt.html",
+    "d": "2023-06-28",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Se acabó el culebrón más largo de la NBA: los Hawks mandan a John Collins a Utah",
@@ -8573,6 +8790,15 @@
     "s": "R"
   },
   {
+    "t": "#15 Empieza la off-season: os presento la mega-guía del verano NBA",
+    "u": "https://alejandroggo.substack.com/p/off-season-nba-guia",
+    "d": "2023-06-22",
+    "y": 2023,
+    "s": "S",
+    "sub": "Se acabó la NBA, los Nuggets son campeones, pero es momento de hablar del mercado. Y os traigo un regalo que no podéis desaprovechar.",
+    "p": 1
+  },
+  {
     "t": "Damian Lillard y la dualidad de Portland, entre competir y desarrollar un proyecto a futuro",
     "u": "https://www.relevo.com/baloncesto/nba/damian-lillard-dualidad-portland-competir-20230620054418-nt.html",
     "d": "2023-06-22",
@@ -8588,15 +8814,6 @@
     "tags": [
       "Celtics"
     ]
-  },
-  {
-    "t": "#15 Empieza la off-season: os presento la mega-guía del verano NBA",
-    "u": "https://alejandroggo.substack.com/p/off-season-nba-guia",
-    "d": "2023-06-22",
-    "y": 2023,
-    "s": "S",
-    "sub": "Se acabó la NBA, los Nuggets son campeones, pero es momento de hablar del mercado. Y os traigo un regalo que no podéis desaprovechar.",
-    "p": 1
   },
   {
     "t": "Los gemelos Thompson pueden hacer historia: ¿primera pareja de hermanos elegidos en el top-10 del draft?",
@@ -8641,6 +8858,17 @@
     "s": "R"
   },
   {
+    "t": "#14 Sobre Ja Morant y una sanción hipócrita motivada por dinero",
+    "u": "https://alejandroggo.substack.com/p/ja-morant-sancion-dinero",
+    "d": "2023-06-16",
+    "y": 2023,
+    "s": "S",
+    "sub": "El base de los Grizzlies se perderá 25 partidos por mostrar un arma en internet o, para la NBA, recuperar una cultura que David Stern había enterrado hace dos décadas.",
+    "tags": [
+      "Historia"
+    ]
+  },
+  {
     "t": "La NBA suspende a Ja Morant 25 partidos por volver a mostrar una pistola en Instagram",
     "u": "https://www.relevo.com/baloncesto/nba/suspende-morant-partidos-volver-mostrar-20230615180436-nt.html",
     "d": "2023-06-16",
@@ -8655,27 +8883,9 @@
     "s": "R"
   },
   {
-    "t": "#14 Sobre Ja Morant y una sanción hipócrita motivada por dinero",
-    "u": "https://alejandroggo.substack.com/p/ja-morant-sancion-dinero",
-    "d": "2023-06-16",
-    "y": 2023,
-    "s": "S",
-    "sub": "El base de los Grizzlies se perderá 25 partidos por mostrar un arma en internet o, para la NBA, recuperar una cultura que David Stern había enterrado hace dos décadas.",
-    "tags": [
-      "Historia"
-    ]
-  },
-  {
     "t": "La receta del éxito en la NBA: un MVP de temporada regular para ganar el anillo",
     "u": "https://www.relevo.com/baloncesto/nba/receta-exito-temporada-regular-ganar-20230613051050-nt.html",
     "d": "2023-06-15",
-    "y": 2023,
-    "s": "R"
-  },
-  {
-    "t": "Mimbres de dinastía: el futuro de los Nuggets está atado y bien atado",
-    "u": "https://www.relevo.com/baloncesto/nba/mimbres-dinastia-futuro-nuggets-atado-20230612041539-nt.html",
-    "d": "2023-06-14",
     "y": 2023,
     "s": "R"
   },
@@ -8686,6 +8896,13 @@
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Mimbres de dinastía: el futuro de los Nuggets está atado y bien atado",
+    "u": "https://www.relevo.com/baloncesto/nba/mimbres-dinastia-futuro-nuggets-atado-20230612041539-nt.html",
+    "d": "2023-06-14",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Nikola Jokic reabre el debate sobre el mejor europeo de la historia con un MVP para el recuerdo",
@@ -8716,6 +8933,14 @@
     ]
   },
   {
+    "t": "#29 Game 3 Finales NBA: ante la grandeza histórica de Nikola Jokic y Jamal Murray",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-06-08",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Jokic deja atrás a Kareem y Chamberlain y se alía con Murray para formar la mejor pareja de la NBA",
     "u": "https://www.relevo.com/baloncesto/nba/nikola-jokic-jamal-murray-baten-20230607065018-nt.html",
     "d": "2023-06-08",
@@ -8728,14 +8953,6 @@
     "d": "2023-06-08",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#29 Game 3 Finales NBA: ante la grandeza histórica de Nikola Jokic y Jamal Murray",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-06-08",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "La lista de Estados Unidos para el Mundial empieza a coger forma: cuatro All Stars y cuatro plazas por decidir",
@@ -8987,6 +9204,14 @@
     ]
   },
   {
+    "t": "#12 Sobre cortoplacismo: es momento de entender por qué y cómo",
+    "u": "https://alejandroggo.substack.com/p/sobre-cortoplacismo-por-que-como",
+    "d": "2023-05-10",
+    "y": 2023,
+    "s": "S",
+    "sub": "Ni cuando tu equipo gana un partido son los Bulls del '96, ni cuando pierde los Bobcats de 2012. Sentido común, perspectiva y calma, por favor."
+  },
+  {
     "t": "Los Celtics recupera errores del pasado y lo paga ante un Embiid en modo MVP",
     "u": "https://www.relevo.com/baloncesto/nba/celtics-vuelven-caer-errores-pasado-20230508053053-nt.html",
     "d": "2023-05-10",
@@ -8997,12 +9222,15 @@
     ]
   },
   {
-    "t": "#12 Sobre cortoplacismo: es momento de entender por qué y cómo",
-    "u": "https://alejandroggo.substack.com/p/sobre-cortoplacismo-por-que-como",
-    "d": "2023-05-10",
+    "t": "#28 Los playoffs al rojo vivo: análisis de cada serie",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-05-09",
     "y": 2023,
-    "s": "S",
-    "sub": "Ni cuando tu equipo gana un partido son los Bulls del '96, ni cuando pierde los Bobcats de 2012. Sentido común, perspectiva y calma, por favor."
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
   },
   {
     "t": "Jimmy Butler y Erik Spoelstra vuelven a hacerlo: fuera de las quinielas... y a un paso de la Final del Este",
@@ -9017,17 +9245,6 @@
     "d": "2023-05-09",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#28 Los playoffs al rojo vivo: análisis de cada serie",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-05-09",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "Análisis"
-    ]
   },
   {
     "t": "Steve Kerr y Klay Thompson destrozan el plan defensivo de los Lakers",
@@ -9061,6 +9278,17 @@
     "s": "R"
   },
   {
+    "t": "#27 Análisis de los playoffs en directo desde el TD Garden",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-05-03",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
     "t": "Joel Embiid rompe la maldición del 'segundón' y por fin se lleva el MVP de la NBA",
     "u": "https://www.relevo.com/baloncesto/nba/joel-embiid-lleva-20230501033008-nt.html",
     "d": "2023-05-03",
@@ -9073,17 +9301,6 @@
     "d": "2023-05-03",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#27 Análisis de los playoffs en directo desde el TD Garden",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-05-03",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "Análisis"
-    ]
   },
   {
     "t": "James Harden evoca su versión más anotadora para robar el factor pista en Boston",
@@ -9144,6 +9361,17 @@
     "s": "R"
   },
   {
+    "t": "#26 Análisis de los playoffs (I)",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-04-25",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
     "t": "Ime Udoka vuelve a los banquillos tras la sanción: será nuevo entrenador de los Houston Rockets",
     "u": "https://www.relevo.com/baloncesto/nba/udoka-vuelve-banquillos-tras-sancion-20230423045110-nt.html",
     "d": "2023-04-25",
@@ -9156,17 +9384,6 @@
     "d": "2023-04-25",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#26 Análisis de los playoffs (I)",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-04-25",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "Análisis"
-    ]
   },
   {
     "t": "Tyrese Maxey y otros motivos para creer en estos Sixers",
@@ -9186,6 +9403,17 @@
     ]
   },
   {
+    "t": "#25 Primera semana de playoffs: ¿cómo está cada serie?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-04-20",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "TV y derechos"
+    ]
+  },
+  {
     "t": "Mike Brow gana el Entrenador del Año de forma unánime y con un toque español en el banquillo",
     "u": "https://www.relevo.com/baloncesto/nba/mike-brown-nombrado-manera-unanime-20230418055654-nt.html",
     "d": "2023-04-20",
@@ -9201,17 +9429,6 @@
     "d": "2023-04-20",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#25 Primera semana de playoffs: ¿cómo está cada serie?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-04-20",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "TV y derechos"
-    ]
   },
   {
     "t": "De'Aaron Fox es el nuevo rey del 'clutch' en la NBA",
@@ -9284,6 +9501,17 @@
     ]
   },
   {
+    "t": "#24 La previa de playoffs: ¿los mejores de la historia?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-04-13",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "Historia"
+    ]
+  },
+  {
     "t": "Se acaba el proyecto de Nick Nurse en Toronto",
     "u": "https://www.relevo.com/baloncesto/nba/acaba-proyecto-nick-nurse-toronto-20230412061100-nt.html",
     "d": "2023-04-13",
@@ -9305,17 +9533,6 @@
     "s": "R",
     "tags": [
       "Españoles NBA"
-    ]
-  },
-  {
-    "t": "#24 La previa de playoffs: ¿los mejores de la historia?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-04-13",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "Historia"
     ]
   },
   {
@@ -9464,19 +9681,19 @@
     "s": "R"
   },
   {
-    "t": "Los Sacramento Kings rompen la sequía más larga del deporte americano: vuelven a los playoffs tras 17 años en blanco",
-    "u": "https://www.relevo.com/baloncesto/nba/sacramento-kings-rompen-sequia-larga-20230328055846-nt.html",
-    "d": "2023-03-30",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#22 Damian Lillard y el precio de la lealtad",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-03-30",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Los Sacramento Kings rompen la sequía más larga del deporte americano: vuelven a los playoffs tras 17 años en blanco",
+    "u": "https://www.relevo.com/baloncesto/nba/sacramento-kings-rompen-sequia-larga-20230328055846-nt.html",
+    "d": "2023-03-30",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "El misterio de Andrew Wiggins y el ejemplo de los Warriors",
@@ -9517,6 +9734,14 @@
     "s": "R"
   },
   {
+    "t": "#10 Sobre la cultura del anillo y el resultadismo",
+    "u": "https://alejandroggo.substack.com/p/sobre-cultura-del-anillo",
+    "d": "2023-03-24",
+    "y": 2023,
+    "s": "S",
+    "sub": "Sobre qué significa ganar y sobre todo, qué significa fracasar. Porque solo gana uno pero no pueden fracasar el resto."
+  },
+  {
     "t": "Los Angeles Clippers y la mala suerte de los playoffs: una década de desgracias",
     "u": "https://www.relevo.com/baloncesto/nba/angeles-clippers-mala-suerte-playoffs-20230322040942-nt.html",
     "d": "2023-03-24",
@@ -9534,12 +9759,16 @@
     "s": "R"
   },
   {
-    "t": "#10 Sobre la cultura del anillo y el resultadismo",
-    "u": "https://alejandroggo.substack.com/p/sobre-cultura-del-anillo",
-    "d": "2023-03-24",
+    "t": "#21 Boston Celtics, ¿siguen siendo candidatos al anillo?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-03-23",
     "y": 2023,
-    "s": "S",
-    "sub": "Sobre qué significa ganar y sobre todo, qué significa fracasar. Porque solo gana uno pero no pueden fracasar el resto."
+    "s": "UU",
+    "pod": 1,
+    "tags": [
+      "Celtics",
+      "Estadística"
+    ]
   },
   {
     "t": "Jimmy Butler y los Heat pueden ser un problema para los favoritos al Este",
@@ -9554,18 +9783,6 @@
     "d": "2023-03-23",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#21 Boston Celtics, ¿siguen siendo candidatos al anillo?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-03-23",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1,
-    "tags": [
-      "Celtics",
-      "Estadística"
-    ]
   },
   {
     "t": "Fallece Willis Reed, leyenda de los Knicks y estrella en los dos únicos anillos de la franquicia",
@@ -9607,19 +9824,19 @@
     ]
   },
   {
-    "t": "Los Lakers, la promesa de Rob Pelinka y el triple como arma",
-    "u": "https://www.relevo.com/baloncesto/nba/lakers-promesa-pelinka-triple-arma-20230313042504-nt.html",
-    "d": "2023-03-15",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#20 La lucha por la cabeza del Este",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-03-15",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Los Lakers, la promesa de Rob Pelinka y el triple como arma",
+    "u": "https://www.relevo.com/baloncesto/nba/lakers-promesa-pelinka-triple-arma-20230313042504-nt.html",
+    "d": "2023-03-15",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Pistolas, palizas, denuncias y 50.000 dólares: cronología del caso Ja Morant",
@@ -9657,19 +9874,19 @@
     ]
   },
   {
-    "t": "Los Memphis Grizzlies mantienen el castigo al 'pistolero' Ja Morant pese a no haber delito",
-    "u": "https://www.relevo.com/baloncesto/nba/morant-seguira-cuatro-partidos-alejado-20230307050537-nt.html",
-    "d": "2023-03-09",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#19 Ja Morant: cronología de un caso",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-03-09",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Los Memphis Grizzlies mantienen el castigo al 'pistolero' Ja Morant pese a no haber delito",
+    "u": "https://www.relevo.com/baloncesto/nba/morant-seguira-cuatro-partidos-alejado-20230307050537-nt.html",
+    "d": "2023-03-09",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Pau Gasol es leyenda: su 16 ya cuelga en el techo del pabellón de los Lakers",
@@ -9730,19 +9947,19 @@
     ]
   },
   {
-    "t": "Josh Hart es el nuevo corazón de estos Knicks ganadores",
-    "u": "https://www.relevo.com/baloncesto/nba/josh-hart-nuevo-corazon-knicks-20230302075519-nt.html",
-    "d": "2023-03-02",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#18 Golden State Warriors: el coco del Oeste",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-03-02",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Josh Hart es el nuevo corazón de estos Knicks ganadores",
+    "u": "https://www.relevo.com/baloncesto/nba/josh-hart-nuevo-corazon-knicks-20230302075519-nt.html",
+    "d": "2023-03-02",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Giannis Antetokounmpo deja que su juego hable en la pista",
@@ -9783,6 +10000,14 @@
     "s": "R"
   },
   {
+    "t": "#7 Diez pronósticos de cara al final de temporada",
+    "u": "https://alejandroggo.substack.com/p/diez-pronosticos-de-cara-al-final",
+    "d": "2023-02-24",
+    "y": 2023,
+    "s": "S",
+    "sub": "Quedan 45 días de NBA hasta el final de la temporada regular, aprovechémoslo. Soñemos cosas chingonas."
+  },
+  {
     "t": "Willy Hernangómez mira con ilusión su futuro en los Pelicans... pese a sus cero minutos en cancha",
     "u": "https://www.relevo.com/baloncesto/nba/willy-hernangomez-sigue-positivo-pese-20230223062514-nt.html",
     "d": "2023-02-24",
@@ -9793,12 +10018,12 @@
     ]
   },
   {
-    "t": "#7 Diez pronósticos de cara al final de temporada",
-    "u": "https://alejandroggo.substack.com/p/diez-pronosticos-de-cara-al-final",
-    "d": "2023-02-24",
+    "t": "#17 Los Clippers de Kawhi, Paul George... y Westbrook",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-02-23",
     "y": 2023,
-    "s": "S",
-    "sub": "Quedan 45 días de NBA hasta el final de la temporada regular, aprovechémoslo. Soñemos cosas chingonas."
+    "s": "UU",
+    "pod": 1
   },
   {
     "t": "Empieza una nueva NBA a mes y medio para los playoffs",
@@ -9815,14 +10040,6 @@
     "s": "R"
   },
   {
-    "t": "#17 Los Clippers de Kawhi, Paul George... y Westbrook",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-02-23",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
-  },
-  {
     "t": "Russell Westbrook se muda de franquicia sin cambiar de ciudad y pabellón: será nuevo jugador de los Clippers",
     "u": "https://www.relevo.com/baloncesto/nba/russell-westbrook-muda-franquicia-cambiar-20230220025350-nt.html",
     "d": "2023-02-22",
@@ -9835,6 +10052,17 @@
     "d": "2023-02-19",
     "y": 2023,
     "s": "R"
+  },
+  {
+    "t": "#6 De pelear en el barro, exposición y recompensas: periodismo de NBA",
+    "u": "https://alejandroggo.substack.com/p/6-de-pelear-en-el-barro-exposicion",
+    "d": "2023-02-17",
+    "y": 2023,
+    "s": "S",
+    "sub": "Hoy os traigo algo más personal.",
+    "tags": [
+      "Periodismo"
+    ]
   },
   {
     "t": "Un All Star de la NBA repleto de internacionales y suplentes",
@@ -9851,17 +10079,6 @@
     "s": "R"
   },
   {
-    "t": "#6 De pelear en el barro, exposición y recompensas: periodismo de NBA",
-    "u": "https://alejandroggo.substack.com/p/6-de-pelear-en-el-barro-exposicion",
-    "d": "2023-02-17",
-    "y": 2023,
-    "s": "S",
-    "sub": "Hoy os traigo algo más personal.",
-    "tags": [
-      "Periodismo"
-    ]
-  },
-  {
     "t": "Nadie le hace sombra a los Denver Nuggets en el Oeste",
     "u": "https://www.relevo.com/baloncesto/nba/sombra-denver-nuggets-oeste-20230214072240-nt.html",
     "d": "2023-02-16",
@@ -9876,6 +10093,14 @@
     "s": "R"
   },
   {
+    "t": "#16 Radiografía de la nueva NBA",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-02-15",
+    "y": 2023,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "¿Qué hacemos con Ben Simmons? De superestrella a injugable en dos años",
     "u": "https://www.relevo.com/baloncesto/nba/hacemos-simmons-superestrella-injugable-anos-20230214061211-nt.html",
     "d": "2023-02-15",
@@ -9888,14 +10113,6 @@
     "d": "2023-02-15",
     "y": 2023,
     "s": "R"
-  },
-  {
-    "t": "#16 Radiografía de la nueva NBA",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-02-15",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Zion Williamson estará «múltiples semanas» de baja tras el All Star. ¿Habrá playoffs en New Orleans?",
@@ -9919,6 +10136,16 @@
     "s": "R"
   },
   {
+    "t": "#5 La magnitud de LeBron James... y el debate eterno sobre el GOAT",
+    "u": "https://alejandroggo.substack.com/p/lebron-james-goat",
+    "d": "2023-02-10",
+    "y": 2023,
+    "s": "S",
+    "tags": [
+      "Opinión"
+    ]
+  },
+  {
     "t": "La locura del último día en el mercado NBA: casi 60 jugadores traspasados y Serge Ibaka cortado",
     "u": "https://www.relevo.com/baloncesto/locura-ultimo-mercado-jugadores-traspasados-20230208045624-nt.html",
     "d": "2023-02-10",
@@ -9937,14 +10164,12 @@
     ]
   },
   {
-    "t": "#5 La magnitud de LeBron James... y el debate eterno sobre el GOAT",
-    "u": "https://alejandroggo.substack.com/p/lebron-james-goat",
-    "d": "2023-02-10",
+    "t": "#15 Kyrie Irving, talento y caos a partes iguales",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-02-08",
     "y": 2023,
-    "s": "S",
-    "tags": [
-      "Opinión"
-    ]
+    "s": "UU",
+    "pod": 1
   },
   {
     "t": "LeBron James se convierte en el máximo anotador de la historia de la NBA",
@@ -9955,14 +10180,6 @@
     "tags": [
       "Historia"
     ]
-  },
-  {
-    "t": "#15 Kyrie Irving, talento y caos a partes iguales",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-02-08",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "¿Puede la defensa de los Thunder aplazar el récord de LeBron James? Los datos dicen que sí",
@@ -10014,13 +10231,6 @@
     "s": "R"
   },
   {
-    "t": "Dillon Brooks quiere ser el villano de la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/dillon-brooks-quiere-villano-20230202070558-nt.html",
-    "d": "2023-02-03",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#4 Por qué los Lakers tienen que hacer todos los movimientos de Julio esta semana",
     "u": "https://alejandroggo.substack.com/p/4-por-que-los-lakers-tienen-que-hacer",
     "d": "2023-02-03",
@@ -10028,9 +10238,9 @@
     "s": "S"
   },
   {
-    "t": "Joel Embiid está cansado de quedar siempre segundo",
-    "u": "https://www.relevo.com/baloncesto/nba/joel-embiid-cansado-quedar-siempre-20230130043929-nt.html",
-    "d": "2023-02-01",
+    "t": "Dillon Brooks quiere ser el villano de la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/dillon-brooks-quiere-villano-20230202070558-nt.html",
+    "d": "2023-02-03",
     "y": 2023,
     "s": "R"
   },
@@ -10041,6 +10251,13 @@
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Joel Embiid está cansado de quedar siempre segundo",
+    "u": "https://www.relevo.com/baloncesto/nba/joel-embiid-cansado-quedar-siempre-20230130043929-nt.html",
+    "d": "2023-02-01",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Cuatro errores arbitrales que pueden marcar la temporada de los Lakers",
@@ -10064,19 +10281,19 @@
     "s": "R"
   },
   {
-    "t": "Luka Doncic, lesionado y contra todos: plantilla, banquillo y gerencia, obstáculos a superar",
-    "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-plantilla-banquillo-gerencia-20230124041037-nt.html",
-    "d": "2023-01-27",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#3 Cuatro dudas para el mercado de traspasos: quedan menos de dos semanas",
     "u": "https://alejandroggo.substack.com/p/cuatro-dudas-para-el-mercado-de-traspasos",
     "d": "2023-01-27",
     "y": 2023,
     "s": "S",
     "p": 1
+  },
+  {
+    "t": "Luka Doncic, lesionado y contra todos: plantilla, banquillo y gerencia, obstáculos a superar",
+    "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-plantilla-banquillo-gerencia-20230124041037-nt.html",
+    "d": "2023-01-27",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Ricky Rubio tras volver de la lesión: «Me siento mejor de lo que me he sentido en toda mi carrera»",
@@ -10096,16 +10313,6 @@
     ]
   },
   {
-    "t": "Bronny James, el hijo de LeBron, se puede convertir en el jugador universitario mejor pagado de la historia",
-    "u": "https://www.relevo.com/baloncesto/nba/bronny-james-hijo-lebron-puede-20230123051815-nt.html",
-    "d": "2023-01-25",
-    "y": 2023,
-    "s": "R",
-    "tags": [
-      "Historia"
-    ]
-  },
-  {
     "t": "#13 Luka Doncic y el dilema de los Mavericks",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-01-25",
@@ -10114,6 +10321,16 @@
     "pod": 1,
     "tags": [
       "Opinión"
+    ]
+  },
+  {
+    "t": "Bronny James, el hijo de LeBron, se puede convertir en el jugador universitario mejor pagado de la historia",
+    "u": "https://www.relevo.com/baloncesto/nba/bronny-james-hijo-lebron-puede-20230123051815-nt.html",
+    "d": "2023-01-25",
+    "y": 2023,
+    "s": "R",
+    "tags": [
+      "Historia"
     ]
   },
   {
@@ -10131,16 +10348,6 @@
     "s": "R"
   },
   {
-    "t": "Los Celtics superan los fantasmas de las últimas finales",
-    "u": "https://www.relevo.com/baloncesto/nba/celtics-superan-fantasmas-ultimas-finales-20230119062042-nt.html",
-    "d": "2023-01-20",
-    "y": 2023,
-    "s": "R",
-    "tags": [
-      "Celtics"
-    ]
-  },
-  {
     "t": "#2 Mis 24 All Stars: quiénes y por qué",
     "u": "https://alejandroggo.substack.com/p/2-mis-24-all-stars-quienes-y-por",
     "d": "2023-01-20",
@@ -10148,6 +10355,16 @@
     "s": "S",
     "tags": [
       "Pronósticos"
+    ]
+  },
+  {
+    "t": "Los Celtics superan los fantasmas de las últimas finales",
+    "u": "https://www.relevo.com/baloncesto/nba/celtics-superan-fantasmas-ultimas-finales-20230119062042-nt.html",
+    "d": "2023-01-20",
+    "y": 2023,
+    "s": "R",
+    "tags": [
+      "Celtics"
     ]
   },
   {
@@ -10165,19 +10382,19 @@
     "s": "R"
   },
   {
-    "t": "Los Raptors son el epicentro del mercado de traspasos de la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/raptors-epicentro-proximo-mercado-traspasos-20230116024428-nt.html",
-    "d": "2023-01-18",
-    "y": 2023,
-    "s": "R"
-  },
-  {
     "t": "#12 Nuestros elegidos para el All Star Game",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2023-01-18",
     "y": 2023,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "Los Raptors son el epicentro del mercado de traspasos de la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/raptors-epicentro-proximo-mercado-traspasos-20230116024428-nt.html",
+    "d": "2023-01-18",
+    "y": 2023,
+    "s": "R"
   },
   {
     "t": "Jayson Tatum sigue reescribiendo la historia de los Celtics",
@@ -10198,6 +10415,17 @@
     "s": "R"
   },
   {
+    "t": "#1 Premios NBA de mitad de temporada",
+    "u": "https://alejandroggo.substack.com/p/1-premios-nba-de-mitad-de-temporada",
+    "d": "2023-01-13",
+    "y": 2023,
+    "s": "S",
+    "sub": "Todos los equipos han llegado a 41 partidos a excepción de los Kings, así que es momento de dar los premios de la NBA a mitad de temporada.",
+    "tags": [
+      "Pronósticos"
+    ]
+  },
+  {
     "t": "Ricky Rubio vuelve a jugar tras casi 13 meses de baja: 9 puntos, 3 rebotes y victoria de Cleveland",
     "u": "https://www.relevo.com/baloncesto/ricky-rubio-vuelve-jugar-tras-20230111050935-nt.html",
     "d": "2023-01-13",
@@ -10215,15 +10443,12 @@
     ]
   },
   {
-    "t": "#1 Premios NBA de mitad de temporada",
-    "u": "https://alejandroggo.substack.com/p/1-premios-nba-de-mitad-de-temporada",
-    "d": "2023-01-13",
+    "t": "Bienvenidos a otro proyecto de baloncesto",
+    "u": "https://alejandroggo.substack.com/p/bienvenidos-a-otro-proyecto-de-baloncesto",
+    "d": "2023-01-12",
     "y": 2023,
     "s": "S",
-    "sub": "Todos los equipos han llegado a 41 partidos a excepción de los Kings, así que es momento de dar los premios de la NBA a mitad de temporada.",
-    "tags": [
-      "Pronósticos"
-    ]
+    "sub": "¿Qué es esto que estoy leyendo?, te preguntas. Te lo explico, dame dos minutos de tu tiempo."
   },
   {
     "t": "Ha vuelto Steph Curry, ¿han vuelto los Warriors?",
@@ -10240,12 +10465,12 @@
     "s": "R"
   },
   {
-    "t": "Bienvenidos a otro proyecto de baloncesto",
-    "u": "https://alejandroggo.substack.com/p/bienvenidos-a-otro-proyecto-de-baloncesto",
-    "d": "2023-01-12",
+    "t": "#11 Nikola Jokic y la rutina de lo extraordinario",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2023-01-11",
     "y": 2023,
-    "s": "S",
-    "sub": "¿Qué es esto que estoy leyendo?, te preguntas. Te lo explico, dame dos minutos de tu tiempo."
+    "s": "UU",
+    "pod": 1
   },
   {
     "t": "Los Sixers son el tapado del Este: hay vida más allá de Boston, Brooklyn y Milwaukee",
@@ -10257,14 +10482,6 @@
       "Celtics",
       "Jordi Fernández"
     ]
-  },
-  {
-    "t": "#11 Nikola Jokic y la rutina de lo extraordinario",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2023-01-11",
-    "y": 2023,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "La temporada de los Clippers tiene un asterisco gigante: la salud",
@@ -10415,6 +10632,14 @@
     ]
   },
   {
+    "t": "#9 El efecto Stephen Curry",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2022-12-21",
+    "y": 2022,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Los Nets de Vaughn: Durant y Kyrie, defensa y un juego aposicional",
     "u": "https://www.relevo.com/baloncesto/nba/nets-vaughn-durant-kyrie-defensa-20221221095802-nt.html",
     "d": "2022-12-21",
@@ -10423,14 +10648,6 @@
     "tags": [
       "Jordi Fernández"
     ]
-  },
-  {
-    "t": "#9 El efecto Stephen Curry",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2022-12-21",
-    "y": 2022,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Se abre la votación para el All-Star 2023 de la NBA. ¿Cómo y dónde votar?",
@@ -10489,13 +10706,6 @@
     "s": "R"
   },
   {
-    "t": "Cómo el 15 de diciembre puede cambiar la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/diciembre-puede-cambiar-20221213071640-nt.html",
-    "d": "2022-12-14",
-    "y": 2022,
-    "s": "R"
-  },
-  {
     "t": "#8 Los nuevos premios de la NBA",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2022-12-14",
@@ -10505,6 +10715,13 @@
     "tags": [
       "Pronósticos"
     ]
+  },
+  {
+    "t": "Cómo el 15 de diciembre puede cambiar la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/diciembre-puede-cambiar-20221213071640-nt.html",
+    "d": "2022-12-14",
+    "y": 2022,
+    "s": "R"
   },
   {
     "t": "La enésima resurrección de los Knicks: la defensa y Julius Randle",
@@ -10566,13 +10783,6 @@
     ]
   },
   {
-    "t": "¿Qué hace a los Grizzlies ser favoritos? Su fondo de armario",
-    "u": "https://www.relevo.com/baloncesto/nba/grizzlies-favoritos-fondo-armario-20221207073126-nt.html",
-    "d": "2022-12-07",
-    "y": 2022,
-    "s": "R"
-  },
-  {
     "t": "#7 La misión de Jayson Tatum",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2022-12-07",
@@ -10582,6 +10792,13 @@
     "tags": [
       "Celtics"
     ]
+  },
+  {
+    "t": "¿Qué hace a los Grizzlies ser favoritos? Su fondo de armario",
+    "u": "https://www.relevo.com/baloncesto/nba/grizzlies-favoritos-fondo-armario-20221207073126-nt.html",
+    "d": "2022-12-07",
+    "y": 2022,
+    "s": "R"
   },
   {
     "t": "Blake Griffin encarna el rol de veterano en la NBA como muy pocos",
@@ -10741,19 +10958,19 @@
     "s": "R"
   },
   {
-    "t": "¿Podría un equipo internacional ganarle un duelo a un quinteto formado solo por americanos?",
-    "u": "https://www.relevo.com/baloncesto/nba/equipo-internacional-ganarle-duelo-quinteto-20221116071408-nt.html",
-    "d": "2022-11-17",
-    "y": 2022,
-    "s": "R"
-  },
-  {
     "t": "#6 Cleveland Cavaliers, proyecto o realidad con Donovan Micthell",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2022-11-17",
     "y": 2022,
     "s": "UU",
     "pod": 1
+  },
+  {
+    "t": "¿Podría un equipo internacional ganarle un duelo a un quinteto formado solo por americanos?",
+    "u": "https://www.relevo.com/baloncesto/nba/equipo-internacional-ganarle-duelo-quinteto-20221116071408-nt.html",
+    "d": "2022-11-17",
+    "y": 2022,
+    "s": "R"
   },
   {
     "t": "Los Mavericks no saben vivir sin Luka Doncic",
@@ -10817,6 +11034,14 @@
     "s": "R"
   },
   {
+    "t": "#5 El desastre de Los Angeles Lakers",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2022-11-10",
+    "y": 2022,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "«No sabíamos lo que teníamos en Garuba hasta que le vimos jugar con España»",
     "u": "https://www.relevo.com/baloncesto/nba/sabiamos-usman-garuba-vimos-jugar-20221109070201-nt.html",
     "d": "2022-11-10",
@@ -10835,14 +11060,6 @@
     "tags": [
       "Expansión"
     ]
-  },
-  {
-    "t": "#5 El desastre de Los Angeles Lakers",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2022-11-10",
-    "y": 2022,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "La reconstrucción exprés de los Cavaliers tras la salida de LeBron James",
@@ -10993,6 +11210,14 @@
     "s": "R"
   },
   {
+    "t": "#4 Damian Lillard, ¿ha vuelto o nunca se fue?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2022-10-27",
+    "y": 2022,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Christian Wood, el mejor escudero de Luka Doncic en la NBA, sale desde el banquillo",
     "u": "https://www.relevo.com/baloncesto/nba/christian-wood-mejor-escudero-luka-20221025052214-nt.html",
     "d": "2022-10-27",
@@ -11008,14 +11233,6 @@
     "tags": [
       "Españoles NBA"
     ]
-  },
-  {
-    "t": "#4 Damian Lillard, ¿ha vuelto o nunca se fue?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2022-10-27",
-    "y": 2022,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Ni las lesiones pueden frenar a unos Pelicans que no cuentan con el MVP Willy Hernangómez",
@@ -11056,13 +11273,6 @@
     "s": "R"
   },
   {
-    "t": "Los novatos llegan pisando fuerte a la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/novatos-llegan-pisando-fuerte-20221019065917-nt.html",
-    "d": "2022-10-20",
-    "y": 2022,
-    "s": "R"
-  },
-  {
     "t": "#3 Victor Wembanyama: ¿el mejor prospecto en la historia de la NBA?",
     "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
     "d": "2022-10-20",
@@ -11072,6 +11282,13 @@
     "tags": [
       "Historia"
     ]
+  },
+  {
+    "t": "Los novatos llegan pisando fuerte a la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/novatos-llegan-pisando-fuerte-20221019065917-nt.html",
+    "d": "2022-10-20",
+    "y": 2022,
+    "s": "R"
   },
   {
     "t": "Los Denver Nuggets se proclaman campeones de la NBA y Nikola Jokic se corona como MVP de las Finales",
@@ -11163,6 +11380,14 @@
     "s": "R"
   },
   {
+    "t": "#2 Previa de la Conferencia Este... ¿con el máximo favorito?",
+    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
+    "d": "2022-10-13",
+    "y": 2022,
+    "s": "UU",
+    "pod": 1
+  },
+  {
     "t": "Serge Ibaka, músculo veterano al servicio de Antetokounmpo",
     "u": "https://www.relevo.com/baloncesto/nba/nuevo-serge-ibaka-bucks-20221011025655-nt.html",
     "d": "2022-10-13",
@@ -11175,14 +11400,6 @@
     "d": "2022-10-13",
     "y": 2022,
     "s": "R"
-  },
-  {
-    "t": "#2 Previa de la Conferencia Este... ¿con el máximo favorito?",
-    "u": "https://www.spreaker.com/podcast/up-and-under-un-podcast-de-nba--6264697",
-    "d": "2022-10-13",
-    "y": 2022,
-    "s": "UU",
-    "pod": 1
   },
   {
     "t": "Usman Garuba, una bestia desenjaulada: «No sabíamos que era tan bueno»",
@@ -12659,7 +12876,8 @@
     "u": "https://www.antena3.com/noticias/deportes/baloncesto/video-estampida-toronto-raptors-tiroteo_201906185d08f48f0cf28dc4e14c4f95.html",
     "d": "2019-06-18",
     "y": 2019,
-    "s": "OTR"
+    "s": "OTR",
+    "vid": 1
   },
   {
     "t": "¡TORONTO RAPTORS CAMPEÓN DE LA NBA! Gasol, Kawhi e Ibaka consiguen el anillo",
