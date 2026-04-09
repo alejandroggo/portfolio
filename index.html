@@ -550,8 +550,7 @@ function applyFilters() {
     const matchesSearch = a.t.toLowerCase().includes(searchInput) || 
   (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
   (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
-     return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesSearch && matchesTags;
-  });
+return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesTxt && matchesSearch && matchesTags;  });
 
   document.getElementById('results-count').textContent =
     `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
