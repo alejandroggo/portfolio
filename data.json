@@ -318,6 +318,14 @@
     ]
   },
   {
+    "t": "Gregg Popovich: Huella y legado",
+    "u": "https://www.gigantes.com/nba/gregg-propovich-huella-legado/",
+    "d": "2026-02-01",
+    "y": null,
+    "sub": "La NBA es menos sin Gregg Popovich. El legendario entrenador de los Spurs deja los banquillos por problemas de salud, tras un año apartado del equipo.",
+    "p": 1
+  },
+  {
     "t": "#190 LeBron James se quiere despedir sin decir adiós",
     "u": "https://alejandroggo.substack.com/p/lebron-james-despedir-adios",
     "d": "2026-01-29",
@@ -785,6 +793,18 @@
     ]
   },
   {
+    "t": "Entrevista a Eli Ndiaye: hablamos con él tras su debut en la G-League con el filial de Atlanta Hawks",
+    "u": "https://www.gigantes.com/nba/eli-john-ndiaye-entrevista-debut-g-league-atlanta/",
+    "d": "2025-11-08",
+    "y": null,
+    "sub": "Eli Ndiaye sigue dando pasos en su adaptación a Estados Unidos. El ala-pívot, seleccionable con España y procedente del Real Madrid, pertenece a los Atlanta Hawks, con los que firmó un contrato two-way este verano.",
+    "tags": [
+      "Entrevista",
+      "Entrevistas",
+      "Españoles NBA"
+    ]
+  },
+  {
     "t": "#157 La NBA en Europa ya tiene fecha y sedes: todo lo que sabemos de la nueva liga",
     "u": "https://alejandroggo.substack.com/p/157-la-nba-en-europa-ya-tiene-fecha",
     "d": "2025-11-07",
@@ -810,6 +830,26 @@
     "y": null,
     "s2": "NH",
     "vid": 1
+  },
+  {
+    "t": "Por qué los Houston Rockets están desafiando a la NBA moderna: un ataque con un estilo que parecía olvidado",
+    "u": "https://www.gigantes.com/nba/houston-rockets-analisis-ataque-kevin-durant/",
+    "d": "2025-11-04",
+    "y": null,
+    "sub": "Un plan del pasado para construir uno de los mejores ataques de la NBA. Te explicamos cómo los Rockets desafían la NBA moderna"
+  },
+  {
+    "t": "Hablamos con Santi Aldama en Toronto: rol, Grizzlies, Hugo González…",
+    "u": "https://www.gigantes.com/nba/hablamos-con-santi-aldama-en-el-arranque-de-su-quinta-temporada-nba/",
+    "d": "2025-11-03",
+    "y": null,
+    "sub": "Santi Aldama ha atendido a los medios españoles, entre los que se encontraba Gigantes, en su visita a Toronto",
+    "tags": [
+      "Entrevista",
+      "Periodismo",
+      "Hugo González",
+      "Españoles NBA"
+    ]
   },
   {
     "t": "#155 Sobre madurez, periodismo, entretenimiento y un grupo de what's app",
@@ -1355,6 +1395,19 @@
     ]
   },
   {
+    "t": "Las claves del regreso de los Detroit Pistons: un análisis para entender una de las historias de la temporada NBA",
+    "u": "https://www.gigantes.com/nba/detroit-pistons-orgullo-temporada/",
+    "d": "2025-04-30",
+    "y": null,
+    "sub": "El 28 de diciembre de 2023, tras caer en la prórroga en la pista de Boston, los Detroit Pistons entraban de lleno en la historia de la NBA.",
+    "p": 1,
+    "tags": [
+      "Celtics",
+      "Análisis",
+      "Historia"
+    ]
+  },
+  {
     "t": "#110 Sobre Giannis, el final del camino y posibles destinos",
     "u": "https://alejandroggo.substack.com/p/giannis-antetokounmpo-posibles-destinos",
     "d": "2025-04-28",
@@ -1603,6 +1656,16 @@
     "sub": "Durante años hemos dudado si los Lakers eran el Madrid o el Barça. Pero la realidad es que la comparativa es diferente."
   },
   {
+    "t": "Cierre del mercado de traspasos NBA: El resumen del trade deadline 2025",
+    "u": "https://www.gigantes.com/nba/mercado-traspasos-directo-fichajes-rumores-trade-deadline/",
+    "d": "2025-02-07",
+    "y": null,
+    "sub": "El cierre del mercado de traspasos en la NBA o trade deadline es uno de los momentos más importantes de cada temporada y en esta 2024-25 ha alcanzado el siguiente nivel. ",
+    "tags": [
+      "Análisis"
+    ]
+  },
+  {
     "t": "#86 Sobre el deadline: análisis equipo por equipo del mercado de traspasos",
     "u": "https://alejandroggo.substack.com/p/deadline-nba-analisis-equipo",
     "d": "2025-02-07",
@@ -1611,6 +1674,23 @@
     "p": 1,
     "tags": [
       "Análisis"
+    ]
+  },
+  {
+    "t": "Jimmy Butler traspasado a los Golden State Warriors: Los detalles de la operación",
+    "u": "https://www.gigantes.com/nba/jimmy-butler-traspaso-golden-state-warriors-jugadores-picks/",
+    "d": "2025-02-06",
+    "y": null,
+    "sub": "Jimmy Butler será nuevo jugador de los Golden State Warriors, traspasado por Andrew Wiggins en un movimiento a cuatro bandas."
+  },
+  {
+    "t": "Las palabras de Santi Aldama sobre su temporada, la actualidad NBA y otros temas",
+    "u": "https://www.gigantes.com/nba/santi-aldama-memphis-grizzlies/",
+    "d": "2025-02-06",
+    "y": null,
+    "sub": "Los Memphis Grizzlies derrotaron anoche a los Raptors en su visita a Toronto (107-138) y ampliaron su magnífica racha hasta las 10 victorias en los últimos 11 encuentros.",
+    "tags": [
+      "Españoles NBA"
     ]
   },
   {
@@ -1706,6 +1786,17 @@
     "pod": 1
   },
   {
+    "t": "El dilema de los Warriors: hipotecar o no el futuro por Curry",
+    "u": "https://www.gigantes.com/nba/el-dilema-de-los-warriors-hipotecar-o-no-el-futuro-por-curry/",
+    "d": "2025-01-15",
+    "y": null,
+    "sub": "Hablamos con tres jugadores de los Warriors: Gary Payton II, Trayce Jackson-Davis y Pat Spencer sobre la temporada de Golden State.",
+    "tags": [
+      "Entrevista",
+      "Opinión"
+    ]
+  },
+  {
     "t": "Power Ranking #4: ¿Qué le pasa a los Celtics? ¿Resaca de campeón?",
     "u": "https://alejandroggo.substack.com/p/power-ranking-celtics-crisis",
     "d": "2025-01-13",
@@ -1775,6 +1866,17 @@
     "p": 1
   },
   {
+    "t": "Jordi Fernández a través de sus jugadores: «Honestidad, defensa y Badalona»",
+    "u": "https://www.gigantes.com/nba/jordi-fernandez-jugadores-defensa-badalona/",
+    "d": "2024-12-20",
+    "y": null,
+    "sub": "Jordi Fernández volvió a Toronto y Gigantes del Basket pudo hablar con el entrenador y sus jugadores. Y por ahora hay tres pilares en el equipo: comunicación, identidad y Badalona.",
+    "tags": [
+      "Entrevista",
+      "Jordi Fernández"
+    ]
+  },
+  {
     "t": "#74 Sobre audiencias: un diagnóstico del entorno de la NBA, causas y contexto de una crisis que no existe",
     "u": "https://alejandroggo.substack.com/p/74-sobre-audiencias-un-diagnostico",
     "d": "2024-12-18",
@@ -1798,6 +1900,16 @@
     "u": "https://www.relevo.com/baloncesto/nba/milwaukee-bucks-proclama-campeon-copa-20241216053108-nt.html",
     "d": "2024-12-18",
     "y": null
+  },
+  {
+    "t": "Mercado NBA: Diez nombres que pueden marcar el futuro de la liga",
+    "u": "https://www.gigantes.com/nba/mercado-jugadores-campeon-traspaso/",
+    "d": "2024-12-16",
+    "y": null,
+    "sub": "Este domingo se abrió, extraoficialmente, el mercado NBA con dos traspasos. Y no serán los últimos: aquí 10 candidatos a ser movidos.",
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "t": "Luka Doncic reina frente a Stephen Curry en una oda al triple: ¡¡48 anotados, récord histórico en la NBA!!",
@@ -1855,6 +1967,16 @@
     "tags": [
       "Celtics",
       "Españoles NBA"
+    ]
+  },
+  {
+    "t": "El caso Jimmy Butler: ¿a dónde puede salir traspasado? ¿Es posible moverlo?",
+    "u": "https://www.gigantes.com/nba/jimmy-butler-traspaso-equipos-miami-heat/",
+    "d": "2024-12-12",
+    "y": null,
+    "sub": "La posible salida de Jimmy Butler es la primera bomba del mercado, pero no será tan fácil. Aquí te explicamos todos los problemas que tendrán que sortear.",
+    "tags": [
+      "TV y derechos"
     ]
   },
   {
@@ -1939,6 +2061,13 @@
     "tags": [
       "Jordi Fernández"
     ]
+  },
+  {
+    "t": "El efecto Luka Doncic: Los Mavericks son locales en la carretera",
+    "u": "https://www.gigantes.com/nba/luka-doncic-dallas-mavericks-efecto-local/",
+    "d": "2024-12-08",
+    "y": null,
+    "sub": "Luka Doncic volvió a Toronto y centenares de aficionados de Dallas se agolparon a verlo. Y se ha convertido en una tradición por todo el país."
   },
   {
     "t": "El peor equipo de la historia tumba a Denver y los 56 puntos de Nikola Jokic",
@@ -2106,6 +2235,17 @@
     "pod": 1
   },
   {
+    "t": "Al habla Santi Aldama: “Siento que Memphis es mi casa y ojalá dure muchos años”",
+    "u": "https://www.gigantes.com/nba/al-habla-santi-aldama-siento-que-memphis-es-mi-casa-y-ojala-dure-muchos-anos/",
+    "d": "2024-11-27",
+    "y": null,
+    "sub": "Santi Aldama atendió a los medios de comunicación para hablar de su temporada, el futuro del baloncesto español y su contrato.",
+    "tags": [
+      "Periodismo",
+      "Españoles NBA"
+    ]
+  },
+  {
     "t": "La lesión de su estrella puede cambiar la temporada de Jordi Fernández en los Nets",
     "u": "https://www.relevo.com/baloncesto/nba/lesion-estrella-puede-cambiar-temporada-20241126205736-nt.html",
     "d": "2024-11-27",
@@ -2127,6 +2267,16 @@
     "y": null,
     "tags": [
       "Españoles NBA"
+    ]
+  },
+  {
+    "t": "Tyrese Haliburton y el anhelo del pasado: Análisis del presente de la estrella de los Pacers",
+    "u": "https://www.gigantes.com/nba/tyrese-haliburton-y-el-anhelo-del-pasado-analisis-del-presente-de-la-estrella-de-los-pacers/",
+    "d": "2024-11-26",
+    "y": null,
+    "sub": "Tyrese Haliburton ha empezado la temporada lejos de la mejor versión. Y se cumple justo un año de su explosión como estrella NBA.",
+    "tags": [
+      "Análisis"
     ]
   },
   {
@@ -2194,6 +2344,13 @@
     "y": null
   },
   {
+    "t": "Los New York Knicks y la teoría de la manta",
+    "u": "https://www.gigantes.com/nba/los-new-york-knicks-y-la-teoria-de-la-manta/",
+    "d": "2024-11-23",
+    "y": null,
+    "sub": "Históricamente, y los Knicks con ellos, los equipos de Tom Thibodeau han sido defensivos. Pero este año no."
+  },
+  {
     "t": "Papá Jokic' vuelve a la cancha, pero no es suficiente ante unos Mavs que quieren irse de Copas... sin Luka Doncic",
     "u": "https://www.relevo.com/baloncesto/nba/mavericks-doncic-arruinan-paternidad-jokic-20241122073053-nt.html",
     "d": "2024-11-23",
@@ -2225,6 +2382,16 @@
     "u": "https://www.relevo.com/baloncesto/nba/franz-wagner-asalta-angeles-rompe-20241121072627-nt.html",
     "d": "2024-11-22",
     "y": null
+  },
+  {
+    "t": "Cleveland Cavaliers, una derrota para conocer el verdadero nivel",
+    "u": "https://www.gigantes.com/nba/cleveland-cavaliers-una-derrota-para-conocer-el-verdadero-nivel/",
+    "d": "2024-11-21",
+    "y": null,
+    "sub": "Tras 16 partidos, los Cavaliers por fin sucumbieron. El adjetivo invicto desaparece de la temporada NBA tras la primera derrota de Cleveland, a manos del campeón en uno de los mejores partidos de lo que va de curso",
+    "tags": [
+      "TV y derechos"
+    ]
   },
   {
     "t": "Stephen Curry desciende de su nave nodriza para volver a reinar en el Oeste... recuperando una faceta poco reconocida",
@@ -2324,6 +2491,16 @@
     "y": null,
     "tags": [
       "Celtics"
+    ]
+  },
+  {
+    "t": "Lesiones en la NBA, la pandemia moderna: hablamos con un experto sobre causas y soluciones",
+    "u": "https://www.gigantes.com/nba/lesiones-en-la-nba-la-pandemia-moderna-hablamos-con-un-experto-sobre-causas-y-soluciones/",
+    "d": "2024-11-16",
+    "y": null,
+    "sub": "En tres semanas de temporada, los jugadores NBA se han perdido 600 partidos por lesiones. ¿Por qué? Responde el Dr. Julio Calleja-González",
+    "tags": [
+      "Hugo González"
     ]
   },
   {
@@ -2446,6 +2623,18 @@
     ]
   },
   {
+    "t": "“El aura a su alrededor es especial”, Mike Brown y Mike Malone hablan sobre Jordi Fernández",
+    "u": "https://www.gigantes.com/nba/el-aura-a-su-alrededor-es-especial-mike-brown-y-mike-malone-hablan-sobre-jordi-fernandez/",
+    "d": "2024-11-04",
+    "y": null,
+    "sub": "Hablamos con Mike Brown y Mike Malone, los dos entrenadores que abrieron la puerta de Jordi Fernández en la NBA sobre el español.",
+    "tags": [
+      "Celtics",
+      "Jordi Fernández",
+      "Españoles NBA"
+    ]
+  },
+  {
     "t": "Power Ranking #1: ¿Los Warriors son un equipo triplista o defensivo?",
     "u": "https://alejandroggo.substack.com/p/power-ranking-1-los-warriors-son",
     "d": "2024-11-04",
@@ -2495,6 +2684,16 @@
     "u": "https://www.relevo.com/baloncesto/nba/warriors-serio-curry-buddy-hield-20241102063119-nt.html",
     "d": "2024-11-03",
     "y": null
+  },
+  {
+    "t": "Los Pistons se retan ante los Nets de Jordi Fernández en el NBA Sundays",
+    "u": "https://www.gigantes.com/nba/detroit-pistons-brooklyn-nets-jordi-fernandez/",
+    "d": "2024-11-02",
+    "y": null,
+    "sub": "Detroit Pistons y Brooklyn Nets serán protagonistas del NBA Sundays esta semana. Los de Jordi Fernández llegan 3-3 y buscan seguir ganando.",
+    "tags": [
+      "Jordi Fernández"
+    ]
   },
   {
     "t": "Anthony Edwards le recuerda a Denver la pesadilla de mayo con una remontada agónica",
@@ -2753,6 +2952,20 @@
     ]
   },
   {
+    "t": "Embiid y los Sixers trazan el plan perfecto para el anillo: cuidar la salud de sus estrellas",
+    "u": "https://www.gigantes.com/nba/joel-embiid-y-los-sixers-trazan-el-plan-perfecto-para-el-anillo-cuidar-la-salud-de-sus-estrellas/",
+    "d": "2024-10-15",
+    "y": null,
+    "sub": "Embiid y los Sixers trazan el plan perfecto para el anillo: cuidar la salud de sus estrellas"
+  },
+  {
+    "t": "Dereck Lively II marca el techo de los Mavericks con su evolución en ataque",
+    "u": "https://www.gigantes.com/nba/dereck-lively-ii-marca-el-techo-de-los-mavericks-con-su-evolucion-en-ataque/",
+    "d": "2024-10-14",
+    "y": null,
+    "sub": "Dereck Lively II marca el techo de los Mavericks con su evolución en ataque"
+  },
+  {
     "t": "Vince Carter: mitad hombre, mitad increíble y ahora miembro al completo del Salón de la Fama",
     "u": "https://www.relevo.com/baloncesto/nba/vince-carter-mitad-hombre-mitad-20241013050000-nt.html",
     "d": "2024-10-13",
@@ -2780,6 +2993,13 @@
     ]
   },
   {
+    "t": "Siete agentes libres que han cambiado de equipo y pueden decidir la NBA",
+    "u": "https://www.gigantes.com/nba/siete-agentes-libres-que-han-cambiado-de-equipo-y-pueden-decidir-la-nba/",
+    "d": "2024-10-10",
+    "y": null,
+    "sub": "Se ha acabado el verano, vuelve la NBA y entre tanto cambio de equipo, aquí van siete agentes libres que pueden decidir la NBA."
+  },
+  {
     "t": "Jordi Fernández sorprende por su apuesta por Ben Simmons y por el 'látigo': «Es una de las más duras que he vivido en mi carrera»",
     "u": "https://www.relevo.com/baloncesto/nba/simmons-vuelve-clave-ordenes-jordi-20241010022830-nt.html",
     "d": "2024-10-10",
@@ -2804,6 +3024,13 @@
     "y": null
   },
   {
+    "t": "New York Knicks y toda la magia financiera para conseguir a Karl-Anthony Towns. Te explicamos esta compleja operación",
+    "u": "https://www.gigantes.com/nba/new-york-knicks-y-toda-la-magia-financiera-para-conseguir-a-karl-anthony-towns-te-explicamos-esta-compleja-operacion/",
+    "d": "2024-10-03",
+    "y": null,
+    "sub": "Leon Rose, presidente de los New York Knicks, ha vuelto a dar otra clase magistral de magia financiera para conseguir a Karl-Anthony Towns."
+  },
+  {
     "t": "Cómo Obradovic y el Partizan se llevaron un millón de dólares gracias al fichaje bomba de la NBA",
     "u": "https://www.relevo.com/baloncesto/nba/partizan-clave-llegada-towns-knicks-20241003000909-nt.html",
     "d": "2024-10-03",
@@ -2814,6 +3041,17 @@
     "u": "https://www.relevo.com/baloncesto/nba/stephen-silas-entrenador-team-ventanas-20241003192203-nt.html",
     "d": "2024-10-03",
     "y": null
+  },
+  {
+    "t": "Vince Carter: héroe, villano y primera camiseta retirada en Toronto",
+    "u": "https://www.gigantes.com/nba/vince-carter-heroe-villano-y-primera-camiseta-retirada-en-toronto/",
+    "d": "2024-09-30",
+    "y": null,
+    "sub": "Vince Carter se convierte en el primer jugador en tener su camiseta retirada en la historia de la franquicia canadiense.",
+    "tags": [
+      "TV y derechos",
+      "Historia"
+    ]
   },
   {
     "t": "Dikembe Mutombo, el gigante africano, dice adiós entre tapones y labor social",
@@ -2914,6 +3152,13 @@
     "u": "https://www.relevo.com/baloncesto/nba/joel-embiid-confirma-futuro-philadelphia-20240919165909-nt.html",
     "d": "2024-09-20",
     "y": null
+  },
+  {
+    "t": "La nueva NBA: paridad, meritocracia y la liga más abierta posible",
+    "u": "https://www.gigantes.com/nba/la-nueva-nba-paridad-meritocracia-y-la-liga-mas-abierta-posible/",
+    "d": "2024-09-18",
+    "y": null,
+    "sub": "La NBA acumula seis campeones en seis temporadas, en parte consecuencia del convenio colectivo. ¿Es positivo el nuevo cambio?"
   },
   {
     "t": "Deja el periodismo Adrian Wojnarowski, el hombre que no dormía para saber todo sobre la NBA cinco minutos antes que los demás",
