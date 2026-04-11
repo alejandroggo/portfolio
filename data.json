@@ -2060,7 +2060,7 @@
     "s": "G",
     "sub": "Jordi Fernández volvió a Toronto y Gigantes del Basket pudo hablar con el entrenador y sus jugadores. Y por ahora hay tres pilares en el equipo: comunicación, identidad y Badalona.",
     "tags": [
-      "Entrevista",
+      "Entrevistas",
       "Jordi Fernández"
     ]
   },
@@ -2476,7 +2476,8 @@
     "sub": "Santi Aldama atendió a los medios de comunicación para hablar de su temporada, el futuro del baloncesto español y su contrato.",
     "tags": [
       "Periodismo",
-      "Españoles NBA"
+      "Españoles NBA",
+      "Entrevistas"
     ]
   },
   {
@@ -2595,7 +2596,10 @@
     "d": "2024-11-23",
     "y": 2024,
     "s": "G",
-    "sub": "Históricamente, y los Knicks con ellos, los equipos de Tom Thibodeau han sido defensivos. Pero este año no."
+    "sub": "Históricamente, y los Knicks con ellos, los equipos de Tom Thibodeau han sido defensivos. Pero este año no.",
+    "tags": [
+      "Análisis"
+    ]
   },
   {
     "t": "Papá Jokic' vuelve a la cancha, pero no es suficiente ante unos Mavs que quieren irse de Copas... sin Luka Doncic",
