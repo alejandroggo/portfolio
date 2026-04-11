@@ -353,7 +353,10 @@
     "y": 2026,
     "s": "G",
     "sub": "La NBA es menos sin Gregg Popovich. El legendario entrenador de los Spurs deja los banquillos por problemas de salud, tras un año apartado del equipo.",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Historia"
+    ]
   },
   {
     "t": "#190 LeBron James se quiere despedir sin decir adiós",
@@ -918,7 +921,10 @@
     "y": 2025,
     "s": "G",
     "sub": "Un plan del pasado para construir uno de los mejores ataques de la NBA. Te explicamos cómo los Rockets desafían la NBA moderna",
-    "p": 1
+    "p": 1,
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "t": "Hablamos con Santi Aldama en Toronto: rol, Grizzlies, Hugo González…",
@@ -930,7 +936,8 @@
     "tags": [
       "Periodismo",
       "Hugo González",
-      "Españoles NBA"
+      "Españoles NBA",
+      "Entrevistas"
     ]
   },
   {
