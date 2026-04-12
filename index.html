@@ -655,9 +655,6 @@ function renderFeatured(data) {
 
   renderFeaturedCards(featured);
   document.getElementById('featured-carousel').style.display = 'block';
-
-  if (featuredInterval) clearInterval(featuredInterval);
-  featuredInterval = setInterval(() => renderFeaturedCards(featured), 5000);
 }
 
 // ── Renderizado principal ──────────────────────────────────────
