@@ -270,7 +270,8 @@
     "sub": "Junto a mi querido Alejandro Gaitán, revisamos todos los equipos de la NBA tras el deadline 2026. Las apuestas de Wizards por Trae Young y Anthony Davis, el cambio de Garland por Harden o la llegada de Jaren Jackson Jr a Utah.",
     "vid": 1,
     "tags": [
-      "Análisis"
+      "Análisis",
+      "Opinión"
     ]
   },
   {
@@ -589,6 +590,15 @@
     ]
   },
   {
+    "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
+    "u": "https://www.youtube.com/watch?v=G5ivzeVgUMc",
+    "d": "2025-12-23",
+    "y": 2025,
+    "s": "G",
+    "s2": "NH",
+    "vid": 1
+  },
+  {
     "t": "#176 La realidad de un periodista internacional cubriendo la NBA",
     "u": "https://alejandroggo.substack.com/p/realidad-periodista-nba",
     "d": "2025-12-23",
@@ -601,15 +611,6 @@
     ],
     "featured": 1,
     "img": "https://substackcdn.com/image/fetch/$s_!fnMp!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F046b44af-4bed-4137-aa63-41b3a6b769b5_1600x1200.jpeg"
-  },
-  {
-    "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
-    "u": "https://www.youtube.com/watch?v=G5ivzeVgUMc",
-    "d": "2025-12-23",
-    "y": 2025,
-    "s": "G",
-    "s2": "NH",
-    "vid": 1
   },
   {
     "t": "#175 Mis 24 All Stars a día de hoy: quiénes y por qué (y LeBron James)",
@@ -3167,6 +3168,13 @@
     ]
   },
   {
+    "t": "Victor Wembanyama año II: el alien que ha transformado su cuerpo para consumar su invasión de la NBA",
+    "u": "https://www.relevo.com/baloncesto/nba/victor-wembanyama-alien-quiere-invadir-20241022063107-nt.html",
+    "d": "2024-10-23",
+    "y": 2024,
+    "s": "R"
+  },
+  {
     "t": "A mi me entrenó “un fuera de serie” como Jordi Fernández: “Veías lo que tenía preparado para nosotros, chavales de EBA...”",
     "u": "https://www.relevo.com/baloncesto/nba/serie-gusta-protagonismo-jugadores-gana-20241023110113-nt.html",
     "d": "2024-10-23",
@@ -3180,13 +3188,6 @@
     ],
     "featured": 1,
     "img": "https://s2.sportstatics.com/relevo/www/multimedia/202410/14/media/cortadas/jordi-fernandez-canada-RJv3KelbO9yW7k3AiUN8xjN-1200x648@Relevo.jpg?w=569&h=320"
-  },
-  {
-    "t": "Victor Wembanyama año II: el alien que ha transformado su cuerpo para consumar su invasión de la NBA",
-    "u": "https://www.relevo.com/baloncesto/nba/victor-wembanyama-alien-quiere-invadir-20241022063107-nt.html",
-    "d": "2024-10-23",
-    "y": 2024,
-    "s": "R"
   },
   {
     "t": "Los Celtics buscan igualar a los Warriors de Stephen Curry y Kevin Durant... y algo que Boston no logra desde 1969",
@@ -3761,7 +3762,10 @@
     "u": "https://www.relevo.com/juegos-olimpicos/baloncesto/cerrar-legado-tres-talentos-generacionales-20240809000034-nt.html",
     "d": "2024-08-11",
     "y": 2024,
-    "s": "R"
+    "s": "R",
+    "sub": "Tuvieron que aparecer los tres, a su mejor nivel, para conseguir el oro. Y tras la victoria llega la duda: ¿y ahora qué?",
+    "featured": 1,
+    "img": "https://s3.sportstatics.com/relevo/www/multimedia/202408/09/media/cortadas/lebron-curry-getty-RQwjJSWQpfZys5y5UEoMyOM-1200x648@Relevo.jpg?w=569&h=320"
   },
   {
     "t": "El debate del nuevo Dream Team a un partido del oro: ¿vencer o convencer?",
@@ -4352,17 +4356,6 @@
     ]
   },
   {
-    "t": "Boston Celtics: un anillo para cerrar un año casi perfecto y para la historia",
-    "u": "https://www.relevo.com/baloncesto/nba/boston-celtics-anillo-cerrar-perfecto-20240617081927-nt.html",
-    "d": "2024-06-18",
-    "y": 2024,
-    "s": "R",
-    "tags": [
-      "Celtics",
-      "Historia"
-    ]
-  },
-  {
     "t": "Luka Doncic y la realidad de jugar tus primeras finales: «No he hecho lo suficiente»",
     "u": "https://www.relevo.com/baloncesto/nba/luka-doncic-realidad-jugar-primeras-20240616061248-nt.html",
     "d": "2024-06-18",
@@ -4371,6 +4364,21 @@
     "tags": [
       "TV y derechos"
     ]
+  },
+  {
+    "t": "Boston Celtics: un anillo para cerrar un año casi perfecto y para la historia",
+    "u": "https://www.relevo.com/baloncesto/nba/boston-celtics-anillo-cerrar-perfecto-20240617081927-nt.html",
+    "d": "2024-06-18",
+    "y": 2024,
+    "s": "R",
+    "sub": "El título sirve para redondear un año que se recordará para siempre en la NBA. Por el banner 18, y por cómo lo hicieron.",
+    "tags": [
+      "Celtics",
+      "Historia",
+      "Estadística"
+    ],
+    "featured": 1,
+    "img": "https://s1.sportstatics.com/relevo/www/multimedia/202406/17/media/cortadas/celtics-nba-k1eH-RAsSVBNTJG0VR5dMjklz5BP-1200x648@Relevo.jpg?w=569&h=320"
   },
   {
     "t": "“Está bien sonreír durante la guerra”, la mentalidad de los Celtics para cerrar las finales",
@@ -8742,7 +8750,8 @@
     "sub": "El nuevo CBA está teniendo un impacto tremendo en la NBA y muchas franquicias se han visto obligadas a empezar a hacer movimientos para tratar de adaptarse a él. ",
     "vid": 1,
     "tags": [
-      "CBA"
+      "CBA",
+      "Opinión"
     ]
   },
   {
@@ -11815,7 +11824,8 @@
     "sub": "Muy poca gente en el planeta puede decir haber sido la primera en haber hecho algo, en general. Mucho menos si ese algo es debutar en la NBA y si la comparación es con todo un país, uno de más de 50 millones de habitantes. ",
     "vid": 1,
     "tags": [
-      "TV y derechos"
+      "TV y derechos",
+      "Entrevistas"
     ]
   },
   {
@@ -12895,7 +12905,10 @@
     "d": "2019-10-23",
     "y": 2019,
     "s": "OTR",
-    "pod": 1
+    "pod": 1,
+    "tags": [
+      "Opinión"
+    ]
   },
   {
     "t": "¡PREDICCIÓNES PARA LOS PREMIOS Y LAS NBA FINALS 2020!",
