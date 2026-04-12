@@ -598,7 +598,9 @@
     "tags": [
       "Periodismo",
       "Historia"
-    ]
+    ],
+    "featured": 1,
+    "img": "https://substackcdn.com/image/fetch/$s_!fnMp!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F046b44af-4bed-4137-aa63-41b3a6b769b5_1600x1200.jpeg"
   },
   {
     "t": "LA PREVIA DEL DÍA DE NAVIDAD NBA",
@@ -1008,7 +1010,9 @@
     "p": 1,
     "tags": [
       "Historia"
-    ]
+    ],
+    "featured": 1,
+    "img": "https://substackcdn.com/image/fetch/$s_!DG0r!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a05cdea-101a-4eca-a4ef-2e4b58bd6392_1680x1200.png"
   },
   {
     "t": "#150 Ha vuelto la NBA y NUNCA había tenido tantas ganas de ella",
@@ -3157,9 +3161,14 @@
     "d": "2024-10-23",
     "y": 2024,
     "s": "R",
+    "sub": "Hablamos con diez jugadores que han pasado por las manos de Jordi Fernández para conocer cómo es el primer entrenador español en dirigir un equipo en la NBA.\r",
     "tags": [
-      "Jordi Fernández"
-    ]
+      "Jordi Fernández",
+      "TV y derechos",
+      "Españoles NBA"
+    ],
+    "featured": 1,
+    "img": "https://s2.sportstatics.com/relevo/www/multimedia/202410/14/media/cortadas/jordi-fernandez-canada-RJv3KelbO9yW7k3AiUN8xjN-1200x648@Relevo.jpg?w=569&h=320"
   },
   {
     "t": "Victor Wembanyama año II: el alien que ha transformado su cuerpo para consumar su invasión de la NBA",
