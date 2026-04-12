@@ -170,19 +170,52 @@
     margin: 0 auto;
   }
 
+  .featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
   .featured-title {
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 1rem;
   }
+
+  .featured-nav {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .featured-nav button {
+    width: 2rem;
+    height: 2rem;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.12s;
+    color: var(--ink);
+  }
+
+  .featured-nav button:hover { background: var(--ink); color: var(--paper); }
+  .featured-nav button:disabled { opacity: 0.25; cursor: default; }
+  .featured-nav button:disabled:hover { background: transparent; color: var(--ink); }
 
   #featured-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 700px) {
+    #featured-cards { grid-template-columns: 1fr; }
   }
 
   .featured-card {
@@ -193,11 +226,11 @@
     transition: all 0.15s;
     display: flex;
     flex-direction: column;
-    animation: fadeIn 0.4s ease;
+    animation: fadeIn 0.3s ease;
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
+    from { opacity: 0; transform: translateY(5px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
@@ -239,12 +272,156 @@
     padding-top: 0.4rem;
   }
 
-  /* ── Artículos ─────────────────────────────────────────────── */
-  main {
-    padding: 0 5vw;
+  /* ── Layout principal con panel de tags ────────────────────── */
+  .content-wrap {
+    display: flex;
+    align-items: flex-start;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 5vw;
   }
+
+  /* ── Panel de tags lateral ─────────────────────────────────── */
+  #tags-panel {
+    width: 210px;
+    flex-shrink: 0;
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid var(--rule);
+    margin-right: 1.5rem;
+    position: sticky;
+    top: 120px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+  }
+
+  #tags-panel::-webkit-scrollbar { width: 3px; }
+  #tags-panel::-webkit-scrollbar-track { background: transparent; }
+  #tags-panel::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
+
+  .tags-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .tags-panel-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .tags-panel-clear {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    text-decoration: underline;
+    padding: 0;
+    display: none;
+  }
+
+  .tags-panel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .tag-panel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.28rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    transition: all 0.1s;
+    border-radius: 1px;
+    user-select: none;
+  }
+
+  .tag-panel-item:hover { background: white; border-color: var(--rule); }
+  .tag-panel-item.active { background: var(--ink); color: var(--paper); }
+  .tag-panel-item.active:hover { background: var(--ink); }
+
+  .tag-panel-count {
+    font-size: 0.6rem;
+    color: var(--muted);
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-left: 0.4rem;
+  }
+
+  .tag-panel-item.active .tag-panel-count { color: rgba(255,255,255,0.55); }
+
+  /* Botón toggle tags en móvil */
+  #tags-toggle {
+    display: none;
+    padding: 0.4rem 0.75rem;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--ink);
+    transition: all 0.12s;
+    white-space: nowrap;
+  }
+
+  #tags-toggle:hover, #tags-toggle.active { background: var(--ink); color: var(--paper); }
+
+  #tags-mobile-panel {
+    display: none;
+    width: 100%;
+    padding: 0.5rem 0 0.1rem;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  #tags-mobile-panel.open { display: flex; }
+
+  .tag-mobile-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--rule);
+    cursor: pointer;
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    border-radius: 1px;
+    user-select: none;
+  }
+
+  .tag-mobile-item:hover { background: white; }
+  .tag-mobile-item.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  .tag-mobile-count { font-size: 0.58rem; opacity: 0.6; }
+
+  @media (max-width: 900px) {
+    #tags-panel { display: none; }
+    #tags-toggle { display: block; }
+    .content-wrap { display: block; padding: 0 5vw; }
+    #main-content { padding: 0; }
+  }
+
+  @media (min-width: 901px) {
+    #tags-toggle { display: none !important; }
+    #tags-mobile-panel { display: none !important; }
+  }
+
+  /* ── Artículos ─────────────────────────────────────────────── */
+  #main-content { flex: 1; min-width: 0; }
 
   .year-section { margin-top: 3rem; }
 
@@ -260,7 +437,7 @@
 
   .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     border-top: 1.5px solid var(--ink);
   }
 
@@ -281,7 +458,6 @@
   .article-card:hover .article-title { color: var(--accent); }
 
   .card-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
-
   .card-date { font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
   .badge {
@@ -344,11 +520,7 @@
     border-right: 1px solid var(--rule);
   }
 
-  .article-card-wrapper .article-card {
-    border-bottom: none;
-    border-right: none;
-    flex: 1;
-  }
+  .article-card-wrapper .article-card { border-bottom: none; border-right: none; flex: 1; }
 
   .article-card-wrapper .tags {
     padding: 0 1.25rem 0.75rem;
@@ -477,6 +649,7 @@
     <button class="filter-btn" data-txt="1" onclick="setTxt(this)">📝 Texto</button>
     <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
     <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
+    <button id="tags-toggle" onclick="toggleTagsPanel()">🏷 Tags</button>
   </div>
   <span class="results-count" id="results-count"></span>
   <div id="active-tags-bar" style="display:none; width:100%; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
@@ -484,14 +657,30 @@
     <div id="active-tags-list" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
     <button onclick="clearTags()" style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--muted); text-decoration:underline; padding:0;">Limpiar</button>
   </div>
+  <div id="tags-mobile-panel"></div>
 </div>
 
 <div id="featured-carousel" style="display:none;">
-  <div class="featured-title">Destacados</div>
+  <div class="featured-header">
+    <div class="featured-title">Destacados</div>
+    <div class="featured-nav">
+      <button id="feat-prev" onclick="featuredPrev()" disabled>←</button>
+      <button id="feat-next" onclick="featuredNext()">→</button>
+    </div>
+  </div>
   <div id="featured-cards"></div>
 </div>
 
-<main id="main-content"><div class="loading">Cargando artículos…</div></main>
+<div class="content-wrap">
+  <div id="tags-panel">
+    <div class="tags-panel-header">
+      <span class="tags-panel-title">Tags</span>
+      <button class="tags-panel-clear" id="tags-panel-clear" onclick="clearTags()">Limpiar</button>
+    </div>
+    <div class="tags-panel-list" id="tags-panel-list"></div>
+  </div>
+  <div id="main-content"><div class="loading">Cargando artículos…</div></div>
+</div>
 
 <footer>
   <p>© Alejandro Gaitán · <a href="https://alejandroggo.substack.com" target="_blank">Substack</a> · <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank">Relevo</a></p>
@@ -500,15 +689,16 @@
 
 <script>
 // ── Estado global ──────────────────────────────────────────────
-let allArticles = [];
-let activeYear  = 'all';
-let activeSrc   = 'all';
-let activePod   = false;
-let activeVid   = false;
-let activePaid  = false;
-let activeTxt   = false;
-let activeTags  = [];
-let featuredInterval = null;
+let allArticles   = [];
+let activeYear    = 'all';
+let activeSrc     = 'all';
+let activePod     = false;
+let activeVid     = false;
+let activePaid    = false;
+let activeTxt     = false;
+let activeTags    = [];
+let featuredList  = [];
+let featuredIndex = 0;
 
 // ── Tags ───────────────────────────────────────────────────────
 function toggleTag(event, tag) {
@@ -523,6 +713,13 @@ function toggleTag(event, tag) {
 function clearTags() {
   activeTags = [];
   applyFilters();
+}
+
+function toggleTagsPanel() {
+  const panel = document.getElementById('tags-mobile-panel');
+  const btn   = document.getElementById('tags-toggle');
+  panel.classList.toggle('open');
+  btn.classList.toggle('active', panel.classList.contains('open'));
 }
 
 document.getElementById('today-date').textContent =
@@ -629,11 +826,51 @@ function badgeFor(s, s2) {
   return html;
 }
 
+// ── Panel de tags ──────────────────────────────────────────────
+function buildTagCounts(data) {
+  const counts = {};
+  data.forEach(a => {
+    (a.tags || []).forEach(tag => {
+      counts[tag] = (counts[tag] || 0) + 1;
+    });
+  });
+  return Object.entries(counts).sort((a, b) => b[1] - a[1]);
+}
+
+function renderTagsPanel(tagCounts) {
+  const list        = document.getElementById('tags-panel-list');
+  const mobilePanel = document.getElementById('tags-mobile-panel');
+
+  const esc = t => t.replace(/'/g, "\\'");
+
+  list.innerHTML = tagCounts.map(([tag, count]) => `
+    <div class="tag-panel-item${activeTags.includes(tag) ? ' active' : ''}" onclick="clickPanelTag('${esc(tag)}')">
+      <span>${tag}</span>
+      <span class="tag-panel-count">${count}</span>
+    </div>
+  `).join('');
+
+  mobilePanel.innerHTML = tagCounts.map(([tag, count]) => `
+    <span class="tag-mobile-item${activeTags.includes(tag) ? ' active' : ''}" onclick="clickPanelTag('${esc(tag)}')">
+      ${tag} <span class="tag-mobile-count">${count}</span>
+    </span>
+  `).join('');
+
+  document.getElementById('tags-panel-clear').style.display = activeTags.length > 0 ? 'block' : 'none';
+}
+
+function clickPanelTag(tag) {
+  const index = activeTags.indexOf(tag);
+  if (index > -1) activeTags.splice(index, 1);
+  else activeTags.push(tag);
+  applyFilters();
+}
+
 // ── Carrusel de destacados ─────────────────────────────────────
-function renderFeaturedCards(featured) {
-  const shuffled = [...featured].sort(() => Math.random() - 0.5).slice(0, 3);
+function renderFeaturedCards() {
+  const slice     = featuredList.slice(featuredIndex, featuredIndex + 3);
   const container = document.getElementById('featured-cards');
-  container.innerHTML = shuffled.map(a => `
+  container.innerHTML = slice.map(a => `
     <a href="${a.u}" target="_blank" rel="noopener" class="featured-card">
       ${a.img ? `<div class="featured-img" style="background-image:url('${a.img}')"></div>` : '<div class="featured-img"></div>'}
       <div class="featured-body">
@@ -647,13 +884,25 @@ function renderFeaturedCards(featured) {
       </div>
     </a>
   `).join('');
+
+  document.getElementById('feat-prev').disabled = featuredIndex === 0;
+  document.getElementById('feat-next').disabled = featuredIndex + 3 >= featuredList.length;
+}
+
+function featuredPrev() {
+  if (featuredIndex > 0) { featuredIndex--; renderFeaturedCards(); }
+}
+
+function featuredNext() {
+  if (featuredIndex + 3 < featuredList.length) { featuredIndex++; renderFeaturedCards(); }
 }
 
 function renderFeatured(data) {
   const featured = data.filter(a => a.featured === 1);
   if (featured.length === 0) return;
-
-  renderFeaturedCards(featured);
+  featuredList  = [...featured].sort(() => Math.random() - 0.5);
+  featuredIndex = 0;
+  renderFeaturedCards();
   document.getElementById('featured-carousel').style.display = 'block';
 }
 
@@ -678,6 +927,7 @@ function applyFilters() {
   document.getElementById('results-count').textContent =
     `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
 
+  // Barra de tags activos
   const bar  = document.getElementById('active-tags-bar');
   const list = document.getElementById('active-tags-list');
   if (activeTags.length > 0) {
@@ -689,6 +939,21 @@ function applyFilters() {
     bar.style.display = 'none';
     list.innerHTML = '';
   }
+
+  // Panel de tags: conteos sobre todo excepto filtro de tags (para no vaciarlo)
+  const baseForTags = allArticles.filter(a => {
+    const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
+    const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc || a.s2 === activeSrc;
+    const matchesPod    = !activePod  || a.pod === 1;
+    const matchesVid    = !activeVid  || a.vid === 1;
+    const matchesPaid   = !activePaid || a.p   === 1;
+    const matchesTxt    = !activeTxt  || (!a.pod && !a.vid);
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) ||
+      (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
+      (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);
+    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesTxt && matchesSearch;
+  });
+  renderTagsPanel(buildTagCounts(baseForTags));
 
   const byYear = {};
   filtered.forEach(a => {
