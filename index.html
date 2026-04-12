@@ -147,12 +147,12 @@
   .filter-btn.video-active { background: #00B4D8; color: white; border-color: #00B4D8; }
   .filter-btn.texto-active { background: #4CAF50; color: white; border-color: #4CAF50; }
   .filter-btn.solobasket-active { background: var(--solobasket); color: white; border-color: var(--solobasket); }
-.filter-btn.wordpress-active { background: var(--wordpress); color: white; border-color: var(--wordpress); }
-.filter-btn.outsiders-active { background: var(--outsiders); color: white; border-color: var(--outsiders); }
-.filter-btn.upunder-active { background: var(--upunder); color: white; border-color: var(--upunder); }
-.filter-btn.youtube-active { background: var(--youtube); color: #111111; border-color: var(--youtube); }
-.filter-btn.paid-active { background: var(--paid-badge); color: white; border-color: var(--paid-badge); }
-.filter-btn.otros-active { background: #FFFFFF; color: #111111; border-color: #444; }
+  .filter-btn.wordpress-active { background: var(--wordpress); color: white; border-color: var(--wordpress); }
+  .filter-btn.outsiders-active { background: var(--outsiders); color: white; border-color: var(--outsiders); }
+  .filter-btn.upunder-active { background: var(--upunder); color: white; border-color: var(--upunder); }
+  .filter-btn.youtube-active { background: var(--youtube); color: #111111; border-color: var(--youtube); }
+  .filter-btn.paid-active { background: var(--paid-badge); color: white; border-color: var(--paid-badge); }
+  .filter-btn.otros-active { background: #FFFFFF; color: #111111; border-color: #444; }
 
   .results-count {
     font-size: 0.68rem;
@@ -163,6 +163,83 @@
     flex-shrink: 0;
   }
 
+  /* ── Carrusel destacados ───────────────────────────────────── */
+  #featured-carousel {
+    padding: 2rem 5vw 0;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .featured-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  #featured-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-card {
+    border: 1.5px solid var(--ink);
+    text-decoration: none;
+    color: var(--ink);
+    overflow: hidden;
+    transition: all 0.15s;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.4s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .featured-card:hover { background: white; }
+  .featured-card:hover .featured-card-title { color: var(--accent); }
+
+  .featured-img {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--rule);
+  }
+
+  .featured-body {
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+  }
+
+  .featured-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+
+  .featured-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.3;
+    transition: color 0.12s;
+  }
+
+  .featured-card-date {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: auto;
+    padding-top: 0.4rem;
+  }
+
+  /* ── Artículos ─────────────────────────────────────────────── */
   main {
     padding: 0 5vw;
     max-width: 1400px;
@@ -341,24 +418,24 @@
     <h1>Alejandro <span>Gaitán</span></h1>
     <p class="masthead-sub">Periodismo NBA en español · 2015–2026</p>
   </div>
-<div class="header-stats">
-  <div class="stat">
-    <div class="stat-num" id="stat-texto">—</div>
-    <div class="stat-label">Texto</div>
+  <div class="header-stats">
+    <div class="stat">
+      <div class="stat-num" id="stat-texto">—</div>
+      <div class="stat-label">Texto</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-audio">—</div>
+      <div class="stat-label">Audio</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-video">—</div>
+      <div class="stat-label">Vídeo</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-total">—</div>
+      <div class="stat-label">Total</div>
+    </div>
   </div>
-  <div class="stat">
-    <div class="stat-num" id="stat-audio">—</div>
-    <div class="stat-label">Audio</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" id="stat-video">—</div>
-    <div class="stat-label">Vídeo</div>
-  </div>
-<div class="stat">
-  <div class="stat-num" id="stat-total">—</div>
-  <div class="stat-label">Total</div>
-</div>
-</div>
 </header>
 
 <div class="controls">
@@ -394,7 +471,7 @@
     <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
     <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros Medios</button>
   </div>
- <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
+  <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
     <button class="filter-btn" data-paid="1" onclick="setPaid(this)">💰 De pago</button>
     <button class="filter-btn" data-txt="1" onclick="setTxt(this)">📝 Texto</button>
@@ -407,6 +484,11 @@
     <div id="active-tags-list" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
     <button onclick="clearTags()" style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--muted); text-decoration:underline; padding:0;">Limpiar</button>
   </div>
+</div>
+
+<div id="featured-carousel" style="display:none;">
+  <div class="featured-title">Destacados</div>
+  <div id="featured-cards"></div>
 </div>
 
 <main id="main-content"><div class="loading">Cargando artículos…</div></main>
@@ -426,19 +508,15 @@ let activeVid   = false;
 let activePaid  = false;
 let activeTxt   = false;
 let activeTags  = [];
+let featuredInterval = null;
 
-// ── Función para manejar clicks en tags ─────────────────────────
+// ── Tags ───────────────────────────────────────────────────────
 function toggleTag(event, tag) {
   event.preventDefault();
   event.stopPropagation();
-
   const index = activeTags.indexOf(tag);
-  if (index > -1) {
-    activeTags.splice(index, 1);
-  } else {
-    activeTags.push(tag);
-  }
-
+  if (index > -1) activeTags.splice(index, 1);
+  else activeTags.push(tag);
   applyFilters();
 }
 
@@ -447,25 +525,25 @@ function clearTags() {
   applyFilters();
 }
 
+document.getElementById('today-date').textContent =
+  new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  document.getElementById('today-date').textContent =
-    new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+// ── Utilidad: formato de fecha ─────────────────────────────────
+function formatDate(d) {
+  if (!d) return '';
+  const [y, m, day] = d.split('-');
+  const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return `${+day} ${months[+m - 1]} ${y}`;
+}
 
-  // ── Utilidad: formato de fecha ─────────────────────────────────
-  function formatDate(d) {
-    const [y, m, day] = d.split('-');
-    const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-    return `${+day} ${months[+m - 1]} ${y}`;
-  }
+// ── Filtros ────────────────────────────────────────────────────
+function setYear(btn) {
+  document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeYear = btn.dataset.year;
+  applyFilters();
+}
 
-  // ── Filtros de año y fuente ────────────────────────────────────
-  function setYear(btn) {
-    document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeYear = btn.dataset.year;
-    applyFilters();
-  }
-  
 function setSrc(btn) {
   document.querySelectorAll('[data-src]').forEach(b => {
     b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active', 'solobasket-active', 'wordpress-active', 'outsiders-active', 'upunder-active', 'youtube-active', 'otros-active');
@@ -485,7 +563,7 @@ function setSrc(btn) {
   applyFilters();
 }
 
- function setPod(btn) {
+function setPod(btn) {
   activePod = !activePod;
   if (activePod) { activeVid = false; activePaid = false; activeTxt = false; }
   btn.classList.toggle('active', activePod);
@@ -528,48 +606,82 @@ function setTxt(btn) {
   document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
   applyFilters();
 }
-  // ── Badge por medio ────────────────────────────────────────────
-  const MEDIOS = {
-    R:  { label: 'Relevo',      cls: 'relevo'     },
-    S:  { label: 'Substack',    cls: 'substack'   },
-    SB: { label: 'Solobasket',  cls: 'solobasket' },
-    G:  { label: 'Gigantes',    cls: 'gigantes'   },
-    WP: { label: 'Wordpress',   cls: 'wordpress'  },
-    O:  { label: 'Outsiders',   cls: 'outsiders'  },
-    UU: { label: 'Up & Under',  cls: 'upunder'    },
-    YT: { label: 'YouTube', cls: 'youtube' },
-    NH: { label: 'NBA House', cls: 'nbahouse' },
-    OTR: { label: 'Otros Medios',    cls: 'otros'    },
-  };
+
+// ── Badge por medio ────────────────────────────────────────────
+const MEDIOS = {
+  R:   { label: 'Relevo',       cls: 'relevo'     },
+  S:   { label: 'Substack',     cls: 'substack'   },
+  SB:  { label: 'Solobasket',   cls: 'solobasket' },
+  G:   { label: 'Gigantes',     cls: 'gigantes'   },
+  WP:  { label: 'Wordpress',    cls: 'wordpress'  },
+  O:   { label: 'Outsiders',    cls: 'outsiders'  },
+  UU:  { label: 'Up & Under',   cls: 'upunder'    },
+  YT:  { label: 'YouTube',      cls: 'youtube'    },
+  NH:  { label: 'NBA House',    cls: 'nbahouse'   },
+  OTR: { label: 'Otros Medios', cls: 'otros'      },
+};
+
 function badgeFor(s, s2) {
-  const m = MEDIOS[s];
+  const m  = MEDIOS[s];
   const m2 = s2 ? MEDIOS[s2] : null;
   let html = m ? `<span class="badge badge-${m.cls}">${m.label}</span>` : '';
   if (m2) html += ` <span class="badge badge-${m2.cls}">${m2.label}</span>`;
   return html;
 }
 
-  // ── Renderizado principal ──────────────────────────────────────
+// ── Carrusel de destacados ─────────────────────────────────────
+function renderFeaturedCards(featured) {
+  const shuffled = [...featured].sort(() => Math.random() - 0.5).slice(0, 3);
+  const container = document.getElementById('featured-cards');
+  container.innerHTML = shuffled.map(a => `
+    <a href="${a.u}" target="_blank" rel="noopener" class="featured-card">
+      ${a.img ? `<div class="featured-img" style="background-image:url('${a.img}')"></div>` : '<div class="featured-img"></div>'}
+      <div class="featured-body">
+        <div class="featured-meta">
+          ${badgeFor(a.s, a.s2)}
+          ${a.pod ? '<span class="badge badge-podcast">Podcast</span>' : ''}
+          ${a.vid ? '<span class="badge badge-video">Vídeo</span>' : ''}
+        </div>
+        <div class="featured-card-title">${a.t}</div>
+        ${a.d ? `<div class="featured-card-date">${formatDate(a.d)}</div>` : ''}
+      </div>
+    </a>
+  `).join('');
+}
+
+function renderFeatured(data) {
+  const featured = data.filter(a => a.featured === 1);
+  if (featured.length === 0) return;
+
+  renderFeaturedCards(featured);
+  document.getElementById('featured-carousel').style.display = 'block';
+
+  if (featuredInterval) clearInterval(featuredInterval);
+  featuredInterval = setInterval(() => renderFeaturedCards(featured), 5000);
+}
+
+// ── Renderizado principal ──────────────────────────────────────
 function applyFilters() {
   const searchInput = document.getElementById('search').value.toLowerCase();
 
   const filtered = allArticles.filter(a => {
     const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
-    const matchesSrc = activeSrc === 'all' || a.s === activeSrc || a.s2 === activeSrc;
-    const matchesPod    = !activePod || a.pod === 1;
-    const matchesVid = !activeVid || a.vid === 1;
-    const matchesPaid = !activePaid || a.p === 1;
-    const matchesTxt = !activeTxt || (!a.pod && !a.vid);
-    const matchesSearch = a.t.toLowerCase().includes(searchInput) || 
-  (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
-  (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
-return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesTxt && matchesSearch && matchesTags;  });
+    const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc || a.s2 === activeSrc;
+    const matchesPod    = !activePod  || a.pod === 1;
+    const matchesVid    = !activeVid  || a.vid === 1;
+    const matchesPaid   = !activePaid || a.p   === 1;
+    const matchesTxt    = !activeTxt  || (!a.pod && !a.vid);
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) ||
+      (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
+      (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);
+    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
+    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesTxt && matchesSearch && matchesTags;
+  });
 
   document.getElementById('results-count').textContent =
     `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
 
-  // Actualizar barra de tags activos
-  const bar = document.getElementById('active-tags-bar');
+  const bar  = document.getElementById('active-tags-bar');
   const list = document.getElementById('active-tags-list');
   if (activeTags.length > 0) {
     bar.style.display = 'flex';
@@ -588,7 +700,7 @@ return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && m
   });
 
   const years = Object.keys(byYear).sort((a, b) => b - a);
-  const main = document.getElementById('main-content');
+  const main  = document.getElementById('main-content');
 
   if (filtered.length === 0) {
     main.innerHTML = `
@@ -612,9 +724,9 @@ return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && m
               <div class="card-meta">
                 <span class="card-date">${formatDate(a.d)}</span>
                 ${badgeFor(a.s, a.s2)}
-                ${a.p   ? '<span class="badge badge-paid">De pago</span>' : ''}
-                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>' : ''}
-                ${a.vid ? '<span class="badge badge-video">Vídeo</span>' : ''}
+                ${a.p   ? '<span class="badge badge-paid">De pago</span>'     : ''}
+                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>'  : ''}
+                ${a.vid ? '<span class="badge badge-video">Vídeo</span>'      : ''}
               </div>
               <div class="article-title">${a.t}</div>
               ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
@@ -629,41 +741,43 @@ return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && m
     </div>
   `).join('');
 }
-  // ── Carga de datos ─────────────────────────────────────────────
-  fetch('data.json')
-    .then(r => r.json())
-    .then(data => {
-      allArticles = data;
 
-document.getElementById('stat-audio').textContent  = data.filter(a => a.pod === 1).length.toLocaleString('es-ES');
-document.getElementById('stat-video').textContent  = data.filter(a => a.vid === 1).length.toLocaleString('es-ES');
-document.getElementById('stat-texto').textContent  = data.filter(a => !a.pod && !a.vid).length.toLocaleString('es-ES');
-document.getElementById('stat-total').textContent = data.length.toLocaleString('es-ES');
+// ── Carga de datos ─────────────────────────────────────────────
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => {
+    allArticles = data;
 
-activeYear = 'all';
-activeSrc = 'all';
-activePod = false;
-activeVid = false;
-activePaid = false;
-activeTxt = false;
+    document.getElementById('stat-audio').textContent  = data.filter(a => a.pod === 1).length.toLocaleString('es-ES');
+    document.getElementById('stat-video').textContent  = data.filter(a => a.vid === 1).length.toLocaleString('es-ES');
+    document.getElementById('stat-texto').textContent  = data.filter(a => !a.pod && !a.vid).length.toLocaleString('es-ES');
+    document.getElementById('stat-total').textContent  = data.length.toLocaleString('es-ES');
 
-activeTags = [];
-document.getElementById('search').value = '';
-document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
-document.querySelector('[data-year="all"]').classList.add('active');
-document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
-document.querySelector('[data-src="all"]').classList.add('active');
-document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
-document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
-      
-applyFilters();
-    })
-    .catch(() => {
-      document.getElementById('main-content').innerHTML =
-        '<div class="loading">Error cargando datos. Asegúrate de que data.json está en la misma carpeta.</div>';
-    });
+    activeYear = 'all';
+    activeSrc  = 'all';
+    activePod  = false;
+    activeVid  = false;
+    activePaid = false;
+    activeTxt  = false;
+    activeTags = [];
+
+    document.getElementById('search').value = '';
+    document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-year="all"]').classList.add('active');
+    document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
+    document.querySelector('[data-src="all"]').classList.add('active');
+    document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+    document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+    document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+    document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+
+    renderFeatured(data);
+    applyFilters();
+  })
+  .catch(() => {
+    document.getElementById('main-content').innerHTML =
+      '<div class="loading">Error cargando datos. Asegúrate de que data.json está en la misma carpeta.</div>';
+  });
 </script>
 </body>
 </html>
