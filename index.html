@@ -3,1306 +3,1043 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NBA EN ESPAÑOL</title>
+<title>Alejandro Gaitán — NBA en español</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #0a0a0f;
-  --bg2: #0f0f16;
-  --panel: #13131a;
-  --panel-header: #16161f;
-  --border: #2a2a3a;
-  --border2: #3a3a50;
-  --gold: #c9a84c;
-  --gold-light: #e0c070;
-  --gold-bg: rgba(201,168,76,0.08);
-  --live-red: #e05050;
-  --live-red-bg: rgba(224,80,80,0.08);
-  --yt-red: #ff4444;
-  --pod-purple: #9b6fd4;
-  --pod-purple-bg: rgba(155,111,212,0.1);
-  --text: #f0f0f0;
-  --text2: #a0a0b8;
-  --text3: #606078;
-  --green: #4caf82;
-  --panel-radius: 7px;
-  --header-h: 46px;
-  --topbar-h: 50px;
-  --fs-article: 13px;
-  --fs-title: 14px;
-  --shadow: 0 1px 6px rgba(0,0,0,0.4), 0 0 0 1px var(--border);
-  --shadow-hover: 0 3px 16px rgba(0,0,0,0.5), 0 0 0 1px var(--border2);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'IBM Plex Mono',monospace;height:100vh;width:100vw;overflow:hidden;user-select:none;}
-
-/* ── TOPBAR ── */
-#topbar{position:fixed;top:0;left:0;right:0;height:var(--topbar-h);background:var(--panel);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 14px;gap:8px;z-index:1000;box-shadow:0 1px 8px rgba(0,0,0,0.5);}
-#logo{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);letter-spacing:2px;margin-right:6px;flex-shrink:0;line-height:1;}
-.tb-sep{width:1px;height:22px;background:var(--border);margin:0 2px;}
-.tb-btn{background:transparent;border:1px solid var(--border);color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:10px;padding:4px 9px;cursor:pointer;border-radius:4px;letter-spacing:.8px;transition:all .15s;flex-shrink:0;}
-.tb-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-bg);}
-.tb-btn.active{border-color:var(--live-red);color:var(--live-red);background:var(--live-red-bg);}
-.tb-label{font-size:9px;color:var(--text3);letter-spacing:.8px;flex-shrink:0;}
-.tb-slider{-webkit-appearance:none;appearance:none;width:60px;height:3px;background:var(--border);border-radius:2px;outline:none;cursor:pointer;flex-shrink:0;}
-.tb-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;background:var(--gold);border-radius:50%;}
-select.tb-select{background:var(--panel);border:1px solid var(--border);color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:10px;padding:3px 7px;cursor:pointer;border-radius:4px;outline:none;flex-shrink:0;}
-#clock{margin-left:auto;font-size:11px;color:var(--gold);letter-spacing:1px;flex-shrink:0;}
-
-/* SEARCH */
-#search-wrap{position:relative;flex-shrink:0;}
-#global-search{background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:10px;padding:4px 8px 4px 26px;width:150px;border-radius:4px;outline:none;transition:border-color .15s;}
-#global-search:focus{border-color:var(--gold);}
-#global-search::placeholder{color:var(--text3);}
-#search-icon{position:absolute;left:7px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--text3);pointer-events:none;}
-
-/* ── CANVAS / GRID LAYOUT ── */
-#canvas{
-  position:fixed;
-  top:var(--topbar-h);
-  left:0;right:0;bottom:0;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows:1fr 1fr;
-  grid-template-areas:
-    "wire youtube podcast"
-    "teams scorecal standings";
-  gap:10px;
-  padding:10px;
-  overflow:hidden;
-}
-
-/* ── PANELS ── */
-.panel{
-  background:var(--panel);
-  border-radius:var(--panel-radius);
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  transition:box-shadow .15s;
-  min-height:0;
-}
-.panel:hover{box-shadow:var(--shadow-hover);}
-
-#panel-wire     {grid-area:wire;}
-#panel-teams    {grid-area:teams;}
-#panel-scorecal {grid-area:scorecal;}
-#panel-standings{grid-area:standings;}
-#panel-youtube  {grid-area:youtube;}
-#panel-podcast  {grid-area:podcast;}
-
-.panel-header{height:var(--header-h);background:var(--panel-header);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 11px;flex-shrink:0;gap:7px;}
-.panel-title{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;flex:1;}
-.panel-badge{font-size:9px;color:var(--text3);background:var(--bg);border:1px solid var(--border);padding:1px 6px;border-radius:10px;}
-.panel-btn{background:transparent;border:none;color:var(--text3);font-size:12px;cursor:pointer;padding:3px;transition:color .15s;line-height:1;font-family:'IBM Plex Mono',monospace;}
-.panel-btn:hover{color:var(--gold);}
-.panel-updated{font-size:9px;color:var(--text3);letter-spacing:0;font-family:'IBM Plex Sans',sans-serif;}
-.panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:9px;font-size:var(--fs-article);min-height:0;}
-.panel-body::-webkit-scrollbar{width:3px;}
-.panel-body::-webkit-scrollbar-track{background:transparent;}
-.panel-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.panel-body::-webkit-scrollbar-thumb:hover{background:var(--border2);}
-
-/* ── FILTER BAR (exclusión) ── */
-.filter-bar{padding:6px 9px;border-bottom:1px solid var(--border);background:var(--bg2);position:relative;flex-shrink:0;}
-.filter-btn{background:transparent;border:1px solid var(--border);color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:10px;padding:3px 8px;border-radius:4px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px;width:100%;}
-.filter-btn:hover{border-color:var(--gold);color:var(--gold);}
-.filter-btn .filter-count{background:var(--live-red);color:#fff;font-size:8px;padding:1px 5px;border-radius:8px;margin-left:auto;display:none;}
-.filter-btn .filter-count.has-exclusions{display:inline;}
-.filter-dropdown{display:none;position:absolute;top:calc(100% + 2px);left:9px;right:9px;background:var(--panel);border:1px solid var(--border);border-radius:5px;box-shadow:0 6px 20px rgba(0,0,0,0.5);z-index:200;max-height:220px;overflow-y:auto;}
-.filter-dropdown.open{display:block;}
-.filter-dropdown::-webkit-scrollbar{width:3px;}
-.filter-dropdown::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.filter-hint{padding:6px 10px;font-size:9px;color:var(--text3);border-bottom:1px solid var(--border);letter-spacing:.5px;}
-.filter-option{display:flex;align-items:center;gap:8px;padding:6px 10px;cursor:pointer;font-size:10px;color:var(--text2);transition:background .1s;border-bottom:1px solid var(--border);}
-.filter-option:last-child{border-bottom:none;}
-.filter-option:hover{background:var(--bg2);}
-.filter-option.excluded{color:var(--live-red);opacity:.7;}
-.filter-option .check{width:12px;height:12px;border:1px solid var(--border);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0;color:var(--text);}
-.filter-option.excluded .check{background:var(--live-red-bg);border-color:var(--live-red);color:var(--live-red);}
-.filter-all{padding:5px 10px;font-size:9px;color:var(--text3);border-bottom:1px solid var(--border);display:flex;gap:8px;}
-.filter-all button{background:none;border:none;color:var(--gold);cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:9px;padding:0;}
-
-/* ── ARTÍCULOS ── */
-.article-item{padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.04);cursor:pointer;transition:background .1s;}
-.article-item:hover{background:var(--gold-bg);margin:0 -9px;padding:7px 9px;}
-.article-item:last-child{border-bottom:none;}
-.article-thumb{width:100%;height:90px;object-fit:cover;border-radius:4px;margin-bottom:5px;display:block;background:var(--bg2);}
-.article-meta{display:flex;align-items:center;gap:5px;margin-bottom:3px;flex-wrap:wrap;}
-.article-source{font-size:9px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;}
-.article-title{font-family:'IBM Plex Sans',sans-serif;font-size:var(--fs-title);color:var(--text);line-height:1.4;margin-bottom:2px;}
-.article-date{font-size:9px;color:var(--text3);}
-.badge{font-size:8px;letter-spacing:.5px;padding:1px 5px;border-radius:3px;text-transform:uppercase;flex-shrink:0;}
-.badge-pay{background:rgba(224,80,80,.12);color:var(--live-red);border:1px solid rgba(224,80,80,.25);}
-.badge-en{background:rgba(255,255,255,.05);color:var(--text3);border:1px solid var(--border);}
-.badge-new{background:rgba(76,175,130,.1);color:var(--green);border:1px solid rgba(76,175,130,.25);}
-
-/* ── SCORES + CAL tabs ── */
-.sc-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--bg2);flex-shrink:0;}
-.sc-tab{flex:1;text-align:center;padding:7px 0;font-size:10px;letter-spacing:.8px;cursor:pointer;color:var(--text3);border-bottom:2px solid transparent;transition:all .15s;}
-.sc-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
-
-/* ── RESULTADOS ── */
-.scores-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
-.score-card{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:9px;}
-.score-card.live{border-color:rgba(224,80,80,.4);background:rgba(224,80,80,.03);}
-.live-dot{display:inline-block;width:6px;height:6px;background:var(--live-red);border-radius:50%;animation:pulse 1.2s infinite;margin-right:4px;vertical-align:middle;}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.score-status{font-size:9px;color:var(--text3);margin-bottom:5px;letter-spacing:.5px;}
-.score-teams{display:flex;flex-direction:column;gap:4px;}
-.score-team{display:flex;align-items:center;justify-content:space-between;}
-.score-team-info{display:flex;align-items:center;gap:5px;}
-.team-logo{width:20px;height:20px;object-fit:contain;}
-.team-abbr{font-size:11px;font-weight:600;color:var(--text);}
-.team-score{font-size:17px;font-weight:600;color:var(--text);}
-.team-score.leader{color:var(--gold);}
-.score-divider{width:100%;height:1px;background:var(--border);margin:3px 0;}
-.no-games{text-align:center;color:var(--text3);font-size:11px;padding:18px;}
-
-/* ── CALENDARIO ── */
-.cal-item{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:8px;}
-.cal-item:last-child{border-bottom:none;}
-.cal-time{font-size:10px;color:var(--text3);min-width:55px;flex-shrink:0;}
-.cal-time.today{color:var(--gold);font-weight:600;}
-.cal-matchup{flex:1;font-family:'IBM Plex Sans',sans-serif;font-size:var(--fs-title);color:var(--text);}
-.cal-score{font-size:12px;font-weight:600;color:var(--text);min-width:50px;text-align:right;flex-shrink:0;}
-.cal-score.final{color:var(--text2);}
-.cal-label{font-size:8px;padding:1px 5px;border-radius:3px;border:1px solid var(--border);color:var(--text3);flex-shrink:0;}
-.cal-label.live-label{border-color:rgba(224,80,80,.4);color:var(--live-red);background:var(--live-red-bg);}
-.cal-section{font-size:9px;color:var(--text3);letter-spacing:1px;padding:5px 0 3px;text-transform:uppercase;border-bottom:1px solid var(--border);margin-bottom:4px;}
-
-/* ── CLASIFICACIÓN ── */
-.conf-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--bg2);flex-shrink:0;}
-.conf-tab{flex:1;text-align:center;padding:6px 0;font-size:10px;letter-spacing:.8px;cursor:pointer;color:var(--text3);border-bottom:2px solid transparent;transition:all .15s;}
-.conf-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
-.standings-table{width:100%;border-collapse:collapse;font-size:10px;}
-.standings-table th{color:var(--text3);font-weight:500;padding:4px 5px;text-align:left;letter-spacing:.5px;border-bottom:1px solid var(--border);font-size:9px;}
-.standings-table td{padding:4px 5px;border-bottom:1px solid rgba(255,255,255,.03);}
-.standings-table tr:hover td{background:var(--gold-bg);}
-.rank-num{color:var(--text3);width:18px;}
-.pct-cell{color:var(--gold);}
-.playoff-line td{border-top:1px solid rgba(201,168,76,.3)!important;}
-
-/* ── YOUTUBE / PODCAST ── */
-.media-item{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;transition:background .1s;}
-.media-item:hover{background:var(--gold-bg);margin:0 -9px;padding:7px 9px;}
-.media-item:last-child{border-bottom:none;}
-.media-thumb{width:100%;height:90px;object-fit:cover;border-radius:4px;margin-bottom:5px;display:block;background:var(--bg2);}
-.media-thumb-fallback{width:100%;height:90px;background:var(--bg2);border-radius:4px;margin-bottom:5px;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--border2);}
-.media-source{font-size:9px;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;display:flex;align-items:center;gap:4px;}
-.media-source.yt{color:var(--yt-red);}
-.media-source.pod{color:var(--pod-purple);}
-.media-title{font-family:'IBM Plex Sans',sans-serif;font-size:var(--fs-title);color:var(--text);line-height:1.4;margin-bottom:2px;}
-.media-date{font-size:9px;color:var(--text3);}
-
-/* ── CONFIG MODAL ── */
-#config-modal{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;}
-#config-modal.open{display:flex;}
-.config-box{background:var(--panel);border:1px solid var(--border);border-radius:9px;width:600px;max-width:96vw;max-height:90vh;overflow-y:auto;padding:22px;box-shadow:0 12px 40px rgba(0,0,0,.7);}
-.config-box::-webkit-scrollbar{width:3px;}
-.config-box::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.config-title{font-size:16px;color:var(--gold);letter-spacing:2px;margin-bottom:18px;}
-.config-section{margin-bottom:18px;}
-.config-section-title{font-size:10px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px;padding-bottom:5px;border-bottom:1px solid var(--border);}
-.chips-grid{display:flex;flex-wrap:wrap;gap:5px;}
-.chip{font-size:10px;padding:3px 8px;border-radius:10px;border:1px solid var(--border);color:var(--text2);cursor:pointer;transition:all .15s;background:transparent;font-family:'IBM Plex Mono',monospace;}
-.chip.active{border-color:var(--gold);color:var(--gold);background:var(--gold-bg);}
-.chip.maxed{opacity:.35;cursor:not-allowed;}
-.config-input{background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:11px;padding:6px 9px;width:100%;border-radius:4px;outline:none;transition:border-color .15s;}
-.config-input:focus{border-color:var(--gold);}
-.config-row{display:flex;gap:7px;margin-top:6px;}
-.config-btn{background:var(--gold-bg);border:1px solid var(--gold);color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:10px;padding:6px 12px;cursor:pointer;border-radius:4px;transition:all .15s;white-space:nowrap;}
-.config-btn:hover{background:rgba(201,168,76,.18);}
-.health-item{display:flex;align-items:center;gap:9px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);}
-.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.dot.ok{background:var(--green);}
-.dot.err{background:var(--live-red);}
-.dot.loading{background:var(--gold-light);animation:pulse 1s infinite;}
-.health-name{flex:1;font-size:10px;color:var(--text2);display:flex;align-items:center;gap:5px;}
-.health-count{font-size:9px;color:var(--text3);min-width:55px;text-align:right;}
-.toggle-btn{font-size:9px;padding:2px 7px;border-radius:8px;border:1px solid var(--border);color:var(--text3);cursor:pointer;background:transparent;font-family:'IBM Plex Mono',monospace;transition:all .15s;}
-.toggle-btn.on{border-color:var(--green);color:var(--green);}
-.custom-item{display:flex;align-items:center;gap:7px;padding:3px 0;font-size:10px;color:var(--text2);}
-.del-btn{cursor:pointer;color:var(--live-red);font-size:13px;line-height:1;flex-shrink:0;}
-.close-config{display:block;width:100%;padding:9px;margin-top:14px;background:transparent;border:1px solid var(--border);color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;cursor:pointer;border-radius:4px;transition:all .15s;}
-.close-config:hover{border-color:var(--gold);color:var(--gold);}
-
-/* ── ESTADOS ── */
-.panel-loading{text-align:center;color:var(--text3);font-size:11px;padding:20px;}
-.panel-loading::after{content:'…';animation:dots 1.5s infinite;}
-@keyframes dots{0%{content:'.'}33%{content:'..'}66%{content:'…'}}
-.panel-error{text-align:center;color:var(--live-red);font-size:11px;padding:14px;line-height:1.8;}
-.empty-state{text-align:center;color:var(--text3);font-size:11px;padding:20px;line-height:1.8;}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  body{overflow:auto;}
-  #canvas{
-    position:relative;
-    top:auto;left:auto;right:auto;bottom:auto;
-    margin-top:var(--topbar-h);
-    display:flex;
-    flex-direction:column;
-    height:auto;
-    overflow:visible;
-    gap:10px;
-    padding:10px;
+  :root {
+    --ink: #111111;
+    --paper: #f5f0e8;
+    --accent: #007A33;
+    --muted: #7a7060;
+    --rule: #d4cfc5;
+    --paid-badge: #1a3a5c;
+    --relevo: #FF34EF;
+    --substack: #007A33;
+    --solobasket: #E8620A;
+    --gigantes: #CC0000;
+    --wordpress: #3D9CD2;
+    --outsiders: #111111;
+    --upunder: #1B3A6B;
+    --youtube: #FFD700;
   }
-  .panel{
-    min-height:380px;
-    height:auto;
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
   }
-  #topbar{
-    overflow-x:auto;
-    flex-wrap:nowrap;
+
+  header {
+    border-bottom: 3px solid var(--ink);
+    padding: 0 5vw;
   }
-  #topbar .tb-sep:nth-child(n+4){display:none;}
-  .tb-label{display:none;}
-  .tb-slider{display:none;}
-  select.tb-select{display:none;}
-}
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .masthead {
+    padding: 2.5rem 0 2rem;
+    text-align: center;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+
+  .masthead h1 span { color: var(--accent); font-style: italic; }
+
+  .masthead-sub {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.25rem 0 1.5rem;
+    border-top: 1px solid var(--rule);
+    margin-top: 1.5rem;
+  }
+
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+  .stat-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+
+  .controls {
+    padding: 1.25rem 5vw;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  .search-wrap {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    padding: 0.55rem 1rem 0.55rem 2.2rem;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink);
+    outline: none;
+  }
+
+  .search-wrap input::placeholder { color: var(--muted); }
+  .search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 0.85rem; pointer-events: none; }
+
+  .filter-group { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+  .filter-btn {
+    padding: 0.4rem 0.75rem;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--ink);
+    transition: all 0.12s;
+    white-space: nowrap;
+  }
+
+  .filter-btn:hover { background: var(--ink); color: var(--paper); }
+  .filter-btn.active { background: var(--ink); color: var(--paper); }
+  .filter-btn.relevo-active { background: var(--relevo); color: white; border-color: var(--relevo); }
+  .filter-btn.substack-active { background: var(--substack); color: white; border-color: var(--substack); }
+  .filter-btn.podcast-active { background: #6b4fbb; color: white; border-color: #6b4fbb; }
+  .filter-btn.gigantes-active { background: var(--gigantes); color: white; border-color: var(--gigantes); }
+  .filter-btn.nbahouse-active { background: #E03A3A; color: white; border-color: #E03A3A; }
+  .filter-btn.video-active { background: #00B4D8; color: white; border-color: #00B4D8; }
+  .filter-btn.texto-active { background: #4CAF50; color: white; border-color: #4CAF50; }
+  .filter-btn.solobasket-active { background: var(--solobasket); color: white; border-color: var(--solobasket); }
+  .filter-btn.wordpress-active { background: var(--wordpress); color: white; border-color: var(--wordpress); }
+  .filter-btn.outsiders-active { background: var(--outsiders); color: white; border-color: var(--outsiders); }
+  .filter-btn.upunder-active { background: var(--upunder); color: white; border-color: var(--upunder); }
+  .filter-btn.youtube-active { background: var(--youtube); color: #111111; border-color: var(--youtube); }
+  .filter-btn.paid-active { background: var(--paid-badge); color: white; border-color: var(--paid-badge); }
+  .filter-btn.otros-active { background: #FFFFFF; color: #111111; border-color: #444; }
+
+  .results-count {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* ── Carrusel destacados ───────────────────────────────────── */
+  #featured-carousel {
+    padding: 2rem 5vw 0;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .featured-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .featured-nav {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .featured-nav button {
+    width: 2rem;
+    height: 2rem;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.12s;
+    color: var(--ink);
+  }
+
+  .featured-nav button:hover { background: var(--ink); color: var(--paper); }
+  .featured-nav button:disabled { opacity: 0.25; cursor: default; }
+  .featured-nav button:disabled:hover { background: transparent; color: var(--ink); }
+
+  #featured-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 700px) {
+    #featured-cards { grid-template-columns: 1fr; }
+  }
+
+  .featured-card {
+    border: 1.5px solid var(--ink);
+    text-decoration: none;
+    color: var(--ink);
+    overflow: hidden;
+    transition: all 0.15s;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .featured-card:hover { background: white; }
+  .featured-card:hover .featured-card-title { color: var(--accent); }
+
+  .featured-img {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--rule);
+  }
+
+  .featured-body {
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+  }
+
+  .featured-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+
+  .featured-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.3;
+    transition: color 0.12s;
+  }
+
+  .featured-card-date {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: auto;
+    padding-top: 0.4rem;
+  }
+
+  /* ── Layout principal con panel de tags ────────────────────── */
+  .content-wrap {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5vw;
+  }
+
+  /* ── Panel de tags lateral ─────────────────────────────────── */
+  #tags-panel {
+    width: 210px;
+    flex-shrink: 0;
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid var(--rule);
+    margin-right: 1.5rem;
+    position: sticky;
+    top: 120px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+  }
+
+  #tags-panel::-webkit-scrollbar { width: 3px; }
+  #tags-panel::-webkit-scrollbar-track { background: transparent; }
+  #tags-panel::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
+
+  .tags-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .tags-panel-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .tags-panel-clear {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    text-decoration: underline;
+    padding: 0;
+    display: none;
+  }
+
+  .tags-panel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .tag-panel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.28rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    transition: all 0.1s;
+    border-radius: 1px;
+    user-select: none;
+  }
+
+  .tag-panel-item:hover { background: white; border-color: var(--rule); }
+  .tag-panel-item.active { background: var(--ink); color: var(--paper); }
+  .tag-panel-item.active:hover { background: var(--ink); }
+
+  .tag-panel-count {
+    font-size: 0.6rem;
+    color: var(--muted);
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-left: 0.4rem;
+  }
+
+  .tag-panel-item.active .tag-panel-count { color: rgba(255,255,255,0.55); }
+
+  /* Botón toggle tags en móvil */
+  #tags-toggle {
+    display: none;
+    padding: 0.4rem 0.75rem;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--ink);
+    transition: all 0.12s;
+    white-space: nowrap;
+  }
+
+  #tags-toggle:hover, #tags-toggle.active { background: var(--ink); color: var(--paper); }
+
+  #tags-mobile-panel {
+    display: none;
+    width: 100%;
+    padding: 0.5rem 0 0.1rem;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  #tags-mobile-panel.open { display: flex; }
+
+  .tag-mobile-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--rule);
+    cursor: pointer;
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    border-radius: 1px;
+    user-select: none;
+  }
+
+  .tag-mobile-item:hover { background: white; }
+  .tag-mobile-item.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  .tag-mobile-count { font-size: 0.58rem; opacity: 0.6; }
+
+  @media (max-width: 900px) {
+    #tags-panel { display: none; }
+    #tags-toggle { display: block; }
+    .content-wrap { display: block; padding: 0 5vw; }
+    #main-content { padding: 0; }
+  }
+
+  @media (min-width: 901px) {
+    #tags-toggle { display: none !important; }
+    #tags-mobile-panel { display: none !important; }
+  }
+
+  /* ── Artículos ─────────────────────────────────────────────── */
+  #main-content { flex: 1; min-width: 0; }
+
+  .year-section { margin-top: 3rem; }
+
+  .year-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--rule);
+    line-height: 1;
+    margin-bottom: -1rem;
+    user-select: none;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    border-top: 1.5px solid var(--ink);
+  }
+
+  .article-card {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    transition: background 0.12s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+
+  .article-card:hover { background: white; }
+  .article-card:hover .article-title { color: var(--accent); }
+
+  .card-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+  .card-date { font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+  .badge {
+    font-size: 0.56rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.12rem 0.35rem;
+    font-weight: 500;
+    border-radius: 1px;
+  }
+
+  .badge-relevo { background: var(--relevo); color: white; }
+  .badge-substack { background: var(--substack); color: white; }
+  .badge-paid { background: var(--paid-badge); color: white; }
+  .badge-podcast { background: #6b4fbb; color: white; }
+  .badge-solobasket { background: var(--solobasket); color: white; }
+  .badge-gigantes { background: var(--gigantes); color: white; }
+  .badge-wordpress { background: var(--wordpress); color: white; }
+  .badge-outsiders { background: var(--outsiders); color: white; border: 1px solid #444; }
+  .badge-upunder { background: var(--upunder); color: white; }
+  .badge-youtube { background: var(--youtube); color: #111111; }
+  .badge-nbahouse { background: #E03A3A; color: white; }
+  .badge-otrosmedios { background: #FFFFFF; color: #111111; border: 1px solid #444; }
+  .badge-video { background: #00B4D8; color: white; }
+
+  .article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+    transition: color 0.12s;
+    padding-right: 1rem;
+  }
+
+  .article-sub {
+    font-size: 0.73rem;
+    color: var(--muted);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-arrow {
+    position: absolute;
+    right: 0.75rem;
+    top: 1rem;
+    color: var(--rule);
+    font-size: 0.9rem;
+    transition: all 0.12s;
+  }
+
+  .article-card:hover .card-arrow { color: var(--accent); right: 0.5rem; }
+
+  .article-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+
+  .article-card-wrapper .article-card { border-bottom: none; border-right: none; flex: 1; }
+
+  .article-card-wrapper .tags {
+    padding: 0 1.25rem 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .empty-state {
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    grid-column: 1/-1;
+  }
+
+  .loading {
+    padding: 5rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  footer {
+    margin-top: 4rem;
+    border-top: 3px solid var(--ink);
+    padding: 2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer p { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+  .tag {
+    display: inline-block;
+    background-color: #e5e7eb;
+    color: #111827;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.12s;
+    border: 1px solid transparent;
+  }
+
+  .tag:hover { background-color: var(--ink); color: var(--paper); }
+  .tag.active { background-color: var(--ink); color: var(--paper); border-color: var(--ink); }
 </style>
 </head>
 <body>
 
-<div id="topbar">
-  <div id="logo">NBA EN ESPAÑOL</div>
-  <div class="tb-sep"></div>
-  <button class="tb-btn" onclick="refreshAll()">↺ ACTUALIZAR</button>
-  <button class="tb-btn" id="live-btn" onclick="toggleLive()">🏀 EN VIVO</button>
-  <button class="tb-btn" onclick="openConfig()">⚙ CONFIG</button>
-  <div class="tb-sep"></div>
-  <span class="tb-label">ART.</span>
-  <input type="range" class="tb-slider" id="fs-slider" min="11" max="18" value="13" oninput="updateFontSize('article',this.value)">
-  <span class="tb-label">TÍT.</span>
-  <input type="range" class="tb-slider" id="fst-slider" min="11" max="20" value="14" oninput="updateFontSize('title',this.value)">
-  <div class="tb-sep"></div>
-  <span class="tb-label">AUTO</span>
-  <select class="tb-select" id="auto-refresh" onchange="setAutoRefresh(this.value)">
-    <option value="0">OFF</option>
-    <option value="5">5 MIN</option>
-    <option value="10">10 MIN</option>
-    <option value="15">15 MIN</option>
-  </select>
-  <div class="tb-sep"></div>
-  <div id="search-wrap">
-    <span id="search-icon">🔍</span>
-    <input type="text" id="global-search" placeholder="Buscar..." oninput="onSearch(this.value)">
+<header>
+  <div class="header-top">
+    <span>Periodista NBA</span>
+    <span>Portafolio en español</span>
+    <span id="today-date"></span>
   </div>
-  <div id="clock">--:--</div>
+  <div class="masthead">
+    <h1>Alejandro <span>Gaitán</span></h1>
+    <p class="masthead-sub">Periodismo NBA en español · 2015–2026</p>
+  </div>
+  <div class="header-stats">
+    <div class="stat">
+      <div class="stat-num" id="stat-texto">—</div>
+      <div class="stat-label">Artículos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-audio">—</div>
+      <div class="stat-label">Podcasts</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-video">—</div>
+      <div class="stat-label">Vídeos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="stat-total">—</div>
+      <div class="stat-label">Total</div>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="search-wrap" style="width:100%;">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search" placeholder="Buscar por título…" oninput="applyFilters()">
+  </div>
+  <div class="filter-group" id="year-filters">
+    <button class="filter-btn active" data-year="all" onclick="setYear(this)">Todo</button>
+    <button class="filter-btn" data-year="2026" onclick="setYear(this)">2026</button>
+    <button class="filter-btn" data-year="2025" onclick="setYear(this)">2025</button>
+    <button class="filter-btn" data-year="2024" onclick="setYear(this)">2024</button>
+    <button class="filter-btn" data-year="2023" onclick="setYear(this)">2023</button>
+    <button class="filter-btn" data-year="2022" onclick="setYear(this)">2022</button>
+    <button class="filter-btn" data-year="2021" onclick="setYear(this)">2021</button>
+    <button class="filter-btn" data-year="2020" onclick="setYear(this)">2020</button>
+    <button class="filter-btn" data-year="2019" onclick="setYear(this)">2019</button>
+    <button class="filter-btn" data-year="2018" onclick="setYear(this)">2018</button>
+    <button class="filter-btn" data-year="2017" onclick="setYear(this)">2017</button>
+    <button class="filter-btn" data-year="2016" onclick="setYear(this)">2016</button>
+    <button class="filter-btn" data-year="2015" onclick="setYear(this)">2015</button>
+  </div>
+  <div class="filter-group">
+    <button class="filter-btn active" data-src="all" onclick="setSrc(this)">Todos</button>
+    <button class="filter-btn" data-src="R" onclick="setSrc(this)">Relevo</button>
+    <button class="filter-btn" data-src="S" onclick="setSrc(this)">Substack</button>
+    <button class="filter-btn" data-src="SB" onclick="setSrc(this)">Solobasket</button>
+    <button class="filter-btn" data-src="G" onclick="setSrc(this)">Gigantes</button>
+    <button class="filter-btn" data-src="WP" onclick="setSrc(this)">Wordpress</button>
+    <button class="filter-btn" data-src="O" onclick="setSrc(this)">Outsiders</button>
+    <button class="filter-btn" data-src="UU" onclick="setSrc(this)">Up & Under</button>
+    <button class="filter-btn" data-src="YT" onclick="setSrc(this)">YouTube</button>
+    <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
+    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros Medios</button>
+  </div>
+  <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
+  <div class="filter-group">
+    <button class="filter-btn" data-paid="1" onclick="setPaid(this)">💰 De pago</button>
+    <button class="filter-btn" data-txt="1" onclick="setTxt(this)">📝 Texto</button>
+    <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
+    <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
+    <button id="tags-toggle" onclick="toggleTagsPanel()">🏷 Tags</button>
+  </div>
+  <span class="results-count" id="results-count"></span>
+  <div id="active-tags-bar" style="display:none; width:100%; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
+    <span style="font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Tags:</span>
+    <div id="active-tags-list" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
+    <button onclick="clearTags()" style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--muted); text-decoration:underline; padding:0;">Limpiar</button>
+  </div>
+  <div id="tags-mobile-panel"></div>
 </div>
 
-<div id="canvas">
-
-  <!-- NOTICIAS -->
-  <div class="panel" id="panel-wire">
-    <div class="panel-header">
-      <span class="panel-title">📡 NOTICIAS</span>
-      <span class="panel-badge" id="badge-wire">—</span>
-      <span class="panel-updated" id="upd-wire"></span>
-      <button class="panel-btn" onclick="refreshPanel('wire')" title="Actualizar">↺</button>
+<div id="featured-carousel" style="display:none;">
+  <div class="featured-header">
+    <div class="featured-title">Destacados</div>
+    <div class="featured-nav">
+      <button id="feat-prev" onclick="featuredPrev()" disabled>←</button>
+      <button id="feat-next" onclick="featuredNext()">→</button>
     </div>
-    <div class="filter-bar" id="filter-bar-wire">
-      <button class="filter-btn" onclick="toggleFilterDropdown('wire')">
-        <span>FUENTES</span>
-        <span class="filter-count" id="filter-count-wire"></span>
-      </button>
-      <div class="filter-dropdown" id="filter-dd-wire"></div>
-    </div>
-    <div class="panel-body" id="body-wire"></div>
   </div>
-
-  <!-- YOUTUBE -->
-  <div class="panel" id="panel-youtube">
-    <div class="panel-header">
-      <span class="panel-title">▶ YOUTUBE</span>
-      <span class="panel-badge" id="badge-youtube">—</span>
-      <span class="panel-updated" id="upd-youtube"></span>
-      <button class="panel-btn" onclick="refreshPanel('youtube')" title="Actualizar">↺</button>
-    </div>
-    <div class="filter-bar" id="filter-bar-youtube">
-      <button class="filter-btn" onclick="toggleFilterDropdown('youtube')">
-        <span>CANALES</span>
-        <span class="filter-count" id="filter-count-youtube"></span>
-      </button>
-      <div class="filter-dropdown" id="filter-dd-youtube"></div>
-    </div>
-    <div class="panel-body" id="body-youtube"></div>
-  </div>
-
-  <!-- PODCAST -->
-  <div class="panel" id="panel-podcast">
-    <div class="panel-header">
-      <span class="panel-title">🎙 PODCAST</span>
-      <span class="panel-badge" id="badge-podcast">—</span>
-      <span class="panel-updated" id="upd-podcast"></span>
-      <button class="panel-btn" onclick="refreshPanel('podcast')" title="Actualizar">↺</button>
-    </div>
-    <div class="filter-bar" id="filter-bar-podcast">
-      <button class="filter-btn" onclick="toggleFilterDropdown('podcast')">
-        <span>PROGRAMAS</span>
-        <span class="filter-count" id="filter-count-podcast"></span>
-      </button>
-      <div class="filter-dropdown" id="filter-dd-podcast"></div>
-    </div>
-    <div class="panel-body" id="body-podcast"></div>
-  </div>
-
-  <!-- MIS EQUIPOS -->
-  <div class="panel" id="panel-teams">
-    <div class="panel-header">
-      <span class="panel-title">🏀 MIS EQUIPOS</span>
-      <span class="panel-badge" id="badge-teams">—</span>
-      <span class="panel-updated" id="upd-teams"></span>
-      <button class="panel-btn" onclick="refreshPanel('teams')" title="Actualizar">↺</button>
-    </div>
-    <div class="panel-body" id="body-teams"></div>
-  </div>
-
-  <!-- RESULTADOS + CALENDARIO (panel unificado) -->
-  <div class="panel" id="panel-scorecal">
-    <div class="panel-header">
-      <span class="panel-title">📊 PARTIDOS</span>
-      <span class="panel-badge" id="badge-scorecal">—</span>
-      <span class="panel-updated" id="upd-scorecal"></span>
-      <button class="panel-btn" onclick="refreshPanel('scorecal')" title="Actualizar">↺</button>
-    </div>
-    <div class="sc-tabs">
-      <div class="sc-tab active" id="sc-tab-scores" onclick="switchScoreTab('scores')">RESULTADOS</div>
-      <div class="sc-tab" id="sc-tab-calendar" onclick="switchScoreTab('calendar')">CALENDARIO ±24h</div>
-    </div>
-    <div class="panel-body" id="body-scorecal"></div>
-  </div>
-
-  <!-- CLASIFICACIÓN -->
-  <div class="panel" id="panel-standings">
-    <div class="panel-header">
-      <span class="panel-title">🏆 CLASIFICACIÓN</span>
-      <span class="panel-badge" id="badge-standings">—</span>
-      <button class="panel-btn" onclick="refreshPanel('standings')" title="Actualizar">↺</button>
-    </div>
-    <div class="conf-tabs">
-      <div class="conf-tab active" onclick="switchConf('east')">ESTE</div>
-      <div class="conf-tab" onclick="switchConf('west')">OESTE</div>
-    </div>
-    <div class="panel-body" id="body-standings" style="padding:0;"></div>
-  </div>
-
+  <div id="featured-cards"></div>
 </div>
 
-<!-- CONFIG MODAL -->
-<div id="config-modal">
-  <div class="config-box">
-    <div class="config-title">⚙ CONFIGURACIÓN</div>
-
-    <div class="config-section">
-      <div class="config-section-title">Equipos favoritos (máx. 3) — filtra el panel Mis Equipos</div>
-      <div class="chips-grid" id="teams-grid"></div>
+<div class="content-wrap">
+  <div id="tags-panel">
+    <div class="tags-panel-header">
+      <span class="tags-panel-title">Tags</span>
+      <button class="tags-panel-clear" id="tags-panel-clear" onclick="clearTags()">Limpiar</button>
     </div>
-
-    <div class="config-section">
-      <div class="config-section-title">Fuentes RSS personalizadas</div>
-      <div class="config-row">
-        <input type="text" class="config-input" id="cf-label" placeholder="Nombre del medio">
-        <input type="text" class="config-input" id="cf-url" placeholder="URL del RSS">
-        <button class="config-btn" onclick="addCustomFeed()">+ AÑADIR</button>
-      </div>
-      <div id="custom-feed-list" style="margin-top:7px"></div>
-    </div>
-
-    <div class="config-section">
-      <div class="config-section-title">Canales de YouTube personalizados</div>
-      <p style="font-size:9px;color:var(--text3);margin-bottom:7px;line-height:1.6">Añade el Channel ID (UCxxxxxxx) que encuentras en la URL del canal en YouTube.</p>
-      <div class="config-row">
-        <input type="text" class="config-input" id="yt-label" placeholder="Nombre del canal">
-        <input type="text" class="config-input" id="yt-id" placeholder="Channel ID: UCxxxxxxx">
-        <button class="config-btn" onclick="addCustomYT()">+ AÑADIR</button>
-      </div>
-      <div id="yt-channels-config" style="margin-top:7px"></div>
-    </div>
-
-    <div class="config-section">
-      <div class="config-section-title">Estado feeds — Noticias</div>
-      <div id="feed-health-news"></div>
-    </div>
-
-    <div class="config-section">
-      <div class="config-section-title">Estado feeds — YouTube</div>
-      <div id="feed-health-yt"></div>
-    </div>
-
-    <div class="config-section">
-      <div class="config-section-title">Estado feeds — Podcast</div>
-      <div id="feed-health-pod"></div>
-    </div>
-
-    <button class="close-config" onclick="closeConfig()">CERRAR ✕</button>
+    <div class="tags-panel-list" id="tags-panel-list"></div>
   </div>
+  <div id="main-content"><div class="loading">Cargando artículos…</div></div>
 </div>
+
+<footer>
+  <p>© Alejandro Gaitán · <a href="https://alejandroggo.substack.com" target="_blank">Substack</a> · <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank">Relevo</a></p>
+  <p>Portfolio generado en marzo 2026</p>
+</footer>
 
 <script>
-// ═══════════════════════════════════════════════════════
-// DATOS
-// ═══════════════════════════════════════════════════════
-const NBA_TEAMS = ['ATL','BOS','BKN','CHA','CHI','CLE','DAL','DEN','DET','GSW','HOU','IND','LAC','LAL','MEM','MIA','MIL','MIN','NOP','NYK','OKC','ORL','PHI','PHX','POR','SAC','SAS','TOR','UTA','WAS'];
-const TEAM_NAMES = {ATL:'Atlanta Hawks',BOS:'Boston Celtics',BKN:'Brooklyn Nets',CHA:'Charlotte Hornets',CHI:'Chicago Bulls',CLE:'Cleveland Cavaliers',DAL:'Dallas Mavericks',DEN:'Denver Nuggets',DET:'Detroit Pistons',GSW:'Golden State Warriors',HOU:'Houston Rockets',IND:'Indiana Pacers',LAC:'LA Clippers',LAL:'Los Angeles Lakers',MEM:'Memphis Grizzlies',MIA:'Miami Heat',MIL:'Milwaukee Bucks',MIN:'Minnesota Timberwolves',NOP:'New Orleans Pelicans',NYK:'New York Knicks',OKC:'Oklahoma City Thunder',ORL:'Orlando Magic',PHI:'Philadelphia 76ers',PHX:'Phoenix Suns',POR:'Portland Trail Blazers',SAC:'Sacramento Kings',SAS:'San Antonio Spurs',TOR:'Toronto Raptors',UTA:'Utah Jazz',WAS:'Washington Wizards'};
+// ── Estado global ──────────────────────────────────────────────
+let allArticles   = [];
+let activeYear    = 'all';
+let activeSrc     = 'all';
+let activePod     = false;
+let activeVid     = false;
+let activePaid    = false;
+let activeTxt     = false;
+let activeTags    = [];
+let featuredList  = [];
+let featuredIndex = 0;
 
-// pay:true → 🔒 solo en Substacks de pago
-const NEWS_FEEDS = [
-  {id:'gigantes',  label:'Gigantes del Basket', url:'https://gigantes.com/feed/',                                pay:false, lang:'es', enabled:true},
-  {id:'md_nba',   label:'Mundo Deportivo NBA',  url:'https://www.mundodeportivo.com/feed/rss/baloncesto/nba',   pay:false, lang:'es', enabled:true},
-  {id:'as_nba',   label:'AS NBA',               url:'https://as.com/baloncesto/nba/rss.xml',                    pay:false, lang:'es', enabled:true},
-  {id:'marca_nba',label:'Marca NBA',            url:'https://www.marca.com/baloncesto/nba/rss.xml',             pay:false, lang:'es', enabled:true},
-  {id:'sport_nba',label:'Sport NBA',            url:'https://www.sport.es/es/noticias/baloncesto/nba/rss.xml',  pay:false, lang:'es', enabled:true},
-  {id:'agaitan',  label:'Alejandro Gaitán',     url:'https://alejandroggo.com/feed',                            pay:true,  lang:'es', enabled:true},
-  {id:'kike',     label:'Kike García',          url:'https://kikegarcianba.substack.com/feed',                  pay:true,  lang:'es', enabled:true},
-  {id:'maniacs',  label:'NBA Maniacs',          url:'https://www.nbamaniacs.com/feed/',                         pay:false, lang:'es', enabled:true},
-  {id:'contexto', label:'NBA Con Contexto',     url:'https://www.nbaconcontexto.com/feed/',                     pay:false, lang:'es', enabled:true},
-  {id:'espn',     label:'ESPN NBA',             url:'https://www.espn.com/espn/rss/nba/news',                   pay:false, lang:'en', enabled:true},
-  {id:'br',       label:'Bleacher Report',      url:'https://bleacherreport.com/articles/feed?tag_id=9',        pay:false, lang:'en', enabled:true},
-  {id:'nba_com',  label:'NBA.com',              url:'https://www.nba.com/news/rss.xml',                         pay:false, lang:'en', enabled:true},
-];
-
-const YT_CHANNELS = [
-  {id:'UCTJNmeP0HiOU4-qOMNVNoGA', label:'Drafteados'},
-  {id:'UCev6qJYN5x_OD3YuQepnyNQ', label:'Leo Carranza'},
-  {id:'UCz5kABFOoIJlSx_jo2QPXLA', label:'Planeta NBA TV'},
-  {id:'@Gigantesbasket',           label:'Gigantes del Basket'},
-  {id:'@sergiorabinal',            label:'Sergio Rabinal'},
-];
-
-const POD_FEEDS = [
-  {id:'enopnba', label:'Esto no es un podcast NBA', url:'https://www.ivoox.com/feed_fg_f12295569_filtro_1.xml', enabled:true},
-  {id:'minvet',  label:'Mínimo de Veterano',         url:'https://www.ivoox.com/feed_fg_f11384307_filtro_1.xml', enabled:true},
-];
-
-// ═══════════════════════════════════════════════════════
-// ESTADO
-// ═══════════════════════════════════════════════════════
-let state = {
-  favTeams:     JSON.parse(localStorage.getItem('nba_teams')    || '[]'),
-  customFeeds:  JSON.parse(localStorage.getItem('nba_feeds')    || '[]'),
-  customYT:     JSON.parse(localStorage.getItem('nba_yt_extra') || '[]'),
-  disabledNews: JSON.parse(localStorage.getItem('nba_dis_news') || '[]'),
-  disabledYT:   JSON.parse(localStorage.getItem('nba_dis_yt')   || '[]'),
-  disabledPod:  JSON.parse(localStorage.getItem('nba_dis_pod')  || '[]'),
-};
-
-let newsData  = {}, ytData = {}, podData = {};
-let newsHealth= {}, ytHealth = {}, podHealth = {};
-
-// Filtros de exclusión: array de IDs excluidos (vacío = todos visibles)
-let newsExcluded = [], ytExcluded = [], podExcluded = [];
-let searchQuery = '';
-let livePolling = false, liveInterval = null, autoRefreshTimer = null;
-let fetchQueue = [], activeCount = 0;
-const MAX_CONCURRENT = 3;
-let lastUpdate = {};
-
-// Panel activo en scorecal
-let activeScoreTab = 'scores';
-let standingsConf = 'east';
-
-// Cache de datos ESPN para no refrescar al cambiar tab
-let _scoresData = null, _calData = null;
-
-// ═══════════════════════════════════════════════════════
-// CONCURRENCIA
-// ═══════════════════════════════════════════════════════
-function enqueueFetch(fn) {
-  return new Promise((res, rej) => { fetchQueue.push({fn, resolve:res, reject:rej}); drainQueue(); });
-}
-function drainQueue() {
-  while (activeCount < MAX_CONCURRENT && fetchQueue.length) {
-    const {fn, resolve, reject} = fetchQueue.shift();
-    activeCount++;
-    fn().then(v => { activeCount--; resolve(v); drainQueue(); })
-        .catch(e => { activeCount--; reject(e); drainQueue(); });
-  }
+// ── Tags ───────────────────────────────────────────────────────
+function toggleTag(event, tag) {
+  event.preventDefault();
+  event.stopPropagation();
+  const index = activeTags.indexOf(tag);
+  if (index > -1) activeTags.splice(index, 1);
+  else activeTags.push(tag);
+  applyFilters();
 }
 
-// ═══════════════════════════════════════════════════════
-// RSS
-// ═══════════════════════════════════════════════════════
-async function fetchRSS(url) {
-  const r2j = async () => {
-    const r = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`, {signal: AbortSignal.timeout(9000)});
-    const d = await r.json();
-    if (d.status !== 'ok' || !d.items?.length) throw new Error('rss2json vacío');
-    return d.items.map(i => ({
-      title: i.title||'',
-      link: i.link||'',
-      pubDate: i.pubDate||'',
-      thumbnail: i.thumbnail||i.enclosure?.link||extractImgFromContent(i.content||i.description||'')||'',
-    }));
-  };
-  const ao = async () => {
-    const r = await fetch(`https://allorigins.win/get?disableCache=true&url=${encodeURIComponent(url)}`, {signal: AbortSignal.timeout(9000)});
-    return parseXML((await r.json()).contents);
-  };
-  const cp = async () => {
-    const r = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`, {signal: AbortSignal.timeout(9000)});
-    return parseXML(await r.text());
-  };
-  return Promise.any([r2j(), ao(), cp()]);
+function clearTags() {
+  activeTags = [];
+  applyFilters();
 }
 
-function extractImgFromContent(html) {
-  if (!html) return '';
-  const m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-  return m ? m[1] : '';
+function toggleTagsPanel() {
+  const panel = document.getElementById('tags-mobile-panel');
+  const btn   = document.getElementById('tags-toggle');
+  panel.classList.toggle('open');
+  btn.classList.toggle('active', panel.classList.contains('open'));
 }
 
-function parseXML(xml) {
-  const doc = new DOMParser().parseFromString(xml, 'text/xml');
-  const items = [];
-  doc.querySelectorAll('item,entry').forEach(el => {
-    const title = el.querySelector('title')?.textContent || '';
-    const link = el.querySelector('link')?.getAttribute('href') || el.querySelector('link')?.textContent || el.querySelector('guid')?.textContent || '';
-    const pubDate = el.querySelector('pubDate')?.textContent || el.querySelector('published')?.textContent || el.querySelector('updated')?.textContent || '';
-    // imagen: media:content, enclosure, o img en description
-    let thumbnail = '';
-    const mc = el.querySelector('content') || el.querySelector('[medium="image"]');
-    if (mc) thumbnail = mc.getAttribute('url') || mc.getAttribute('href') || '';
-    if (!thumbnail) {
-      const enc = el.querySelector('enclosure');
-      if (enc && enc.getAttribute('type')?.startsWith('image')) thumbnail = enc.getAttribute('url') || '';
-    }
-    if (!thumbnail) {
-      const desc = el.querySelector('description')?.textContent || el.querySelector('summary')?.textContent || '';
-      thumbnail = extractImgFromContent(desc);
-    }
-    if (title) items.push({title, link, pubDate, thumbnail});
-  });
-  if (!items.length) throw new Error('sin items');
-  return items;
-}
+document.getElementById('today-date').textContent =
+  new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 
-// ═══════════════════════════════════════════════════════
-// CARGA FEEDS
-// ═══════════════════════════════════════════════════════
-async function loadNewsFeed(feed) {
-  newsHealth[feed.id] = {status:'loading', count:0};
-  try {
-    const items = await enqueueFetch(() => fetchRSS(feed.url));
-    newsData[feed.id] = items.map(i => ({...i, source:feed.label, pay:feed.pay, lang:feed.lang, feedId:feed.id})).slice(0, 30);
-    newsHealth[feed.id] = {status:'ok', count:items.length};
-  } catch(e) {
-    newsData[feed.id] = [];
-    newsHealth[feed.id] = {status:'err', count:0};
-  }
-}
-
-async function loadYTChannel(ch) {
-  ytHealth[ch.id] = {status:'loading', count:0};
-  let url;
-  if (ch.id.startsWith('UC')) {
-    url = `https://www.youtube.com/feeds/videos.xml?channel_id=${ch.id}`;
-  } else {
-    url = `https://www.youtube.com/feeds/videos.xml?user=${ch.id.replace('@','')}`;
-  }
-  try {
-    const items = await enqueueFetch(() => fetchRSS(url));
-    ytData[ch.id] = items.map(i => ({
-      ...i,
-      channelName: ch.label,
-      channelId: ch.id,
-      thumbnail: i.thumbnail || `https://img.youtube.com/vi/${extractYTId(i.link)}/mqdefault.jpg`,
-    })).slice(0, 15);
-    ytHealth[ch.id] = {status:'ok', count:items.length};
-  } catch(e) {
-    ytData[ch.id] = [];
-    ytHealth[ch.id] = {status:'err', count:0};
-  }
-}
-
-function extractYTId(url) {
-  if (!url) return '';
-  const m = url.match(/(?:v=|\/videos\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-  return m ? m[1] : '';
-}
-
-async function loadPodFeed(feed) {
-  podHealth[feed.id] = {status:'loading', count:0};
-  try {
-    const items = await enqueueFetch(() => fetchRSS(feed.url));
-    podData[feed.id] = items.map(i => ({...i, source:feed.label, feedId:feed.id})).slice(0, 20);
-    podHealth[feed.id] = {status:'ok', count:items.length};
-  } catch(e) {
-    podData[feed.id] = [];
-    podHealth[feed.id] = {status:'err', count:0};
-  }
-}
-
-async function loadAllNews() {
-  const feeds = [...NEWS_FEEDS, ...state.customFeeds.map(f => ({...f, id:'c_'+f.label, pay:false, lang:'es'}))];
-  const active = feeds.filter(f => !state.disabledNews.includes(f.id));
-  setLoading('wire'); setLoading('teams');
-  await Promise.allSettled(active.map(f => loadNewsFeed(f)));
-  lastUpdate.news = new Date();
-  renderWire(); renderTeams();
-  updateHealthUI();
-}
-
-async function loadAllYT() {
-  const chs = [...YT_CHANNELS, ...state.customYT];
-  const active = chs.filter(c => !state.disabledYT.includes(c.id));
-  setLoading('youtube');
-  await Promise.allSettled(active.map(c => loadYTChannel(c)));
-  lastUpdate.yt = new Date();
-  renderYT();
-  updateHealthUI();
-}
-
-async function loadAllPod() {
-  const feeds = POD_FEEDS.filter(f => !state.disabledPod.includes(f.id));
-  setLoading('podcast');
-  await Promise.allSettled(feeds.map(f => loadPodFeed(f)));
-  lastUpdate.pod = new Date();
-  renderPod();
-  updateHealthUI();
-}
-
-function setLoading(id) {
-  const b = document.getElementById('body-'+id);
-  if (b) b.innerHTML = '<div class="panel-loading">CARGANDO</div>';
-  if (id === 'scorecal') {
-    const b2 = document.getElementById('body-scorecal');
-    if (b2) b2.innerHTML = '<div class="panel-loading">CARGANDO</div>';
-  }
-}
-
-// ═══════════════════════════════════════════════════════
-// RELOJ
-// ═══════════════════════════════════════════════════════
-function updateClock() {
-  const et = new Intl.DateTimeFormat('es-ES', {timeZone:'America/New_York', hour:'2-digit', minute:'2-digit', hour12:false}).format(new Date());
-  document.getElementById('clock').textContent = et + ' ET';
-}
-setInterval(updateClock, 1000); updateClock();
-
-// ═══════════════════════════════════════════════════════
-// FILTROS (modo exclusión)
-// ═══════════════════════════════════════════════════════
-function toggleFilterDropdown(panelId) {
-  const dd = document.getElementById('filter-dd-' + panelId);
-  if (!dd) return;
-  document.querySelectorAll('.filter-dropdown.open').forEach(d => { if (d.id !== 'filter-dd-' + panelId) d.classList.remove('open'); });
-  if (!dd.classList.contains('open')) {
-    buildFilterDropdown(panelId);
-    dd.classList.add('open');
-  } else {
-    dd.classList.remove('open');
-  }
-}
-
-document.addEventListener('click', e => {
-  if (!e.target.closest('.filter-bar')) document.querySelectorAll('.filter-dropdown.open').forEach(d => d.classList.remove('open'));
-});
-
-function getExcludedArr(panelId) {
-  if (panelId === 'youtube') return ytExcluded;
-  if (panelId === 'podcast') return podExcluded;
-  return newsExcluded;
-}
-function setExcludedArr(panelId, arr) {
-  if (panelId === 'youtube') ytExcluded = arr;
-  else if (panelId === 'podcast') podExcluded = arr;
-  else newsExcluded = arr;
-}
-
-function buildFilterDropdown(panelId) {
-  const dd = document.getElementById('filter-dd-' + panelId);
-  if (!dd) return;
-  let sources = [];
-  if (panelId === 'wire') {
-    sources = [...NEWS_FEEDS, ...state.customFeeds.map(f => ({id:'c_'+f.label, label:f.label}))].filter(f => !state.disabledNews.includes(f.id));
-  } else if (panelId === 'youtube') {
-    sources = [...YT_CHANNELS, ...state.customYT].filter(c => !state.disabledYT.includes(c.id));
-  } else if (panelId === 'podcast') {
-    sources = POD_FEEDS.filter(f => !state.disabledPod.includes(f.id));
-  }
-  const excluded = getExcludedArr(panelId);
-  dd.innerHTML = `<div class="filter-hint">Desmarca los que NO quieres ver</div>
-    <div class="filter-all">
-      <button onclick="restoreAllFilter('${panelId}')">Mostrar todos</button>
-    </div>` +
-    sources.map(s => {
-      const isExcluded = excluded.includes(s.id);
-      return `<div class="filter-option ${isExcluded ? 'excluded' : ''}" onclick="toggleExclude('${panelId}','${s.id}',this)">
-        <div class="check">${isExcluded ? '✕' : '✓'}</div>
-        <span>${escHtml(s.label)}</span>
-      </div>`;
-    }).join('');
-}
-
-function toggleExclude(panelId, sourceId, el) {
-  const excluded = [...getExcludedArr(panelId)];
-  const idx = excluded.indexOf(sourceId);
-  if (idx >= 0) {
-    excluded.splice(idx, 1);
-  } else {
-    excluded.push(sourceId);
-  }
-  setExcludedArr(panelId, excluded);
-  buildFilterDropdown(panelId);
-  updateFilterCount(panelId);
-  reRenderPanel(panelId);
-}
-
-function restoreAllFilter(panelId) {
-  setExcludedArr(panelId, []);
-  buildFilterDropdown(panelId);
-  updateFilterCount(panelId);
-  reRenderPanel(panelId);
-}
-
-function updateFilterCount(panelId) {
-  const el = document.getElementById('filter-count-' + panelId);
-  if (!el) return;
-  const excluded = getExcludedArr(panelId);
-  if (excluded.length === 0) {
-    el.textContent = '';
-    el.classList.remove('has-exclusions');
-  } else {
-    el.textContent = excluded.length + ' EXCL.';
-    el.classList.add('has-exclusions');
-  }
-}
-
-function reRenderPanel(panelId) {
-  if (panelId === 'wire') renderWire();
-  else if (panelId === 'youtube') renderYT();
-  else if (panelId === 'podcast') renderPod();
-}
-
-// ═══════════════════════════════════════════════════════
-// BUSCADOR
-// ═══════════════════════════════════════════════════════
-function onSearch(val) {
-  searchQuery = val.trim().toLowerCase();
-  renderWire(); renderTeams(); renderYT(); renderPod();
-}
-
-function matchesSearch(item) {
-  if (!searchQuery) return true;
-  const q = searchQuery;
-  const text = ((item.title||'') + (item.source||item.channelName||'')).toLowerCase();
-  if (text.includes(q)) return true;
-  for (const [abbr, name] of Object.entries(TEAM_NAMES)) {
-    if ((abbr.toLowerCase() === q || name.toLowerCase().includes(q)) && text.includes(abbr.toLowerCase())) return true;
-  }
-  return false;
-}
-
-// ═══════════════════════════════════════════════════════
-// RENDER — NOTICIAS
-// ═══════════════════════════════════════════════════════
-function getAllNews() {
-  const all = [];
-  Object.values(newsData).forEach(items => all.push(...items));
-  all.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-  return all;
-}
-
-function applyNewsFilter(items) {
-  let filtered = newsExcluded.length > 0 ? items.filter(i => !newsExcluded.includes(i.feedId)) : items;
-  if (searchQuery) filtered = filtered.filter(i => matchesSearch(i));
-  return filtered;
-}
-
-// Mis Equipos: solo filtra por equipos favoritos, no por fuente
-function applyTeamFilter(items) {
-  let filtered = items;
-  if (state.favTeams.length) {
-    filtered = items.filter(a => {
-      const text = (a.title + ' ' + (a.description||'')).toLowerCase();
-      return state.favTeams.some(t => text.includes(t.toLowerCase()) || text.includes((TEAM_NAMES[t]||'').toLowerCase()));
-    });
-  }
-  if (searchQuery) filtered = filtered.filter(i => matchesSearch(i));
-  return filtered;
-}
-
-function isNew(pubDate) {
-  if (!pubDate) return false;
-  try { return Date.now() - new Date(pubDate) < 86400000; } catch { return false; }
-}
-
-function newsItemHTML(a) {
-  const date = a.pubDate ? formatDate(a.pubDate) : '';
-  const newBadge = isNew(a.pubDate) ? '<span class="badge badge-new">🆕</span>' : '';
-  const payBadge = a.pay ? '<span class="badge badge-pay">🔒</span>' : '';
-  const enBadge = a.lang === 'en' ? '<span class="badge badge-en">EN</span>' : '';
-  const thumb = a.thumbnail ? `<img class="article-thumb" src="${escHtml(a.thumbnail)}" loading="lazy" onerror="this.style.display='none'" alt="">` : '';
-  return `<div class="article-item" onclick="window.open('${escHtml(a.link)}','_blank')">
-    ${thumb}
-    <div class="article-meta"><span class="article-source">${escHtml(a.source)}</span>${payBadge}${enBadge}${newBadge}</div>
-    <div class="article-title">${escHtml(a.title)}</div>
-    <div class="article-date">${date}</div>
-  </div>`;
-}
-
-function renderWire() {
-  const body = document.getElementById('body-wire');
-  const all = applyNewsFilter(getAllNews());
-  if (!all.length) { body.innerHTML = '<div class="empty-state">No hay artículos.<br>Comprueba los feeds en ⚙ CONFIG</div>'; setBadge('wire','0'); return; }
-  body.innerHTML = all.map(a => newsItemHTML(a)).join('');
-  setBadge('wire', all.length);
-  setUpdated('wire', lastUpdate.news);
-}
-
-function renderTeams() {
-  const body = document.getElementById('body-teams');
-  if (!state.favTeams.length) {
-    body.innerHTML = '<div class="empty-state">Elige 1–3 equipos en ⚙ CONFIG<br>para filtrar noticias por equipo.</div>';
-    setBadge('teams', '0'); return;
-  }
-  const filtered = applyTeamFilter(getAllNews());
-  body.innerHTML = filtered.length ? filtered.map(a => newsItemHTML(a)).join('') : '<div class="empty-state">No hay artículos para los equipos seleccionados.</div>';
-  setBadge('teams', filtered.length);
-  setUpdated('teams', lastUpdate.news);
-}
-
-// ═══════════════════════════════════════════════════════
-// PANEL SCORECAL — tabs
-// ═══════════════════════════════════════════════════════
-function switchScoreTab(tab) {
-  activeScoreTab = tab;
-  document.getElementById('sc-tab-scores').classList.toggle('active', tab === 'scores');
-  document.getElementById('sc-tab-calendar').classList.toggle('active', tab === 'calendar');
-  if (tab === 'scores') {
-    if (_scoresData) renderScores(_scoresData);
-    else loadScores();
-  } else {
-    if (_calData) renderCalendar(..._calData);
-    else loadCalendar();
-  }
-}
-
-// ═══════════════════════════════════════════════════════
-// RENDER — RESULTADOS
-// ═══════════════════════════════════════════════════════
-async function loadScores() {
-  document.getElementById('body-scorecal').innerHTML = '<div class="panel-loading">CARGANDO</div>';
-  try {
-    const r = await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard');
-    _scoresData = await r.json();
-    if (activeScoreTab === 'scores') renderScores(_scoresData);
-  } catch(e) {
-    if (activeScoreTab === 'scores') document.getElementById('body-scorecal').innerHTML = '<div class="panel-error">Error al cargar resultados.</div>';
-  }
-}
-
-function renderScores(d) {
-  if (activeScoreTab !== 'scores') return;
-  const body = document.getElementById('body-scorecal');
-  const events = d.events || [];
-  if (!events.length) { body.innerHTML = '<div class="no-games">No hay partidos hoy</div>'; setBadge('scorecal','0'); return; }
-  setBadge('scorecal', events.length + ' PART.');
-  const cards = events.map(ev => {
-    const comp = ev.competitions?.[0]; const status = ev.status?.type;
-    const isLive = status?.state === 'in';
-    const teams = comp?.competitors || [];
-    const away = teams.find(t => t.homeAway === 'away') || teams[0];
-    const home = teams.find(t => t.homeAway === 'home') || teams[1];
-    if (!away || !home) return '';
-    const aS = parseInt(away.score||0), hS = parseInt(home.score||0);
-    const logo = id => `https://a.espncdn.com/i/teamlogos/nba/500/${(id||'').toLowerCase()}.png`;
-    return `<div class="score-card${isLive?' live':''}">
-      <div class="score-status">${isLive?'<span class="live-dot"></span>':''}${escHtml(status?.shortDetail||'')}</div>
-      <div class="score-teams">
-        <div class="score-team"><div class="score-team-info"><img class="team-logo" src="${logo(away.team?.abbreviation)}" onerror="this.style.display='none'"><span class="team-abbr">${escHtml(away.team?.abbreviation||'')}</span></div><span class="team-score${aS>hS?' leader':''}">${away.score||''}</span></div>
-        <div class="score-divider"></div>
-        <div class="score-team"><div class="score-team-info"><img class="team-logo" src="${logo(home.team?.abbreviation)}" onerror="this.style.display='none'"><span class="team-abbr">${escHtml(home.team?.abbreviation||'')}</span></div><span class="team-score${hS>aS?' leader':''}">${home.score||''}</span></div>
-      </div>
-    </div>`;
-  }).join('');
-  body.innerHTML = `<div class="scores-grid">${cards}</div>`;
-}
-
-// ═══════════════════════════════════════════════════════
-// RENDER — CALENDARIO ±24h
-// ═══════════════════════════════════════════════════════
-async function loadCalendar() {
-  if (activeScoreTab === 'calendar') document.getElementById('body-scorecal').innerHTML = '<div class="panel-loading">CARGANDO</div>';
-  const now = new Date();
-  const yesterday = new Date(now - 86400000);
-  const tomorrow = new Date(now.getTime() + 86400000);
-  const fmt = d => `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;
-  try {
-    const [rYest, rToday, rTomor] = await Promise.all([
-      fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${fmt(yesterday)}`).then(r=>r.json()),
-      fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${fmt(now)}`).then(r=>r.json()),
-      fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${fmt(tomorrow)}`).then(r=>r.json()),
-    ]);
-    _calData = [rYest, rToday, rTomor];
-    if (activeScoreTab === 'calendar') renderCalendar(rYest, rToday, rTomor);
-  } catch(e) {
-    if (activeScoreTab === 'calendar') document.getElementById('body-scorecal').innerHTML = '<div class="panel-error">Error al cargar el calendario.</div>';
-  }
-}
-
-function renderCalendar(dYest, dToday, dTomor) {
-  if (activeScoreTab !== 'calendar') return;
-  const body = document.getElementById('body-scorecal');
-  let html = '';
-  const sections = [
-    {label:'AYER',  data:dYest,  past:true},
-    {label:'HOY',   data:dToday, past:false},
-    {label:'MAÑANA',data:dTomor, past:false},
-  ];
-  let total = 0;
-  sections.forEach(sec => {
-    const events = sec.data?.events || [];
-    if (!events.length) return;
-    html += `<div class="cal-section">${sec.label}</div>`;
-    events.forEach(ev => {
-      total++;
-      const comp = ev.competitions?.[0]; const status = ev.status?.type;
-      const isLive = status?.state === 'in'; const isFinal = status?.state === 'post';
-      const statusText = status?.shortDetail || '';
-      const teams = comp?.competitors || [];
-      const away = teams.find(t => t.homeAway === 'away') || teams[0];
-      const home = teams.find(t => t.homeAway === 'home') || teams[1];
-      if (!away || !home) return;
-      const matchup = `${away.team?.abbreviation||''} @ ${home.team?.abbreviation||''}`;
-      const scoreText = isFinal||isLive ? `${away.score||0} - ${home.score||0}` : '';
-      const labelClass = isLive ? 'live-label' : isFinal ? 'final-label' : '';
-      const labelText = isLive ? 'EN VIVO' : isFinal ? 'FINAL' : statusText;
-      const timeClass = sec.label === 'HOY' ? 'today' : '';
-      html += `<div class="cal-item">
-        <span class="cal-time ${timeClass}">${statusText}</span>
-        <span class="cal-matchup">${escHtml(matchup)}</span>
-        ${scoreText ? `<span class="cal-score${isFinal?' final':''}">${scoreText}</span>` : ''}
-        <span class="cal-label ${labelClass}">${labelText}</span>
-      </div>`;
-    });
-  });
-  body.innerHTML = html || '<div class="empty-state">Sin partidos en ±24h</div>';
-  setBadge('scorecal', total ? total + ' PART.' : '—');
-}
-
-// ═══════════════════════════════════════════════════════
-// RENDER — CLASIFICACIÓN
-// ═══════════════════════════════════════════════════════
-async function loadStandings() {
-  setLoading('standings');
-  try {
-    const r = await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/standings');
-    renderStandings(await r.json());
-  } catch(e) {
-    document.getElementById('body-standings').innerHTML = '<div class="panel-error">Error al cargar clasificación.</div>';
-  }
-}
-
-function renderStandings(d) {
-  const body = document.getElementById('body-standings');
-  window._sData = {
-    east: (d.children||[]).find(c => c.abbreviation==='East'||c.name?.includes('East')),
-    west: (d.children||[]).find(c => c.abbreviation==='West'||c.name?.includes('West')),
-  };
-  body.innerHTML = `<div id="st-container" style="overflow-y:auto;height:100%;padding:0 2px;"></div>`;
-  renderStandingsTable();
-  setBadge('standings','NBA');
-}
-
-function switchConf(conf) {
-  standingsConf = conf;
-  document.querySelectorAll('.conf-tab').forEach(t => t.classList.toggle('active', (conf==='east'&&t.textContent==='ESTE')||(conf==='west'&&t.textContent==='OESTE')));
-  renderStandingsTable();
-}
-
-function renderStandingsTable() {
-  const c = document.getElementById('st-container'); if (!c || !window._sData) return;
-  const data = standingsConf === 'east' ? window._sData.east : window._sData.west;
-  if (!data) { c.innerHTML = '<div class="panel-error">Sin datos</div>'; return; }
-  const rows = (data.standings?.entries||[]).map((entry, i) => {
-    const t = entry.team; const s = {};
-    (entry.stats||[]).forEach(x => s[x.name] = x.displayValue||x.value);
-    return `<tr class="${i===5?'playoff-line':''}">
-      <td class="rank-num">${i+1}</td>
-      <td>${t?.abbreviation||t?.shortDisplayName||''}</td>
-      <td>${s['wins']||0}-${s['losses']||0}</td>
-      <td class="pct-cell">${s['winPercent']||s['pct']||'—'}</td>
-      <td>${s['gamesBehind']||s['gamesBack']||'—'}</td>
-      <td>${s['Home']||s['homeRecord']||'—'}</td>
-      <td>${s['Road']||s['awayRecord']||'—'}</td>
-      <td>${s['L10']||s['last10']||'—'}</td>
-    </tr>`;
-  }).join('');
-  c.innerHTML = `<table class="standings-table"><thead><tr><th>#</th><th>EQUIPO</th><th>V-D</th><th>PCT</th><th>DIF</th><th>LOCAL</th><th>VISIT.</th><th>ÚLT10</th></tr></thead><tbody>${rows}</tbody></table>`;
-}
-
-// ═══════════════════════════════════════════════════════
-// RENDER — YOUTUBE
-// ═══════════════════════════════════════════════════════
-function getAllYT() {
-  const all = []; Object.values(ytData).forEach(items => all.push(...items));
-  all.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-  return all;
-}
-
-function applyYTFilter(items) {
-  let filtered = ytExcluded.length > 0 ? items.filter(i => !ytExcluded.includes(i.channelId)) : items;
-  if (searchQuery) filtered = filtered.filter(i => matchesSearch(i));
-  return filtered;
-}
-
-function renderYT() {
-  const body = document.getElementById('body-youtube'); if (!body) return;
-  const all = applyYTFilter(getAllYT());
-  if (!all.length) { body.innerHTML = '<div class="empty-state">No hay vídeos disponibles.</div>'; setBadge('youtube','0'); return; }
-  body.innerHTML = all.map(v => {
-    const newBadge = isNew(v.pubDate) ? '<span class="badge badge-new">🆕</span>' : '';
-    const ytId = extractYTId(v.link);
-    const thumb = ytId
-      ? `<img class="media-thumb" src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg" loading="lazy" onerror="this.parentNode.querySelector('.media-thumb-fallback').style.display='flex';this.style.display='none'" alt="">`
-      : '';
-    const fallback = `<div class="media-thumb-fallback" style="display:none">▶</div>`;
-    return `<div class="media-item" onclick="window.open('${escHtml(v.link)}','_blank')">
-      ${thumb}${fallback}
-      <div class="media-source yt">▶ ${escHtml(v.channelName)} ${newBadge}</div>
-      <div class="media-title">${escHtml(v.title)}</div>
-      <div class="media-date">${v.pubDate ? formatDate(v.pubDate) : ''}</div>
-    </div>`;
-  }).join('');
-  setBadge('youtube', all.length + ' VÍD.');
-  setUpdated('youtube', lastUpdate.yt);
-}
-
-// ═══════════════════════════════════════════════════════
-// RENDER — PODCAST
-// ═══════════════════════════════════════════════════════
-function getAllPod() {
-  const all = []; Object.values(podData).forEach(items => all.push(...items));
-  all.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-  return all;
-}
-
-function applyPodFilter(items) {
-  let filtered = podExcluded.length > 0 ? items.filter(i => !podExcluded.includes(i.feedId)) : items;
-  if (searchQuery) filtered = filtered.filter(i => matchesSearch(i));
-  return filtered;
-}
-
-function renderPod() {
-  const body = document.getElementById('body-podcast'); if (!body) return;
-  const all = applyPodFilter(getAllPod());
-  if (!all.length) { body.innerHTML = '<div class="empty-state">No hay episodios disponibles.</div>'; setBadge('podcast','0'); return; }
-  body.innerHTML = all.map(v => {
-    const newBadge = isNew(v.pubDate) ? '<span class="badge badge-new">🆕</span>' : '';
-    const thumb = v.thumbnail
-      ? `<img class="media-thumb" src="${escHtml(v.thumbnail)}" loading="lazy" onerror="this.parentNode.querySelector('.media-thumb-fallback').style.display='flex';this.style.display='none'" alt="">`
-      : '';
-    const fallback = `<div class="media-thumb-fallback" style="${v.thumbnail?'display:none':''}">🎙</div>`;
-    return `<div class="media-item" onclick="window.open('${escHtml(v.link)}','_blank')">
-      ${thumb}${fallback}
-      <div class="media-source pod">🎙 ${escHtml(v.source)} ${newBadge}</div>
-      <div class="media-title">${escHtml(v.title)}</div>
-      <div class="media-date">${v.pubDate ? formatDate(v.pubDate) : ''}</div>
-    </div>`;
-  }).join('');
-  setBadge('podcast', all.length + ' EP.');
-  setUpdated('podcast', lastUpdate.pod);
-}
-
-// ═══════════════════════════════════════════════════════
-// EN VIVO / AUTO REFRESH
-// ═══════════════════════════════════════════════════════
-function toggleLive() {
-  livePolling = !livePolling;
-  const btn = document.getElementById('live-btn');
-  if (livePolling) {
-    btn.classList.add('active');
-    liveInterval = setInterval(loadScores, 60000);
-    loadScores();
-  } else {
-    btn.classList.remove('active');
-    clearInterval(liveInterval);
-  }
-}
-
-function setAutoRefresh(val) {
-  clearInterval(autoRefreshTimer);
-  const mins = parseInt(val);
-  if (mins > 0) autoRefreshTimer = setInterval(() => { loadAllNews(); loadAllYT(); loadAllPod(); }, mins * 60000);
-}
-
-function updateFontSize(type, val) {
-  document.documentElement.style.setProperty(type === 'article' ? '--fs-article' : '--fs-title', val + 'px');
-  localStorage.setItem(type === 'article' ? 'nba_fs' : 'nba_fst', val);
-}
-
-// ═══════════════════════════════════════════════════════
-// REFRESH
-// ═══════════════════════════════════════════════════════
-function refreshPanel(id) {
-  const map = {
-    wire: loadAllNews,
-    teams: () => { loadAllNews(); },
-    scorecal: () => { activeScoreTab === 'scores' ? loadScores() : loadCalendar(); },
-    standings: loadStandings,
-    youtube: loadAllYT,
-    podcast: loadAllPod,
-  };
-  (map[id] || (() => {}))();
-}
-
-function refreshAll() {
-  loadAllNews(); loadScores(); loadCalendar(); loadStandings(); loadAllYT(); loadAllPod();
-}
-
-// ═══════════════════════════════════════════════════════
-// CONFIG
-// ═══════════════════════════════════════════════════════
-function openConfig() {
-  renderTeamsGrid(); renderCustomFeedList(); renderYTConfig(); updateHealthUI();
-  document.getElementById('config-modal').classList.add('open');
-}
-function closeConfig() { document.getElementById('config-modal').classList.remove('open'); }
-
-function renderTeamsGrid() {
-  document.getElementById('teams-grid').innerHTML = NBA_TEAMS.map(t =>
-    `<button class="chip ${state.favTeams.includes(t)?'active':''} ${state.favTeams.length>=3&&!state.favTeams.includes(t)?'maxed':''}" onclick="toggleTeam('${t}',this)">${t}</button>`
-  ).join('');
-}
-
-function toggleTeam(abbr, el) {
-  if (state.favTeams.includes(abbr)) {
-    state.favTeams = state.favTeams.filter(t => t !== abbr);
-    el.classList.remove('active');
-  } else {
-    if (state.favTeams.length >= 3) return;
-    state.favTeams.push(abbr);
-    el.classList.add('active');
-  }
-  localStorage.setItem('nba_teams', JSON.stringify(state.favTeams));
-  document.querySelectorAll('#teams-grid .chip').forEach(c => c.classList.toggle('maxed', state.favTeams.length >= 3 && !state.favTeams.includes(c.textContent.trim())));
-  renderTeams();
-}
-
-function renderCustomFeedList() {
-  const list = document.getElementById('custom-feed-list');
-  list.innerHTML = state.customFeeds.length ? state.customFeeds.map((f, i) =>
-    `<div class="custom-item"><span style="flex-shrink:0">${escHtml(f.label)}</span><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:9px;color:var(--text3)">${escHtml(f.url)}</span><span class="del-btn" onclick="removeCustomFeed(${i})">✕</span></div>`
-  ).join('') : '';
-}
-
-function addCustomFeed() {
-  const label = document.getElementById('cf-label').value.trim();
-  const url = document.getElementById('cf-url').value.trim();
-  if (!label || !url) return;
-  state.customFeeds.push({label, url, id:'c_'+label, pay:false, lang:'es', enabled:true});
-  localStorage.setItem('nba_feeds', JSON.stringify(state.customFeeds));
-  document.getElementById('cf-label').value = '';
-  document.getElementById('cf-url').value = '';
-  renderCustomFeedList();
-}
-
-function removeCustomFeed(i) {
-  state.customFeeds.splice(i, 1);
-  localStorage.setItem('nba_feeds', JSON.stringify(state.customFeeds));
-  renderCustomFeedList();
-}
-
-function renderYTConfig() {
-  const c = document.getElementById('yt-channels-config');
-  c.innerHTML = [...YT_CHANNELS, ...state.customYT].map((ch, i) => {
-    const h = ytHealth[ch.id] || {status:'loading', count:0};
-    const disabled = state.disabledYT.includes(ch.id);
-    const isCustom = i >= YT_CHANNELS.length;
-    return `<div class="health-item"><div class="dot ${disabled?'err':h.status}"></div><span class="health-name">${escHtml(ch.label)}</span><span class="health-count">${h.count||0} vídeos</span><button class="toggle-btn ${disabled?'':'on'}" onclick="toggleYT('${ch.id}',this)">${disabled?'DESACT.':'ACTIVO'}</button>${isCustom?`<span class="del-btn" onclick="removeCustomYT(${i-YT_CHANNELS.length})">✕</span>`:''}</div>`;
-  }).join('');
-}
-
-function addCustomYT() {
-  const label = document.getElementById('yt-label').value.trim();
-  const id = document.getElementById('yt-id').value.trim();
-  if (!label || !id) return;
-  state.customYT.push({id, label});
-  localStorage.setItem('nba_yt_extra', JSON.stringify(state.customYT));
-  document.getElementById('yt-label').value = '';
-  document.getElementById('yt-id').value = '';
-  renderYTConfig();
-}
-
-function removeCustomYT(i) { state.customYT.splice(i, 1); localStorage.setItem('nba_yt_extra', JSON.stringify(state.customYT)); renderYTConfig(); }
-
-function toggleYT(id, btn) {
-  if (state.disabledYT.includes(id)) { state.disabledYT = state.disabledYT.filter(x => x !== id); btn.textContent = 'ACTIVO'; btn.classList.add('on'); }
-  else { state.disabledYT.push(id); btn.textContent = 'DESACT.'; btn.classList.remove('on'); }
-  localStorage.setItem('nba_dis_yt', JSON.stringify(state.disabledYT));
-  renderYTConfig();
-}
-
-function updateHealthUI() {
-  const allFeeds = [...NEWS_FEEDS, ...state.customFeeds.map(f => ({...f, id:'c_'+f.label}))];
-  document.getElementById('feed-health-news').innerHTML = allFeeds.map(f => {
-    const h = newsHealth[f.id] || {status:'loading', count:0};
-    const disabled = state.disabledNews.includes(f.id);
-    const payTag = f.pay ? '🔒 ' : '';
-    const enTag = f.lang === 'en' ? '<span class="badge badge-en" style="margin-left:3px">EN</span>' : '';
-    return `<div class="health-item"><div class="dot ${disabled?'err':h.status}"></div><span class="health-name">${payTag}${escHtml(f.label)}${enTag}</span><span class="health-count">${h.count||0} art.</span><button class="toggle-btn ${disabled?'':'on'}" onclick="toggleNews('${f.id}',this)">${disabled?'DESACT.':'ACTIVO'}</button></div>`;
-  }).join('');
-  renderYTConfig();
-  document.getElementById('feed-health-pod').innerHTML = POD_FEEDS.map(f => {
-    const h = podHealth[f.id] || {status:'loading', count:0};
-    const disabled = state.disabledPod.includes(f.id);
-    return `<div class="health-item"><div class="dot ${disabled?'err':h.status}"></div><span class="health-name">${escHtml(f.label)}</span><span class="health-count">${h.count||0} ep.</span><button class="toggle-btn ${disabled?'':'on'}" onclick="togglePod('${f.id}',this)">${disabled?'DESACT.':'ACTIVO'}</button></div>`;
-  }).join('');
-}
-
-function toggleNews(id, btn) {
-  if (state.disabledNews.includes(id)) { state.disabledNews = state.disabledNews.filter(x => x !== id); btn.textContent = 'ACTIVO'; btn.classList.add('on'); }
-  else { state.disabledNews.push(id); btn.textContent = 'DESACT.'; btn.classList.remove('on'); }
-  localStorage.setItem('nba_dis_news', JSON.stringify(state.disabledNews));
-  updateHealthUI();
-}
-
-function togglePod(id, btn) {
-  if (state.disabledPod.includes(id)) { state.disabledPod = state.disabledPod.filter(x => x !== id); btn.textContent = 'ACTIVO'; btn.classList.add('on'); }
-  else { state.disabledPod.push(id); btn.textContent = 'DESACT.'; btn.classList.remove('on'); }
-  localStorage.setItem('nba_dis_pod', JSON.stringify(state.disabledPod));
-  updateHealthUI();
-}
-
-// ═══════════════════════════════════════════════════════
-// UTILS
-// ═══════════════════════════════════════════════════════
-function setBadge(id, val) { const el = document.getElementById('badge-' + id); if (el) el.textContent = val; }
-function setUpdated(id, date) { const el = document.getElementById('upd-' + id); if (el && date) el.textContent = '↺ ' + formatDate(date); }
-function escHtml(s) { if (!s) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+// ── Utilidad: formato de fecha ─────────────────────────────────
 function formatDate(d) {
   if (!d) return '';
-  try {
-    const date = new Date(d); if (isNaN(date)) return '';
-    const diff = Date.now() - date;
-    if (diff < 3600000) return 'Hace ' + Math.floor(diff/60000) + ' min';
-    if (diff < 86400000) return 'Hace ' + Math.floor(diff/3600000) + 'h';
-    return date.toLocaleDateString('es-ES', {day:'numeric', month:'short'});
-  } catch { return ''; }
+  const [y, m, day] = d.split('-');
+  const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return `${+day} ${months[+m - 1]} ${y}`;
 }
 
-// ═══════════════════════════════════════════════════════
-// INICIO
-// ═══════════════════════════════════════════════════════
-function init() {
-  const fs = localStorage.getItem('nba_fs'), fst = localStorage.getItem('nba_fst');
-  if (fs) { document.getElementById('fs-slider').value = fs; updateFontSize('article', fs); }
-  if (fst) { document.getElementById('fst-slider').value = fst; updateFontSize('title', fst); }
-  ['wire','youtube','podcast'].forEach(id => updateFilterCount(id));
-  // Carga inicial: scores primero (tab activo por defecto)
-  loadAllNews();
-  loadScores();
-  loadCalendar(); // carga en background, no renderiza hasta que se cambie de tab
-  loadStandings();
-  loadAllYT();
-  loadAllPod();
+// ── Filtros ────────────────────────────────────────────────────
+function setYear(btn) {
+  document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeYear = btn.dataset.year;
+  applyFilters();
 }
-init();
+
+function setSrc(btn) {
+  document.querySelectorAll('[data-src]').forEach(b => {
+    b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active', 'solobasket-active', 'wordpress-active', 'outsiders-active', 'upunder-active', 'youtube-active', 'otros-active');
+  });
+  btn.classList.add('active');
+  if (btn.dataset.src === 'R')   btn.classList.add('relevo-active');
+  if (btn.dataset.src === 'S')   btn.classList.add('substack-active');
+  if (btn.dataset.src === 'G')   btn.classList.add('gigantes-active');
+  if (btn.dataset.src === 'NH')  btn.classList.add('nbahouse-active');
+  if (btn.dataset.src === 'SB')  btn.classList.add('solobasket-active');
+  if (btn.dataset.src === 'WP')  btn.classList.add('wordpress-active');
+  if (btn.dataset.src === 'O')   btn.classList.add('outsiders-active');
+  if (btn.dataset.src === 'UU')  btn.classList.add('upunder-active');
+  if (btn.dataset.src === 'YT')  btn.classList.add('youtube-active');
+  if (btn.dataset.src === 'OTR') btn.classList.add('otros-active');
+  activeSrc = btn.dataset.src;
+  applyFilters();
+}
+
+function setPod(btn) {
+  activePod = !activePod;
+  if (activePod) { activeVid = false; activePaid = false; activeTxt = false; }
+  btn.classList.toggle('active', activePod);
+  btn.classList.toggle('podcast-active', activePod);
+  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  applyFilters();
+}
+
+function setVid(btn) {
+  activeVid = !activeVid;
+  if (activeVid) { activePod = false; activePaid = false; activeTxt = false; }
+  btn.classList.toggle('active', activeVid);
+  btn.classList.toggle('video-active', activeVid);
+  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  applyFilters();
+}
+
+function setPaid(btn) {
+  activePaid = !activePaid;
+  if (activePaid) { activePod = false; activeVid = false; activeTxt = false; }
+  btn.classList.toggle('active', activePaid);
+  btn.classList.toggle('paid-active', activePaid);
+  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  applyFilters();
+}
+
+function setTxt(btn) {
+  activeTxt = !activeTxt;
+  if (activeTxt) { activePod = false; activeVid = false; activePaid = false; }
+  btn.classList.toggle('active', activeTxt);
+  btn.classList.toggle('texto-active', activeTxt);
+  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  applyFilters();
+}
+
+// ── Badge por medio ────────────────────────────────────────────
+const MEDIOS = {
+  R:   { label: 'Relevo',       cls: 'relevo'     },
+  S:   { label: 'Substack',     cls: 'substack'   },
+  SB:  { label: 'Solobasket',   cls: 'solobasket' },
+  G:   { label: 'Gigantes',     cls: 'gigantes'   },
+  WP:  { label: 'Wordpress',    cls: 'wordpress'  },
+  O:   { label: 'Outsiders',    cls: 'outsiders'  },
+  UU:  { label: 'Up & Under',   cls: 'upunder'    },
+  YT:  { label: 'YouTube',      cls: 'youtube'    },
+  NH:  { label: 'NBA House',    cls: 'nbahouse'   },
+  OTR: { label: 'Otros Medios', cls: 'otros'      },
+};
+
+function badgeFor(s, s2) {
+  const m  = MEDIOS[s];
+  const m2 = s2 ? MEDIOS[s2] : null;
+  let html = m ? `<span class="badge badge-${m.cls}">${m.label}</span>` : '';
+  if (m2) html += ` <span class="badge badge-${m2.cls}">${m2.label}</span>`;
+  return html;
+}
+
+// ── Panel de tags ──────────────────────────────────────────────
+function buildTagCounts(data) {
+  const counts = {};
+  data.forEach(a => {
+    (a.tags || []).forEach(tag => {
+      counts[tag] = (counts[tag] || 0) + 1;
+    });
+  });
+  return Object.entries(counts).sort((a, b) => b[1] - a[1]);
+}
+
+function renderTagsPanel(tagCounts) {
+  const list        = document.getElementById('tags-panel-list');
+  const mobilePanel = document.getElementById('tags-mobile-panel');
+
+  const esc = t => t.replace(/'/g, "\\'");
+
+  list.innerHTML = tagCounts.map(([tag, count]) => `
+    <div class="tag-panel-item${activeTags.includes(tag) ? ' active' : ''}" onclick="clickPanelTag('${esc(tag)}')">
+      <span>${tag}</span>
+      <span class="tag-panel-count">${count}</span>
+    </div>
+  `).join('');
+
+  mobilePanel.innerHTML = tagCounts.map(([tag, count]) => `
+    <span class="tag-mobile-item${activeTags.includes(tag) ? ' active' : ''}" onclick="clickPanelTag('${esc(tag)}')">
+      ${tag} <span class="tag-mobile-count">${count}</span>
+    </span>
+  `).join('');
+
+  document.getElementById('tags-panel-clear').style.display = activeTags.length > 0 ? 'block' : 'none';
+}
+
+function clickPanelTag(tag) {
+  const index = activeTags.indexOf(tag);
+  if (index > -1) activeTags.splice(index, 1);
+  else activeTags.push(tag);
+  applyFilters();
+}
+
+// ── Carrusel de destacados ─────────────────────────────────────
+function renderFeaturedCards() {
+  const slice     = featuredList.slice(featuredIndex, featuredIndex + 3);
+  const container = document.getElementById('featured-cards');
+  container.innerHTML = slice.map(a => `
+    <a href="${a.u}" target="_blank" rel="noopener" class="featured-card">
+      ${a.img ? `<div class="featured-img" style="background-image:url('${a.img}')"></div>` : '<div class="featured-img"></div>'}
+      <div class="featured-body">
+        <div class="featured-meta">
+          ${badgeFor(a.s, a.s2)}
+          ${a.pod ? '<span class="badge badge-podcast">Podcast</span>' : ''}
+          ${a.vid ? '<span class="badge badge-video">Vídeo</span>' : ''}
+        </div>
+        <div class="featured-card-title">${a.t}</div>
+        ${a.d ? `<div class="featured-card-date">${formatDate(a.d)}</div>` : ''}
+      </div>
+    </a>
+  `).join('');
+
+  document.getElementById('feat-prev').disabled = featuredIndex === 0;
+  document.getElementById('feat-next').disabled = featuredIndex + 3 >= featuredList.length;
+}
+
+function featuredPrev() {
+  if (featuredIndex > 0) { featuredIndex--; renderFeaturedCards(); }
+}
+
+function featuredNext() {
+  if (featuredIndex + 3 < featuredList.length) { featuredIndex++; renderFeaturedCards(); }
+}
+
+function renderFeatured(data) {
+  const featured = data.filter(a => a.featured === 1);
+  if (featured.length === 0) return;
+  featuredList  = [...featured].sort(() => Math.random() - 0.5);
+  featuredIndex = 0;
+  renderFeaturedCards();
+  document.getElementById('featured-carousel').style.display = 'block';
+}
+
+// ── Renderizado principal ──────────────────────────────────────
+function applyFilters() {
+  const searchInput = document.getElementById('search').value.toLowerCase();
+
+  const filtered = allArticles.filter(a => {
+    const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
+    const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc || a.s2 === activeSrc;
+    const matchesPod    = !activePod  || a.pod === 1;
+    const matchesVid    = !activeVid  || a.vid === 1;
+    const matchesPaid   = !activePaid || a.p   === 1;
+    const matchesTxt    = !activeTxt  || (!a.pod && !a.vid);
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) ||
+      (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
+      (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);
+    const matchesTags   = activeTags.length === 0 || activeTags.every(tag => a.tags?.includes(tag));
+    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesTxt && matchesSearch && matchesTags;
+  });
+
+  document.getElementById('results-count').textContent =
+    `Mostrando ${filtered.length.toLocaleString('es-ES')} de ${allArticles.length.toLocaleString('es-ES')} artículos`;
+
+  // Barra de tags activos
+  const bar  = document.getElementById('active-tags-bar');
+  const list = document.getElementById('active-tags-list');
+  if (activeTags.length > 0) {
+    bar.style.display = 'flex';
+    list.innerHTML = activeTags.map(tag =>
+      `<span class="tag active" onclick="toggleTag(event, '${tag}')">${tag} ✕</span>`
+    ).join('');
+  } else {
+    bar.style.display = 'none';
+    list.innerHTML = '';
+  }
+
+  // Panel de tags: conteos sobre todo excepto filtro de tags (para no vaciarlo)
+  const baseForTags = allArticles.filter(a => {
+    const matchesYear   = activeYear === 'all' || String(a.y) === activeYear;
+    const matchesSrc    = activeSrc  === 'all' || a.s === activeSrc || a.s2 === activeSrc;
+    const matchesPod    = !activePod  || a.pod === 1;
+    const matchesVid    = !activeVid  || a.vid === 1;
+    const matchesPaid   = !activePaid || a.p   === 1;
+    const matchesTxt    = !activeTxt  || (!a.pod && !a.vid);
+    const matchesSearch = a.t.toLowerCase().includes(searchInput) ||
+      (a.sub?.toLowerCase().includes(searchInput) ?? false) ||
+      (a.tags?.some(tag => tag.toLowerCase().includes(searchInput)) ?? false);
+    return matchesYear && matchesSrc && matchesPod && matchesVid && matchesPaid && matchesTxt && matchesSearch;
+  });
+  renderTagsPanel(buildTagCounts(baseForTags));
+
+  const byYear = {};
+  filtered.forEach(a => {
+    if (!byYear[a.y]) byYear[a.y] = [];
+    byYear[a.y].push(a);
+  });
+
+  const years = Object.keys(byYear).sort((a, b) => b - a);
+  const main  = document.getElementById('main-content');
+
+  if (filtered.length === 0) {
+    main.innerHTML = `
+      <div class="articles-grid">
+        <div class="empty-state">
+          No se han encontrado resultados.<br><br>
+          Prueba a eliminar algunos filtros o cambiar la búsqueda.
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  main.innerHTML = years.map(year => `
+    <div class="year-section">
+      <div class="year-label">${year}</div>
+      <div class="articles-grid">
+        ${byYear[year].map(a => `
+          <div class="article-card-wrapper">
+            <a class="article-card" href="${a.u}" target="_blank" rel="noopener">
+              <div class="card-meta">
+                <span class="card-date">${formatDate(a.d)}</span>
+                ${badgeFor(a.s, a.s2)}
+                ${a.p   ? '<span class="badge badge-paid">De pago</span>'     : ''}
+                ${a.pod ? '<span class="badge badge-podcast">Podcast</span>'  : ''}
+                ${a.vid ? '<span class="badge badge-video">Vídeo</span>'      : ''}
+              </div>
+              <div class="article-title">${a.t}</div>
+              ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
+              <span class="card-arrow">→</span>
+            </a>
+            ${a.tags ? `<div class="tags">${a.tags.map(tag =>
+              `<span class="tag${activeTags.includes(tag) ? ' active' : ''}" onclick="toggleTag(event, '${tag}')">${tag}</span>`
+            ).join('')}</div>` : ''}
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── Carga de datos ─────────────────────────────────────────────
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => {
+    allArticles = data;
+
+    document.getElementById('stat-audio').textContent  = data.filter(a => a.pod === 1).length.toLocaleString('es-ES');
+    document.getElementById('stat-video').textContent  = data.filter(a => a.vid === 1).length.toLocaleString('es-ES');
+    document.getElementById('stat-texto').textContent  = data.filter(a => !a.pod && !a.vid).length.toLocaleString('es-ES');
+    document.getElementById('stat-total').textContent  = data.length.toLocaleString('es-ES');
+
+    activeYear = 'all';
+    activeSrc  = 'all';
+    activePod  = false;
+    activeVid  = false;
+    activePaid = false;
+    activeTxt  = false;
+    activeTags = [];
+
+    document.getElementById('search').value = '';
+    document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-year="all"]').classList.add('active');
+    document.querySelectorAll('[data-src]').forEach(b => b.classList.remove('active', 'relevo-active', 'substack-active'));
+    document.querySelector('[data-src="all"]').classList.add('active');
+    document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
+    document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
+    document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+    document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+
+    renderFeatured(data);
+    applyFilters();
+  })
+  .catch(() => {
+    document.getElementById('main-content').innerHTML =
+      '<div class="loading">Error cargando datos. Asegúrate de que data.json está en la misma carpeta.</div>';
+  });
 </script>
 </body>
 </html>
