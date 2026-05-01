@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alejandro Gaitán — NBA en español</title>
 
+<!-- SEO / Social -->
+<meta name="description" content="Portafolio de Alejandro Gaitán — periodismo NBA en español. Artículos, podcasts y vídeos (2015–2026).">
+<meta property="og:title" content="Alejandro Gaitán — Periodismo NBA en español">
+<meta property="og:description" content="Portafolio con artículos, podcasts y vídeos sobre la NBA en español.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alejandroggo.github.io/portfolio/">
+<meta property="og:image" content="https://alejandroggo.github.io/portfolio/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -163,11 +172,27 @@
     flex-shrink: 0;
   }
 
+  /* Loader spinner */
+  .loader {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(0,0,0,0.08);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin: 0 auto 0.75rem;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
   /* ── Carrusel destacados ───────────────────────────────────── */
   #featured-carousel {
     padding: 2rem 5vw 0;
     max-width: 1400px;
     margin: 0 auto;
+    display: none;
   }
 
   .featured-header {
@@ -576,6 +601,10 @@
 
   .tag:hover { background-color: var(--ink); color: var(--paper); }
   .tag.active { background-color: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* Compensación para anclas / sticky header */
+  .year-label, .masthead { scroll-margin-top: 110px; }
+
 </style>
 </head>
 <body>
@@ -660,7 +689,7 @@
   <div id="tags-mobile-panel"></div>
 </div>
 
-<div id="featured-carousel" style="display:none;">
+<div id="featured-carousel">
   <div class="featured-header">
     <div class="featured-title">Destacados</div>
     <div class="featured-nav">
@@ -679,7 +708,15 @@
     </div>
     <div class="tags-panel-list" id="tags-panel-list"></div>
   </div>
-  <div id="main-content"><div class="loading">Cargando artículos…</div></div>
+
+  <!-- MAIN CONTENT: ahora contiene loading-state + articles-container -->
+  <div id="main-content">
+    <div id="loading-state" class="loading" aria-live="polite">
+      <div class="loader" role="status" aria-hidden="true"></div>
+      <div id="loading-text">Cargando artículos…</div>
+    </div>
+    <div id="articles-container" style="display:none;"></div>
+  </div>
 </div>
 
 <footer>
@@ -688,6 +725,31 @@
 </footer>
 
 <script>
+// Mostrar fecha
+document.getElementById('today-date').textContent =
+  new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+
+// ── Loader helpers
+function showLoader(msg = 'Cargando artículos…') {
+  const loading = document.getElementById('loading-state');
+  const text = document.getElementById('loading-text');
+  const container = document.getElementById('articles-container');
+  if (loading) { loading.style.display = 'block'; text.textContent = msg; }
+  if (container) container.style.display = 'none';
+}
+function hideLoader() {
+  const loading = document.getElementById('loading-state');
+  const container = document.getElementById('articles-container');
+  if (loading) loading.style.display = 'none';
+  if (container) container.style.display = 'block';
+}
+function showLoadError(msg = 'No se pudieron cargar los artículos. Intenta recargar la página.') {
+  const loading = document.getElementById('loading-state');
+  if (loading) {
+    loading.innerHTML = `<div style="color:var(--muted);font-size:0.95rem;">${msg}</div>`;
+  }
+}
+
 // ── Estado global ──────────────────────────────────────────────
 let allArticles   = [];
 let activeYear    = 'all';
@@ -721,9 +783,6 @@ function toggleTagsPanel() {
   panel.classList.toggle('open');
   btn.classList.toggle('active', panel.classList.contains('open'));
 }
-
-document.getElementById('today-date').textContent =
-  new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 
 // ── Utilidad: formato de fecha ─────────────────────────────────
 function formatDate(d) {
@@ -962,7 +1021,7 @@ function applyFilters() {
   });
 
   const years = Object.keys(byYear).sort((a, b) => b - a);
-  const main  = document.getElementById('main-content');
+  const main  = document.getElementById('articles-container');
 
   if (filtered.length === 0) {
     main.innerHTML = `
@@ -1005,6 +1064,7 @@ function applyFilters() {
 }
 
 // ── Carga de datos ─────────────────────────────────────────────
+showLoader();
 fetch('data.json')
   .then(r => r.json())
   .then(data => {
@@ -1035,10 +1095,10 @@ fetch('data.json')
 
     renderFeatured(data);
     applyFilters();
+    hideLoader();
   })
   .catch(() => {
-    document.getElementById('main-content').innerHTML =
-      '<div class="loading">Error cargando datos. Asegúrate de que data.json está en la misma carpeta.</div>';
+    showLoadError('Error cargando datos. Asegúrate de que data.json está en la misma carpeta.');
   });
 </script>
 </body>
