@@ -207,6 +207,45 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+  }
+
+  .featured-title:hover { color: var(--ink); }
+
+  .featured-toggle-icon {
+    font-size: 0.55rem;
+    transition: transform 0.25s ease;
+    display: inline-block;
+  }
+
+  #featured-carousel.collapsed .featured-toggle-icon {
+    transform: rotate(-90deg);
+  }
+
+  #featured-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    max-height: 600px;
+    transition: max-height 0.3s ease, opacity 0.25s ease, margin-bottom 0.3s ease;
+    opacity: 1;
+  }
+
+  #featured-carousel.collapsed #featured-cards {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+  }
+
+  #featured-carousel.collapsed .featured-nav {
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   .featured-nav {
@@ -232,15 +271,8 @@
   .featured-nav button:disabled { opacity: 0.25; cursor: default; }
   .featured-nav button:disabled:hover { background: transparent; color: var(--ink); }
 
-  #featured-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
   @media (max-width: 700px) {
-    #featured-cards { grid-template-columns: 1fr; }
+    #featured-cards { grid-template-columns: 1fr; max-height: 1200px; }
   }
 
   .featured-card {
@@ -691,7 +723,10 @@
 
 <div id="featured-carousel">
   <div class="featured-header">
-    <div class="featured-title">Destacados</div>
+    <div class="featured-title" onclick="toggleFeatured()">
+      Destacados
+      <span class="featured-toggle-icon">▼</span>
+    </div>
     <div class="featured-nav">
       <button id="feat-prev" onclick="featuredPrev()" disabled>←</button>
       <button id="feat-next" onclick="featuredNext()">→</button>
@@ -962,7 +997,17 @@ function renderFeatured(data) {
   featuredList  = [...featured].sort(() => Math.random() - 0.5);
   featuredIndex = 0;
   renderFeaturedCards();
-  document.getElementById('featured-carousel').style.display = 'block';
+  const carousel = document.getElementById('featured-carousel');
+  carousel.style.display = 'block';
+  if (localStorage.getItem('featuredCollapsed') === '1') {
+    carousel.classList.add('collapsed');
+  }
+}
+
+function toggleFeatured() {
+  const carousel = document.getElementById('featured-carousel');
+  const collapsed = carousel.classList.toggle('collapsed');
+  localStorage.setItem('featuredCollapsed', collapsed ? '1' : '0');
 }
 
 // ── Renderizado principal ──────────────────────────────────────
