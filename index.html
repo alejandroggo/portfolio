@@ -207,6 +207,50 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+  }
+
+  .featured-title:hover { color: var(--ink); }
+
+  .featured-toggle-icon {
+    font-size: 0.55rem;
+    transition: transform 0.25s ease;
+    display: inline-block;
+  }
+
+  #featured-carousel.collapsed .featured-toggle-icon {
+    transform: rotate(-90deg);
+  }
+
+  #featured-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    max-height: 600px;
+    transition: max-height 0.3s ease, opacity 0.25s ease, margin-bottom 0.3s ease;
+    opacity: 1;
+  }
+
+  #featured-carousel.collapsed #featured-cards {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+  }
+
+  #featured-carousel.collapsed .featured-nav {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .featured-nav {
+    transition: opacity 0.2s ease;
   }
 
   .featured-nav {
@@ -232,15 +276,8 @@
   .featured-nav button:disabled { opacity: 0.25; cursor: default; }
   .featured-nav button:disabled:hover { background: transparent; color: var(--ink); }
 
-  #featured-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
   @media (max-width: 700px) {
-    #featured-cards { grid-template-columns: 1fr; }
+    #featured-cards { grid-template-columns: 1fr; max-height: 1200px; }
   }
 
   .featured-card {
@@ -505,7 +542,7 @@
   .badge-upunder { background: var(--upunder); color: white; }
   .badge-youtube { background: var(--youtube); color: #111111; }
   .badge-nbahouse { background: #E03A3A; color: white; }
-  .badge-otrosmedios { background: #FFFFFF; color: #111111; border: 1px solid #444; }
+  .badge-otros { background: #FFFFFF; color: #111111; border: 1px solid #444; }
   .badge-video { background: #00B4D8; color: white; }
 
   .article-title {
@@ -681,7 +718,7 @@
     <button id="tags-toggle" onclick="toggleTagsPanel()">🏷 Tags</button>
   </div>
   <span class="results-count" id="results-count"></span>
-  <div id="active-tags-bar" style="display:none; width:100%; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
+  <div id="active-tags-bar" style="display:none; width:100%; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
     <span style="font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Tags:</span>
     <div id="active-tags-list" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
     <button onclick="clearTags()" style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--muted); text-decoration:underline; padding:0;">Limpiar</button>
@@ -691,7 +728,10 @@
 
 <div id="featured-carousel">
   <div class="featured-header">
-    <div class="featured-title">Destacados</div>
+    <div class="featured-title" onclick="toggleFeatured()">
+      Destacados
+      <span class="featured-toggle-icon">▼</span>
+    </div>
     <div class="featured-nav">
       <button id="feat-prev" onclick="featuredPrev()" disabled>←</button>
       <button id="feat-next" onclick="featuredNext()">→</button>
@@ -720,7 +760,7 @@
 </div>
 
 <footer>
-  <p>© Alejandro Gaitán · <a href="https://alejandroggo.substack.com" target="_blank">Substack</a> · <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank">Relevo</a></p>
+  <p>© Alejandro Gaitán · <a href="https://alejandroggo.substack.com" target="_blank" rel="noopener noreferrer">Substack</a> · <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank" rel="noopener noreferrer">Relevo</a></p>
   <p>Portfolio generado en marzo 2026</p>
 </footer>
 
@@ -930,7 +970,7 @@ function renderFeaturedCards() {
   const slice     = featuredList.slice(featuredIndex, featuredIndex + 3);
   const container = document.getElementById('featured-cards');
   container.innerHTML = slice.map(a => `
-    <a href="${a.u}" target="_blank" rel="noopener" class="featured-card">
+    <a href="${a.u}" target="_blank" rel="noopener noreferrer" class="featured-card">
       ${a.img ? `<div class="featured-img" style="background-image:url('${a.img}')"></div>` : '<div class="featured-img"></div>'}
       <div class="featured-body">
         <div class="featured-meta">
@@ -959,10 +999,24 @@ function featuredNext() {
 function renderFeatured(data) {
   const featured = data.filter(a => a.featured === 1);
   if (featured.length === 0) return;
-  featuredList  = [...featured].sort(() => Math.random() - 0.5);
+  featuredList  = [...featured];
+  for (let i = featuredList.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [featuredList[i], featuredList[j]] = [featuredList[j], featuredList[i]];
+  }
   featuredIndex = 0;
   renderFeaturedCards();
-  document.getElementById('featured-carousel').style.display = 'block';
+  const carousel = document.getElementById('featured-carousel');
+  carousel.style.display = 'block';
+  if (localStorage.getItem('featuredCollapsed') === '1') {
+    carousel.classList.add('collapsed');
+  }
+}
+
+function toggleFeatured() {
+  const carousel = document.getElementById('featured-carousel');
+  const collapsed = carousel.classList.toggle('collapsed');
+  localStorage.setItem('featuredCollapsed', collapsed ? '1' : '0');
 }
 
 // ── Renderizado principal ──────────────────────────────────────
@@ -1041,7 +1095,7 @@ function applyFilters() {
       <div class="articles-grid">
         ${byYear[year].map(a => `
           <div class="article-card-wrapper">
-            <a class="article-card" href="${a.u}" target="_blank" rel="noopener">
+            <a class="article-card" href="${a.u}" target="_blank" rel="noopener noreferrer">
               <div class="card-meta">
                 <span class="card-date">${formatDate(a.d)}</span>
                 ${badgeFor(a.s, a.s2)}
@@ -1097,7 +1151,8 @@ fetch('data.json')
     applyFilters();
     hideLoader();
   })
-  .catch(() => {
+  .catch(err => {
+    console.error('Error cargando data.json:', err);
     showLoadError('Error cargando datos. Asegúrate de que data.json está en la misma carpeta.');
   });
 </script>
