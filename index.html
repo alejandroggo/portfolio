@@ -167,9 +167,10 @@
     color: var(--ink);
     outline: none;
   }
+  .search-wrap input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   .search-wrap input::placeholder { color: var(--muted); }
-  .search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 0.85rem; pointer-events: none; }
+  .search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; display: flex; }
 
   .filter-group { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 
@@ -253,6 +254,10 @@
     align-items: center;
     gap: 0.4rem;
     user-select: none;
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: inherit;
   }
 
   .featured-title:hover { color: var(--ink); }
@@ -748,6 +753,11 @@
   }
   #theme-toggle:hover { border-color: var(--text); color: var(--text); }
 
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
 </style>
 </head>
 <body>
@@ -786,44 +796,46 @@
 
 <div class="controls">
   <div class="search-wrap" style="width:100%;">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="search" placeholder="Buscar por título…" oninput="applyFilters()">
+    <span class="search-icon" aria-hidden="true">
+      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><circle cx="8.5" cy="8.5" r="5.5"/><line x1="13" y1="13" x2="18" y2="18"/></svg>
+    </span>
+    <input type="text" id="search" placeholder="Buscar por título…" oninput="applyFilters()" aria-label="Buscar artículos por título">
   </div>
-  <div class="filter-group" id="year-filters">
-    <button class="filter-btn active" data-year="all" onclick="setYear(this)">Todo</button>
-    <button class="filter-btn" data-year="2026" onclick="setYear(this)">2026</button>
-    <button class="filter-btn" data-year="2025" onclick="setYear(this)">2025</button>
-    <button class="filter-btn" data-year="2024" onclick="setYear(this)">2024</button>
-    <button class="filter-btn" data-year="2023" onclick="setYear(this)">2023</button>
-    <button class="filter-btn" data-year="2022" onclick="setYear(this)">2022</button>
-    <button class="filter-btn" data-year="2021" onclick="setYear(this)">2021</button>
-    <button class="filter-btn" data-year="2020" onclick="setYear(this)">2020</button>
-    <button class="filter-btn" data-year="2019" onclick="setYear(this)">2019</button>
-    <button class="filter-btn" data-year="2018" onclick="setYear(this)">2018</button>
-    <button class="filter-btn" data-year="2017" onclick="setYear(this)">2017</button>
-    <button class="filter-btn" data-year="2016" onclick="setYear(this)">2016</button>
-    <button class="filter-btn" data-year="2015" onclick="setYear(this)">2015</button>
+  <div class="filter-group" id="year-filters" role="tablist" aria-label="Filtrar por año">
+    <button class="filter-btn active" data-year="all" onclick="setYear(this)" role="tab" aria-selected="true">Todo</button>
+    <button class="filter-btn" data-year="2026" onclick="setYear(this)" role="tab" aria-selected="false">2026</button>
+    <button class="filter-btn" data-year="2025" onclick="setYear(this)" role="tab" aria-selected="false">2025</button>
+    <button class="filter-btn" data-year="2024" onclick="setYear(this)" role="tab" aria-selected="false">2024</button>
+    <button class="filter-btn" data-year="2023" onclick="setYear(this)" role="tab" aria-selected="false">2023</button>
+    <button class="filter-btn" data-year="2022" onclick="setYear(this)" role="tab" aria-selected="false">2022</button>
+    <button class="filter-btn" data-year="2021" onclick="setYear(this)" role="tab" aria-selected="false">2021</button>
+    <button class="filter-btn" data-year="2020" onclick="setYear(this)" role="tab" aria-selected="false">2020</button>
+    <button class="filter-btn" data-year="2019" onclick="setYear(this)" role="tab" aria-selected="false">2019</button>
+    <button class="filter-btn" data-year="2018" onclick="setYear(this)" role="tab" aria-selected="false">2018</button>
+    <button class="filter-btn" data-year="2017" onclick="setYear(this)" role="tab" aria-selected="false">2017</button>
+    <button class="filter-btn" data-year="2016" onclick="setYear(this)" role="tab" aria-selected="false">2016</button>
+    <button class="filter-btn" data-year="2015" onclick="setYear(this)" role="tab" aria-selected="false">2015</button>
   </div>
-  <div class="filter-group">
-    <button class="filter-btn active" data-src="all" onclick="setSrc(this)">Todos</button>
-    <button class="filter-btn" data-src="R" onclick="setSrc(this)">Relevo</button>
-    <button class="filter-btn" data-src="S" onclick="setSrc(this)">Substack</button>
-    <button class="filter-btn" data-src="SB" onclick="setSrc(this)">Solobasket</button>
-    <button class="filter-btn" data-src="G" onclick="setSrc(this)">Gigantes</button>
-    <button class="filter-btn" data-src="WP" onclick="setSrc(this)">Wordpress</button>
-    <button class="filter-btn" data-src="O" onclick="setSrc(this)">Outsiders</button>
-    <button class="filter-btn" data-src="UU" onclick="setSrc(this)">Up & Under</button>
-    <button class="filter-btn" data-src="YT" onclick="setSrc(this)">YouTube</button>
-    <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
-    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros Medios</button>
+  <div class="filter-group" id="src-filters" role="tablist" aria-label="Filtrar por medio">
+    <button class="filter-btn active" data-src="all" onclick="setSrc(this)" role="tab" aria-selected="true">Todos</button>
+    <button class="filter-btn" data-src="R" onclick="setSrc(this)" role="tab" aria-selected="false">Relevo</button>
+    <button class="filter-btn" data-src="S" onclick="setSrc(this)" role="tab" aria-selected="false">Substack</button>
+    <button class="filter-btn" data-src="SB" onclick="setSrc(this)" role="tab" aria-selected="false">Solobasket</button>
+    <button class="filter-btn" data-src="G" onclick="setSrc(this)" role="tab" aria-selected="false">Gigantes</button>
+    <button class="filter-btn" data-src="WP" onclick="setSrc(this)" role="tab" aria-selected="false">Wordpress</button>
+    <button class="filter-btn" data-src="O" onclick="setSrc(this)" role="tab" aria-selected="false">Outsiders</button>
+    <button class="filter-btn" data-src="UU" onclick="setSrc(this)" role="tab" aria-selected="false">Up &amp; Under</button>
+    <button class="filter-btn" data-src="YT" onclick="setSrc(this)" role="tab" aria-selected="false">YouTube</button>
+    <button class="filter-btn" data-src="NH" onclick="setSrc(this)" role="tab" aria-selected="false">NBA House</button>
+    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)" role="tab" aria-selected="false">Otros Medios</button>
   </div>
   <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
-    <button class="filter-btn" data-paid="1" onclick="setPaid(this)">💰 De pago</button>
-    <button class="filter-btn" data-txt="1" onclick="setTxt(this)">📝 Texto</button>
-    <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
-    <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
-    <button id="tags-toggle" onclick="toggleTagsPanel()">🏷 Tags</button>
+    <button class="filter-btn" data-paid="1" onclick="setPaid(this)"><span aria-hidden="true">💰</span> De pago</button>
+    <button class="filter-btn" data-txt="1" onclick="setTxt(this)"><span aria-hidden="true">📝</span> Texto</button>
+    <button class="filter-btn" data-pod="1" onclick="setPod(this)"><span aria-hidden="true">🎙</span> Podcast</button>
+    <button class="filter-btn" data-vid="1" onclick="setVid(this)"><span aria-hidden="true">🎥</span> Vídeo</button>
+    <button id="tags-toggle" onclick="toggleTagsPanel()"><span aria-hidden="true">🏷</span> Tags</button>
   </div>
   <span class="results-count" id="results-count"></span>
   <div id="active-tags-bar" style="display:none; width:100%; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
@@ -836,13 +848,13 @@
 
 <div id="featured-carousel">
   <div class="featured-header">
-    <div class="featured-title" onclick="toggleFeatured()">
+    <button class="featured-title" onclick="toggleFeatured()" aria-expanded="true" aria-controls="featured-cards">
       Destacados
-      <span class="featured-toggle-icon">▼</span>
-    </div>
+      <span class="featured-toggle-icon" aria-hidden="true">▼</span>
+    </button>
     <div class="featured-nav">
-      <button id="feat-prev" onclick="featuredPrev()" disabled>←</button>
-      <button id="feat-next" onclick="featuredNext()">→</button>
+      <button id="feat-prev" onclick="featuredPrev()" disabled aria-label="Anterior destacado">←</button>
+      <button id="feat-next" onclick="featuredNext()" aria-label="Siguiente destacado">→</button>
     </div>
   </div>
   <div id="featured-cards"></div>
@@ -961,8 +973,9 @@ function formatDate(d) {
 
 // ── Filtros ────────────────────────────────────────────────────
 function setYear(btn) {
-  document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('[data-year]').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
   btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
   activeYear = btn.dataset.year;
   applyFilters();
 }
@@ -970,8 +983,10 @@ function setYear(btn) {
 function setSrc(btn) {
   document.querySelectorAll('[data-src]').forEach(b => {
     b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active', 'solobasket-active', 'wordpress-active', 'outsiders-active', 'upunder-active', 'youtube-active', 'otros-active');
+    b.setAttribute('aria-selected', 'false');
   });
   btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
   if (btn.dataset.src === 'R')   btn.classList.add('relevo-active');
   if (btn.dataset.src === 'S')   btn.classList.add('substack-active');
   if (btn.dataset.src === 'G')   btn.classList.add('gigantes-active');
@@ -1137,6 +1152,8 @@ function renderFeatured(data) {
   carousel.style.display = 'block';
   if (localStorage.getItem('featuredCollapsed') === '1') {
     carousel.classList.add('collapsed');
+    const btn = carousel.querySelector('.featured-title');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -1144,6 +1161,8 @@ function toggleFeatured() {
   const carousel = document.getElementById('featured-carousel');
   const collapsed = carousel.classList.toggle('collapsed');
   localStorage.setItem('featuredCollapsed', collapsed ? '1' : '0');
+  const btn = carousel.querySelector('.featured-title');
+  if (btn) btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
 }
 
 // ── Renderizado principal ──────────────────────────────────────
@@ -1232,7 +1251,7 @@ function applyFilters() {
               </div>
               <div class="article-title">${a.t}</div>
               ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
-              <span class="card-arrow">→</span>
+              <span class="card-arrow" aria-hidden="true">→</span>
             </a>
             ${a.tags ? `<div class="tags">${a.tags.map(tag =>
               `<span class="tag${activeTags.includes(tag) ? ' active' : ''}" onclick="toggleTag(event, '${tag}')">${tag}</span>`
