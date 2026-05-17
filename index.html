@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){var s=localStorage.getItem('ag-theme');document.documentElement.setAttribute('data-theme',s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');})();
+</script>
 <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico">
 <link rel="apple-touch-icon" href="/portfolio/apple-touch-icon.png">
@@ -21,20 +24,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #111111;
-    --paper: #f5f0e8;
-    --accent: #007A33;
-    --muted: #7a7060;
-    --rule: #d4cfc5;
+    /* Tokens estándar — modo claro */
+    --bg:              #f5f0e8;
+    --surface:         #ede8de;
+    --surface-2:       #e4ddd0;
+    --border:          #d4cfc5;
+    --text:            #111111;
+    --text-muted:      #7a7060;
+    --accent:          #007A33;
+    --accent-contrast: #ffffff;
+    --danger:          #CC0000;
+    --success:         #007A33;
+
+    /* Aliases legacy */
+    --ink:   var(--text);
+    --paper: var(--bg);
+    --muted: var(--text-muted);
+    --rule:  var(--border);
+
+    /* Colores de marca (fijos) */
     --paid-badge: #1a3a5c;
-    --relevo: #FF34EF;
-    --substack: #007A33;
+    --relevo:     #FF34EF;
+    --substack:   #007A33;
     --solobasket: #E8620A;
-    --gigantes: #CC0000;
-    --wordpress: #3D9CD2;
-    --outsiders: #111111;
-    --upunder: #1B3A6B;
-    --youtube: #FFD700;
+    --gigantes:   #CC0000;
+    --wordpress:  #3D9CD2;
+    --outsiders:  #111111;
+    --upunder:    #1B3A6B;
+    --youtube:    #FFD700;
+  }
+
+  [data-theme="dark"] {
+    --bg:              #111118;
+    --surface:         #1a1a24;
+    --surface-2:       #22222e;
+    --border:          #2d2d3a;
+    --text:            #e8e4db;
+    --text-muted:      #8c8278;
+    --accent:          #22c55e;
+    --accent-contrast: #000000;
+    --danger:          #ef4444;
+    --success:         #22c55e;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -307,7 +337,7 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  .featured-card:hover { background: white; }
+  .featured-card:hover { background: var(--surface); }
   .featured-card:hover .featured-card-title { color: var(--accent); }
 
   .featured-img {
@@ -419,7 +449,7 @@
     user-select: none;
   }
 
-  .tag-panel-item:hover { background: white; border-color: var(--rule); }
+  .tag-panel-item:hover { background: var(--surface); border-color: var(--rule); }
   .tag-panel-item.active { background: var(--ink); color: var(--paper); }
   .tag-panel-item.active:hover { background: var(--ink); }
 
@@ -476,7 +506,7 @@
     user-select: none;
   }
 
-  .tag-mobile-item:hover { background: white; }
+  .tag-mobile-item:hover { background: var(--surface); }
   .tag-mobile-item.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
   .tag-mobile-count { font-size: 0.58rem; opacity: 0.6; }
@@ -527,7 +557,7 @@
     position: relative;
   }
 
-  .article-card:hover { background: white; }
+  .article-card:hover { background: var(--surface); }
   .article-card:hover .article-title { color: var(--accent); }
 
   .card-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
@@ -702,6 +732,22 @@
   /* Compensación para anclas / sticky header */
   .year-label, .masthead { scroll-margin-top: 110px; }
 
+  #theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.12s;
+    white-space: nowrap;
+  }
+  #theme-toggle:hover { border-color: var(--text); color: var(--text); }
+
 </style>
 </head>
 <body>
@@ -711,6 +757,7 @@
     <span>Periodista NBA</span>
     <span>Portafolio en español</span>
     <span id="today-date"></span>
+    <button id="theme-toggle" aria-label="Cambiar tema de color">Auto</button>
   </div>
   <div class="masthead">
     <h1>Alejandro <span>Gaitán</span></h1>
@@ -1259,6 +1306,37 @@ fetch('https://api.github.com/repos/alejandroggo/portfolio/commits?path=data.jso
     }
   })
   .catch(() => { if (_dataLastModified) setDataDate(_dataLastModified); });
+
+// ── Toggle de tema ─────────────────────────────────────────────
+(function () {
+  const STATES = ['auto', 'light', 'dark'];
+  const LABELS = { auto: 'Auto', light: 'Claro', dark: 'Oscuro' };
+
+  function applyTheme(state) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const useDark = state === 'dark' || (state === 'auto' && prefersDark);
+    document.documentElement.setAttribute('data-theme', useDark ? 'dark' : 'light');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.textContent = LABELS[state];
+      btn.setAttribute('aria-label', 'Tema: ' + LABELS[state] + '. Clic para cambiar');
+    }
+  }
+
+  function getState() { return localStorage.getItem('ag-theme') || 'auto'; }
+
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    const next = STATES[(STATES.indexOf(getState()) + 1) % STATES.length];
+    localStorage.setItem('ag-theme', next);
+    applyTheme(next);
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+    if (getState() === 'auto') applyTheme('auto');
+  });
+
+  applyTheme(getState());
+})();
 </script>
 </body>
 </html>
