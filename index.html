@@ -831,11 +831,11 @@
   </div>
   <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
-    <button class="filter-btn" data-paid="1" onclick="setPaid(this)"><span aria-hidden="true">💰</span> De pago</button>
-    <button class="filter-btn" data-txt="1" onclick="setTxt(this)"><span aria-hidden="true">📝</span> Texto</button>
-    <button class="filter-btn" data-pod="1" onclick="setPod(this)"><span aria-hidden="true">🎙</span> Podcast</button>
-    <button class="filter-btn" data-vid="1" onclick="setVid(this)"><span aria-hidden="true">🎥</span> Vídeo</button>
-    <button id="tags-toggle" onclick="toggleTagsPanel()"><span aria-hidden="true">🏷</span> Tags</button>
+    <button class="filter-btn" data-paid="1" onclick="setPaid(this)" aria-pressed="false"><span aria-hidden="true">💰</span> De pago</button>
+    <button class="filter-btn" data-txt="1" onclick="setTxt(this)" aria-pressed="false"><span aria-hidden="true">📝</span> Texto</button>
+    <button class="filter-btn" data-pod="1" onclick="setPod(this)" aria-pressed="false"><span aria-hidden="true">🎙</span> Podcast</button>
+    <button class="filter-btn" data-vid="1" onclick="setVid(this)" aria-pressed="false"><span aria-hidden="true">🎥</span> Vídeo</button>
+    <button id="tags-toggle" onclick="toggleTagsPanel()" aria-expanded="false" aria-controls="tags-mobile-panel"><span aria-hidden="true">🏷</span> Tags</button>
   </div>
   <span class="results-count" id="results-count"></span>
   <div id="active-tags-bar" style="display:none; width:100%; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
@@ -960,7 +960,9 @@ function toggleTagsPanel() {
   const panel = document.getElementById('tags-mobile-panel');
   const btn   = document.getElementById('tags-toggle');
   panel.classList.toggle('open');
-  btn.classList.toggle('active', panel.classList.contains('open'));
+  const isOpen = panel.classList.contains('open');
+  btn.classList.toggle('active', isOpen);
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 }
 
 // ── Utilidad: formato de fecha ─────────────────────────────────
@@ -1006,9 +1008,10 @@ function setPod(btn) {
   if (activePod) { activeVid = false; activePaid = false; activeTxt = false; }
   btn.classList.toggle('active', activePod);
   btn.classList.toggle('podcast-active', activePod);
-  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
-  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  btn.setAttribute('aria-pressed', activePod ? 'true' : 'false');
+  document.querySelectorAll('[data-vid]').forEach(b => { b.classList.remove('active', 'video-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-paid]').forEach(b => { b.classList.remove('active', 'paid-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-txt]').forEach(b => { b.classList.remove('active', 'texto-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -1017,9 +1020,10 @@ function setVid(btn) {
   if (activeVid) { activePod = false; activePaid = false; activeTxt = false; }
   btn.classList.toggle('active', activeVid);
   btn.classList.toggle('video-active', activeVid);
-  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
-  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  btn.setAttribute('aria-pressed', activeVid ? 'true' : 'false');
+  document.querySelectorAll('[data-pod]').forEach(b => { b.classList.remove('active', 'podcast-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-paid]').forEach(b => { b.classList.remove('active', 'paid-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-txt]').forEach(b => { b.classList.remove('active', 'texto-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -1028,9 +1032,10 @@ function setPaid(btn) {
   if (activePaid) { activePod = false; activeVid = false; activeTxt = false; }
   btn.classList.toggle('active', activePaid);
   btn.classList.toggle('paid-active', activePaid);
-  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  btn.setAttribute('aria-pressed', activePaid ? 'true' : 'false');
+  document.querySelectorAll('[data-pod]').forEach(b => { b.classList.remove('active', 'podcast-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-vid]').forEach(b => { b.classList.remove('active', 'video-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-txt]').forEach(b => { b.classList.remove('active', 'texto-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -1039,9 +1044,10 @@ function setTxt(btn) {
   if (activeTxt) { activePod = false; activeVid = false; activePaid = false; }
   btn.classList.toggle('active', activeTxt);
   btn.classList.toggle('texto-active', activeTxt);
-  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  btn.setAttribute('aria-pressed', activeTxt ? 'true' : 'false');
+  document.querySelectorAll('[data-pod]').forEach(b => { b.classList.remove('active', 'podcast-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-vid]').forEach(b => { b.classList.remove('active', 'video-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-paid]').forEach(b => { b.classList.remove('active', 'paid-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
