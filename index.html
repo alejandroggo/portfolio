@@ -86,6 +86,14 @@
     color: var(--muted);
   }
 
+  .ag-data-badge {
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
   .header-stats {
     display: flex;
     justify-content: center;
@@ -707,6 +715,7 @@
   <div class="masthead">
     <h1>Alejandro <span>Gaitán</span></h1>
     <p class="masthead-sub">Periodismo NBA en español · 2015–2026</p>
+    <p id="ag-data-badge" class="ag-data-badge" hidden>Datos a: <time id="ag-data-date" datetime=""></time></p>
   </div>
   <div class="header-stats">
     <div class="stat">
@@ -862,6 +871,7 @@ function showLoadError(msg = 'No se pudieron cargar los artículos. Intenta reca
 
 // ── Estado global ──────────────────────────────────────────────
 let allArticles   = [];
+let _dataLastModified = null;
 let activeYear    = 'all';
 let activeSrc     = 'all';
 let activePod     = false;
@@ -1190,7 +1200,7 @@ function applyFilters() {
 // ── Carga de datos ─────────────────────────────────────────────
 showLoader();
 fetch('data.json')
-  .then(r => r.json())
+  .then(r => { _dataLastModified = r.headers.get('Last-Modified'); return r.json(); })
   .then(data => {
     allArticles = data;
 
@@ -1225,6 +1235,30 @@ fetch('data.json')
     console.error('Error cargando data.json:', err);
     showLoadError('Error cargando datos. Asegúrate de que data.json está en la misma carpeta.');
   });
+
+// ── Fecha última actualización ──────────────────────────────────
+function setDataDate(isoStr) {
+  const d = new Date(isoStr);
+  if (isNaN(d.getTime())) return;
+  const fmt    = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+  const iso    = d.toISOString().split('T')[0];
+  const badge  = document.getElementById('ag-data-badge');
+  const dateEl = document.getElementById('ag-data-date');
+  const footerT = document.getElementById('ag-last-update');
+  if (badge && dateEl) { dateEl.textContent = fmt; dateEl.setAttribute('datetime', iso); badge.hidden = false; }
+  if (footerT) { footerT.textContent = fmt; footerT.setAttribute('datetime', iso); }
+}
+
+fetch('https://api.github.com/repos/alejandroggo/portfolio/commits?path=data.json&per_page=1')
+  .then(r => r.json())
+  .then(commits => {
+    if (Array.isArray(commits) && commits[0]?.commit?.committer?.date) {
+      setDataDate(commits[0].commit.committer.date);
+    } else if (_dataLastModified) {
+      setDataDate(_dataLastModified);
+    }
+  })
+  .catch(() => { if (_dataLastModified) setDataDate(_dataLastModified); });
 </script>
 </body>
 </html>
