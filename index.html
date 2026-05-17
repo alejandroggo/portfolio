@@ -611,19 +611,68 @@
     text-transform: uppercase;
   }
 
-  footer {
+  .ag-footer {
     margin-top: 4rem;
     border-top: 3px solid var(--ink);
     padding: 2rem 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr;
+    gap: 2rem 3rem;
+    align-items: start;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
   }
 
-  footer p { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-  footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .ag-footer-brand strong {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+
+  .ag-footer-brand span {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .ag-footer-projects,
+  .ag-footer-pubs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .ag-footer-projects a,
+  .ag-footer-pubs a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .ag-footer-projects a:hover,
+  .ag-footer-pubs a:hover {
+    text-decoration: underline;
+  }
+
+  .ag-footer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 700px) {
+    .ag-footer {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
 
   .tag {
     display: inline-block;
@@ -762,9 +811,27 @@
   </div>
 </div>
 
-<footer>
-  <p>© Alejandro Gaitán · <a href="https://alejandroggo.substack.com" target="_blank" rel="noopener noreferrer">Substack</a> · <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank" rel="noopener noreferrer">Relevo</a></p>
-  <p>Portfolio generado en marzo 2026</p>
+<footer class="ag-footer">
+  <div class="ag-footer-brand">
+    <strong>Alejandro Gaitán</strong>
+    <span>Periodismo NBA en español</span>
+  </div>
+  <nav class="ag-footer-projects" aria-label="Otros proyectos">
+    <a href="https://alejandroggo.github.io/nba-rankings/" target="_blank" rel="noopener noreferrer">Rankings NBA</a>
+    <a href="https://alejandroggo.github.io/nba-offseason-2026/" target="_blank" rel="noopener noreferrer">Off-Season 2026</a>
+    <a href="https://alejandroggo.github.io/espanoles-nba/" target="_blank" rel="noopener noreferrer">Españoles en la NBA</a>
+    <a href="https://alejandroggo.github.io/NBA-espanol/" target="_blank" rel="noopener noreferrer">NBA en Español</a>
+  </nav>
+  <nav class="ag-footer-pubs" aria-label="Publicaciones">
+    <a href="https://alejandroggo.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+    <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank" rel="noopener noreferrer">Relevo</a>
+    <a href="https://www.gigantes.com" target="_blank" rel="noopener noreferrer">Gigantes</a>
+    <a href="https://alejandrogaitan.com" target="_blank" rel="noopener noreferrer">alejandrogaitan.com</a>
+  </nav>
+  <div class="ag-footer-meta">
+    <span>© Alejandro Gaitán</span>
+    <span>Última actualización: <time id="ag-last-update" datetime=""></time></span>
+  </div>
 </footer>
 
 <script>
