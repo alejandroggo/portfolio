@@ -2,6 +2,12 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){var s=localStorage.getItem('ag-theme');document.documentElement.setAttribute('data-theme',s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');})();
+</script>
+<link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico">
+<link rel="apple-touch-icon" href="/portfolio/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alejandro Gaitán — NBA en español</title>
 
@@ -15,36 +21,120 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #111111;
-    --paper: #f5f0e8;
-    --accent: #007A33;
-    --muted: #7a7060;
-    --rule: #d4cfc5;
+    /* Colores base — modo claro */
+    --bg:           #f4f4ef;
+    --surface:      #ffffff;
+    --surface-2:    #ebebeb;
+    --border:       #ddddd8;
+    --text:         #111111;
+    --text-muted:   #666660;
+
+    /* Acento portfolio — gris-pizarra editorial */
+    --accent:         #334155;
+    --accent-light:   #e2e8f0;
+    --accent-contrast:#ffffff;
+    --accent-hover:   #1e293b;
+
+    /* Semánticos */
+    --success:      #16a34a;
+    --success-light:#dcfce7;
+    --danger:       #dc2626;
+    --danger-light: #fee2e2;
+    --warning:      #d97706;
+    --warning-light:#fef3c7;
+
+    /* Aliases legacy */
+    --ink:   var(--text);
+    --paper: var(--bg);
+    --muted: var(--text-muted);
+    --rule:  var(--border);
+
+    /* Colores de marca (fijos) */
     --paid-badge: #1a3a5c;
-    --relevo: #FF34EF;
-    --substack: #007A33;
+    --relevo:     #FF34EF;
+    --substack:   #007A33;
     --solobasket: #E8620A;
-    --gigantes: #CC0000;
-    --wordpress: #3D9CD2;
-    --outsiders: #111111;
-    --upunder: #1B3A6B;
-    --youtube: #FFD700;
+    --gigantes:   #CC0000;
+    --wordpress:  #3D9CD2;
+    --outsiders:  #111111;
+    --upunder:    #1B3A6B;
+    --youtube:    #FFD700;
+
+    /* Espaciado */
+    --space-1:  4px;  --space-2:  8px;  --space-3:  12px; --space-4:  16px;
+    --space-5:  20px; --space-6:  24px; --space-8:  32px; --space-10: 40px;
+    --space-12: 48px; --space-16: 64px;
+
+    /* Tipografía */
+    --font-xs:   0.75rem;
+    --font-sm:   0.875rem;
+    --font-base: 1rem;
+    --font-md:   1.125rem;
+    --font-lg:   1.5rem;
+    --font-xl:   2rem;
+    --font-2xl:  3rem;
+    --font-3xl:  4.5rem;
+
+    /* Forma */
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   12px;
+    --radius-xl:   16px;
+    --radius-full: 9999px;
+
+    /* Sombras */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.10);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.14);
+
+    /* Transición */
+    --transition: 150ms ease;
+  }
+
+  [data-theme="dark"] {
+    --bg:           #0f1117;
+    --surface:      #1a1f2e;
+    --surface-2:    #242938;
+    --border:       #2d3348;
+    --text:         #e8eaf0;
+    --text-muted:   #8892a4;
+
+    --accent:         #94a3b8;
+    --accent-light:   #1e293b;
+    --accent-contrast:#ffffff;
+    --accent-hover:   #cbd5e1;
+
+    --success:      #22c55e;
+    --success-light:#14532d;
+    --danger:       #f87171;
+    --danger-light: #7f1d1d;
+    --warning:      #fbbf24;
+    --warning-light:#78350f;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.40);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.50);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
   }
 
   header {
-    border-bottom: 3px solid var(--ink);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
     padding: 0 5vw;
   }
 
@@ -65,6 +155,15 @@
     text-align: center;
   }
 
+  .ag-hero {
+    font-size: var(--font-2xl);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .ag-hero em { font-style: italic; font-weight: 400; color: var(--text-muted); }
+
   .masthead h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(3rem, 8vw, 7rem);
@@ -78,6 +177,14 @@
   .masthead-sub {
     margin-top: 1rem;
     font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .ag-data-badge {
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -103,11 +210,11 @@
     gap: 0.75rem;
     align-items: center;
     flex-wrap: wrap;
-    background: var(--paper);
+    background: var(--bg);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-sm);
   }
 
   .search-wrap {
@@ -118,36 +225,45 @@
 
   .search-wrap input {
     width: 100%;
-    padding: 0.55rem 1rem 0.55rem 2.2rem;
-    border: 1.5px solid var(--ink);
-    background: transparent;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    color: var(--ink);
+    padding: var(--space-2) var(--space-3) var(--space-2) 2.2rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: var(--font-sm);
+    color: var(--text);
+    min-height: 44px;
     outline: none;
+    transition: border-color var(--transition);
+  }
+  .search-wrap input:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
   }
 
   .search-wrap input::placeholder { color: var(--muted); }
-  .search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 0.85rem; pointer-events: none; }
+  .search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; display: flex; }
 
   .filter-group { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 
   .filter-btn {
-    padding: 0.4rem 0.75rem;
-    border: 1.5px solid var(--ink);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border);
     background: transparent;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+    font-family: inherit;
+    font-size: var(--font-xs);
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
-    color: var(--ink);
-    transition: all 0.12s;
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
     white-space: nowrap;
   }
 
-  .filter-btn:hover { background: var(--ink); color: var(--paper); }
-  .filter-btn.active { background: var(--ink); color: var(--paper); }
+  .filter-btn:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .filter-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
   .filter-btn.relevo-active { background: var(--relevo); color: white; border-color: var(--relevo); }
   .filter-btn.substack-active { background: var(--substack); color: white; border-color: var(--substack); }
   .filter-btn.podcast-active { background: #6b4fbb; color: white; border-color: #6b4fbb; }
@@ -177,7 +293,7 @@
     display: inline-block;
     width: 48px;
     height: 48px;
-    border: 4px solid rgba(0,0,0,0.08);
+    border: 4px solid var(--border);
     border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin 0.9s linear infinite;
@@ -212,6 +328,10 @@
     align-items: center;
     gap: 0.4rem;
     user-select: none;
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: inherit;
   }
 
   .featured-title:hover { color: var(--ink); }
@@ -261,31 +381,35 @@
   .featured-nav button {
     width: 2rem;
     height: 2rem;
-    border: 1.5px solid var(--ink);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
     background: transparent;
     cursor: pointer;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.12s;
-    color: var(--ink);
+    transition: all var(--transition);
+    color: var(--text);
   }
 
-  .featured-nav button:hover { background: var(--ink); color: var(--paper); }
+  .featured-nav button:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
   .featured-nav button:disabled { opacity: 0.25; cursor: default; }
-  .featured-nav button:disabled:hover { background: transparent; color: var(--ink); }
+  .featured-nav button:disabled:hover { background: transparent; color: var(--text); border-color: var(--border); }
 
   @media (max-width: 700px) {
     #featured-cards { grid-template-columns: 1fr; max-height: 1200px; }
   }
 
   .featured-card {
-    border: 1.5px solid var(--ink);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
     text-decoration: none;
-    color: var(--ink);
+    color: var(--text);
     overflow: hidden;
-    transition: all 0.15s;
+    transition: all var(--transition);
     display: flex;
     flex-direction: column;
     animation: fadeIn 0.3s ease;
@@ -296,7 +420,7 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  .featured-card:hover { background: white; }
+  .featured-card:hover { background: var(--surface); }
   .featured-card:hover .featured-card-title { color: var(--accent); }
 
   .featured-img {
@@ -318,11 +442,10 @@
   .featured-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
 
   .featured-card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.92rem;
-    font-weight: 700;
+    font-size: var(--font-sm);
+    font-weight: 600;
     line-height: 1.3;
-    transition: color 0.12s;
+    transition: color var(--transition);
   }
 
   .featured-card-date {
@@ -403,14 +526,14 @@
     font-size: 0.68rem;
     letter-spacing: 0.03em;
     border: 1px solid transparent;
-    transition: all 0.1s;
-    border-radius: 1px;
+    transition: all var(--transition);
+    border-radius: var(--radius-sm);
     user-select: none;
   }
 
-  .tag-panel-item:hover { background: white; border-color: var(--rule); }
-  .tag-panel-item.active { background: var(--ink); color: var(--paper); }
-  .tag-panel-item.active:hover { background: var(--ink); }
+  .tag-panel-item:hover { background: var(--surface-2); border-color: var(--border); }
+  .tag-panel-item.active { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
+  .tag-panel-item.active:hover { background: var(--accent-hover); }
 
   .tag-panel-count {
     font-size: 0.6rem;
@@ -420,25 +543,26 @@
     margin-left: 0.4rem;
   }
 
-  .tag-panel-item.active .tag-panel-count { color: rgba(255,255,255,0.55); }
+  .tag-panel-item.active .tag-panel-count { color: rgba(255,255,255,0.65); }
 
   /* Botón toggle tags en móvil */
   #tags-toggle {
     display: none;
-    padding: 0.4rem 0.75rem;
-    border: 1.5px solid var(--ink);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border);
     background: transparent;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+    font-family: inherit;
+    font-size: var(--font-xs);
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
-    color: var(--ink);
-    transition: all 0.12s;
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
     white-space: nowrap;
   }
 
-  #tags-toggle:hover, #tags-toggle.active { background: var(--ink); color: var(--paper); }
+  #tags-toggle:hover, #tags-toggle.active { background: var(--text); color: var(--bg); border-color: var(--text); }
 
   #tags-mobile-panel {
     display: none;
@@ -460,13 +584,13 @@
     font-size: 0.62rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    transition: all 0.1s;
-    border-radius: 1px;
+    transition: all var(--transition);
+    border-radius: var(--radius-sm);
     user-select: none;
   }
 
-  .tag-mobile-item:hover { background: white; }
-  .tag-mobile-item.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .tag-mobile-item:hover { background: var(--surface-2); }
+  .tag-mobile-item.active { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
 
   .tag-mobile-count { font-size: 0.58rem; opacity: 0.6; }
 
@@ -516,19 +640,21 @@
     position: relative;
   }
 
-  .article-card:hover { background: white; }
+  .article-card:hover { background: var(--surface); }
   .article-card:hover .article-title { color: var(--accent); }
 
   .card-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
   .card-date { font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
   .badge {
-    font-size: 0.56rem;
-    letter-spacing: 0.1em;
+    font-size: var(--font-xs);
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    padding: 0.12rem 0.35rem;
+    padding: 2px var(--space-2);
     font-weight: 500;
-    border-radius: 1px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
   }
 
   .badge-relevo { background: var(--relevo); color: white; }
@@ -546,11 +672,10 @@
   .badge-video { background: #00B4D8; color: white; }
 
   .article-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-size: var(--font-sm);
+    font-weight: 600;
     line-height: 1.3;
-    transition: color 0.12s;
+    transition: color var(--transition);
     padding-right: 1rem;
   }
 
@@ -608,39 +733,114 @@
     text-transform: uppercase;
   }
 
-  footer {
-    margin-top: 4rem;
-    border-top: 3px solid var(--ink);
-    padding: 2rem 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+  .ag-footer {
+    margin-top: var(--space-16);
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: var(--space-8) var(--space-6);
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr;
+    gap: var(--space-8) var(--space-8);
+    align-items: start;
+    font-size: var(--font-sm);
+    color: var(--text-muted);
   }
 
-  footer p { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-  footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .ag-footer-brand strong {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+
+  .ag-footer-brand span {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .ag-footer-projects,
+  .ag-footer-pubs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .ag-footer-projects a,
+  .ag-footer-pubs a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .ag-footer-projects a:hover,
+  .ag-footer-pubs a:hover {
+    text-decoration: underline;
+  }
+
+  .ag-footer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 700px) {
+    .ag-footer {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
 
   .tag {
     display: inline-block;
-    background-color: #e5e7eb;
-    color: #111827;
-    font-size: 0.62rem;
+    background-color: var(--surface-2);
+    color: var(--text-muted);
+    font-size: var(--font-xs);
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    padding: 0.2rem 0.5rem;
-    border-radius: 1px;
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-full);
     cursor: pointer;
-    transition: all 0.12s;
+    transition: all var(--transition);
     border: 1px solid transparent;
   }
 
-  .tag:hover { background-color: var(--ink); color: var(--paper); }
-  .tag.active { background-color: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .tag:hover { background-color: var(--text); color: var(--bg); }
+  .tag.active { background-color: var(--text); color: var(--bg); border-color: var(--text); }
 
   /* Compensación para anclas / sticky header */
   .year-label, .masthead { scroll-margin-top: 110px; }
+
+  #theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: var(--font-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+    white-space: nowrap;
+  }
+  #theme-toggle:hover { border-color: var(--text); color: var(--text); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius-full); }
 
 </style>
 </head>
@@ -651,10 +851,12 @@
     <span>Periodista NBA</span>
     <span>Portafolio en español</span>
     <span id="today-date"></span>
+    <button id="theme-toggle" aria-label="Cambiar tema de color">Auto</button>
   </div>
   <div class="masthead">
-    <h1>Alejandro <span>Gaitán</span></h1>
+    <h1 class="ag-hero">Alejandro <span>Gaitán</span></h1>
     <p class="masthead-sub">Periodismo NBA en español · 2015–2026</p>
+    <p id="ag-data-badge" class="ag-data-badge" hidden>Datos a: <time id="ag-data-date" datetime=""></time></p>
   </div>
   <div class="header-stats">
     <div class="stat">
@@ -678,44 +880,46 @@
 
 <div class="controls">
   <div class="search-wrap" style="width:100%;">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="search" placeholder="Buscar por título…" oninput="applyFilters()">
+    <span class="search-icon" aria-hidden="true">
+      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><circle cx="8.5" cy="8.5" r="5.5"/><line x1="13" y1="13" x2="18" y2="18"/></svg>
+    </span>
+    <input type="text" id="search" placeholder="Buscar por título…" oninput="applyFilters()" aria-label="Buscar artículos por título">
   </div>
-  <div class="filter-group" id="year-filters">
-    <button class="filter-btn active" data-year="all" onclick="setYear(this)">Todo</button>
-    <button class="filter-btn" data-year="2026" onclick="setYear(this)">2026</button>
-    <button class="filter-btn" data-year="2025" onclick="setYear(this)">2025</button>
-    <button class="filter-btn" data-year="2024" onclick="setYear(this)">2024</button>
-    <button class="filter-btn" data-year="2023" onclick="setYear(this)">2023</button>
-    <button class="filter-btn" data-year="2022" onclick="setYear(this)">2022</button>
-    <button class="filter-btn" data-year="2021" onclick="setYear(this)">2021</button>
-    <button class="filter-btn" data-year="2020" onclick="setYear(this)">2020</button>
-    <button class="filter-btn" data-year="2019" onclick="setYear(this)">2019</button>
-    <button class="filter-btn" data-year="2018" onclick="setYear(this)">2018</button>
-    <button class="filter-btn" data-year="2017" onclick="setYear(this)">2017</button>
-    <button class="filter-btn" data-year="2016" onclick="setYear(this)">2016</button>
-    <button class="filter-btn" data-year="2015" onclick="setYear(this)">2015</button>
+  <div class="filter-group" id="year-filters" role="tablist" aria-label="Filtrar por año">
+    <button class="filter-btn active" data-year="all" onclick="setYear(this)" role="tab" aria-selected="true">Todo</button>
+    <button class="filter-btn" data-year="2026" onclick="setYear(this)" role="tab" aria-selected="false">2026</button>
+    <button class="filter-btn" data-year="2025" onclick="setYear(this)" role="tab" aria-selected="false">2025</button>
+    <button class="filter-btn" data-year="2024" onclick="setYear(this)" role="tab" aria-selected="false">2024</button>
+    <button class="filter-btn" data-year="2023" onclick="setYear(this)" role="tab" aria-selected="false">2023</button>
+    <button class="filter-btn" data-year="2022" onclick="setYear(this)" role="tab" aria-selected="false">2022</button>
+    <button class="filter-btn" data-year="2021" onclick="setYear(this)" role="tab" aria-selected="false">2021</button>
+    <button class="filter-btn" data-year="2020" onclick="setYear(this)" role="tab" aria-selected="false">2020</button>
+    <button class="filter-btn" data-year="2019" onclick="setYear(this)" role="tab" aria-selected="false">2019</button>
+    <button class="filter-btn" data-year="2018" onclick="setYear(this)" role="tab" aria-selected="false">2018</button>
+    <button class="filter-btn" data-year="2017" onclick="setYear(this)" role="tab" aria-selected="false">2017</button>
+    <button class="filter-btn" data-year="2016" onclick="setYear(this)" role="tab" aria-selected="false">2016</button>
+    <button class="filter-btn" data-year="2015" onclick="setYear(this)" role="tab" aria-selected="false">2015</button>
   </div>
-  <div class="filter-group">
-    <button class="filter-btn active" data-src="all" onclick="setSrc(this)">Todos</button>
-    <button class="filter-btn" data-src="R" onclick="setSrc(this)">Relevo</button>
-    <button class="filter-btn" data-src="S" onclick="setSrc(this)">Substack</button>
-    <button class="filter-btn" data-src="SB" onclick="setSrc(this)">Solobasket</button>
-    <button class="filter-btn" data-src="G" onclick="setSrc(this)">Gigantes</button>
-    <button class="filter-btn" data-src="WP" onclick="setSrc(this)">Wordpress</button>
-    <button class="filter-btn" data-src="O" onclick="setSrc(this)">Outsiders</button>
-    <button class="filter-btn" data-src="UU" onclick="setSrc(this)">Up & Under</button>
-    <button class="filter-btn" data-src="YT" onclick="setSrc(this)">YouTube</button>
-    <button class="filter-btn" data-src="NH" onclick="setSrc(this)">NBA House</button>
-    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)">Otros Medios</button>
+  <div class="filter-group" id="src-filters" role="tablist" aria-label="Filtrar por medio">
+    <button class="filter-btn active" data-src="all" onclick="setSrc(this)" role="tab" aria-selected="true">Todos</button>
+    <button class="filter-btn" data-src="R" onclick="setSrc(this)" role="tab" aria-selected="false">Relevo</button>
+    <button class="filter-btn" data-src="S" onclick="setSrc(this)" role="tab" aria-selected="false">Substack</button>
+    <button class="filter-btn" data-src="SB" onclick="setSrc(this)" role="tab" aria-selected="false">Solobasket</button>
+    <button class="filter-btn" data-src="G" onclick="setSrc(this)" role="tab" aria-selected="false">Gigantes</button>
+    <button class="filter-btn" data-src="WP" onclick="setSrc(this)" role="tab" aria-selected="false">Wordpress</button>
+    <button class="filter-btn" data-src="O" onclick="setSrc(this)" role="tab" aria-selected="false">Outsiders</button>
+    <button class="filter-btn" data-src="UU" onclick="setSrc(this)" role="tab" aria-selected="false">Up &amp; Under</button>
+    <button class="filter-btn" data-src="YT" onclick="setSrc(this)" role="tab" aria-selected="false">YouTube</button>
+    <button class="filter-btn" data-src="NH" onclick="setSrc(this)" role="tab" aria-selected="false">NBA House</button>
+    <button class="filter-btn" data-src="OTR" onclick="setSrc(this)" role="tab" aria-selected="false">Otros Medios</button>
   </div>
   <div style="width:100%; height:1px; background: var(--ink); opacity:0.15; margin: 4px 0;"></div>
   <div class="filter-group">
-    <button class="filter-btn" data-paid="1" onclick="setPaid(this)">💰 De pago</button>
-    <button class="filter-btn" data-txt="1" onclick="setTxt(this)">📝 Texto</button>
-    <button class="filter-btn" data-pod="1" onclick="setPod(this)">🎙 Podcast</button>
-    <button class="filter-btn" data-vid="1" onclick="setVid(this)">🎥 Vídeo</button>
-    <button id="tags-toggle" onclick="toggleTagsPanel()">🏷 Tags</button>
+    <button class="filter-btn" data-paid="1" onclick="setPaid(this)" aria-pressed="false"><span aria-hidden="true">💰</span> De pago</button>
+    <button class="filter-btn" data-txt="1" onclick="setTxt(this)" aria-pressed="false"><span aria-hidden="true">📝</span> Texto</button>
+    <button class="filter-btn" data-pod="1" onclick="setPod(this)" aria-pressed="false"><span aria-hidden="true">🎙</span> Podcast</button>
+    <button class="filter-btn" data-vid="1" onclick="setVid(this)" aria-pressed="false"><span aria-hidden="true">🎥</span> Vídeo</button>
+    <button id="tags-toggle" onclick="toggleTagsPanel()" aria-expanded="false" aria-controls="tags-mobile-panel"><span aria-hidden="true">🏷</span> Tags</button>
   </div>
   <span class="results-count" id="results-count"></span>
   <div id="active-tags-bar" style="display:none; width:100%; gap:0.4rem; flex-wrap:wrap; align-items:center; padding-top:0.25rem;">
@@ -728,13 +932,13 @@
 
 <div id="featured-carousel">
   <div class="featured-header">
-    <div class="featured-title" onclick="toggleFeatured()">
+    <button class="featured-title" onclick="toggleFeatured()" aria-expanded="true" aria-controls="featured-cards">
       Destacados
-      <span class="featured-toggle-icon">▼</span>
-    </div>
+      <span class="featured-toggle-icon" aria-hidden="true">▼</span>
+    </button>
     <div class="featured-nav">
-      <button id="feat-prev" onclick="featuredPrev()" disabled>←</button>
-      <button id="feat-next" onclick="featuredNext()">→</button>
+      <button id="feat-prev" onclick="featuredPrev()" disabled aria-label="Anterior destacado">←</button>
+      <button id="feat-next" onclick="featuredNext()" aria-label="Siguiente destacado">→</button>
     </div>
   </div>
   <div id="featured-cards"></div>
@@ -759,9 +963,27 @@
   </div>
 </div>
 
-<footer>
-  <p>© Alejandro Gaitán · <a href="https://alejandroggo.substack.com" target="_blank" rel="noopener noreferrer">Substack</a> · <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank" rel="noopener noreferrer">Relevo</a></p>
-  <p>Portfolio generado en marzo 2026</p>
+<footer class="ag-footer">
+  <div class="ag-footer-brand">
+    <strong>Alejandro Gaitán</strong>
+    <span>Periodismo NBA en español</span>
+  </div>
+  <nav class="ag-footer-projects" aria-label="Otros proyectos">
+    <a href="https://alejandroggo.github.io/nba-rankings/" target="_blank" rel="noopener noreferrer">Rankings NBA</a>
+    <a href="https://alejandroggo.github.io/nba-offseason-2026/" target="_blank" rel="noopener noreferrer">Off-Season 2026</a>
+    <a href="https://alejandroggo.github.io/espanoles-nba/" target="_blank" rel="noopener noreferrer">Españoles en la NBA</a>
+    <a href="https://alejandroggo.github.io/NBA-espanol/" target="_blank" rel="noopener noreferrer">NBA en Español</a>
+  </nav>
+  <nav class="ag-footer-pubs" aria-label="Publicaciones">
+    <a href="https://alejandroggo.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+    <a href="https://www.relevo.com/autor/alejandro-gaitan-5475.html" target="_blank" rel="noopener noreferrer">Relevo</a>
+    <a href="https://www.gigantes.com" target="_blank" rel="noopener noreferrer">Gigantes</a>
+    <a href="https://alejandrogaitan.com" target="_blank" rel="noopener noreferrer">alejandrogaitan.com</a>
+  </nav>
+  <div class="ag-footer-meta">
+    <span>© Alejandro Gaitán</span>
+    <span>Última actualización: <time id="ag-last-update" datetime=""></time></span>
+  </div>
 </footer>
 
 <script>
@@ -792,6 +1014,7 @@ function showLoadError(msg = 'No se pudieron cargar los artículos. Intenta reca
 
 // ── Estado global ──────────────────────────────────────────────
 let allArticles   = [];
+let _dataLastModified = null;
 let activeYear    = 'all';
 let activeSrc     = 'all';
 let activePod     = false;
@@ -821,7 +1044,9 @@ function toggleTagsPanel() {
   const panel = document.getElementById('tags-mobile-panel');
   const btn   = document.getElementById('tags-toggle');
   panel.classList.toggle('open');
-  btn.classList.toggle('active', panel.classList.contains('open'));
+  const isOpen = panel.classList.contains('open');
+  btn.classList.toggle('active', isOpen);
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 }
 
 // ── Utilidad: formato de fecha ─────────────────────────────────
@@ -834,8 +1059,9 @@ function formatDate(d) {
 
 // ── Filtros ────────────────────────────────────────────────────
 function setYear(btn) {
-  document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('[data-year]').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
   btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
   activeYear = btn.dataset.year;
   applyFilters();
 }
@@ -843,8 +1069,10 @@ function setYear(btn) {
 function setSrc(btn) {
   document.querySelectorAll('[data-src]').forEach(b => {
     b.classList.remove('active', 'relevo-active', 'substack-active', 'gigantes-active', 'nbahouse-active', 'solobasket-active', 'wordpress-active', 'outsiders-active', 'upunder-active', 'youtube-active', 'otros-active');
+    b.setAttribute('aria-selected', 'false');
   });
   btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
   if (btn.dataset.src === 'R')   btn.classList.add('relevo-active');
   if (btn.dataset.src === 'S')   btn.classList.add('substack-active');
   if (btn.dataset.src === 'G')   btn.classList.add('gigantes-active');
@@ -864,9 +1092,10 @@ function setPod(btn) {
   if (activePod) { activeVid = false; activePaid = false; activeTxt = false; }
   btn.classList.toggle('active', activePod);
   btn.classList.toggle('podcast-active', activePod);
-  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
-  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  btn.setAttribute('aria-pressed', activePod ? 'true' : 'false');
+  document.querySelectorAll('[data-vid]').forEach(b => { b.classList.remove('active', 'video-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-paid]').forEach(b => { b.classList.remove('active', 'paid-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-txt]').forEach(b => { b.classList.remove('active', 'texto-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -875,9 +1104,10 @@ function setVid(btn) {
   if (activeVid) { activePod = false; activePaid = false; activeTxt = false; }
   btn.classList.toggle('active', activeVid);
   btn.classList.toggle('video-active', activeVid);
-  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
-  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  btn.setAttribute('aria-pressed', activeVid ? 'true' : 'false');
+  document.querySelectorAll('[data-pod]').forEach(b => { b.classList.remove('active', 'podcast-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-paid]').forEach(b => { b.classList.remove('active', 'paid-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-txt]').forEach(b => { b.classList.remove('active', 'texto-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -886,9 +1116,10 @@ function setPaid(btn) {
   if (activePaid) { activePod = false; activeVid = false; activeTxt = false; }
   btn.classList.toggle('active', activePaid);
   btn.classList.toggle('paid-active', activePaid);
-  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-  document.querySelectorAll('[data-txt]').forEach(b => b.classList.remove('active', 'texto-active'));
+  btn.setAttribute('aria-pressed', activePaid ? 'true' : 'false');
+  document.querySelectorAll('[data-pod]').forEach(b => { b.classList.remove('active', 'podcast-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-vid]').forEach(b => { b.classList.remove('active', 'video-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-txt]').forEach(b => { b.classList.remove('active', 'texto-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -897,9 +1128,10 @@ function setTxt(btn) {
   if (activeTxt) { activePod = false; activeVid = false; activePaid = false; }
   btn.classList.toggle('active', activeTxt);
   btn.classList.toggle('texto-active', activeTxt);
-  document.querySelectorAll('[data-pod]').forEach(b => b.classList.remove('active', 'podcast-active'));
-  document.querySelectorAll('[data-vid]').forEach(b => b.classList.remove('active', 'video-active'));
-  document.querySelectorAll('[data-paid]').forEach(b => b.classList.remove('active', 'paid-active'));
+  btn.setAttribute('aria-pressed', activeTxt ? 'true' : 'false');
+  document.querySelectorAll('[data-pod]').forEach(b => { b.classList.remove('active', 'podcast-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-vid]').forEach(b => { b.classList.remove('active', 'video-active'); b.setAttribute('aria-pressed', 'false'); });
+  document.querySelectorAll('[data-paid]').forEach(b => { b.classList.remove('active', 'paid-active'); b.setAttribute('aria-pressed', 'false'); });
   applyFilters();
 }
 
@@ -1010,6 +1242,8 @@ function renderFeatured(data) {
   carousel.style.display = 'block';
   if (localStorage.getItem('featuredCollapsed') === '1') {
     carousel.classList.add('collapsed');
+    const btn = carousel.querySelector('.featured-title');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -1017,6 +1251,8 @@ function toggleFeatured() {
   const carousel = document.getElementById('featured-carousel');
   const collapsed = carousel.classList.toggle('collapsed');
   localStorage.setItem('featuredCollapsed', collapsed ? '1' : '0');
+  const btn = carousel.querySelector('.featured-title');
+  if (btn) btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
 }
 
 // ── Renderizado principal ──────────────────────────────────────
@@ -1105,7 +1341,7 @@ function applyFilters() {
               </div>
               <div class="article-title">${a.t}</div>
               ${a.sub ? `<div class="article-sub">${a.sub}</div>` : ''}
-              <span class="card-arrow">→</span>
+              <span class="card-arrow" aria-hidden="true">→</span>
             </a>
             ${a.tags ? `<div class="tags">${a.tags.map(tag =>
               `<span class="tag${activeTags.includes(tag) ? ' active' : ''}" onclick="toggleTag(event, '${tag}')">${tag}</span>`
@@ -1120,7 +1356,7 @@ function applyFilters() {
 // ── Carga de datos ─────────────────────────────────────────────
 showLoader();
 fetch('data.json')
-  .then(r => r.json())
+  .then(r => { _dataLastModified = r.headers.get('Last-Modified'); return r.json(); })
   .then(data => {
     allArticles = data;
 
@@ -1155,6 +1391,61 @@ fetch('data.json')
     console.error('Error cargando data.json:', err);
     showLoadError('Error cargando datos. Asegúrate de que data.json está en la misma carpeta.');
   });
+
+// ── Fecha última actualización ──────────────────────────────────
+function setDataDate(isoStr) {
+  const d = new Date(isoStr);
+  if (isNaN(d.getTime())) return;
+  const fmt    = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+  const iso    = d.toISOString().split('T')[0];
+  const badge  = document.getElementById('ag-data-badge');
+  const dateEl = document.getElementById('ag-data-date');
+  const footerT = document.getElementById('ag-last-update');
+  if (badge && dateEl) { dateEl.textContent = fmt; dateEl.setAttribute('datetime', iso); badge.hidden = false; }
+  if (footerT) { footerT.textContent = fmt; footerT.setAttribute('datetime', iso); }
+}
+
+fetch('https://api.github.com/repos/alejandroggo/portfolio/commits?path=data.json&per_page=1')
+  .then(r => r.json())
+  .then(commits => {
+    if (Array.isArray(commits) && commits[0]?.commit?.committer?.date) {
+      setDataDate(commits[0].commit.committer.date);
+    } else if (_dataLastModified) {
+      setDataDate(_dataLastModified);
+    }
+  })
+  .catch(() => { if (_dataLastModified) setDataDate(_dataLastModified); });
+
+// ── Toggle de tema ─────────────────────────────────────────────
+(function () {
+  const STATES = ['auto', 'light', 'dark'];
+  const LABELS = { auto: 'Auto', light: 'Claro', dark: 'Oscuro' };
+
+  function applyTheme(state) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const useDark = state === 'dark' || (state === 'auto' && prefersDark);
+    document.documentElement.setAttribute('data-theme', useDark ? 'dark' : 'light');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.textContent = LABELS[state];
+      btn.setAttribute('aria-label', 'Tema: ' + LABELS[state] + '. Clic para cambiar');
+    }
+  }
+
+  function getState() { return localStorage.getItem('ag-theme') || 'auto'; }
+
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    const next = STATES[(STATES.indexOf(getState()) + 1) % STATES.length];
+    localStorage.setItem('ag-theme', next);
+    applyTheme(next);
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+    if (getState() === 'auto') applyTheme('auto');
+  });
+
+  applyTheme(getState());
+})();
 </script>
 </body>
 </html>
